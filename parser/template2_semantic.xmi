@@ -10,6 +10,8 @@
   </Metamodel>
   <Metamodel name="amalthea">
     <metaclasses name="Task"/>
-    <metaclasses name="ComponentContainer"/>
+    <metaclasses name="ComponentContainer">
+      <references name="tasks" target="/1/@metaclasses.0"/>
+    </metaclasses>
   </Metamodel>
 </xmi:XMI>

@@ -7,6 +7,8 @@
     </metaclasses>
   </Metamodel>
   <Metamodel name="amalthea">
-    <metaclasses name="Task"/>
+    <metaclasses name="Task">
+      <attributes name="name"/>
+    </metaclasses>
   </Metamodel>
 </xmi:XMI>

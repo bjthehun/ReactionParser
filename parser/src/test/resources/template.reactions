@@ -26,7 +26,6 @@ reaction InitTaskNameChanged{
 	call changeAmaltheaTaskName(affectedEObject)
 }
 
-
 routine changeAmaltheaTaskName(ascet::InitTask initTask){
 	match {
 		val Task = retrieve amalthea::Task corresponding to initTask
