@@ -14,6 +14,7 @@ import java.util.Set;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -21,14 +22,18 @@ import java.util.InputMismatchException;
 import java.util.function.BiConsumer;
 
 import org.antlr.v4.runtime.Parser;
+import org.antlr.v4.runtime.ParserInterpreter;
 import org.antlr.v4.runtime.ANTLRFileStream;
 import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonToken;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.DefaultErrorStrategy;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
+import org.antlr.v4.runtime.Token;
+import org.antlr.v4.runtime.TokenStream;
 import org.antlr.v4.runtime.TokenStreamRewriter;
 import org.eclipse.emf.common.util.URI;
 
@@ -72,12 +77,15 @@ public class IntegrationTest {
     }
 
     private static class FuzzyKeywordErrorCorrection extends DefaultErrorStrategy {
+        private int keywordTokenType = -1;
+        private Token errorToken = null;
+
         @Override
         public void recover(Parser parser, RecognitionException exception) {
             if (exception instanceof org.antlr.v4.runtime.InputMismatchException) {
                 var recognitionException = (org.antlr.v4.runtime.InputMismatchException) exception;
                 // What token caused the error?
-                var errorToken = recognitionException.getOffendingToken();
+                errorToken = recognitionException.getOffendingToken();
                 var content = errorToken.getText();
     
                 // What literals could we expect?
@@ -101,15 +109,35 @@ public class IntegrationTest {
                 System.out.println("Possible substitutes: " + expectedLiterals);
 
                 // Rewrite to most suitable token
-                // GetMissingSymbol, singleTokenInsertion, singleTokenDeletion
                 if (!expectedLiterals.isEmpty()) {
                     var alternative = expectedLiterals.get(0);
+                    keywordTokenType = alternative.tokenType;
                     System.err.println("Replacing with " + alternative);
+                    // Match and consume "correct" token, pretend to have parsed that token
+                    parser.match(keywordTokenType);
+                    parser.consume();
+                    // Return to previous state
+                    parser.setState(recognitionException.getOffendingState());
+                }
+                else {
+                    super.recover(parser, recognitionException);
                 }
             }
             else {
                 super.recover(parser, exception);
             }
+        }
+
+        @Override
+        public Token recoverInline(Parser parser) {
+            if (keywordTokenType == -1) {
+                return super.recoverInline(parser);
+            }
+            var replacement = new CommonToken(errorToken);
+            replacement.setType(keywordTokenType);
+            replacement.setText(parser.getVocabulary().getLiteralName(keywordTokenType));
+            keywordTokenType = -1;
+            return replacement;
         }
     
         private int levenshteinDistance(String tokenToFix, String alternativeToken) {
@@ -165,15 +193,20 @@ public class IntegrationTest {
 
         var charStream = CharStreams.fromFileName(resourcePath(path));
         var lexer = new DebugInternalReactionsLanguageLexer(charStream);
-        var parser =  new DebugInternalReactionsLanguageParser(new CommonTokenStream(lexer, 0));
-
-        var grammarFirstTokenGetter = new FirstTokenOfRulesRecognizer(resourcePath("Hello.g4"));
+        var parser = new ParserInterpreter(
+            resourcePath("DebugInternalReactionsLanguage.g4"), 
+            DebugInternalReactionsLanguageParser.VOCABULARY, 
+            Arrays.asList(DebugInternalReactionsLanguageParser.ruleNames),
+            DebugInternalReactionsLanguageParser._ATN, 
+            new CommonTokenStream(lexer));
 
         parser.removeErrorListeners();
         parser.addErrorListener(new ErrorListener());
         parser.setErrorHandler(new FuzzyKeywordErrorCorrection());
         try {
-            var antlr4result = parser.ruleReactionsFile();
+            var antlr4result = parser.parse(
+                DebugInternalReactionsLanguageParser.RULE_ruleReactionsFile
+            );
             // Report parser errors
             System.out.println(antlr4result.toInfoString(parser));
         }
