@@ -2,18 +2,34 @@ package tools.vitruv.reactionsparser.parser;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-
-
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Map;
 import java.util.Set;
 
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.InputMismatchException;
 import java.util.function.BiConsumer;
 
+import org.antlr.v4.runtime.Parser;
+import org.antlr.v4.runtime.ANTLRFileStream;
+import org.antlr.v4.runtime.BaseErrorListener;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.DefaultErrorStrategy;
+import org.antlr.v4.runtime.RecognitionException;
+import org.antlr.v4.runtime.Recognizer;
+import org.antlr.v4.runtime.TokenStreamRewriter;
 import org.eclipse.emf.common.util.URI;
 
 import org.eclipse.emf.ecore.EClass;
@@ -35,19 +51,136 @@ import org.eclipse.xtext.xbase.XMemberFeatureCall;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-
+import org.antlr.v4.tool.Grammar;
 import tools.vitruv.dsls.reactions.ReactionsLanguageStandaloneSetup;
 import tools.vitruv.dsls.reactions.language.ModelAttributeReplacedChange;
 import tools.vitruv.dsls.reactions.language.ModelElementChange;
 import tools.vitruv.dsls.reactions.language.toplevelelements.ReactionsFile;
-
-
+import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageLexer;
+import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageParser;
 
 public class IntegrationTest {
+    private static record SubstituteToken(
+        int tokenType,
+        String content,
+        int distance
+    ) {};
 
     @BeforeAll
     public static void setupAll() {
         ReactionsLanguageStandaloneSetup.doSetup();
+    }
+
+    private static class FuzzyKeywordErrorCorrection extends DefaultErrorStrategy {
+        @Override
+        public void recover(Parser parser, RecognitionException exception) {
+            if (exception instanceof org.antlr.v4.runtime.InputMismatchException) {
+                var recognitionException = (org.antlr.v4.runtime.InputMismatchException) exception;
+                // What token caused the error?
+                var errorToken = recognitionException.getOffendingToken();
+                var content = errorToken.getText();
+    
+                // What literals could we expect?
+                var expectedTokens = exception.getExpectedTokens();
+                var expectedLiterals = expectedTokens
+                    .toList()
+                    .stream()
+                    .filter(type -> parser.getVocabulary().getLiteralName(type) != null)
+                    .map(type -> new SubstituteToken(
+                        type, 
+                        parser.getVocabulary().getLiteralName(type), 
+                        levenshteinDistance(content, parser.getVocabulary().getLiteralName(type))
+                    ))
+                    .toList();
+                expectedLiterals = new ArrayList<>(expectedLiterals); 
+
+                // What literal fits best, i.e. has minimum editing costs?
+                Collections.sort(expectedLiterals, (token1, token2) -> {
+                    return token1.distance() - token2.distance();
+                });
+                System.out.println("Possible substitutes: " + expectedLiterals);
+
+                // Rewrite to most suitable token
+                // GetMissingSymbol, singleTokenInsertion, singleTokenDeletion
+                if (!expectedLiterals.isEmpty()) {
+                    var alternative = expectedLiterals.get(0);
+                    System.err.println("Replacing with " + alternative);
+                }
+            }
+            else {
+                super.recover(parser, exception);
+            }
+        }
+    
+        private int levenshteinDistance(String tokenToFix, String alternativeToken) {
+            alternativeToken = alternativeToken.substring(1, alternativeToken.length() - 1);
+            var m = tokenToFix.length();
+            var n = alternativeToken.length();
+
+            int [][] distances = new int[m + 1][n + 1];
+            for (var i = 1; i <= m; i++) {
+                distances[i][0] = i;
+            }
+            for (var j = 1; j <= n; j++) {
+                distances[0][j] = j;
+            }
+            for (var i = 1; i <= m; i++) {
+                for (var j = 1; j <= n; j++) {
+                    int substitutionCost = tokenToFix.charAt(i - 1) != alternativeToken.charAt(j - 1) ? 1 : 0;
+                    int bestCost = distances[i - 1][j - 1] + substitutionCost;
+                    bestCost = Math.min(bestCost, distances[i - 1][j] + 1);
+                    bestCost = Math.min(bestCost, distances[i][j - 1] + 1);
+                    distances[i][j] = bestCost;
+                }
+            }
+            return distances[m][n];
+        }
+    }
+
+    private static class ErrorListener extends BaseErrorListener {
+        private long parserErrorCount = 0;
+    
+        @Override
+        public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine,
+                String msg, RecognitionException e) {
+            parserErrorCount++;
+            var stack = ((Parser) recognizer).getRuleInvocationStack();
+            //Collections.reverse(stack);
+            System.err.println("Parser Error " + parserErrorCount);
+            System.err.println("Symbol: " + stack.get(0) + ":");
+            System.err.println("Position: Line " + line + ", Column " + charPositionInLine);
+            System.err.println("Error: " + msg);
+            System.err.println("Cause: " + offendingSymbol);
+        }
+    }
+
+
+
+    @Test
+    void testPlainANTLRParser() throws
+        RecognitionException,
+        IllegalArgumentException,
+        IOException {      
+        var path = "template.reactions";
+
+        var charStream = CharStreams.fromFileName(resourcePath(path));
+        var lexer = new DebugInternalReactionsLanguageLexer(charStream);
+        var parser =  new DebugInternalReactionsLanguageParser(new CommonTokenStream(lexer, 0));
+
+        var grammarFirstTokenGetter = new FirstTokenOfRulesRecognizer(resourcePath("Hello.g4"));
+
+        parser.removeErrorListeners();
+        parser.addErrorListener(new ErrorListener());
+        parser.setErrorHandler(new FuzzyKeywordErrorCorrection());
+        try {
+            var antlr4result = parser.ruleReactionsFile();
+            // Report parser errors
+            System.out.println(antlr4result.toInfoString(parser));
+        }
+        catch (RecognitionException re) {
+            System.err.println("Parser error: " + re);
+            throw re;
+        }
     }
 
     @Test
@@ -60,8 +193,8 @@ public class IntegrationTest {
         var parser = new GenericXtextParser();
         ReactionsFile result = null;
         try {
-            String inputPath = resourcePath(inputFile);
-            result = (ReactionsFile) parser.parse(inputPath);
+            String inputPath = resourcePath(inputFile);           
+            result = (ReactionsFile) parser.getParseResult(inputPath);
         } catch (Exception e) {
             fail("Parsing failed for " + inputFile + ": " + e.getMessage());
         }
