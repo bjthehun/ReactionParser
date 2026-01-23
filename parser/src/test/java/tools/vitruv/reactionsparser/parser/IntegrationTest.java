@@ -90,6 +90,7 @@ public class IntegrationTest {
     
                 // What literals could we expect?
                 var expectedTokens = exception.getExpectedTokens();
+                // TODO Systematically explore parsing with different tokens
                 var expectedLiterals = expectedTokens
                     .toList()
                     .stream()
