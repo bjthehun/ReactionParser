@@ -33,6 +33,11 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
     private int keywordTokenType = -1;
     private Token errorToken = null;
 
+    private String removeSingleQuotes(String literalText) {
+        var length = literalText.length();
+        return literalText.substring(1, length - 1);
+    }
+
     @Override
     public void recover(Parser parser, RecognitionException exception) {
         if (exception instanceof InputMismatchException) {
@@ -49,8 +54,9 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
                 .filter(type -> parser.getVocabulary().getLiteralName(type) != null)
                 .map(type -> new SubstituteToken(
                     type, 
-                    parser.getVocabulary().getLiteralName(type), 
-                    levenshteinDistance(content, parser.getVocabulary().getLiteralName(type))
+                    removeSingleQuotes(parser.getVocabulary().getLiteralName(type)), 
+                    levenshteinDistance(content, 
+                        removeSingleQuotes(parser.getVocabulary().getLiteralName(type)))
                 ))
                 .toList();
             expectedLiterals = new ArrayList<>(expectedLiterals); 
@@ -77,7 +83,9 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
     void exploreAlternative(Parser parser, SubstituteToken alternativeToken, InputMismatchException mismatchException) {
         System.out.println("Exploring alternative: " + alternativeToken);
         // Update token stream to work with alternative
-        var manipulatedTokenStream = new TokenStreamRewriter(parser.getTokenStream());
+        var originalTokenStream = (CommonTokenStream) parser.getTokenStream();
+        originalTokenStream.fill();
+        var manipulatedTokenStream = new TokenStreamRewriter(originalTokenStream);
         manipulatedTokenStream.replace(
             mismatchException.getOffendingToken().getTokenIndex(),
             alternativeToken.content);
@@ -89,7 +97,6 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
             parser.getVocabulary(),
             Arrays.asList(parser.getRuleNames()),
             parser.getATN(),
-            // TODO: This new token stream only has text including up to the replaced token
             new CommonTokenStream(new DebugInternalReactionsLanguageLexer(CharStreams.fromString(manipulatedText)))
         );
         interpreter.setErrorHandler(new ANTLRErrorRecoveryExplorer());
@@ -111,7 +118,6 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
     }
 
     private int levenshteinDistance(String tokenToFix, String alternativeToken) {
-        alternativeToken = alternativeToken.substring(1, alternativeToken.length() - 1);
         var m = tokenToFix.length();
         var n = alternativeToken.length();
 
