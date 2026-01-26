@@ -6,6 +6,8 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.lang.model.type.ErrorType;
+
 import org.antlr.v4.runtime.ANTLRErrorListener;
 import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.BufferedTokenStream;
@@ -33,9 +35,8 @@ public class ANTLRErrorRecoveryExplorer {
     /**
      * Substitute token for replacing incorrect tokens.
      */
-    private static record SubstituteToken(
-        int tokenType,
-        int tokenPosition,
+    public static record SubstituteToken(
+        Token originalToken,
         String content,
         int distance
     ) {};
@@ -134,8 +135,7 @@ public class ANTLRErrorRecoveryExplorer {
                 .stream()
                 .filter(type -> parser.getVocabulary().getLiteralName(type) != null)
                 .map(type -> new SubstituteToken(
-                    type, 
-                    errorToken.getTokenIndex(),
+                    errorToken,
                     removeSingleQuotes(parser.getVocabulary().getLiteralName(type)), 
                     levenshteinDistance(content, 
                         removeSingleQuotes(parser.getVocabulary().getLiteralName(type)))

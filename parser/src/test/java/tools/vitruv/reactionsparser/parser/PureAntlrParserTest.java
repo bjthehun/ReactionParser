@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 import org.antlr.runtime.RecognitionException;
 import org.antlr.v4.tool.Grammar;
@@ -91,10 +89,10 @@ public class PureAntlrParserTest {
     @Test
     void testFileWithUnknownErrors() throws IOException, RecognitionException {
         var grammarFileName = resourcePath("DebugInternalReactionsLanguage.g4");
-        var grammarText = getTextFromFile(grammarFileName);
+        var grammarText = ParserUtils.getTextFromFile(grammarFileName);
 
         var fixedParserResult = 
-            new ANTLRErrorRecoveryExplorer(getTextFromFile(resourcePath("with_interesting_errors.reactions")),
+            new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_interesting_errors.reactions")),
             new Grammar(grammarFileName, grammarText)
         )
         .findCorrectSubstituteTokens();
@@ -105,22 +103,14 @@ public class PureAntlrParserTest {
     @Test
     void testFileWithMissingContent() throws IOException, RecognitionException {
         var grammarFileName = resourcePath("DebugInternalReactionsLanguage.g4");
-        var grammarText = getTextFromFile(grammarFileName);
+        var grammarText = ParserUtils.getTextFromFile(grammarFileName);
 
         var fixedParserResult = 
-            new ANTLRErrorRecoveryExplorer(getTextFromFile(resourcePath("with_missing_content.reactions")),
+            new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_missing_content.reactions")),
             new Grammar(grammarFileName, grammarText)
         )
         .findCorrectSubstituteTokens();
-        
         assertEquals(2, fixedParserResult.size());
-    }
-
-    private String getTextFromFile(String fileName) throws IOException {
-        return Files.readAllLines(Path.of(fileName))
-            .stream()
-            .map(line -> line + System.lineSeparator())
-            .reduce("", (text1, text2) -> text1 + text2);
     }
 
     private String resourcePath(String fileName) {

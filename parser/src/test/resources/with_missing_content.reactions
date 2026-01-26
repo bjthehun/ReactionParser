@@ -10,7 +10,7 @@ reaction TestReaction {
 }
 
 routine doSomething (ascet::Task task){
-	match{
+	batch{
 		val x = retrieve ascet::Task corresponding to task
 	}
-	}
+	

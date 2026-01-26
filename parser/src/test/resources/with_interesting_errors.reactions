@@ -10,9 +10,13 @@ reaction TestReaction {
 }
 
 routine doSomething (ascet::Task task){
+	// batch should be match
+	// ANTLR finds this syntax error
 	batch{
 		val x = retrieve ascet::Task corresponding to task
 	}
+	// updat should be update
+	// ANTLR misses this error
 	updat{
 		removeObject(x)
 	}

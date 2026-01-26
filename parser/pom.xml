@@ -18,6 +18,75 @@
   <name>Reactions Parser</name>
   <description />
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>tools.vitruv.reactionsparser.parser.ReactionsErrorReporter</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+
+      <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-shade-plugin</artifactId>
+              <version>3.5.0</version>
+              <executions>
+                  <execution>
+                      <phase>package</phase>
+                      <goals>
+                          <goal>shade</goal>
+                      </goals>
+                      <configuration>
+                          <!-- Do not generate a dependency-reduced POM because
+                                this would interfere with installation into local
+                                repositories.  Instead attach the shaded
+                                artifact alongside the normal one. -->
+                          <createDependencyReducedPom>false</createDependencyReducedPom>
+                          <shadedArtifactAttached>true</shadedArtifactAttached>
+                          <shadedClassifierName>all</shadedClassifierName>
+                          <!-- Explicitly include all classes from the EMF
+                                utilities wrapper.  Without this filter the
+                                classes would be omitted because the wrapper is
+                                provided via a p2 repository rather than the
+                                Maven reactor. -->
+                          <filters>
+                              <filter>
+                                  <artifact>tools.vitruv:tools.vitruv.change.p2wrappers.emfutils</artifact>
+                                  <includes>
+                                      <include>**</include>
+                                  </includes>
+                              </filter>
+                          <!-- Exclude these manifest files from all dependencies -->
+                              <filter>
+                                  <artifact>*:*</artifact>
+                                  <excludes>
+                                  <exclude>META-INF/*.SF</exclude>
+                                  <exclude>META-INF/*.DSA</exclude>
+                                  <exclude>META-INF/*.RSA</exclude>
+                                  </excludes>
+                              </filter>
+                          </filters>
+                          <!-- Ensure that the MANIFEST.MF in the shaded jar
+                                contains the correct Main-Class entry. -->
+                          <transformers>
+                              <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                  <mainClass>tools.vitruv.reactionsparser.parser.ReactionsErrorReporter</mainClass>
+                              </transformer>
+                          </transformers>
+                      </configuration>
+                  </execution>
+              </executions>
+            </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>org.antlr</groupId>
@@ -26,10 +95,6 @@
     <dependency>
       <groupId>org.antlr</groupId>
       <artifactId>antlr4</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.antlr</groupId>
-      <artifactId>antlr4-runtime</artifactId>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
