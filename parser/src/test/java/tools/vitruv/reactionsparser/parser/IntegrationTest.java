@@ -65,105 +65,9 @@ import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageL
 import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageParser;
 
 public class IntegrationTest {
-    private static record SubstituteToken(
-        int tokenType,
-        String content,
-        int distance
-    ) {};
-
     @BeforeAll
     public static void setupAll() {
         ReactionsLanguageStandaloneSetup.doSetup();
-    }
-
-    private static class FuzzyKeywordErrorCorrection extends DefaultErrorStrategy {
-        private int keywordTokenType = -1;
-        private Token errorToken = null;
-
-        @Override
-        public void recover(Parser parser, RecognitionException exception) {
-            if (exception instanceof org.antlr.v4.runtime.InputMismatchException) {
-                var recognitionException = (org.antlr.v4.runtime.InputMismatchException) exception;
-                // What token caused the error?
-                errorToken = recognitionException.getOffendingToken();
-                var content = errorToken.getText();
-    
-                // What literals could we expect?
-                var expectedTokens = exception.getExpectedTokens();
-                // TODO Systematically explore parsing with different tokens
-                var expectedLiterals = expectedTokens
-                    .toList()
-                    .stream()
-                    .filter(type -> parser.getVocabulary().getLiteralName(type) != null)
-                    .map(type -> new SubstituteToken(
-                        type, 
-                        parser.getVocabulary().getLiteralName(type), 
-                        levenshteinDistance(content, parser.getVocabulary().getLiteralName(type))
-                    ))
-                    .toList();
-                expectedLiterals = new ArrayList<>(expectedLiterals); 
-
-                // What literal fits best, i.e. has minimum editing costs?
-                Collections.sort(expectedLiterals, (token1, token2) -> {
-                    return token1.distance() - token2.distance();
-                });
-                System.out.println("Possible substitutes: " + expectedLiterals);
-
-                // Rewrite to most suitable token
-                if (!expectedLiterals.isEmpty()) {
-                    var alternative = expectedLiterals.get(0);
-                    keywordTokenType = alternative.tokenType;
-                    System.err.println("Replacing with " + alternative);
-                    // Match and consume "correct" token, pretend to have parsed that token
-                    parser.match(keywordTokenType);
-                    parser.consume();
-                    // Return to previous state
-                    parser.setState(recognitionException.getOffendingState());
-                }
-                else {
-                    super.recover(parser, recognitionException);
-                }
-            }
-            else {
-                super.recover(parser, exception);
-            }
-        }
-
-        @Override
-        public Token recoverInline(Parser parser) {
-            if (keywordTokenType == -1) {
-                return super.recoverInline(parser);
-            }
-            var replacement = new CommonToken(errorToken);
-            replacement.setType(keywordTokenType);
-            replacement.setText(parser.getVocabulary().getLiteralName(keywordTokenType));
-            keywordTokenType = -1;
-            return replacement;
-        }
-    
-        private int levenshteinDistance(String tokenToFix, String alternativeToken) {
-            alternativeToken = alternativeToken.substring(1, alternativeToken.length() - 1);
-            var m = tokenToFix.length();
-            var n = alternativeToken.length();
-
-            int [][] distances = new int[m + 1][n + 1];
-            for (var i = 1; i <= m; i++) {
-                distances[i][0] = i;
-            }
-            for (var j = 1; j <= n; j++) {
-                distances[0][j] = j;
-            }
-            for (var i = 1; i <= m; i++) {
-                for (var j = 1; j <= n; j++) {
-                    int substitutionCost = tokenToFix.charAt(i - 1) != alternativeToken.charAt(j - 1) ? 1 : 0;
-                    int bestCost = distances[i - 1][j - 1] + substitutionCost;
-                    bestCost = Math.min(bestCost, distances[i - 1][j] + 1);
-                    bestCost = Math.min(bestCost, distances[i][j - 1] + 1);
-                    distances[i][j] = bestCost;
-                }
-            }
-            return distances[m][n];
-        }
     }
 
     private static class ErrorListener extends BaseErrorListener {
@@ -203,7 +107,7 @@ public class IntegrationTest {
 
         parser.removeErrorListeners();
         parser.addErrorListener(new ErrorListener());
-        parser.setErrorHandler(new FuzzyKeywordErrorCorrection());
+        parser.setErrorHandler(new ANTLRErrorRecoveryExplorer());
         try {
             var antlr4result = parser.parse(
                 DebugInternalReactionsLanguageParser.RULE_ruleReactionsFile
