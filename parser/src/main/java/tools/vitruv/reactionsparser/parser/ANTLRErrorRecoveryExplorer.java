@@ -3,7 +3,11 @@ package tools.vitruv.reactionsparser.parser;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
+import org.antlr.v4.runtime.ANTLRErrorListener;
+import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.BufferedTokenStream;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
@@ -13,47 +17,125 @@ import org.antlr.v4.runtime.DefaultErrorStrategy;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.ParserInterpreter;
 import org.antlr.v4.runtime.RecognitionException;
+import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.TokenSource;
 import org.antlr.v4.runtime.TokenStreamRewriter;
 import org.antlr.v4.runtime.atn.ParserATNSimulator;
 import org.antlr.v4.runtime.misc.Interval;
+import org.antlr.v4.tool.Grammar;
 
 import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageLexer;
 
 import org.antlr.v4.runtime.InputMismatchException;
 
-public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
+public class ANTLRErrorRecoveryExplorer {
+    /**
+     * Substitute token for replacing incorrect tokens.
+     */
     private static record SubstituteToken(
         int tokenType,
+        int tokenPosition,
         String content,
         int distance
     ) {};
-    
-    private int keywordTokenType = -1;
-    private Token errorToken = null;
 
-    private String removeSingleQuotes(String literalText) {
-        var length = literalText.length();
-        return literalText.substring(1, length - 1);
+    private static class InputMismatchReporter extends BaseErrorListener {
+        public InputMismatchReporter(ANTLRErrorRecoveryExplorer explorer) {
+            this.explorer = explorer;
+        }
+        private ANTLRErrorRecoveryExplorer explorer;
+
+        @Override
+        public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line,
+                int charPositionInLine, String msg, RecognitionException e) {
+            explorer.parserErrorOccurred = true;
+            if (e instanceof InputMismatchException inputMismatch
+                && explorer.inputMismatch == null
+            ) {
+                explorer.inputMismatch = inputMismatch;
+            }
+        }
     }
 
-    @Override
-    public void recover(Parser parser, RecognitionException exception) {
-        if (exception instanceof InputMismatchException) {
-            var recognitionException = (InputMismatchException) exception;
+    /**
+     * Text of the program to parse
+     */
+    private final String programText;
+    /**
+     * Grammar for constructing other explorer instances
+     */
+    private final Grammar grammar;
+    /**
+     * Did we encounter a parser error (yet)?;
+     */
+    private boolean parserErrorOccurred = false;
+    /**
+     * Tells us about a token causing a parser error.
+     */
+    private InputMismatchException inputMismatch;
+    /**
+     * Possible alternative token.
+     */
+    private final SubstituteToken substituteToken;
+
+    /**
+     * Creates a new recoverer.
+     * 
+     * @param reactionsText
+     * @param grammar
+     */
+    public ANTLRErrorRecoveryExplorer(String reactionsText, Grammar grammar) {
+        this(reactionsText, grammar, null);
+    }
+
+    /**
+     * Creates a new recoverer.
+     * 
+     * @param reactionsText
+     * @param grammar
+     * @param substituteToken
+     */
+    private ANTLRErrorRecoveryExplorer(String reactionsText, Grammar grammar, SubstituteToken substituteToken) {
+        this.programText = reactionsText;
+        this.grammar = grammar;
+        this.substituteToken = substituteToken;
+    }
+
+    public List<SubstituteToken> findCorrectSubstituteTokens() {
+        // Set up parser
+        ParserInterpreter parser = new ParserInterpreter(
+            grammar.fileName,
+            grammar.getVocabulary(),
+            Arrays.asList(grammar.getRuleNames()), 
+            grammar.atn, 
+            new CommonTokenStream(
+                new DebugInternalReactionsLanguageLexer(
+                    CharStreams.fromString(programText))
+                )
+            );
+        // Intercept wrong token problems
+        parser.addErrorListener(new InputMismatchReporter(this));
+        parser.parse(0);
+
+        if (!parserErrorOccurred) {
+            return new LinkedList<SubstituteToken>();
+        }
+
+        if (inputMismatch != null) {
             // What token caused the error?
-            errorToken = recognitionException.getOffendingToken();
+            var errorToken = inputMismatch.getOffendingToken();
             var content = errorToken.getText();
 
             // What literals could we expect?
-            var expectedTokens = exception.getExpectedTokens();
+            var expectedTokens = inputMismatch.getExpectedTokens();
             var expectedLiterals = expectedTokens
                 .toList()
                 .stream()
                 .filter(type -> parser.getVocabulary().getLiteralName(type) != null)
                 .map(type -> new SubstituteToken(
                     type, 
+                    errorToken.getTokenIndex(),
                     removeSingleQuotes(parser.getVocabulary().getLiteralName(type)), 
                     levenshteinDistance(content, 
                         removeSingleQuotes(parser.getVocabulary().getLiteralName(type)))
@@ -65,22 +147,29 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
             Collections.sort(expectedLiterals, (token1, token2) -> {
                 return token1.distance() - token2.distance();
             });
-
-            if (expectedLiterals.isEmpty()) {
-                super.recover(parser, recognitionException);
-            }
             // Rewrite to most suitable token
             // Try alternatives based on editing costs
             for (var alternative: expectedLiterals) {
-                exploreAlternative(parser, alternative, recognitionException);
+                var tokenFixes = exploreAlternative(parser, alternative, inputMismatch);
+                if (tokenFixes != null) {
+                    tokenFixes.add(alternative);
+                }
+                return tokenFixes;
             }
         }
-        else {
-            super.recover(parser, exception);
-        }
+        return null;
+    }
+    
+    private String removeSingleQuotes(String literalText) {
+        var length = literalText.length();
+        return literalText.substring(1, length - 1);
     }
 
-    void exploreAlternative(Parser parser, SubstituteToken alternativeToken, InputMismatchException mismatchException) {
+    private List<SubstituteToken> exploreAlternative(
+        Parser parser,
+        SubstituteToken alternativeToken,
+        InputMismatchException mismatchException) {
+        
         System.out.println("Exploring alternative: " + alternativeToken);
         // Update token stream to work with alternative
         var originalTokenStream = (CommonTokenStream) parser.getTokenStream();
@@ -91,30 +180,8 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
             alternativeToken.content);
         var manipulatedText = manipulatedTokenStream.getText();
 
-        // Create new parser interpreter from current data
-        var interpreter = new ParserInterpreter(
-            parser.getGrammarFileName(), 
-            parser.getVocabulary(),
-            Arrays.asList(parser.getRuleNames()),
-            parser.getATN(),
-            new CommonTokenStream(new DebugInternalReactionsLanguageLexer(CharStreams.fromString(manipulatedText)))
-        );
-        interpreter.setErrorHandler(new ANTLRErrorRecoveryExplorer());
-        interpreter.parse(0);
-    }
-
-    @Override
-    public Token recoverInline(Parser parser) {
-        if (keywordTokenType == -1) {
-            return super.recoverInline(parser);
-        }
-        // Produce "correct token".
-        parser.consume();
-        var replacement = new CommonToken(errorToken);
-        replacement.setType(keywordTokenType);
-        replacement.setText(parser.getVocabulary().getLiteralName(keywordTokenType));
-        keywordTokenType = -1;
-        return replacement;
+        // Try out alternative
+        return new ANTLRErrorRecoveryExplorer(manipulatedText, grammar, alternativeToken).findCorrectSubstituteTokens();
     }
 
     private int levenshteinDistance(String tokenToFix, String alternativeToken) {

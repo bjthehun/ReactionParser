@@ -4,7 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
+import org.antlr.runtime.RecognitionException;
+import org.antlr.v4.tool.Grammar;
 import org.junit.jupiter.api.Test;
 
 public class PureAntlrParserTest {
@@ -85,14 +89,24 @@ public class PureAntlrParserTest {
     }
 
     @Test
-    void testFileWithUnknownErrors() throws IOException {
-        var parser = new PureAntlrParser();
-        var resultWithErrors = parser.parseWithCustomErrorStrategy(
-            resourcePath("with_interesting_errors.reactions"),
-            new ANTLRErrorRecoveryExplorer()
-        );
+    void testFileWithUnknownErrors() throws IOException, RecognitionException {
+        var grammarFileName = resourcePath("DebugInternalReactionsLanguage.g4");
+        var grammarText = getTextFromFile(grammarFileName);
 
-        assertEquals(2, resultWithErrors.getErrorCount(), "Expecting two parser errors");
+        var fixedParserResult = 
+            new ANTLRErrorRecoveryExplorer(getTextFromFile(resourcePath("template2.reactions")),
+            new Grammar(grammarFileName, grammarText)
+        )
+        .findCorrectSubstituteTokens();
+        
+        assertEquals(2, fixedParserResult.size());
+    }
+
+    private String getTextFromFile(String fileName) throws IOException {
+        return Files.readAllLines(Path.of(fileName))
+            .stream()
+            .map(line -> line + System.lineSeparator())
+            .reduce("", (text1, text2) -> text1 + text2);
     }
 
     private String resourcePath(String fileName) {
