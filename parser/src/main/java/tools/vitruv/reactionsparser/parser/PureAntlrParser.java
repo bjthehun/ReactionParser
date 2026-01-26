@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.antlr.v4.runtime.ANTLRErrorStrategy;
 import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.DefaultErrorStrategy;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
@@ -20,6 +22,9 @@ import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageP
  * No Xtext dependencies - just counts syntax errors.
  */
 public class PureAntlrParser {
+    /**
+     * 
+     */
 
     /**
      * Represents a syntax error found during parsing.
@@ -83,18 +88,13 @@ public class PureAntlrParser {
         }
     }
 
-    /**
-     * Parse a reactions file and return the result with error count.
-     *
-     * @param filePath Path to the .reactions file
-     * @return ParseResult containing parse tree and list of syntax errors
-     * @throws IOException if file cannot be read
-     */
-    public ParseResult parse(String filePath) throws IOException {
+    public ParseResult parseWithCustomErrorStrategy(String filePath, ANTLRErrorStrategy strategy) 
+        throws IOException {
         var charStream = CharStreams.fromFileName(filePath);
         var lexer = new DebugInternalReactionsLanguageLexer(charStream);
         var tokens = new CommonTokenStream(lexer);
         var parser = new DebugInternalReactionsLanguageParser(tokens);
+        parser.setErrorHandler(strategy);
 
         // Remove default error listeners and add our collecting listener
         var errorListener = new CollectingErrorListener();
@@ -107,6 +107,17 @@ public class PureAntlrParser {
         var parseTree = parser.ruleReactionsFile();
 
         return new ParseResult(parseTree, errorListener.getErrors());
+    }
+
+    /**
+     * Parse a reactions file and return the result with error count.
+     *
+     * @param filePath Path to the .reactions file
+     * @return ParseResult containing parse tree and list of syntax errors
+     * @throws IOException if file cannot be read
+     */
+    public ParseResult parse(String filePath) throws IOException {
+        return parseWithCustomErrorStrategy(filePath, new DefaultErrorStrategy());
     }
 
     /**

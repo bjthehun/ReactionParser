@@ -1,0 +1,19 @@
+import "http://vitruv.tools/reactionsparser/model" as ascet
+
+reactions: test2
+in reaction to changes in ascet
+execute actions in ascet
+
+reaction TestReaction {
+	after element ascet::Task deleted
+	call doSomething(affectedEObject)
+}
+
+routine doSomething (ascet::Task task){
+	batch{
+		val x = retrieve ascet::Task corresponding to task
+	}
+	updat{
+		removeObject(x)
+	}
+}

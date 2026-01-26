@@ -1,5 +1,5 @@
 package tools.vitruv.reactionsparser.parser.antlr;
-// Generated from DebugInternalReactionsLanguage.g4 by ANTLR 4.13.2
+// Generated from parser/src/main/resources/DebugInternalReactionsLanguage.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -161,32 +161,6 @@ public class DebugInternalReactionsLanguageLexer extends Lexer {
 
 	@Override
 	public ATN getATN() { return _ATN; }
-
-	@Override
-	public void action(RuleContext _localctx, int ruleIndex, int actionIndex) {
-		switch (ruleIndex) {
-		case 121:
-			RULE_SL_COMMENT_action((RuleContext)_localctx, actionIndex);
-			break;
-		case 122:
-			RULE_WS_action((RuleContext)_localctx, actionIndex);
-			break;
-		}
-	}
-	private void RULE_SL_COMMENT_action(RuleContext _localctx, int actionIndex) {
-		switch (actionIndex) {
-		case 0:
-			skip();
-			break;
-		}
-	}
-	private void RULE_WS_action(RuleContext _localctx, int actionIndex) {
-		switch (actionIndex) {
-		case 1:
-			skip();
-			break;
-		}
-	}
 
 	public static final String _serializedATN =
 		"\u0004\u0000|\u03b3\u0006\uffff\uffff\u0002\u0000\u0007\u0000\u0002\u0001"+
@@ -749,11 +723,11 @@ public class DebugInternalReactionsLanguageLexer extends Lexer {
 		"\u03a9\u00f4\u0001\u0000\u0000\u0000\u03aa\u03ac\u0007\u000e\u0000\u0000"+
 		"\u03ab\u03aa\u0001\u0000\u0000\u0000\u03ac\u03ad\u0001\u0000\u0000\u0000"+
 		"\u03ad\u03ab\u0001\u0000\u0000\u0000\u03ad\u03ae\u0001\u0000\u0000\u0000"+
-		"\u03ae\u03af\u0001\u0000\u0000\u0000\u03af\u03b0\u0006z\u0001\u0000\u03b0"+
+		"\u03ae\u03af\u0001\u0000\u0000\u0000\u03af\u03b0\u0006z\u0000\u0000\u03b0"+
 		"\u00f6\u0001\u0000\u0000\u0000\u03b1\u03b2\t\u0000\u0000\u0000\u03b2\u00f8"+
 		"\u0001\u0000\u0000\u0000\u0017\u0000\u0346\u034b\u0351\u0353\u0359\u035f"+
 		"\u0362\u0367\u036a\u0370\u0377\u0379\u037d\u0383\u0385\u0389\u038b\u0393"+
-		"\u039f\u03a3\u03a6\u03ad\u0002\u0001y\u0000\u0001z\u0001";
+		"\u039f\u03a3\u03a6\u03ad\u0001\u0000\u0001\u0000";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

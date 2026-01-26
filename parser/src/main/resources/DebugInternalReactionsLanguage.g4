@@ -1481,8 +1481,10 @@ RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
 // Single Line Comment:
 // "//" followed by anything other than newline
-RULE_SL_COMMENT : '//' ~('\n'|'\r')* ('\r'? '\n')? {skip();};
+// Comments are unparsed, but still in the token stream
+RULE_SL_COMMENT : '//' ~('\n'|'\r')* ('\r'? '\n')? -> channel(HIDDEN);
 
-RULE_WS : (' '|'\t'|'\r'|'\n')+ {skip();};
+// Whitespace also should be in the token stream for error recovery
+RULE_WS : (' '|'\t'|'\r'|'\n')+ -> channel(HIDDEN);
 
 RULE_ANY_OTHER : .;

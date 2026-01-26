@@ -4,14 +4,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+import org.antlr.v4.runtime.BufferedTokenStream;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonToken;
+import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.DefaultErrorStrategy;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.ParserInterpreter;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Token;
+import org.antlr.v4.runtime.TokenSource;
 import org.antlr.v4.runtime.TokenStreamRewriter;
 import org.antlr.v4.runtime.atn.ParserATNSimulator;
+import org.antlr.v4.runtime.misc.Interval;
+
+import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageLexer;
+
 import org.antlr.v4.runtime.InputMismatchException;
 
 public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
@@ -51,11 +60,10 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
                 return token1.distance() - token2.distance();
             });
 
-            // Rewrite to most suitable token
             if (expectedLiterals.isEmpty()) {
                 super.recover(parser, recognitionException);
             }
-
+            // Rewrite to most suitable token
             // Try alternatives based on editing costs
             for (var alternative: expectedLiterals) {
                 exploreAlternative(parser, alternative, recognitionException);
@@ -70,7 +78,10 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
         System.out.println("Exploring alternative: " + alternativeToken);
         // Update token stream to work with alternative
         var manipulatedTokenStream = new TokenStreamRewriter(parser.getTokenStream());
-        manipulatedTokenStream.replace(mismatchException.getOffendingToken(), alternativeToken.content);
+        manipulatedTokenStream.replace(
+            mismatchException.getOffendingToken().getTokenIndex(),
+            alternativeToken.content);
+        var manipulatedText = manipulatedTokenStream.getText();
 
         // Create new parser interpreter from current data
         var interpreter = new ParserInterpreter(
@@ -78,7 +89,8 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
             parser.getVocabulary(),
             Arrays.asList(parser.getRuleNames()),
             parser.getATN(),
-            parser.getTokenStream()
+            // TODO: This new token stream only has text including up to the replaced token
+            new CommonTokenStream(new DebugInternalReactionsLanguageLexer(CharStreams.fromString(manipulatedText)))
         );
         interpreter.setErrorHandler(new ANTLRErrorRecoveryExplorer());
         interpreter.parse(0);
@@ -89,6 +101,8 @@ public class ANTLRErrorRecoveryExplorer extends DefaultErrorStrategy {
         if (keywordTokenType == -1) {
             return super.recoverInline(parser);
         }
+        // Produce "correct token".
+        parser.consume();
         var replacement = new CommonToken(errorToken);
         replacement.setType(keywordTokenType);
         replacement.setText(parser.getVocabulary().getLiteralName(keywordTokenType));

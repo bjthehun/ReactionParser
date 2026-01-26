@@ -84,6 +84,17 @@ public class PureAntlrParserTest {
         assertTrue(result.hasErrors(), "Should have syntax errors");
     }
 
+    @Test
+    void testFileWithUnknownErrors() throws IOException {
+        var parser = new PureAntlrParser();
+        var resultWithErrors = parser.parseWithCustomErrorStrategy(
+            resourcePath("with_interesting_errors.reactions"),
+            new ANTLRErrorRecoveryExplorer()
+        );
+
+        assertEquals(2, resultWithErrors.getErrorCount(), "Expecting two parser errors");
+    }
+
     private String resourcePath(String fileName) {
         return new File(this.getClass().getClassLoader().getResource(fileName).getFile()).getAbsolutePath();
     }
