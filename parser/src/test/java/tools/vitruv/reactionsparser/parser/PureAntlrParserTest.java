@@ -104,6 +104,16 @@ public class PureAntlrParserTest {
         assertEquals(2, fixedParserResult.size());
     }
 
+    @Test
+    void testCorrectParseGuessingForAmaltheaToAscetExample() throws IOException, RecognitionException {
+        var parserResult =
+            new ANTLRErrorRecoveryExplorer(
+                ParserUtils.getTextFromFile(resourcePath("AmaltheaToAscet_TaskCreated.reactions"))
+            )
+            .findCorrectSubstituteTokens();
+        assertTrue(!parserResult.isEmpty());
+    }
+
     private String resourcePath(String fileName) {
         return new File(this.getClass().getClassLoader().getResource(fileName).getFile()).getAbsolutePath();
     }
