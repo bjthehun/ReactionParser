@@ -88,26 +88,17 @@ public class PureAntlrParserTest {
 
     @Test
     void testFileWithUnknownErrors() throws IOException, RecognitionException {
-        var grammarFileName = resourcePath("DebugInternalReactionsLanguage.g4");
-        var grammarText = ParserUtils.getTextFromFile(grammarFileName);
-
         var fixedParserResult = 
-            new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_interesting_errors.reactions")),
-            new Grammar(grammarFileName, grammarText)
+            new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_interesting_errors.reactions"))
         )
         .findCorrectSubstituteTokens();
-        
         assertEquals(2, fixedParserResult.size());
     }
 
     @Test
     void testFileWithMissingContent() throws IOException, RecognitionException {
-        var grammarFileName = resourcePath("DebugInternalReactionsLanguage.g4");
-        var grammarText = ParserUtils.getTextFromFile(grammarFileName);
-
         var fixedParserResult = 
-            new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_missing_content.reactions")),
-            new Grammar(grammarFileName, grammarText)
+            new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_missing_content.reactions"))
         )
         .findCorrectSubstituteTokens();
         assertEquals(2, fixedParserResult.size());

@@ -1,9 +1,10 @@
 package tools.vitruv.reactionsparser.parser;
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Collections;
 
 import org.antlr.runtime.RecognitionException;
-import org.antlr.v4.tool.Grammar;
 
 public class ReactionsErrorReporter {
     public static final String[] GUESS_CORRECT_FLAGS = {
@@ -30,9 +31,9 @@ public class ReactionsErrorReporter {
         var parseResult = parser.parseString(reactionsText);
 
         // Report results, errors
-        System.out.println("File " + filePath + " contains "
-            + (!parseResult.hasErrors() ? " none " : parseResult.getErrorCount())
-            + " errors"
+        System.out.println("File " + filePath + ": ANTLR reports "
+            + (!parseResult.hasErrors() ? " no " : parseResult.getErrorCount())
+            + (parseResult.getErrorCount() != 1 ? " errors " : " error ")
         );
         for (var parseError: parseResult.getErrors()) {
             System.out.println(parseError);
@@ -41,25 +42,26 @@ public class ReactionsErrorReporter {
         // Guess syntax error fixes, if required
         if (!shouldGuessCorrectProgram) {
             return;
-        }
-        var grammarFileName = "resources/DebugInternalReactionsLanguage.g4";
-        var grammarText = ParserUtils.getTextFromFile(grammarFileName);
-        var recoveryExplorer = new ANTLRErrorRecoveryExplorer(reactionsText, 
-            new Grammar(grammarFileName, grammarText)
-        );
+        }    
+        var recoveryExplorer = new ANTLRErrorRecoveryExplorer(reactionsText);
         var recoveryTokens = recoveryExplorer.findCorrectSubstituteTokens();
         if (recoveryTokens == null) {
             System.out.println("Cannot guess correct tokens to recover from syntax errors");
-            System.exit(0);;
+            System.exit(0);
+        }
+        else {
+            System.out.println("Syntax fixes: " + recoveryTokens.size() + " substitutions required");
         }
 
         // Translate to parser errors
+        Collections.reverse(recoveryTokens);
         var recoveryTokensAsParserErrors = recoveryTokens
             .stream()
             .map(token -> new PureAntlrParser.SyntaxError(
                 token.originalToken().getLine(), 
                 token.originalToken().getCharPositionInLine(),
-                "Use " + token.content() + " as replacement for ",
+                "Use " + token.content() + " as replacement for "
+                + token.originalToken().getText(),
                 token.originalToken()))
             .toList();
         for (var recoveryMessage : recoveryTokensAsParserErrors) {

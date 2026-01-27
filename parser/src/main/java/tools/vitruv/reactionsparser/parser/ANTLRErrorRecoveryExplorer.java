@@ -28,6 +28,7 @@ import org.antlr.v4.runtime.misc.Interval;
 import org.antlr.v4.tool.Grammar;
 
 import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageLexer;
+import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageParser;
 
 import org.antlr.v4.runtime.InputMismatchException;
 
@@ -64,10 +65,6 @@ public class ANTLRErrorRecoveryExplorer {
      */
     private final String programText;
     /**
-     * Grammar for constructing other explorer instances
-     */
-    private final Grammar grammar;
-    /**
      * Did we encounter a parser error (yet)?;
      */
     private boolean parserErrorOccurred = false;
@@ -75,20 +72,6 @@ public class ANTLRErrorRecoveryExplorer {
      * Tells us about a token causing a parser error.
      */
     private InputMismatchException inputMismatch;
-    /**
-     * Possible alternative token.
-     */
-    private final SubstituteToken substituteToken;
-
-    /**
-     * Creates a new recoverer.
-     * 
-     * @param reactionsText
-     * @param grammar
-     */
-    public ANTLRErrorRecoveryExplorer(String reactionsText, Grammar grammar) {
-        this(reactionsText, grammar, null);
-    }
 
     /**
      * Creates a new recoverer.
@@ -97,19 +80,13 @@ public class ANTLRErrorRecoveryExplorer {
      * @param grammar
      * @param substituteToken
      */
-    private ANTLRErrorRecoveryExplorer(String reactionsText, Grammar grammar, SubstituteToken substituteToken) {
+    public ANTLRErrorRecoveryExplorer(String reactionsText){
         this.programText = reactionsText;
-        this.grammar = grammar;
-        this.substituteToken = substituteToken;
     }
 
     public List<SubstituteToken> findCorrectSubstituteTokens() {
         // Set up parser
-        ParserInterpreter parser = new ParserInterpreter(
-            grammar.fileName,
-            grammar.getVocabulary(),
-            Arrays.asList(grammar.getRuleNames()), 
-            grammar.atn, 
+        DebugInternalReactionsLanguageParser parser = new DebugInternalReactionsLanguageParser(
             new CommonTokenStream(
                 new DebugInternalReactionsLanguageLexer(
                     CharStreams.fromString(programText))
@@ -117,7 +94,7 @@ public class ANTLRErrorRecoveryExplorer {
             );
         // Intercept wrong token problems
         parser.addErrorListener(new InputMismatchReporter(this));
-        parser.parse(0);
+        parser.ruleReactionsFile();
 
         if (!parserErrorOccurred) {
             return new LinkedList<SubstituteToken>();
@@ -169,8 +146,6 @@ public class ANTLRErrorRecoveryExplorer {
         Parser parser,
         SubstituteToken alternativeToken,
         InputMismatchException mismatchException) {
-        
-        System.out.println("Exploring alternative: " + alternativeToken);
         // Update token stream to work with alternative
         var originalTokenStream = (CommonTokenStream) parser.getTokenStream();
         originalTokenStream.fill();
@@ -181,7 +156,7 @@ public class ANTLRErrorRecoveryExplorer {
         var manipulatedText = manipulatedTokenStream.getText();
 
         // Try out alternative
-        return new ANTLRErrorRecoveryExplorer(manipulatedText, grammar, alternativeToken).findCorrectSubstituteTokens();
+        return new ANTLRErrorRecoveryExplorer(manipulatedText).findCorrectSubstituteTokens();
     }
 
     private int levenshteinDistance(String tokenToFix, String alternativeToken) {
