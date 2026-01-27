@@ -82,6 +82,7 @@ public class ANTLRErrorRecoveryExplorer {
                 return;
             }
 
+            explorer.recognitionException = e;
             var parser = (Parser) recognizer;
             if (e instanceof InputMismatchException
                 || msg.startsWith("extraneous")
@@ -117,9 +118,13 @@ public class ANTLRErrorRecoveryExplorer {
      */
     private Token offendingToken;
     /**
-     * Possible replacement tokens
+     * Possible replacement tokens.
      */
     private IntervalSet expectedTokens;
+    /**
+     * RecognitionExcpetion, if any.
+     */
+    private RecognitionException recognitionException;
 
     /**
      * Creates a new recoverer.
@@ -158,7 +163,9 @@ public class ANTLRErrorRecoveryExplorer {
             }
             return tokenFixes;
         }
-        
+
+        System.out.println("Failed at: ");
+        System.out.println(programText);
         return null;
     }
 
@@ -206,7 +213,7 @@ public class ANTLRErrorRecoveryExplorer {
             manipulatedTokenStream.replace(offendingToken.getTokenIndex(), action.content);
         }
         else {
-            manipulatedTokenStream.insertAfter(offendingToken.getTokenIndex(), action.content);
+            manipulatedTokenStream.insertBefore(offendingToken.getTokenIndex(), action.content + " ");
         }
         var manipulatedText = manipulatedTokenStream.getText();
 
