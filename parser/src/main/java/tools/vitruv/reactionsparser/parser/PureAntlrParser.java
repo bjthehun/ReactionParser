@@ -9,7 +9,6 @@ import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.DefaultErrorStrategy;
-import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -22,10 +21,6 @@ import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageP
  * No Xtext dependencies - just counts syntax errors.
  */
 public class PureAntlrParser {
-    /**
-     * 
-     */
-
     /**
      * Represents a syntax error found during parsing.
      */

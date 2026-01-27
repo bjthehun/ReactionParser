@@ -4,9 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.antlr.runtime.RecognitionException;
-import org.antlr.v4.tool.Grammar;
 import org.junit.jupiter.api.Test;
 
 public class PureAntlrParserTest {
@@ -91,7 +89,7 @@ public class PureAntlrParserTest {
         var fixedParserResult = 
             new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_interesting_errors.reactions"))
         )
-        .findCorrectSubstituteTokens();
+        .findCorrectingOperations();
         assertEquals(2, fixedParserResult.size());
     }
 
@@ -100,7 +98,7 @@ public class PureAntlrParserTest {
         var fixedParserResult = 
             new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_missing_content.reactions"))
         )
-        .findCorrectSubstituteTokens();
+        .findCorrectingOperations();
         assertEquals(2, fixedParserResult.size());
     }
 
@@ -110,7 +108,7 @@ public class PureAntlrParserTest {
             new ANTLRErrorRecoveryExplorer(
                 ParserUtils.getTextFromFile(resourcePath("AmaltheaToAscet_TaskCreated.reactions"))
             )
-            .findCorrectSubstituteTokens();
+            .findCorrectingOperations();
         assertTrue(!parserResult.isEmpty());
     }
 

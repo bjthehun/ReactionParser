@@ -1,7 +1,7 @@
 import "http://vitruv.tools/methodologisttemplate/amalthea" as amalthea
 import "http://vitruv.tools/methodologisttemplate/ascet" as ascet
 
-reactions amaltheaToAscet {
+transformation amaltheaToAscet {
     between amalthea and ascet
     
     reaction TaskCreated {

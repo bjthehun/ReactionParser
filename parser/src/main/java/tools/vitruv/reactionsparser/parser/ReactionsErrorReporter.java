@@ -1,7 +1,6 @@
 package tools.vitruv.reactionsparser.parser;
 
 import java.io.IOException;
-import java.util.Collection;
 import java.util.Collections;
 
 import org.antlr.runtime.RecognitionException;
@@ -44,7 +43,7 @@ public class ReactionsErrorReporter {
             return;
         }    
         var recoveryExplorer = new ANTLRErrorRecoveryExplorer(reactionsText);
-        var recoveryTokens = recoveryExplorer.findCorrectSubstituteTokens();
+        var recoveryTokens = recoveryExplorer.findCorrectingOperations();
         if (recoveryTokens == null) {
             System.out.println("Cannot guess correct tokens to recover from syntax errors");
             System.exit(0);
@@ -58,11 +57,11 @@ public class ReactionsErrorReporter {
         var recoveryTokensAsParserErrors = recoveryTokens
             .stream()
             .map(token -> new PureAntlrParser.SyntaxError(
-                token.originalToken().getLine(), 
-                token.originalToken().getCharPositionInLine(),
+                token.offendingToken().getLine(), 
+                token.offendingToken().getCharPositionInLine(),
                 "Use " + token.content() + " as replacement for "
-                + token.originalToken().getText(),
-                token.originalToken()))
+                + token.offendingToken().getText(),
+                token.offendingToken()))
             .toList();
         for (var recoveryMessage : recoveryTokensAsParserErrors) {
             System.out.println(recoveryMessage);
