@@ -99,7 +99,7 @@ public class PureAntlrParser {
         parser.addErrorListener(errorListener);
 
         // Parse starting from the root rule
-        var parseTree = parser.ruleReactionsFile();
+        var parseTree = parser.reactionsFile();
 
         return new ParseResult(parseTree, errorListener.getErrors());
     }
@@ -144,7 +144,7 @@ public class PureAntlrParser {
         parser.removeErrorListeners();
         parser.addErrorListener(errorListener);
 
-        var parseTree = parser.ruleReactionsFile();
+        var parseTree = parser.reactionsFile();
 
         return new ParseResult(parseTree, errorListener.getErrors());
     }

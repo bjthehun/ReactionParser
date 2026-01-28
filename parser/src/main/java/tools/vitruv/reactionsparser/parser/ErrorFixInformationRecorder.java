@@ -1,5 +1,6 @@
 package tools.vitruv.reactionsparser.parser;
 
+import org.antlr.v4.runtime.NoViableAltException;
 import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.InputMismatchException;
 import org.antlr.v4.runtime.Parser;
@@ -33,6 +34,11 @@ class ErrorFixInformationRecorder extends BaseErrorListener {
             explorer.actionType = RecoveryActionType.REPLACE;
             explorer.offendingToken = (Token) offendingSymbol;
             explorer.expectedTokens = parser.getExpectedTokens();
+        }
+        else if (e instanceof NoViableAltException) {
+            // No viable alternative -> delete offending token
+            explorer.actionType = RecoveryActionType.DELETE;
+            explorer.offendingToken = (Token) offendingSymbol;
         }
         else if (msg.startsWith("missing")) {
             // Missing input -> record token to insert

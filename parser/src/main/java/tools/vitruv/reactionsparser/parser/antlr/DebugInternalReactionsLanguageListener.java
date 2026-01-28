@@ -1,5 +1,7 @@
+// Generated from DebugInternalReactionsLanguage.g4 by ANTLR 4.13.2
+
 package tools.vitruv.reactionsparser.parser.antlr;
-// Generated from parser/src/main/resources/DebugInternalReactionsLanguage.g4 by ANTLR 4.13.2
+
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -8,1193 +10,1193 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface DebugInternalReactionsLanguageListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleReactionsFile}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#reactionsFile}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleReactionsFile(DebugInternalReactionsLanguageParser.RuleReactionsFileContext ctx);
+	void enterReactionsFile(DebugInternalReactionsLanguageParser.ReactionsFileContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleReactionsFile}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#reactionsFile}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleReactionsFile(DebugInternalReactionsLanguageParser.RuleReactionsFileContext ctx);
+	void exitReactionsFile(DebugInternalReactionsLanguageParser.ReactionsFileContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMetamodelImport}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#metamodelImport}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleMetamodelImport(DebugInternalReactionsLanguageParser.RuleMetamodelImportContext ctx);
+	void enterMetamodelImport(DebugInternalReactionsLanguageParser.MetamodelImportContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMetamodelImport}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#metamodelImport}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleMetamodelImport(DebugInternalReactionsLanguageParser.RuleMetamodelImportContext ctx);
+	void exitMetamodelImport(DebugInternalReactionsLanguageParser.MetamodelImportContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleReactionsSegment}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#reactionsSegment}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleReactionsSegment(DebugInternalReactionsLanguageParser.RuleReactionsSegmentContext ctx);
+	void enterReactionsSegment(DebugInternalReactionsLanguageParser.ReactionsSegmentContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleReactionsSegment}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#reactionsSegment}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleReactionsSegment(DebugInternalReactionsLanguageParser.RuleReactionsSegmentContext ctx);
+	void exitReactionsSegment(DebugInternalReactionsLanguageParser.ReactionsSegmentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleReactionsImport}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#reactionsImport}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleReactionsImport(DebugInternalReactionsLanguageParser.RuleReactionsImportContext ctx);
+	void enterReactionsImport(DebugInternalReactionsLanguageParser.ReactionsImportContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleReactionsImport}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#reactionsImport}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleReactionsImport(DebugInternalReactionsLanguageParser.RuleReactionsImportContext ctx);
+	void exitReactionsImport(DebugInternalReactionsLanguageParser.ReactionsImportContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleReaction}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#reaction}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleReaction(DebugInternalReactionsLanguageParser.RuleReactionContext ctx);
+	void enterReaction(DebugInternalReactionsLanguageParser.ReactionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleReaction}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#reaction}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleReaction(DebugInternalReactionsLanguageParser.RuleReactionContext ctx);
+	void exitReaction(DebugInternalReactionsLanguageParser.ReactionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRoutineCall}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#routineCall}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleRoutineCall(DebugInternalReactionsLanguageParser.RuleRoutineCallContext ctx);
+	void enterRoutineCall(DebugInternalReactionsLanguageParser.RoutineCallContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRoutineCall}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#routineCall}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleRoutineCall(DebugInternalReactionsLanguageParser.RuleRoutineCallContext ctx);
+	void exitRoutineCall(DebugInternalReactionsLanguageParser.RoutineCallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleTrigger}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#trigger}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleTrigger(DebugInternalReactionsLanguageParser.RuleTriggerContext ctx);
+	void enterTrigger(DebugInternalReactionsLanguageParser.TriggerContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleTrigger}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#trigger}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleTrigger(DebugInternalReactionsLanguageParser.RuleTriggerContext ctx);
+	void exitTrigger(DebugInternalReactionsLanguageParser.TriggerContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleConcreteModelChange}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#concreteModelChange}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleConcreteModelChange(DebugInternalReactionsLanguageParser.RuleConcreteModelChangeContext ctx);
+	void enterConcreteModelChange(DebugInternalReactionsLanguageParser.ConcreteModelChangeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleConcreteModelChange}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#concreteModelChange}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleConcreteModelChange(DebugInternalReactionsLanguageParser.RuleConcreteModelChangeContext ctx);
+	void exitConcreteModelChange(DebugInternalReactionsLanguageParser.ConcreteModelChangeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleModelElementChange}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#modelElementChange}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleModelElementChange(DebugInternalReactionsLanguageParser.RuleModelElementChangeContext ctx);
+	void enterModelElementChange(DebugInternalReactionsLanguageParser.ModelElementChangeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleModelElementChange}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#modelElementChange}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleModelElementChange(DebugInternalReactionsLanguageParser.RuleModelElementChangeContext ctx);
+	void exitModelElementChange(DebugInternalReactionsLanguageParser.ModelElementChangeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleModelAttributeChange}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#modelAttributeChange}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleModelAttributeChange(DebugInternalReactionsLanguageParser.RuleModelAttributeChangeContext ctx);
+	void enterModelAttributeChange(DebugInternalReactionsLanguageParser.ModelAttributeChangeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleModelAttributeChange}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#modelAttributeChange}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleModelAttributeChange(DebugInternalReactionsLanguageParser.RuleModelAttributeChangeContext ctx);
+	void exitModelAttributeChange(DebugInternalReactionsLanguageParser.ModelAttributeChangeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleArbitraryModelChange}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#arbitraryModelChange}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleArbitraryModelChange(DebugInternalReactionsLanguageParser.RuleArbitraryModelChangeContext ctx);
+	void enterArbitraryModelChange(DebugInternalReactionsLanguageParser.ArbitraryModelChangeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleArbitraryModelChange}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#arbitraryModelChange}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleArbitraryModelChange(DebugInternalReactionsLanguageParser.RuleArbitraryModelChangeContext ctx);
+	void exitArbitraryModelChange(DebugInternalReactionsLanguageParser.ArbitraryModelChangeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementExistenceChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementExistenceChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementExistenceChangeType(DebugInternalReactionsLanguageParser.RuleElementExistenceChangeTypeContext ctx);
+	void enterElementExistenceChangeType(DebugInternalReactionsLanguageParser.ElementExistenceChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementExistenceChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementExistenceChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementExistenceChangeType(DebugInternalReactionsLanguageParser.RuleElementExistenceChangeTypeContext ctx);
+	void exitElementExistenceChangeType(DebugInternalReactionsLanguageParser.ElementExistenceChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementUsageChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementUsageChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementUsageChangeType(DebugInternalReactionsLanguageParser.RuleElementUsageChangeTypeContext ctx);
+	void enterElementUsageChangeType(DebugInternalReactionsLanguageParser.ElementUsageChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementUsageChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementUsageChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementUsageChangeType(DebugInternalReactionsLanguageParser.RuleElementUsageChangeTypeContext ctx);
+	void exitElementUsageChangeType(DebugInternalReactionsLanguageParser.ElementUsageChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementCreationChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementCreationChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementCreationChangeType(DebugInternalReactionsLanguageParser.RuleElementCreationChangeTypeContext ctx);
+	void enterElementCreationChangeType(DebugInternalReactionsLanguageParser.ElementCreationChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementCreationChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementCreationChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementCreationChangeType(DebugInternalReactionsLanguageParser.RuleElementCreationChangeTypeContext ctx);
+	void exitElementCreationChangeType(DebugInternalReactionsLanguageParser.ElementCreationChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementDeletionChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementDeletionChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementDeletionChangeType(DebugInternalReactionsLanguageParser.RuleElementDeletionChangeTypeContext ctx);
+	void enterElementDeletionChangeType(DebugInternalReactionsLanguageParser.ElementDeletionChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementDeletionChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementDeletionChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementDeletionChangeType(DebugInternalReactionsLanguageParser.RuleElementDeletionChangeTypeContext ctx);
+	void exitElementDeletionChangeType(DebugInternalReactionsLanguageParser.ElementDeletionChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementReferenceChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementReferenceChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementReferenceChangeType(DebugInternalReactionsLanguageParser.RuleElementReferenceChangeTypeContext ctx);
+	void enterElementReferenceChangeType(DebugInternalReactionsLanguageParser.ElementReferenceChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementReferenceChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementReferenceChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementReferenceChangeType(DebugInternalReactionsLanguageParser.RuleElementReferenceChangeTypeContext ctx);
+	void exitElementReferenceChangeType(DebugInternalReactionsLanguageParser.ElementReferenceChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementInsertionChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementInsertionChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementInsertionChangeType(DebugInternalReactionsLanguageParser.RuleElementInsertionChangeTypeContext ctx);
+	void enterElementInsertionChangeType(DebugInternalReactionsLanguageParser.ElementInsertionChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementInsertionChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementInsertionChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementInsertionChangeType(DebugInternalReactionsLanguageParser.RuleElementInsertionChangeTypeContext ctx);
+	void exitElementInsertionChangeType(DebugInternalReactionsLanguageParser.ElementInsertionChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementInsertionInListChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementInsertionInListChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementInsertionInListChangeType(DebugInternalReactionsLanguageParser.RuleElementInsertionInListChangeTypeContext ctx);
+	void enterElementInsertionInListChangeType(DebugInternalReactionsLanguageParser.ElementInsertionInListChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementInsertionInListChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementInsertionInListChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementInsertionInListChangeType(DebugInternalReactionsLanguageParser.RuleElementInsertionInListChangeTypeContext ctx);
+	void exitElementInsertionInListChangeType(DebugInternalReactionsLanguageParser.ElementInsertionInListChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementInsertionAsRootChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementInsertionAsRootChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementInsertionAsRootChangeType(DebugInternalReactionsLanguageParser.RuleElementInsertionAsRootChangeTypeContext ctx);
+	void enterElementInsertionAsRootChangeType(DebugInternalReactionsLanguageParser.ElementInsertionAsRootChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementInsertionAsRootChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementInsertionAsRootChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementInsertionAsRootChangeType(DebugInternalReactionsLanguageParser.RuleElementInsertionAsRootChangeTypeContext ctx);
+	void exitElementInsertionAsRootChangeType(DebugInternalReactionsLanguageParser.ElementInsertionAsRootChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementRemovalChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementRemovalChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementRemovalChangeType(DebugInternalReactionsLanguageParser.RuleElementRemovalChangeTypeContext ctx);
+	void enterElementRemovalChangeType(DebugInternalReactionsLanguageParser.ElementRemovalChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementRemovalChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementRemovalChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementRemovalChangeType(DebugInternalReactionsLanguageParser.RuleElementRemovalChangeTypeContext ctx);
+	void exitElementRemovalChangeType(DebugInternalReactionsLanguageParser.ElementRemovalChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementRemovalAsRootChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementRemovalAsRootChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementRemovalAsRootChangeType(DebugInternalReactionsLanguageParser.RuleElementRemovalAsRootChangeTypeContext ctx);
+	void enterElementRemovalAsRootChangeType(DebugInternalReactionsLanguageParser.ElementRemovalAsRootChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementRemovalAsRootChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementRemovalAsRootChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementRemovalAsRootChangeType(DebugInternalReactionsLanguageParser.RuleElementRemovalAsRootChangeTypeContext ctx);
+	void exitElementRemovalAsRootChangeType(DebugInternalReactionsLanguageParser.ElementRemovalAsRootChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementRemovalFromListChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementRemovalFromListChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementRemovalFromListChangeType(DebugInternalReactionsLanguageParser.RuleElementRemovalFromListChangeTypeContext ctx);
+	void enterElementRemovalFromListChangeType(DebugInternalReactionsLanguageParser.ElementRemovalFromListChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementRemovalFromListChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementRemovalFromListChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementRemovalFromListChangeType(DebugInternalReactionsLanguageParser.RuleElementRemovalFromListChangeTypeContext ctx);
+	void exitElementRemovalFromListChangeType(DebugInternalReactionsLanguageParser.ElementRemovalFromListChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementReplacementChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementReplacementChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementReplacementChangeType(DebugInternalReactionsLanguageParser.RuleElementReplacementChangeTypeContext ctx);
+	void enterElementReplacementChangeType(DebugInternalReactionsLanguageParser.ElementReplacementChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementReplacementChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementReplacementChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementReplacementChangeType(DebugInternalReactionsLanguageParser.RuleElementReplacementChangeTypeContext ctx);
+	void exitElementReplacementChangeType(DebugInternalReactionsLanguageParser.ElementReplacementChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementChangeType}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleElementChangeType(DebugInternalReactionsLanguageParser.RuleElementChangeTypeContext ctx);
+	void enterElementChangeType(DebugInternalReactionsLanguageParser.ElementChangeTypeContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleElementChangeType}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#elementChangeType}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleElementChangeType(DebugInternalReactionsLanguageParser.RuleElementChangeTypeContext ctx);
+	void exitElementChangeType(DebugInternalReactionsLanguageParser.ElementChangeTypeContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRoutine}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#routine}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleRoutine(DebugInternalReactionsLanguageParser.RuleRoutineContext ctx);
+	void enterRoutine(DebugInternalReactionsLanguageParser.RoutineContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRoutine}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#routine}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleRoutine(DebugInternalReactionsLanguageParser.RuleRoutineContext ctx);
+	void exitRoutine(DebugInternalReactionsLanguageParser.RoutineContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRoutineOverrideImportPath}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#routineOverrideImportPath}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleRoutineOverrideImportPath(DebugInternalReactionsLanguageParser.RuleRoutineOverrideImportPathContext ctx);
+	void enterRoutineOverrideImportPath(DebugInternalReactionsLanguageParser.RoutineOverrideImportPathContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRoutineOverrideImportPath}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#routineOverrideImportPath}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleRoutineOverrideImportPath(DebugInternalReactionsLanguageParser.RuleRoutineOverrideImportPathContext ctx);
+	void exitRoutineOverrideImportPath(DebugInternalReactionsLanguageParser.RoutineOverrideImportPathContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRoutineInput}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#routineInput}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleRoutineInput(DebugInternalReactionsLanguageParser.RuleRoutineInputContext ctx);
+	void enterRoutineInput(DebugInternalReactionsLanguageParser.RoutineInputContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRoutineInput}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#routineInput}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleRoutineInput(DebugInternalReactionsLanguageParser.RuleRoutineInputContext ctx);
+	void exitRoutineInput(DebugInternalReactionsLanguageParser.RoutineInputContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMatchBlock}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#matchBlock}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleMatchBlock(DebugInternalReactionsLanguageParser.RuleMatchBlockContext ctx);
+	void enterMatchBlock(DebugInternalReactionsLanguageParser.MatchBlockContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMatchBlock}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#matchBlock}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleMatchBlock(DebugInternalReactionsLanguageParser.RuleMatchBlockContext ctx);
+	void exitMatchBlock(DebugInternalReactionsLanguageParser.MatchBlockContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMatchStatement}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#matchStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleMatchStatement(DebugInternalReactionsLanguageParser.RuleMatchStatementContext ctx);
+	void enterMatchStatement(DebugInternalReactionsLanguageParser.MatchStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMatchStatement}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#matchStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleMatchStatement(DebugInternalReactionsLanguageParser.RuleMatchStatementContext ctx);
+	void exitMatchStatement(DebugInternalReactionsLanguageParser.MatchStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRetrieveOrRequireAbscenceOfModelElement}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#retrieveOrRequireAbscenceOfModelElement}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleRetrieveOrRequireAbscenceOfModelElement(DebugInternalReactionsLanguageParser.RuleRetrieveOrRequireAbscenceOfModelElementContext ctx);
+	void enterRetrieveOrRequireAbscenceOfModelElement(DebugInternalReactionsLanguageParser.RetrieveOrRequireAbscenceOfModelElementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRetrieveOrRequireAbscenceOfModelElement}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#retrieveOrRequireAbscenceOfModelElement}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleRetrieveOrRequireAbscenceOfModelElement(DebugInternalReactionsLanguageParser.RuleRetrieveOrRequireAbscenceOfModelElementContext ctx);
+	void exitRetrieveOrRequireAbscenceOfModelElement(DebugInternalReactionsLanguageParser.RetrieveOrRequireAbscenceOfModelElementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRequireAbscenceOfModelElement}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#requireAbscenceOfModelElement}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleRequireAbscenceOfModelElement(DebugInternalReactionsLanguageParser.RuleRequireAbscenceOfModelElementContext ctx);
+	void enterRequireAbscenceOfModelElement(DebugInternalReactionsLanguageParser.RequireAbscenceOfModelElementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRequireAbscenceOfModelElement}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#requireAbscenceOfModelElement}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleRequireAbscenceOfModelElement(DebugInternalReactionsLanguageParser.RuleRequireAbscenceOfModelElementContext ctx);
+	void exitRequireAbscenceOfModelElement(DebugInternalReactionsLanguageParser.RequireAbscenceOfModelElementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRetrieveModelElement}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#retrieveModelElement}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleRetrieveModelElement(DebugInternalReactionsLanguageParser.RuleRetrieveModelElementContext ctx);
+	void enterRetrieveModelElement(DebugInternalReactionsLanguageParser.RetrieveModelElementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRetrieveModelElement}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#retrieveModelElement}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleRetrieveModelElement(DebugInternalReactionsLanguageParser.RuleRetrieveModelElementContext ctx);
+	void exitRetrieveModelElement(DebugInternalReactionsLanguageParser.RetrieveModelElementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRetrieveModelElementTypeStatement}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#retrieveModelElementTypeStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleRetrieveModelElementTypeStatement(DebugInternalReactionsLanguageParser.RuleRetrieveModelElementTypeStatementContext ctx);
+	void enterRetrieveModelElementTypeStatement(DebugInternalReactionsLanguageParser.RetrieveModelElementTypeStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleRetrieveModelElementTypeStatement}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#retrieveModelElementTypeStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleRetrieveModelElementTypeStatement(DebugInternalReactionsLanguageParser.RuleRetrieveModelElementTypeStatementContext ctx);
+	void exitRetrieveModelElementTypeStatement(DebugInternalReactionsLanguageParser.RetrieveModelElementTypeStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMatchCheckStatement}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#matchCheckStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleMatchCheckStatement(DebugInternalReactionsLanguageParser.RuleMatchCheckStatementContext ctx);
+	void enterMatchCheckStatement(DebugInternalReactionsLanguageParser.MatchCheckStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMatchCheckStatement}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#matchCheckStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleMatchCheckStatement(DebugInternalReactionsLanguageParser.RuleMatchCheckStatementContext ctx);
+	void exitMatchCheckStatement(DebugInternalReactionsLanguageParser.MatchCheckStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleCreateBlock}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#createBlock}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleCreateBlock(DebugInternalReactionsLanguageParser.RuleCreateBlockContext ctx);
+	void enterCreateBlock(DebugInternalReactionsLanguageParser.CreateBlockContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleCreateBlock}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#createBlock}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleCreateBlock(DebugInternalReactionsLanguageParser.RuleCreateBlockContext ctx);
+	void exitCreateBlock(DebugInternalReactionsLanguageParser.CreateBlockContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleCreateStatement}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#createStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleCreateStatement(DebugInternalReactionsLanguageParser.RuleCreateStatementContext ctx);
+	void enterCreateStatement(DebugInternalReactionsLanguageParser.CreateStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleCreateStatement}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#createStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleCreateStatement(DebugInternalReactionsLanguageParser.RuleCreateStatementContext ctx);
+	void exitCreateStatement(DebugInternalReactionsLanguageParser.CreateStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleUpdateBlock}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#updateBlock}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleUpdateBlock(DebugInternalReactionsLanguageParser.RuleUpdateBlockContext ctx);
+	void enterUpdateBlock(DebugInternalReactionsLanguageParser.UpdateBlockContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleUpdateBlock}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#updateBlock}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleUpdateBlock(DebugInternalReactionsLanguageParser.RuleUpdateBlockContext ctx);
+	void exitUpdateBlock(DebugInternalReactionsLanguageParser.UpdateBlockContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMetaclassReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#metaclassReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleMetaclassReference(DebugInternalReactionsLanguageParser.RuleMetaclassReferenceContext ctx);
+	void enterMetaclassReference(DebugInternalReactionsLanguageParser.MetaclassReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMetaclassReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#metaclassReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleMetaclassReference(DebugInternalReactionsLanguageParser.RuleMetaclassReferenceContext ctx);
+	void exitMetaclassReference(DebugInternalReactionsLanguageParser.MetaclassReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleUnnamedMetaclassReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#unnamedMetaclassReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleUnnamedMetaclassReference(DebugInternalReactionsLanguageParser.RuleUnnamedMetaclassReferenceContext ctx);
+	void enterUnnamedMetaclassReference(DebugInternalReactionsLanguageParser.UnnamedMetaclassReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleUnnamedMetaclassReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#unnamedMetaclassReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleUnnamedMetaclassReference(DebugInternalReactionsLanguageParser.RuleUnnamedMetaclassReferenceContext ctx);
+	void exitUnnamedMetaclassReference(DebugInternalReactionsLanguageParser.UnnamedMetaclassReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleNamedMetaclassReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#namedMetaclassReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleNamedMetaclassReference(DebugInternalReactionsLanguageParser.RuleNamedMetaclassReferenceContext ctx);
+	void enterNamedMetaclassReference(DebugInternalReactionsLanguageParser.NamedMetaclassReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleNamedMetaclassReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#namedMetaclassReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleNamedMetaclassReference(DebugInternalReactionsLanguageParser.RuleNamedMetaclassReferenceContext ctx);
+	void exitNamedMetaclassReference(DebugInternalReactionsLanguageParser.NamedMetaclassReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleNamedJavaElementReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#namedJavaElementReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleNamedJavaElementReference(DebugInternalReactionsLanguageParser.RuleNamedJavaElementReferenceContext ctx);
+	void enterNamedJavaElementReference(DebugInternalReactionsLanguageParser.NamedJavaElementReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleNamedJavaElementReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#namedJavaElementReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleNamedJavaElementReference(DebugInternalReactionsLanguageParser.RuleNamedJavaElementReferenceContext ctx);
+	void exitNamedJavaElementReference(DebugInternalReactionsLanguageParser.NamedJavaElementReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMetaclassEAttributeReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#metaclassEAttributeReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleMetaclassEAttributeReference(DebugInternalReactionsLanguageParser.RuleMetaclassEAttributeReferenceContext ctx);
+	void enterMetaclassEAttributeReference(DebugInternalReactionsLanguageParser.MetaclassEAttributeReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMetaclassEAttributeReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#metaclassEAttributeReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleMetaclassEAttributeReference(DebugInternalReactionsLanguageParser.RuleMetaclassEAttributeReferenceContext ctx);
+	void exitMetaclassEAttributeReference(DebugInternalReactionsLanguageParser.MetaclassEAttributeReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMetaclassEReferenceReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#metaclassEReferenceReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleMetaclassEReferenceReference(DebugInternalReactionsLanguageParser.RuleMetaclassEReferenceReferenceContext ctx);
+	void enterMetaclassEReferenceReference(DebugInternalReactionsLanguageParser.MetaclassEReferenceReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleMetaclassEReferenceReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#metaclassEReferenceReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleMetaclassEReferenceReference(DebugInternalReactionsLanguageParser.RuleMetaclassEReferenceReferenceContext ctx);
+	void exitMetaclassEReferenceReference(DebugInternalReactionsLanguageParser.MetaclassEReferenceReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXExpression(DebugInternalReactionsLanguageParser.RuleXExpressionContext ctx);
+	void enterXExpression(DebugInternalReactionsLanguageParser.XExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXExpression(DebugInternalReactionsLanguageParser.RuleXExpressionContext ctx);
+	void exitXExpression(DebugInternalReactionsLanguageParser.XExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXAssignment}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xAssignment}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXAssignment(DebugInternalReactionsLanguageParser.RuleXAssignmentContext ctx);
+	void enterXAssignment(DebugInternalReactionsLanguageParser.XAssignmentContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXAssignment}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xAssignment}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXAssignment(DebugInternalReactionsLanguageParser.RuleXAssignmentContext ctx);
+	void exitXAssignment(DebugInternalReactionsLanguageParser.XAssignmentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpSingleAssign}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opSingleAssign}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpSingleAssign(DebugInternalReactionsLanguageParser.RuleOpSingleAssignContext ctx);
+	void enterOpSingleAssign(DebugInternalReactionsLanguageParser.OpSingleAssignContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpSingleAssign}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opSingleAssign}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpSingleAssign(DebugInternalReactionsLanguageParser.RuleOpSingleAssignContext ctx);
+	void exitOpSingleAssign(DebugInternalReactionsLanguageParser.OpSingleAssignContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpMultiAssign}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opMultiAssign}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpMultiAssign(DebugInternalReactionsLanguageParser.RuleOpMultiAssignContext ctx);
+	void enterOpMultiAssign(DebugInternalReactionsLanguageParser.OpMultiAssignContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpMultiAssign}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opMultiAssign}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpMultiAssign(DebugInternalReactionsLanguageParser.RuleOpMultiAssignContext ctx);
+	void exitOpMultiAssign(DebugInternalReactionsLanguageParser.OpMultiAssignContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXOrExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xOrExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXOrExpression(DebugInternalReactionsLanguageParser.RuleXOrExpressionContext ctx);
+	void enterXOrExpression(DebugInternalReactionsLanguageParser.XOrExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXOrExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xOrExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXOrExpression(DebugInternalReactionsLanguageParser.RuleXOrExpressionContext ctx);
+	void exitXOrExpression(DebugInternalReactionsLanguageParser.XOrExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpOr}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opOr}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpOr(DebugInternalReactionsLanguageParser.RuleOpOrContext ctx);
+	void enterOpOr(DebugInternalReactionsLanguageParser.OpOrContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpOr}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opOr}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpOr(DebugInternalReactionsLanguageParser.RuleOpOrContext ctx);
+	void exitOpOr(DebugInternalReactionsLanguageParser.OpOrContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXAndExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xAndExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXAndExpression(DebugInternalReactionsLanguageParser.RuleXAndExpressionContext ctx);
+	void enterXAndExpression(DebugInternalReactionsLanguageParser.XAndExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXAndExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xAndExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXAndExpression(DebugInternalReactionsLanguageParser.RuleXAndExpressionContext ctx);
+	void exitXAndExpression(DebugInternalReactionsLanguageParser.XAndExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpAnd}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opAnd}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpAnd(DebugInternalReactionsLanguageParser.RuleOpAndContext ctx);
+	void enterOpAnd(DebugInternalReactionsLanguageParser.OpAndContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpAnd}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opAnd}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpAnd(DebugInternalReactionsLanguageParser.RuleOpAndContext ctx);
+	void exitOpAnd(DebugInternalReactionsLanguageParser.OpAndContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXEqualityExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xEqualityExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXEqualityExpression(DebugInternalReactionsLanguageParser.RuleXEqualityExpressionContext ctx);
+	void enterXEqualityExpression(DebugInternalReactionsLanguageParser.XEqualityExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXEqualityExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xEqualityExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXEqualityExpression(DebugInternalReactionsLanguageParser.RuleXEqualityExpressionContext ctx);
+	void exitXEqualityExpression(DebugInternalReactionsLanguageParser.XEqualityExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpEquality}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opEquality}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpEquality(DebugInternalReactionsLanguageParser.RuleOpEqualityContext ctx);
+	void enterOpEquality(DebugInternalReactionsLanguageParser.OpEqualityContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpEquality}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opEquality}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpEquality(DebugInternalReactionsLanguageParser.RuleOpEqualityContext ctx);
+	void exitOpEquality(DebugInternalReactionsLanguageParser.OpEqualityContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXRelationalExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xRelationalExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXRelationalExpression(DebugInternalReactionsLanguageParser.RuleXRelationalExpressionContext ctx);
+	void enterXRelationalExpression(DebugInternalReactionsLanguageParser.XRelationalExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXRelationalExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xRelationalExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXRelationalExpression(DebugInternalReactionsLanguageParser.RuleXRelationalExpressionContext ctx);
+	void exitXRelationalExpression(DebugInternalReactionsLanguageParser.XRelationalExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpCompare}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opCompare}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpCompare(DebugInternalReactionsLanguageParser.RuleOpCompareContext ctx);
+	void enterOpCompare(DebugInternalReactionsLanguageParser.OpCompareContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpCompare}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opCompare}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpCompare(DebugInternalReactionsLanguageParser.RuleOpCompareContext ctx);
+	void exitOpCompare(DebugInternalReactionsLanguageParser.OpCompareContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXOtherOperatorExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xOtherOperatorExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXOtherOperatorExpression(DebugInternalReactionsLanguageParser.RuleXOtherOperatorExpressionContext ctx);
+	void enterXOtherOperatorExpression(DebugInternalReactionsLanguageParser.XOtherOperatorExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXOtherOperatorExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xOtherOperatorExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXOtherOperatorExpression(DebugInternalReactionsLanguageParser.RuleXOtherOperatorExpressionContext ctx);
+	void exitXOtherOperatorExpression(DebugInternalReactionsLanguageParser.XOtherOperatorExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpOther}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opOther}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpOther(DebugInternalReactionsLanguageParser.RuleOpOtherContext ctx);
+	void enterOpOther(DebugInternalReactionsLanguageParser.OpOtherContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpOther}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opOther}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpOther(DebugInternalReactionsLanguageParser.RuleOpOtherContext ctx);
+	void exitOpOther(DebugInternalReactionsLanguageParser.OpOtherContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXAdditiveExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xAdditiveExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXAdditiveExpression(DebugInternalReactionsLanguageParser.RuleXAdditiveExpressionContext ctx);
+	void enterXAdditiveExpression(DebugInternalReactionsLanguageParser.XAdditiveExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXAdditiveExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xAdditiveExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXAdditiveExpression(DebugInternalReactionsLanguageParser.RuleXAdditiveExpressionContext ctx);
+	void exitXAdditiveExpression(DebugInternalReactionsLanguageParser.XAdditiveExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpAdd}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opAdd}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpAdd(DebugInternalReactionsLanguageParser.RuleOpAddContext ctx);
+	void enterOpAdd(DebugInternalReactionsLanguageParser.OpAddContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpAdd}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opAdd}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpAdd(DebugInternalReactionsLanguageParser.RuleOpAddContext ctx);
+	void exitOpAdd(DebugInternalReactionsLanguageParser.OpAddContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXMultiplicativeExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xMultiplicativeExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXMultiplicativeExpression(DebugInternalReactionsLanguageParser.RuleXMultiplicativeExpressionContext ctx);
+	void enterXMultiplicativeExpression(DebugInternalReactionsLanguageParser.XMultiplicativeExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXMultiplicativeExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xMultiplicativeExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXMultiplicativeExpression(DebugInternalReactionsLanguageParser.RuleXMultiplicativeExpressionContext ctx);
+	void exitXMultiplicativeExpression(DebugInternalReactionsLanguageParser.XMultiplicativeExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpMulti}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opMulti}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpMulti(DebugInternalReactionsLanguageParser.RuleOpMultiContext ctx);
+	void enterOpMulti(DebugInternalReactionsLanguageParser.OpMultiContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpMulti}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opMulti}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpMulti(DebugInternalReactionsLanguageParser.RuleOpMultiContext ctx);
+	void exitOpMulti(DebugInternalReactionsLanguageParser.OpMultiContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXUnaryOperation}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xUnaryOperation}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXUnaryOperation(DebugInternalReactionsLanguageParser.RuleXUnaryOperationContext ctx);
+	void enterXUnaryOperation(DebugInternalReactionsLanguageParser.XUnaryOperationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXUnaryOperation}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xUnaryOperation}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXUnaryOperation(DebugInternalReactionsLanguageParser.RuleXUnaryOperationContext ctx);
+	void exitXUnaryOperation(DebugInternalReactionsLanguageParser.XUnaryOperationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpUnary}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opUnary}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpUnary(DebugInternalReactionsLanguageParser.RuleOpUnaryContext ctx);
+	void enterOpUnary(DebugInternalReactionsLanguageParser.OpUnaryContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpUnary}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opUnary}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpUnary(DebugInternalReactionsLanguageParser.RuleOpUnaryContext ctx);
+	void exitOpUnary(DebugInternalReactionsLanguageParser.OpUnaryContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXCastedExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xCastedExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXCastedExpression(DebugInternalReactionsLanguageParser.RuleXCastedExpressionContext ctx);
+	void enterXCastedExpression(DebugInternalReactionsLanguageParser.XCastedExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXCastedExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xCastedExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXCastedExpression(DebugInternalReactionsLanguageParser.RuleXCastedExpressionContext ctx);
+	void exitXCastedExpression(DebugInternalReactionsLanguageParser.XCastedExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXPostfixOperation}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xPostfixOperation}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXPostfixOperation(DebugInternalReactionsLanguageParser.RuleXPostfixOperationContext ctx);
+	void enterXPostfixOperation(DebugInternalReactionsLanguageParser.XPostfixOperationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXPostfixOperation}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xPostfixOperation}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXPostfixOperation(DebugInternalReactionsLanguageParser.RuleXPostfixOperationContext ctx);
+	void exitXPostfixOperation(DebugInternalReactionsLanguageParser.XPostfixOperationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpPostfix}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#opPostfix}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleOpPostfix(DebugInternalReactionsLanguageParser.RuleOpPostfixContext ctx);
+	void enterOpPostfix(DebugInternalReactionsLanguageParser.OpPostfixContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleOpPostfix}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#opPostfix}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleOpPostfix(DebugInternalReactionsLanguageParser.RuleOpPostfixContext ctx);
+	void exitOpPostfix(DebugInternalReactionsLanguageParser.OpPostfixContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXMemberFeatureCall}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xMemberFeatureCall}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXMemberFeatureCall(DebugInternalReactionsLanguageParser.RuleXMemberFeatureCallContext ctx);
+	void enterXMemberFeatureCall(DebugInternalReactionsLanguageParser.XMemberFeatureCallContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXMemberFeatureCall}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xMemberFeatureCall}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXMemberFeatureCall(DebugInternalReactionsLanguageParser.RuleXMemberFeatureCallContext ctx);
+	void exitXMemberFeatureCall(DebugInternalReactionsLanguageParser.XMemberFeatureCallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXPrimaryExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xPrimaryExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXPrimaryExpression(DebugInternalReactionsLanguageParser.RuleXPrimaryExpressionContext ctx);
+	void enterXPrimaryExpression(DebugInternalReactionsLanguageParser.XPrimaryExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXPrimaryExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xPrimaryExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXPrimaryExpression(DebugInternalReactionsLanguageParser.RuleXPrimaryExpressionContext ctx);
+	void exitXPrimaryExpression(DebugInternalReactionsLanguageParser.XPrimaryExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXLiteral}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXLiteral(DebugInternalReactionsLanguageParser.RuleXLiteralContext ctx);
+	void enterXLiteral(DebugInternalReactionsLanguageParser.XLiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXLiteral}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXLiteral(DebugInternalReactionsLanguageParser.RuleXLiteralContext ctx);
+	void exitXLiteral(DebugInternalReactionsLanguageParser.XLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXCollectionLiteral}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xCollectionLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXCollectionLiteral(DebugInternalReactionsLanguageParser.RuleXCollectionLiteralContext ctx);
+	void enterXCollectionLiteral(DebugInternalReactionsLanguageParser.XCollectionLiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXCollectionLiteral}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xCollectionLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXCollectionLiteral(DebugInternalReactionsLanguageParser.RuleXCollectionLiteralContext ctx);
+	void exitXCollectionLiteral(DebugInternalReactionsLanguageParser.XCollectionLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXSetLiteral}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xSetLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXSetLiteral(DebugInternalReactionsLanguageParser.RuleXSetLiteralContext ctx);
+	void enterXSetLiteral(DebugInternalReactionsLanguageParser.XSetLiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXSetLiteral}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xSetLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXSetLiteral(DebugInternalReactionsLanguageParser.RuleXSetLiteralContext ctx);
+	void exitXSetLiteral(DebugInternalReactionsLanguageParser.XSetLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXListLiteral}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xListLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXListLiteral(DebugInternalReactionsLanguageParser.RuleXListLiteralContext ctx);
+	void enterXListLiteral(DebugInternalReactionsLanguageParser.XListLiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXListLiteral}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xListLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXListLiteral(DebugInternalReactionsLanguageParser.RuleXListLiteralContext ctx);
+	void exitXListLiteral(DebugInternalReactionsLanguageParser.XListLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXClosure}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xClosure}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXClosure(DebugInternalReactionsLanguageParser.RuleXClosureContext ctx);
+	void enterXClosure(DebugInternalReactionsLanguageParser.XClosureContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXClosure}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xClosure}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXClosure(DebugInternalReactionsLanguageParser.RuleXClosureContext ctx);
+	void exitXClosure(DebugInternalReactionsLanguageParser.XClosureContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXExpressionInClosure}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xExpressionInClosure}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXExpressionInClosure(DebugInternalReactionsLanguageParser.RuleXExpressionInClosureContext ctx);
+	void enterXExpressionInClosure(DebugInternalReactionsLanguageParser.XExpressionInClosureContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXExpressionInClosure}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xExpressionInClosure}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXExpressionInClosure(DebugInternalReactionsLanguageParser.RuleXExpressionInClosureContext ctx);
+	void exitXExpressionInClosure(DebugInternalReactionsLanguageParser.XExpressionInClosureContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXShortClosure}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xShortClosure}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXShortClosure(DebugInternalReactionsLanguageParser.RuleXShortClosureContext ctx);
+	void enterXShortClosure(DebugInternalReactionsLanguageParser.XShortClosureContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXShortClosure}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xShortClosure}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXShortClosure(DebugInternalReactionsLanguageParser.RuleXShortClosureContext ctx);
+	void exitXShortClosure(DebugInternalReactionsLanguageParser.XShortClosureContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXParenthesizedExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xParenthesizedExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXParenthesizedExpression(DebugInternalReactionsLanguageParser.RuleXParenthesizedExpressionContext ctx);
+	void enterXParenthesizedExpression(DebugInternalReactionsLanguageParser.XParenthesizedExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXParenthesizedExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xParenthesizedExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXParenthesizedExpression(DebugInternalReactionsLanguageParser.RuleXParenthesizedExpressionContext ctx);
+	void exitXParenthesizedExpression(DebugInternalReactionsLanguageParser.XParenthesizedExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXIfExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xIfExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXIfExpression(DebugInternalReactionsLanguageParser.RuleXIfExpressionContext ctx);
+	void enterXIfExpression(DebugInternalReactionsLanguageParser.XIfExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXIfExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xIfExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXIfExpression(DebugInternalReactionsLanguageParser.RuleXIfExpressionContext ctx);
+	void exitXIfExpression(DebugInternalReactionsLanguageParser.XIfExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXSwitchExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xSwitchExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXSwitchExpression(DebugInternalReactionsLanguageParser.RuleXSwitchExpressionContext ctx);
+	void enterXSwitchExpression(DebugInternalReactionsLanguageParser.XSwitchExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXSwitchExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xSwitchExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXSwitchExpression(DebugInternalReactionsLanguageParser.RuleXSwitchExpressionContext ctx);
+	void exitXSwitchExpression(DebugInternalReactionsLanguageParser.XSwitchExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXCasePart}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xCasePart}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXCasePart(DebugInternalReactionsLanguageParser.RuleXCasePartContext ctx);
+	void enterXCasePart(DebugInternalReactionsLanguageParser.XCasePartContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXCasePart}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xCasePart}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXCasePart(DebugInternalReactionsLanguageParser.RuleXCasePartContext ctx);
+	void exitXCasePart(DebugInternalReactionsLanguageParser.XCasePartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXForLoopExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xForLoopExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXForLoopExpression(DebugInternalReactionsLanguageParser.RuleXForLoopExpressionContext ctx);
+	void enterXForLoopExpression(DebugInternalReactionsLanguageParser.XForLoopExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXForLoopExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xForLoopExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXForLoopExpression(DebugInternalReactionsLanguageParser.RuleXForLoopExpressionContext ctx);
+	void exitXForLoopExpression(DebugInternalReactionsLanguageParser.XForLoopExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXBasicForLoopExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xBasicForLoopExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXBasicForLoopExpression(DebugInternalReactionsLanguageParser.RuleXBasicForLoopExpressionContext ctx);
+	void enterXBasicForLoopExpression(DebugInternalReactionsLanguageParser.XBasicForLoopExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXBasicForLoopExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xBasicForLoopExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXBasicForLoopExpression(DebugInternalReactionsLanguageParser.RuleXBasicForLoopExpressionContext ctx);
+	void exitXBasicForLoopExpression(DebugInternalReactionsLanguageParser.XBasicForLoopExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXWhileExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xWhileExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXWhileExpression(DebugInternalReactionsLanguageParser.RuleXWhileExpressionContext ctx);
+	void enterXWhileExpression(DebugInternalReactionsLanguageParser.XWhileExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXWhileExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xWhileExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXWhileExpression(DebugInternalReactionsLanguageParser.RuleXWhileExpressionContext ctx);
+	void exitXWhileExpression(DebugInternalReactionsLanguageParser.XWhileExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXDoWhileExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xDoWhileExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXDoWhileExpression(DebugInternalReactionsLanguageParser.RuleXDoWhileExpressionContext ctx);
+	void enterXDoWhileExpression(DebugInternalReactionsLanguageParser.XDoWhileExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXDoWhileExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xDoWhileExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXDoWhileExpression(DebugInternalReactionsLanguageParser.RuleXDoWhileExpressionContext ctx);
+	void exitXDoWhileExpression(DebugInternalReactionsLanguageParser.XDoWhileExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXBlockExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xBlockExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXBlockExpression(DebugInternalReactionsLanguageParser.RuleXBlockExpressionContext ctx);
+	void enterXBlockExpression(DebugInternalReactionsLanguageParser.XBlockExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXBlockExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xBlockExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXBlockExpression(DebugInternalReactionsLanguageParser.RuleXBlockExpressionContext ctx);
+	void exitXBlockExpression(DebugInternalReactionsLanguageParser.XBlockExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXExpressionOrVarDeclaration}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xExpressionOrVarDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXExpressionOrVarDeclaration(DebugInternalReactionsLanguageParser.RuleXExpressionOrVarDeclarationContext ctx);
+	void enterXExpressionOrVarDeclaration(DebugInternalReactionsLanguageParser.XExpressionOrVarDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXExpressionOrVarDeclaration}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xExpressionOrVarDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXExpressionOrVarDeclaration(DebugInternalReactionsLanguageParser.RuleXExpressionOrVarDeclarationContext ctx);
+	void exitXExpressionOrVarDeclaration(DebugInternalReactionsLanguageParser.XExpressionOrVarDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXVariableDeclaration}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xVariableDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXVariableDeclaration(DebugInternalReactionsLanguageParser.RuleXVariableDeclarationContext ctx);
+	void enterXVariableDeclaration(DebugInternalReactionsLanguageParser.XVariableDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXVariableDeclaration}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xVariableDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXVariableDeclaration(DebugInternalReactionsLanguageParser.RuleXVariableDeclarationContext ctx);
+	void exitXVariableDeclaration(DebugInternalReactionsLanguageParser.XVariableDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmFormalParameter}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmFormalParameter}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleJvmFormalParameter(DebugInternalReactionsLanguageParser.RuleJvmFormalParameterContext ctx);
+	void enterJvmFormalParameter(DebugInternalReactionsLanguageParser.JvmFormalParameterContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmFormalParameter}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmFormalParameter}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleJvmFormalParameter(DebugInternalReactionsLanguageParser.RuleJvmFormalParameterContext ctx);
+	void exitJvmFormalParameter(DebugInternalReactionsLanguageParser.JvmFormalParameterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleFullJvmFormalParameter}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#fullJvmFormalParameter}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleFullJvmFormalParameter(DebugInternalReactionsLanguageParser.RuleFullJvmFormalParameterContext ctx);
+	void enterFullJvmFormalParameter(DebugInternalReactionsLanguageParser.FullJvmFormalParameterContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleFullJvmFormalParameter}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#fullJvmFormalParameter}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleFullJvmFormalParameter(DebugInternalReactionsLanguageParser.RuleFullJvmFormalParameterContext ctx);
+	void exitFullJvmFormalParameter(DebugInternalReactionsLanguageParser.FullJvmFormalParameterContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXFeatureCall}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xFeatureCall}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXFeatureCall(DebugInternalReactionsLanguageParser.RuleXFeatureCallContext ctx);
+	void enterXFeatureCall(DebugInternalReactionsLanguageParser.XFeatureCallContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXFeatureCall}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xFeatureCall}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXFeatureCall(DebugInternalReactionsLanguageParser.RuleXFeatureCallContext ctx);
+	void exitXFeatureCall(DebugInternalReactionsLanguageParser.XFeatureCallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleFeatureCallID}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#featureCallID}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleFeatureCallID(DebugInternalReactionsLanguageParser.RuleFeatureCallIDContext ctx);
+	void enterFeatureCallID(DebugInternalReactionsLanguageParser.FeatureCallIDContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleFeatureCallID}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#featureCallID}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleFeatureCallID(DebugInternalReactionsLanguageParser.RuleFeatureCallIDContext ctx);
+	void exitFeatureCallID(DebugInternalReactionsLanguageParser.FeatureCallIDContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleIdOrSuper}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#idOrSuper}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleIdOrSuper(DebugInternalReactionsLanguageParser.RuleIdOrSuperContext ctx);
+	void enterIdOrSuper(DebugInternalReactionsLanguageParser.IdOrSuperContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleIdOrSuper}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#idOrSuper}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleIdOrSuper(DebugInternalReactionsLanguageParser.RuleIdOrSuperContext ctx);
+	void exitIdOrSuper(DebugInternalReactionsLanguageParser.IdOrSuperContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXConstructorCall}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xConstructorCall}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXConstructorCall(DebugInternalReactionsLanguageParser.RuleXConstructorCallContext ctx);
+	void enterXConstructorCall(DebugInternalReactionsLanguageParser.XConstructorCallContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXConstructorCall}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xConstructorCall}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXConstructorCall(DebugInternalReactionsLanguageParser.RuleXConstructorCallContext ctx);
+	void exitXConstructorCall(DebugInternalReactionsLanguageParser.XConstructorCallContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXBooleanLiteral}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xBooleanLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXBooleanLiteral(DebugInternalReactionsLanguageParser.RuleXBooleanLiteralContext ctx);
+	void enterXBooleanLiteral(DebugInternalReactionsLanguageParser.XBooleanLiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXBooleanLiteral}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xBooleanLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXBooleanLiteral(DebugInternalReactionsLanguageParser.RuleXBooleanLiteralContext ctx);
+	void exitXBooleanLiteral(DebugInternalReactionsLanguageParser.XBooleanLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXNullLiteral}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xNullLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXNullLiteral(DebugInternalReactionsLanguageParser.RuleXNullLiteralContext ctx);
+	void enterXNullLiteral(DebugInternalReactionsLanguageParser.XNullLiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXNullLiteral}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xNullLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXNullLiteral(DebugInternalReactionsLanguageParser.RuleXNullLiteralContext ctx);
+	void exitXNullLiteral(DebugInternalReactionsLanguageParser.XNullLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXNumberLiteral}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xNumberLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXNumberLiteral(DebugInternalReactionsLanguageParser.RuleXNumberLiteralContext ctx);
+	void enterXNumberLiteral(DebugInternalReactionsLanguageParser.XNumberLiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXNumberLiteral}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xNumberLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXNumberLiteral(DebugInternalReactionsLanguageParser.RuleXNumberLiteralContext ctx);
+	void exitXNumberLiteral(DebugInternalReactionsLanguageParser.XNumberLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXStringLiteral}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xStringLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXStringLiteral(DebugInternalReactionsLanguageParser.RuleXStringLiteralContext ctx);
+	void enterXStringLiteral(DebugInternalReactionsLanguageParser.XStringLiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXStringLiteral}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xStringLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXStringLiteral(DebugInternalReactionsLanguageParser.RuleXStringLiteralContext ctx);
+	void exitXStringLiteral(DebugInternalReactionsLanguageParser.XStringLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXTypeLiteral}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xTypeLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXTypeLiteral(DebugInternalReactionsLanguageParser.RuleXTypeLiteralContext ctx);
+	void enterXTypeLiteral(DebugInternalReactionsLanguageParser.XTypeLiteralContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXTypeLiteral}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xTypeLiteral}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXTypeLiteral(DebugInternalReactionsLanguageParser.RuleXTypeLiteralContext ctx);
+	void exitXTypeLiteral(DebugInternalReactionsLanguageParser.XTypeLiteralContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXThrowExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xThrowExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXThrowExpression(DebugInternalReactionsLanguageParser.RuleXThrowExpressionContext ctx);
+	void enterXThrowExpression(DebugInternalReactionsLanguageParser.XThrowExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXThrowExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xThrowExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXThrowExpression(DebugInternalReactionsLanguageParser.RuleXThrowExpressionContext ctx);
+	void exitXThrowExpression(DebugInternalReactionsLanguageParser.XThrowExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXReturnExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xReturnExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXReturnExpression(DebugInternalReactionsLanguageParser.RuleXReturnExpressionContext ctx);
+	void enterXReturnExpression(DebugInternalReactionsLanguageParser.XReturnExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXReturnExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xReturnExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXReturnExpression(DebugInternalReactionsLanguageParser.RuleXReturnExpressionContext ctx);
+	void exitXReturnExpression(DebugInternalReactionsLanguageParser.XReturnExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXTryCatchFinallyExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xTryCatchFinallyExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXTryCatchFinallyExpression(DebugInternalReactionsLanguageParser.RuleXTryCatchFinallyExpressionContext ctx);
+	void enterXTryCatchFinallyExpression(DebugInternalReactionsLanguageParser.XTryCatchFinallyExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXTryCatchFinallyExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xTryCatchFinallyExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXTryCatchFinallyExpression(DebugInternalReactionsLanguageParser.RuleXTryCatchFinallyExpressionContext ctx);
+	void exitXTryCatchFinallyExpression(DebugInternalReactionsLanguageParser.XTryCatchFinallyExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXSynchronizedExpression}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xSynchronizedExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXSynchronizedExpression(DebugInternalReactionsLanguageParser.RuleXSynchronizedExpressionContext ctx);
+	void enterXSynchronizedExpression(DebugInternalReactionsLanguageParser.XSynchronizedExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXSynchronizedExpression}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xSynchronizedExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXSynchronizedExpression(DebugInternalReactionsLanguageParser.RuleXSynchronizedExpressionContext ctx);
+	void exitXSynchronizedExpression(DebugInternalReactionsLanguageParser.XSynchronizedExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXCatchClause}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xCatchClause}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXCatchClause(DebugInternalReactionsLanguageParser.RuleXCatchClauseContext ctx);
+	void enterXCatchClause(DebugInternalReactionsLanguageParser.XCatchClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXCatchClause}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xCatchClause}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXCatchClause(DebugInternalReactionsLanguageParser.RuleXCatchClauseContext ctx);
+	void exitXCatchClause(DebugInternalReactionsLanguageParser.XCatchClauseContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleQualifiedName}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#qualifiedName}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleQualifiedName(DebugInternalReactionsLanguageParser.RuleQualifiedNameContext ctx);
+	void enterQualifiedName(DebugInternalReactionsLanguageParser.QualifiedNameContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleQualifiedName}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#qualifiedName}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleQualifiedName(DebugInternalReactionsLanguageParser.RuleQualifiedNameContext ctx);
+	void exitQualifiedName(DebugInternalReactionsLanguageParser.QualifiedNameContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleNumber}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#number}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleNumber(DebugInternalReactionsLanguageParser.RuleNumberContext ctx);
+	void enterNumber(DebugInternalReactionsLanguageParser.NumberContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleNumber}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#number}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleNumber(DebugInternalReactionsLanguageParser.RuleNumberContext ctx);
+	void exitNumber(DebugInternalReactionsLanguageParser.NumberContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmTypeReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmTypeReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleJvmTypeReference(DebugInternalReactionsLanguageParser.RuleJvmTypeReferenceContext ctx);
+	void enterJvmTypeReference(DebugInternalReactionsLanguageParser.JvmTypeReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmTypeReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmTypeReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleJvmTypeReference(DebugInternalReactionsLanguageParser.RuleJvmTypeReferenceContext ctx);
+	void exitJvmTypeReference(DebugInternalReactionsLanguageParser.JvmTypeReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleArrayBrackets}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#arrayBrackets}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleArrayBrackets(DebugInternalReactionsLanguageParser.RuleArrayBracketsContext ctx);
+	void enterArrayBrackets(DebugInternalReactionsLanguageParser.ArrayBracketsContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleArrayBrackets}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#arrayBrackets}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleArrayBrackets(DebugInternalReactionsLanguageParser.RuleArrayBracketsContext ctx);
+	void exitArrayBrackets(DebugInternalReactionsLanguageParser.ArrayBracketsContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXFunctionTypeRef}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xFunctionTypeRef}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXFunctionTypeRef(DebugInternalReactionsLanguageParser.RuleXFunctionTypeRefContext ctx);
+	void enterXFunctionTypeRef(DebugInternalReactionsLanguageParser.XFunctionTypeRefContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXFunctionTypeRef}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xFunctionTypeRef}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXFunctionTypeRef(DebugInternalReactionsLanguageParser.RuleXFunctionTypeRefContext ctx);
+	void exitXFunctionTypeRef(DebugInternalReactionsLanguageParser.XFunctionTypeRefContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmParameterizedTypeReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmParameterizedTypeReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleJvmParameterizedTypeReference(DebugInternalReactionsLanguageParser.RuleJvmParameterizedTypeReferenceContext ctx);
+	void enterJvmParameterizedTypeReference(DebugInternalReactionsLanguageParser.JvmParameterizedTypeReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmParameterizedTypeReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmParameterizedTypeReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleJvmParameterizedTypeReference(DebugInternalReactionsLanguageParser.RuleJvmParameterizedTypeReferenceContext ctx);
+	void exitJvmParameterizedTypeReference(DebugInternalReactionsLanguageParser.JvmParameterizedTypeReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmArgumentTypeReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmArgumentTypeReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleJvmArgumentTypeReference(DebugInternalReactionsLanguageParser.RuleJvmArgumentTypeReferenceContext ctx);
+	void enterJvmArgumentTypeReference(DebugInternalReactionsLanguageParser.JvmArgumentTypeReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmArgumentTypeReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmArgumentTypeReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleJvmArgumentTypeReference(DebugInternalReactionsLanguageParser.RuleJvmArgumentTypeReferenceContext ctx);
+	void exitJvmArgumentTypeReference(DebugInternalReactionsLanguageParser.JvmArgumentTypeReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmWildcardTypeReference}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmWildcardTypeReference}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleJvmWildcardTypeReference(DebugInternalReactionsLanguageParser.RuleJvmWildcardTypeReferenceContext ctx);
+	void enterJvmWildcardTypeReference(DebugInternalReactionsLanguageParser.JvmWildcardTypeReferenceContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmWildcardTypeReference}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmWildcardTypeReference}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleJvmWildcardTypeReference(DebugInternalReactionsLanguageParser.RuleJvmWildcardTypeReferenceContext ctx);
+	void exitJvmWildcardTypeReference(DebugInternalReactionsLanguageParser.JvmWildcardTypeReferenceContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmUpperBound}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmUpperBound}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleJvmUpperBound(DebugInternalReactionsLanguageParser.RuleJvmUpperBoundContext ctx);
+	void enterJvmUpperBound(DebugInternalReactionsLanguageParser.JvmUpperBoundContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmUpperBound}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmUpperBound}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleJvmUpperBound(DebugInternalReactionsLanguageParser.RuleJvmUpperBoundContext ctx);
+	void exitJvmUpperBound(DebugInternalReactionsLanguageParser.JvmUpperBoundContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmUpperBoundAnded}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmUpperBoundAnded}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleJvmUpperBoundAnded(DebugInternalReactionsLanguageParser.RuleJvmUpperBoundAndedContext ctx);
+	void enterJvmUpperBoundAnded(DebugInternalReactionsLanguageParser.JvmUpperBoundAndedContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmUpperBoundAnded}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmUpperBoundAnded}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleJvmUpperBoundAnded(DebugInternalReactionsLanguageParser.RuleJvmUpperBoundAndedContext ctx);
+	void exitJvmUpperBoundAnded(DebugInternalReactionsLanguageParser.JvmUpperBoundAndedContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmLowerBound}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmLowerBound}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleJvmLowerBound(DebugInternalReactionsLanguageParser.RuleJvmLowerBoundContext ctx);
+	void enterJvmLowerBound(DebugInternalReactionsLanguageParser.JvmLowerBoundContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmLowerBound}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmLowerBound}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleJvmLowerBound(DebugInternalReactionsLanguageParser.RuleJvmLowerBoundContext ctx);
+	void exitJvmLowerBound(DebugInternalReactionsLanguageParser.JvmLowerBoundContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmLowerBoundAnded}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmLowerBoundAnded}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleJvmLowerBoundAnded(DebugInternalReactionsLanguageParser.RuleJvmLowerBoundAndedContext ctx);
+	void enterJvmLowerBoundAnded(DebugInternalReactionsLanguageParser.JvmLowerBoundAndedContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleJvmLowerBoundAnded}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#jvmLowerBoundAnded}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleJvmLowerBoundAnded(DebugInternalReactionsLanguageParser.RuleJvmLowerBoundAndedContext ctx);
+	void exitJvmLowerBoundAnded(DebugInternalReactionsLanguageParser.JvmLowerBoundAndedContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleQualifiedNameWithWildcard}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#qualifiedNameWithWildcard}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleQualifiedNameWithWildcard(DebugInternalReactionsLanguageParser.RuleQualifiedNameWithWildcardContext ctx);
+	void enterQualifiedNameWithWildcard(DebugInternalReactionsLanguageParser.QualifiedNameWithWildcardContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleQualifiedNameWithWildcard}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#qualifiedNameWithWildcard}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleQualifiedNameWithWildcard(DebugInternalReactionsLanguageParser.RuleQualifiedNameWithWildcardContext ctx);
+	void exitQualifiedNameWithWildcard(DebugInternalReactionsLanguageParser.QualifiedNameWithWildcardContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleValidID}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#validID}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleValidID(DebugInternalReactionsLanguageParser.RuleValidIDContext ctx);
+	void enterValidID(DebugInternalReactionsLanguageParser.ValidIDContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleValidID}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#validID}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleValidID(DebugInternalReactionsLanguageParser.RuleValidIDContext ctx);
+	void exitValidID(DebugInternalReactionsLanguageParser.ValidIDContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXImportSection}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xImportSection}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXImportSection(DebugInternalReactionsLanguageParser.RuleXImportSectionContext ctx);
+	void enterXImportSection(DebugInternalReactionsLanguageParser.XImportSectionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXImportSection}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xImportSection}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXImportSection(DebugInternalReactionsLanguageParser.RuleXImportSectionContext ctx);
+	void exitXImportSection(DebugInternalReactionsLanguageParser.XImportSectionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXImportDeclaration}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#xImportDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleXImportDeclaration(DebugInternalReactionsLanguageParser.RuleXImportDeclarationContext ctx);
+	void enterXImportDeclaration(DebugInternalReactionsLanguageParser.XImportDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleXImportDeclaration}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#xImportDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleXImportDeclaration(DebugInternalReactionsLanguageParser.RuleXImportDeclarationContext ctx);
+	void exitXImportDeclaration(DebugInternalReactionsLanguageParser.XImportDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleQualifiedNameInStaticImport}.
+	 * Enter a parse tree produced by {@link DebugInternalReactionsLanguageParser#qualifiedNameInStaticImport}.
 	 * @param ctx the parse tree
 	 */
-	void enterRuleQualifiedNameInStaticImport(DebugInternalReactionsLanguageParser.RuleQualifiedNameInStaticImportContext ctx);
+	void enterQualifiedNameInStaticImport(DebugInternalReactionsLanguageParser.QualifiedNameInStaticImportContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#ruleQualifiedNameInStaticImport}.
+	 * Exit a parse tree produced by {@link DebugInternalReactionsLanguageParser#qualifiedNameInStaticImport}.
 	 * @param ctx the parse tree
 	 */
-	void exitRuleQualifiedNameInStaticImport(DebugInternalReactionsLanguageParser.RuleQualifiedNameInStaticImportContext ctx);
+	void exitQualifiedNameInStaticImport(DebugInternalReactionsLanguageParser.QualifiedNameInStaticImportContext ctx);
 }

@@ -59,10 +59,12 @@ public class ErrorRecoveryExplorer {
             );
         // Intercept wrong token problems
         parser.addErrorListener(new ErrorFixInformationRecorder(this));
-        parser.ruleReactionsFile();
+        var result = parser.reactionsFile();
 
         // No parser error occurred -> nothing needs to be done
         if (actionType == RecoveryActionType.NONE_REQUIRED) {
+            System.out.println("Parser accepts this input: ");
+            System.out.println(programText);
             return new LinkedList<RecoveryAction>();
         }
         var recoveryActions = guessActions(parser);
@@ -159,10 +161,10 @@ public class ErrorRecoveryExplorer {
         var manipulatedTokenStream = new TokenStreamRewriter(originalTokenStream);
 
         if (action.actionType() == RecoveryActionType.REPLACE) {
-            manipulatedTokenStream.replace(offendingToken.getTokenIndex(), action.content());
+            manipulatedTokenStream.replace(offendingToken.getTokenIndex(), " "+ action.content()+" ");
         }
         else if (action.actionType() == RecoveryActionType.INSERT) {
-            manipulatedTokenStream.insertBefore(offendingToken.getTokenIndex(), action.content() + " ");
+            manipulatedTokenStream.insertBefore(offendingToken.getTokenIndex(), " " + action.content() + " ");
         }
         else {
             manipulatedTokenStream.delete(offendingToken.getTokenIndex());

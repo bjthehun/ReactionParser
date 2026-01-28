@@ -1,5 +1,7 @@
+// Generated from DebugInternalReactionsLanguage.g4 by ANTLR 4.13.2
+
 package tools.vitruv.reactionsparser.parser.antlr;
-// Generated from parser/src/main/resources/DebugInternalReactionsLanguage.g4 by ANTLR 4.13.2
+
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -37,90 +39,83 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 		RULE_ID=119, RULE_STRING=120, RULE_ML_COMMENT=121, RULE_SL_COMMENT=122, 
 		RULE_WS=123, RULE_ANY_OTHER=124;
 	public static final int
-		RULE_ruleReactionsFile = 0, RULE_ruleMetamodelImport = 1, RULE_ruleReactionsSegment = 2, 
-		RULE_ruleReactionsImport = 3, RULE_ruleReaction = 4, RULE_ruleRoutineCall = 5, 
-		RULE_ruleTrigger = 6, RULE_ruleConcreteModelChange = 7, RULE_ruleModelElementChange = 8, 
-		RULE_ruleModelAttributeChange = 9, RULE_ruleArbitraryModelChange = 10, 
-		RULE_ruleElementExistenceChangeType = 11, RULE_ruleElementUsageChangeType = 12, 
-		RULE_ruleElementCreationChangeType = 13, RULE_ruleElementDeletionChangeType = 14, 
-		RULE_ruleElementReferenceChangeType = 15, RULE_ruleElementInsertionChangeType = 16, 
-		RULE_ruleElementInsertionInListChangeType = 17, RULE_ruleElementInsertionAsRootChangeType = 18, 
-		RULE_ruleElementRemovalChangeType = 19, RULE_ruleElementRemovalAsRootChangeType = 20, 
-		RULE_ruleElementRemovalFromListChangeType = 21, RULE_ruleElementReplacementChangeType = 22, 
-		RULE_ruleElementChangeType = 23, RULE_ruleRoutine = 24, RULE_ruleRoutineOverrideImportPath = 25, 
-		RULE_ruleRoutineInput = 26, RULE_ruleMatchBlock = 27, RULE_ruleMatchStatement = 28, 
-		RULE_ruleRetrieveOrRequireAbscenceOfModelElement = 29, RULE_ruleRequireAbscenceOfModelElement = 30, 
-		RULE_ruleRetrieveModelElement = 31, RULE_ruleRetrieveModelElementTypeStatement = 32, 
-		RULE_ruleMatchCheckStatement = 33, RULE_ruleCreateBlock = 34, RULE_ruleCreateStatement = 35, 
-		RULE_ruleUpdateBlock = 36, RULE_ruleMetaclassReference = 37, RULE_ruleUnnamedMetaclassReference = 38, 
-		RULE_ruleNamedMetaclassReference = 39, RULE_ruleNamedJavaElementReference = 40, 
-		RULE_ruleMetaclassEAttributeReference = 41, RULE_ruleMetaclassEReferenceReference = 42, 
-		RULE_ruleXExpression = 43, RULE_ruleXAssignment = 44, RULE_ruleOpSingleAssign = 45, 
-		RULE_ruleOpMultiAssign = 46, RULE_ruleXOrExpression = 47, RULE_ruleOpOr = 48, 
-		RULE_ruleXAndExpression = 49, RULE_ruleOpAnd = 50, RULE_ruleXEqualityExpression = 51, 
-		RULE_ruleOpEquality = 52, RULE_ruleXRelationalExpression = 53, RULE_ruleOpCompare = 54, 
-		RULE_ruleXOtherOperatorExpression = 55, RULE_ruleOpOther = 56, RULE_ruleXAdditiveExpression = 57, 
-		RULE_ruleOpAdd = 58, RULE_ruleXMultiplicativeExpression = 59, RULE_ruleOpMulti = 60, 
-		RULE_ruleXUnaryOperation = 61, RULE_ruleOpUnary = 62, RULE_ruleXCastedExpression = 63, 
-		RULE_ruleXPostfixOperation = 64, RULE_ruleOpPostfix = 65, RULE_ruleXMemberFeatureCall = 66, 
-		RULE_ruleXPrimaryExpression = 67, RULE_ruleXLiteral = 68, RULE_ruleXCollectionLiteral = 69, 
-		RULE_ruleXSetLiteral = 70, RULE_ruleXListLiteral = 71, RULE_ruleXClosure = 72, 
-		RULE_ruleXExpressionInClosure = 73, RULE_ruleXShortClosure = 74, RULE_ruleXParenthesizedExpression = 75, 
-		RULE_ruleXIfExpression = 76, RULE_ruleXSwitchExpression = 77, RULE_ruleXCasePart = 78, 
-		RULE_ruleXForLoopExpression = 79, RULE_ruleXBasicForLoopExpression = 80, 
-		RULE_ruleXWhileExpression = 81, RULE_ruleXDoWhileExpression = 82, RULE_ruleXBlockExpression = 83, 
-		RULE_ruleXExpressionOrVarDeclaration = 84, RULE_ruleXVariableDeclaration = 85, 
-		RULE_ruleJvmFormalParameter = 86, RULE_ruleFullJvmFormalParameter = 87, 
-		RULE_ruleXFeatureCall = 88, RULE_ruleFeatureCallID = 89, RULE_ruleIdOrSuper = 90, 
-		RULE_ruleXConstructorCall = 91, RULE_ruleXBooleanLiteral = 92, RULE_ruleXNullLiteral = 93, 
-		RULE_ruleXNumberLiteral = 94, RULE_ruleXStringLiteral = 95, RULE_ruleXTypeLiteral = 96, 
-		RULE_ruleXThrowExpression = 97, RULE_ruleXReturnExpression = 98, RULE_ruleXTryCatchFinallyExpression = 99, 
-		RULE_ruleXSynchronizedExpression = 100, RULE_ruleXCatchClause = 101, RULE_ruleQualifiedName = 102, 
-		RULE_ruleNumber = 103, RULE_ruleJvmTypeReference = 104, RULE_ruleArrayBrackets = 105, 
-		RULE_ruleXFunctionTypeRef = 106, RULE_ruleJvmParameterizedTypeReference = 107, 
-		RULE_ruleJvmArgumentTypeReference = 108, RULE_ruleJvmWildcardTypeReference = 109, 
-		RULE_ruleJvmUpperBound = 110, RULE_ruleJvmUpperBoundAnded = 111, RULE_ruleJvmLowerBound = 112, 
-		RULE_ruleJvmLowerBoundAnded = 113, RULE_ruleQualifiedNameWithWildcard = 114, 
-		RULE_ruleValidID = 115, RULE_ruleXImportSection = 116, RULE_ruleXImportDeclaration = 117, 
-		RULE_ruleQualifiedNameInStaticImport = 118;
+		RULE_reactionsFile = 0, RULE_metamodelImport = 1, RULE_reactionsSegment = 2, 
+		RULE_reactionsImport = 3, RULE_reaction = 4, RULE_routineCall = 5, RULE_trigger = 6, 
+		RULE_concreteModelChange = 7, RULE_modelElementChange = 8, RULE_modelAttributeChange = 9, 
+		RULE_arbitraryModelChange = 10, RULE_elementExistenceChangeType = 11, 
+		RULE_elementUsageChangeType = 12, RULE_elementCreationChangeType = 13, 
+		RULE_elementDeletionChangeType = 14, RULE_elementReferenceChangeType = 15, 
+		RULE_elementInsertionChangeType = 16, RULE_elementInsertionInListChangeType = 17, 
+		RULE_elementInsertionAsRootChangeType = 18, RULE_elementRemovalChangeType = 19, 
+		RULE_elementRemovalAsRootChangeType = 20, RULE_elementRemovalFromListChangeType = 21, 
+		RULE_elementReplacementChangeType = 22, RULE_elementChangeType = 23, RULE_routine = 24, 
+		RULE_routineOverrideImportPath = 25, RULE_routineInput = 26, RULE_matchBlock = 27, 
+		RULE_matchStatement = 28, RULE_retrieveOrRequireAbscenceOfModelElement = 29, 
+		RULE_requireAbscenceOfModelElement = 30, RULE_retrieveModelElement = 31, 
+		RULE_retrieveModelElementTypeStatement = 32, RULE_matchCheckStatement = 33, 
+		RULE_createBlock = 34, RULE_createStatement = 35, RULE_updateBlock = 36, 
+		RULE_metaclassReference = 37, RULE_unnamedMetaclassReference = 38, RULE_namedMetaclassReference = 39, 
+		RULE_namedJavaElementReference = 40, RULE_metaclassEAttributeReference = 41, 
+		RULE_metaclassEReferenceReference = 42, RULE_xExpression = 43, RULE_xAssignment = 44, 
+		RULE_opSingleAssign = 45, RULE_opMultiAssign = 46, RULE_xOrExpression = 47, 
+		RULE_opOr = 48, RULE_xAndExpression = 49, RULE_opAnd = 50, RULE_xEqualityExpression = 51, 
+		RULE_opEquality = 52, RULE_xRelationalExpression = 53, RULE_opCompare = 54, 
+		RULE_xOtherOperatorExpression = 55, RULE_opOther = 56, RULE_xAdditiveExpression = 57, 
+		RULE_opAdd = 58, RULE_xMultiplicativeExpression = 59, RULE_opMulti = 60, 
+		RULE_xUnaryOperation = 61, RULE_opUnary = 62, RULE_xCastedExpression = 63, 
+		RULE_xPostfixOperation = 64, RULE_opPostfix = 65, RULE_xMemberFeatureCall = 66, 
+		RULE_xPrimaryExpression = 67, RULE_xLiteral = 68, RULE_xCollectionLiteral = 69, 
+		RULE_xSetLiteral = 70, RULE_xListLiteral = 71, RULE_xClosure = 72, RULE_xExpressionInClosure = 73, 
+		RULE_xShortClosure = 74, RULE_xParenthesizedExpression = 75, RULE_xIfExpression = 76, 
+		RULE_xSwitchExpression = 77, RULE_xCasePart = 78, RULE_xForLoopExpression = 79, 
+		RULE_xBasicForLoopExpression = 80, RULE_xWhileExpression = 81, RULE_xDoWhileExpression = 82, 
+		RULE_xBlockExpression = 83, RULE_xExpressionOrVarDeclaration = 84, RULE_xVariableDeclaration = 85, 
+		RULE_jvmFormalParameter = 86, RULE_fullJvmFormalParameter = 87, RULE_xFeatureCall = 88, 
+		RULE_featureCallID = 89, RULE_idOrSuper = 90, RULE_xConstructorCall = 91, 
+		RULE_xBooleanLiteral = 92, RULE_xNullLiteral = 93, RULE_xNumberLiteral = 94, 
+		RULE_xStringLiteral = 95, RULE_xTypeLiteral = 96, RULE_xThrowExpression = 97, 
+		RULE_xReturnExpression = 98, RULE_xTryCatchFinallyExpression = 99, RULE_xSynchronizedExpression = 100, 
+		RULE_xCatchClause = 101, RULE_qualifiedName = 102, RULE_number = 103, 
+		RULE_jvmTypeReference = 104, RULE_arrayBrackets = 105, RULE_xFunctionTypeRef = 106, 
+		RULE_jvmParameterizedTypeReference = 107, RULE_jvmArgumentTypeReference = 108, 
+		RULE_jvmWildcardTypeReference = 109, RULE_jvmUpperBound = 110, RULE_jvmUpperBoundAnded = 111, 
+		RULE_jvmLowerBound = 112, RULE_jvmLowerBoundAnded = 113, RULE_qualifiedNameWithWildcard = 114, 
+		RULE_validID = 115, RULE_xImportSection = 116, RULE_xImportDeclaration = 117, 
+		RULE_qualifiedNameInStaticImport = 118;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"ruleReactionsFile", "ruleMetamodelImport", "ruleReactionsSegment", "ruleReactionsImport", 
-			"ruleReaction", "ruleRoutineCall", "ruleTrigger", "ruleConcreteModelChange", 
-			"ruleModelElementChange", "ruleModelAttributeChange", "ruleArbitraryModelChange", 
-			"ruleElementExistenceChangeType", "ruleElementUsageChangeType", "ruleElementCreationChangeType", 
-			"ruleElementDeletionChangeType", "ruleElementReferenceChangeType", "ruleElementInsertionChangeType", 
-			"ruleElementInsertionInListChangeType", "ruleElementInsertionAsRootChangeType", 
-			"ruleElementRemovalChangeType", "ruleElementRemovalAsRootChangeType", 
-			"ruleElementRemovalFromListChangeType", "ruleElementReplacementChangeType", 
-			"ruleElementChangeType", "ruleRoutine", "ruleRoutineOverrideImportPath", 
-			"ruleRoutineInput", "ruleMatchBlock", "ruleMatchStatement", "ruleRetrieveOrRequireAbscenceOfModelElement", 
-			"ruleRequireAbscenceOfModelElement", "ruleRetrieveModelElement", "ruleRetrieveModelElementTypeStatement", 
-			"ruleMatchCheckStatement", "ruleCreateBlock", "ruleCreateStatement", 
-			"ruleUpdateBlock", "ruleMetaclassReference", "ruleUnnamedMetaclassReference", 
-			"ruleNamedMetaclassReference", "ruleNamedJavaElementReference", "ruleMetaclassEAttributeReference", 
-			"ruleMetaclassEReferenceReference", "ruleXExpression", "ruleXAssignment", 
-			"ruleOpSingleAssign", "ruleOpMultiAssign", "ruleXOrExpression", "ruleOpOr", 
-			"ruleXAndExpression", "ruleOpAnd", "ruleXEqualityExpression", "ruleOpEquality", 
-			"ruleXRelationalExpression", "ruleOpCompare", "ruleXOtherOperatorExpression", 
-			"ruleOpOther", "ruleXAdditiveExpression", "ruleOpAdd", "ruleXMultiplicativeExpression", 
-			"ruleOpMulti", "ruleXUnaryOperation", "ruleOpUnary", "ruleXCastedExpression", 
-			"ruleXPostfixOperation", "ruleOpPostfix", "ruleXMemberFeatureCall", "ruleXPrimaryExpression", 
-			"ruleXLiteral", "ruleXCollectionLiteral", "ruleXSetLiteral", "ruleXListLiteral", 
-			"ruleXClosure", "ruleXExpressionInClosure", "ruleXShortClosure", "ruleXParenthesizedExpression", 
-			"ruleXIfExpression", "ruleXSwitchExpression", "ruleXCasePart", "ruleXForLoopExpression", 
-			"ruleXBasicForLoopExpression", "ruleXWhileExpression", "ruleXDoWhileExpression", 
-			"ruleXBlockExpression", "ruleXExpressionOrVarDeclaration", "ruleXVariableDeclaration", 
-			"ruleJvmFormalParameter", "ruleFullJvmFormalParameter", "ruleXFeatureCall", 
-			"ruleFeatureCallID", "ruleIdOrSuper", "ruleXConstructorCall", "ruleXBooleanLiteral", 
-			"ruleXNullLiteral", "ruleXNumberLiteral", "ruleXStringLiteral", "ruleXTypeLiteral", 
-			"ruleXThrowExpression", "ruleXReturnExpression", "ruleXTryCatchFinallyExpression", 
-			"ruleXSynchronizedExpression", "ruleXCatchClause", "ruleQualifiedName", 
-			"ruleNumber", "ruleJvmTypeReference", "ruleArrayBrackets", "ruleXFunctionTypeRef", 
-			"ruleJvmParameterizedTypeReference", "ruleJvmArgumentTypeReference", 
-			"ruleJvmWildcardTypeReference", "ruleJvmUpperBound", "ruleJvmUpperBoundAnded", 
-			"ruleJvmLowerBound", "ruleJvmLowerBoundAnded", "ruleQualifiedNameWithWildcard", 
-			"ruleValidID", "ruleXImportSection", "ruleXImportDeclaration", "ruleQualifiedNameInStaticImport"
+			"reactionsFile", "metamodelImport", "reactionsSegment", "reactionsImport", 
+			"reaction", "routineCall", "trigger", "concreteModelChange", "modelElementChange", 
+			"modelAttributeChange", "arbitraryModelChange", "elementExistenceChangeType", 
+			"elementUsageChangeType", "elementCreationChangeType", "elementDeletionChangeType", 
+			"elementReferenceChangeType", "elementInsertionChangeType", "elementInsertionInListChangeType", 
+			"elementInsertionAsRootChangeType", "elementRemovalChangeType", "elementRemovalAsRootChangeType", 
+			"elementRemovalFromListChangeType", "elementReplacementChangeType", "elementChangeType", 
+			"routine", "routineOverrideImportPath", "routineInput", "matchBlock", 
+			"matchStatement", "retrieveOrRequireAbscenceOfModelElement", "requireAbscenceOfModelElement", 
+			"retrieveModelElement", "retrieveModelElementTypeStatement", "matchCheckStatement", 
+			"createBlock", "createStatement", "updateBlock", "metaclassReference", 
+			"unnamedMetaclassReference", "namedMetaclassReference", "namedJavaElementReference", 
+			"metaclassEAttributeReference", "metaclassEReferenceReference", "xExpression", 
+			"xAssignment", "opSingleAssign", "opMultiAssign", "xOrExpression", "opOr", 
+			"xAndExpression", "opAnd", "xEqualityExpression", "opEquality", "xRelationalExpression", 
+			"opCompare", "xOtherOperatorExpression", "opOther", "xAdditiveExpression", 
+			"opAdd", "xMultiplicativeExpression", "opMulti", "xUnaryOperation", "opUnary", 
+			"xCastedExpression", "xPostfixOperation", "opPostfix", "xMemberFeatureCall", 
+			"xPrimaryExpression", "xLiteral", "xCollectionLiteral", "xSetLiteral", 
+			"xListLiteral", "xClosure", "xExpressionInClosure", "xShortClosure", 
+			"xParenthesizedExpression", "xIfExpression", "xSwitchExpression", "xCasePart", 
+			"xForLoopExpression", "xBasicForLoopExpression", "xWhileExpression", 
+			"xDoWhileExpression", "xBlockExpression", "xExpressionOrVarDeclaration", 
+			"xVariableDeclaration", "jvmFormalParameter", "fullJvmFormalParameter", 
+			"xFeatureCall", "featureCallID", "idOrSuper", "xConstructorCall", "xBooleanLiteral", 
+			"xNullLiteral", "xNumberLiteral", "xStringLiteral", "xTypeLiteral", "xThrowExpression", 
+			"xReturnExpression", "xTryCatchFinallyExpression", "xSynchronizedExpression", 
+			"xCatchClause", "qualifiedName", "number", "jvmTypeReference", "arrayBrackets", 
+			"xFunctionTypeRef", "jvmParameterizedTypeReference", "jvmArgumentTypeReference", 
+			"jvmWildcardTypeReference", "jvmUpperBound", "jvmUpperBoundAnded", "jvmLowerBound", 
+			"jvmLowerBoundAnded", "qualifiedNameWithWildcard", "validID", "xImportSection", 
+			"xImportDeclaration", "qualifiedNameInStaticImport"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -214,39 +209,39 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleReactionsFileContext extends ParserRuleContext {
-		public RuleXImportSectionContext ruleXImportSection() {
-			return getRuleContext(RuleXImportSectionContext.class,0);
+	public static class ReactionsFileContext extends ParserRuleContext {
+		public XImportSectionContext xImportSection() {
+			return getRuleContext(XImportSectionContext.class,0);
 		}
-		public List<RuleMetamodelImportContext> ruleMetamodelImport() {
-			return getRuleContexts(RuleMetamodelImportContext.class);
+		public List<MetamodelImportContext> metamodelImport() {
+			return getRuleContexts(MetamodelImportContext.class);
 		}
-		public RuleMetamodelImportContext ruleMetamodelImport(int i) {
-			return getRuleContext(RuleMetamodelImportContext.class,i);
+		public MetamodelImportContext metamodelImport(int i) {
+			return getRuleContext(MetamodelImportContext.class,i);
 		}
-		public List<RuleReactionsSegmentContext> ruleReactionsSegment() {
-			return getRuleContexts(RuleReactionsSegmentContext.class);
+		public List<ReactionsSegmentContext> reactionsSegment() {
+			return getRuleContexts(ReactionsSegmentContext.class);
 		}
-		public RuleReactionsSegmentContext ruleReactionsSegment(int i) {
-			return getRuleContext(RuleReactionsSegmentContext.class,i);
+		public ReactionsSegmentContext reactionsSegment(int i) {
+			return getRuleContext(ReactionsSegmentContext.class,i);
 		}
-		public RuleReactionsFileContext(ParserRuleContext parent, int invokingState) {
+		public ReactionsFileContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleReactionsFile; }
+		@Override public int getRuleIndex() { return RULE_reactionsFile; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleReactionsFile(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterReactionsFile(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleReactionsFile(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitReactionsFile(this);
 		}
 	}
 
-	public final RuleReactionsFileContext ruleReactionsFile() throws RecognitionException {
-		RuleReactionsFileContext _localctx = new RuleReactionsFileContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_ruleReactionsFile);
+	public final ReactionsFileContext reactionsFile() throws RecognitionException {
+		ReactionsFileContext _localctx = new ReactionsFileContext(_ctx, getState());
+		enterRule(_localctx, 0, RULE_reactionsFile);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -257,7 +252,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case 1:
 				{
 				setState(238);
-				ruleXImportSection();
+				xImportSection();
 				}
 				break;
 			}
@@ -268,7 +263,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				{
 				{
 				setState(241);
-				ruleMetamodelImport();
+				metamodelImport();
 				}
 				}
 				setState(246);
@@ -282,7 +277,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				{
 				{
 				setState(247);
-				ruleReactionsSegment();
+				reactionsSegment();
 				}
 				}
 				setState(250); 
@@ -303,28 +298,28 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleMetamodelImportContext extends ParserRuleContext {
+	public static class MetamodelImportContext extends ParserRuleContext {
 		public TerminalNode RULE_STRING() { return getToken(DebugInternalReactionsLanguageParser.RULE_STRING, 0); }
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleMetamodelImportContext(ParserRuleContext parent, int invokingState) {
+		public MetamodelImportContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleMetamodelImport; }
+		@Override public int getRuleIndex() { return RULE_metamodelImport; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleMetamodelImport(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterMetamodelImport(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleMetamodelImport(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitMetamodelImport(this);
 		}
 	}
 
-	public final RuleMetamodelImportContext ruleMetamodelImport() throws RecognitionException {
-		RuleMetamodelImportContext _localctx = new RuleMetamodelImportContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_ruleMetamodelImport);
+	public final MetamodelImportContext metamodelImport() throws RecognitionException {
+		MetamodelImportContext _localctx = new MetamodelImportContext(_ctx, getState());
+		enterRule(_localctx, 2, RULE_metamodelImport);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -336,7 +331,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			setState(254);
 			match(T__1);
 			setState(255);
-			ruleValidID();
+			validID();
 			setState(259);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -365,49 +360,49 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleReactionsSegmentContext extends ParserRuleContext {
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+	public static class ReactionsSegmentContext extends ParserRuleContext {
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
 		public List<TerminalNode> RULE_ID() { return getTokens(DebugInternalReactionsLanguageParser.RULE_ID); }
 		public TerminalNode RULE_ID(int i) {
 			return getToken(DebugInternalReactionsLanguageParser.RULE_ID, i);
 		}
-		public List<RuleReactionsImportContext> ruleReactionsImport() {
-			return getRuleContexts(RuleReactionsImportContext.class);
+		public List<ReactionsImportContext> reactionsImport() {
+			return getRuleContexts(ReactionsImportContext.class);
 		}
-		public RuleReactionsImportContext ruleReactionsImport(int i) {
-			return getRuleContext(RuleReactionsImportContext.class,i);
+		public ReactionsImportContext reactionsImport(int i) {
+			return getRuleContext(ReactionsImportContext.class,i);
 		}
-		public List<RuleReactionContext> ruleReaction() {
-			return getRuleContexts(RuleReactionContext.class);
+		public List<ReactionContext> reaction() {
+			return getRuleContexts(ReactionContext.class);
 		}
-		public RuleReactionContext ruleReaction(int i) {
-			return getRuleContext(RuleReactionContext.class,i);
+		public ReactionContext reaction(int i) {
+			return getRuleContext(ReactionContext.class,i);
 		}
-		public List<RuleRoutineContext> ruleRoutine() {
-			return getRuleContexts(RuleRoutineContext.class);
+		public List<RoutineContext> routine() {
+			return getRuleContexts(RoutineContext.class);
 		}
-		public RuleRoutineContext ruleRoutine(int i) {
-			return getRuleContext(RuleRoutineContext.class,i);
+		public RoutineContext routine(int i) {
+			return getRuleContext(RoutineContext.class,i);
 		}
-		public RuleReactionsSegmentContext(ParserRuleContext parent, int invokingState) {
+		public ReactionsSegmentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleReactionsSegment; }
+		@Override public int getRuleIndex() { return RULE_reactionsSegment; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleReactionsSegment(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterReactionsSegment(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleReactionsSegment(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitReactionsSegment(this);
 		}
 	}
 
-	public final RuleReactionsSegmentContext ruleReactionsSegment() throws RecognitionException {
-		RuleReactionsSegmentContext _localctx = new RuleReactionsSegmentContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_ruleReactionsSegment);
+	public final ReactionsSegmentContext reactionsSegment() throws RecognitionException {
+		ReactionsSegmentContext _localctx = new ReactionsSegmentContext(_ctx, getState());
+		enterRule(_localctx, 4, RULE_reactionsSegment);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -417,7 +412,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			setState(262);
 			match(T__6);
 			setState(263);
-			ruleValidID();
+			validID();
 			setState(264);
 			match(T__7);
 			setState(265);
@@ -477,7 +472,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				{
 				{
 				setState(288);
-				ruleReactionsImport();
+				reactionsImport();
 				}
 				}
 				setState(293);
@@ -495,13 +490,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				case 1:
 					{
 					setState(294);
-					ruleReaction();
+					reaction();
 					}
 					break;
 				case 2:
 					{
 					setState(295);
-					ruleRoutine();
+					routine();
 					}
 					break;
 				}
@@ -524,25 +519,25 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleReactionsImportContext extends ParserRuleContext {
+	public static class ReactionsImportContext extends ParserRuleContext {
 		public TerminalNode RULE_ID() { return getToken(DebugInternalReactionsLanguageParser.RULE_ID, 0); }
-		public RuleReactionsImportContext(ParserRuleContext parent, int invokingState) {
+		public ReactionsImportContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleReactionsImport; }
+		@Override public int getRuleIndex() { return RULE_reactionsImport; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleReactionsImport(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterReactionsImport(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleReactionsImport(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitReactionsImport(this);
 		}
 	}
 
-	public final RuleReactionsImportContext ruleReactionsImport() throws RecognitionException {
-		RuleReactionsImportContext _localctx = new RuleReactionsImportContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_ruleReactionsImport);
+	public final ReactionsImportContext reactionsImport() throws RecognitionException {
+		ReactionsImportContext _localctx = new ReactionsImportContext(_ctx, getState());
+		enterRule(_localctx, 6, RULE_reactionsImport);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -589,35 +584,35 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleReactionContext extends ParserRuleContext {
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+	public static class ReactionContext extends ParserRuleContext {
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleTriggerContext ruleTrigger() {
-			return getRuleContext(RuleTriggerContext.class,0);
+		public TriggerContext trigger() {
+			return getRuleContext(TriggerContext.class,0);
 		}
-		public RuleRoutineCallContext ruleRoutineCall() {
-			return getRuleContext(RuleRoutineCallContext.class,0);
+		public RoutineCallContext routineCall() {
+			return getRuleContext(RoutineCallContext.class,0);
 		}
 		public TerminalNode RULE_ML_COMMENT() { return getToken(DebugInternalReactionsLanguageParser.RULE_ML_COMMENT, 0); }
 		public TerminalNode RULE_ID() { return getToken(DebugInternalReactionsLanguageParser.RULE_ID, 0); }
-		public RuleReactionContext(ParserRuleContext parent, int invokingState) {
+		public ReactionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleReaction; }
+		@Override public int getRuleIndex() { return RULE_reaction; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleReaction(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterReaction(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleReaction(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitReaction(this);
 		}
 	}
 
-	public final RuleReactionContext ruleReaction() throws RecognitionException {
-		RuleReactionContext _localctx = new RuleReactionContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_ruleReaction);
+	public final ReactionContext reaction() throws RecognitionException {
+		ReactionContext _localctx = new ReactionContext(_ctx, getState());
+		enterRule(_localctx, 8, RULE_reaction);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -647,13 +642,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				break;
 			}
 			setState(319);
-			ruleValidID();
+			validID();
 			setState(320);
 			match(T__16);
 			setState(321);
-			ruleTrigger();
+			trigger();
 			setState(322);
-			ruleRoutineCall();
+			routineCall();
 			setState(323);
 			match(T__17);
 			}
@@ -670,34 +665,34 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleRoutineCallContext extends ParserRuleContext {
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+	public static class RoutineCallContext extends ParserRuleContext {
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleRoutineCallContext(ParserRuleContext parent, int invokingState) {
+		public RoutineCallContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleRoutineCall; }
+		@Override public int getRuleIndex() { return RULE_routineCall; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleRoutineCall(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRoutineCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleRoutineCall(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRoutineCall(this);
 		}
 	}
 
-	public final RuleRoutineCallContext ruleRoutineCall() throws RecognitionException {
-		RuleRoutineCallContext _localctx = new RuleRoutineCallContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_ruleRoutineCall);
+	public final RoutineCallContext routineCall() throws RecognitionException {
+		RoutineCallContext _localctx = new RoutineCallContext(_ctx, getState());
+		enterRule(_localctx, 10, RULE_routineCall);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(325);
 			match(T__18);
 			setState(326);
-			ruleXExpression();
+			xExpression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -712,30 +707,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleTriggerContext extends ParserRuleContext {
-		public RuleArbitraryModelChangeContext ruleArbitraryModelChange() {
-			return getRuleContext(RuleArbitraryModelChangeContext.class,0);
+	public static class TriggerContext extends ParserRuleContext {
+		public ArbitraryModelChangeContext arbitraryModelChange() {
+			return getRuleContext(ArbitraryModelChangeContext.class,0);
 		}
-		public RuleConcreteModelChangeContext ruleConcreteModelChange() {
-			return getRuleContext(RuleConcreteModelChangeContext.class,0);
+		public ConcreteModelChangeContext concreteModelChange() {
+			return getRuleContext(ConcreteModelChangeContext.class,0);
 		}
-		public RuleTriggerContext(ParserRuleContext parent, int invokingState) {
+		public TriggerContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleTrigger; }
+		@Override public int getRuleIndex() { return RULE_trigger; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleTrigger(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterTrigger(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleTrigger(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitTrigger(this);
 		}
 	}
 
-	public final RuleTriggerContext ruleTrigger() throws RecognitionException {
-		RuleTriggerContext _localctx = new RuleTriggerContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_ruleTrigger);
+	public final TriggerContext trigger() throws RecognitionException {
+		TriggerContext _localctx = new TriggerContext(_ctx, getState());
+		enterRule(_localctx, 12, RULE_trigger);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -747,14 +742,14 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__28:
 				{
 				setState(329);
-				ruleArbitraryModelChange();
+				arbitraryModelChange();
 				}
 				break;
 			case T__20:
 			case T__22:
 				{
 				setState(330);
-				ruleConcreteModelChange();
+				concreteModelChange();
 				}
 				break;
 			default:
@@ -774,30 +769,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleConcreteModelChangeContext extends ParserRuleContext {
-		public RuleModelElementChangeContext ruleModelElementChange() {
-			return getRuleContext(RuleModelElementChangeContext.class,0);
+	public static class ConcreteModelChangeContext extends ParserRuleContext {
+		public ModelElementChangeContext modelElementChange() {
+			return getRuleContext(ModelElementChangeContext.class,0);
 		}
-		public RuleModelAttributeChangeContext ruleModelAttributeChange() {
-			return getRuleContext(RuleModelAttributeChangeContext.class,0);
+		public ModelAttributeChangeContext modelAttributeChange() {
+			return getRuleContext(ModelAttributeChangeContext.class,0);
 		}
-		public RuleConcreteModelChangeContext(ParserRuleContext parent, int invokingState) {
+		public ConcreteModelChangeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleConcreteModelChange; }
+		@Override public int getRuleIndex() { return RULE_concreteModelChange; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleConcreteModelChange(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterConcreteModelChange(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleConcreteModelChange(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitConcreteModelChange(this);
 		}
 	}
 
-	public final RuleConcreteModelChangeContext ruleConcreteModelChange() throws RecognitionException {
-		RuleConcreteModelChangeContext _localctx = new RuleConcreteModelChangeContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_ruleConcreteModelChange);
+	public final ConcreteModelChangeContext concreteModelChange() throws RecognitionException {
+		ConcreteModelChangeContext _localctx = new ConcreteModelChangeContext(_ctx, getState());
+		enterRule(_localctx, 14, RULE_concreteModelChange);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -807,13 +802,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__20:
 				{
 				setState(333);
-				ruleModelElementChange();
+				modelElementChange();
 				}
 				break;
 			case T__22:
 				{
 				setState(334);
-				ruleModelAttributeChange();
+				modelAttributeChange();
 				}
 				break;
 			default:
@@ -833,33 +828,33 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleModelElementChangeContext extends ParserRuleContext {
-		public RuleElementChangeTypeContext ruleElementChangeType() {
-			return getRuleContext(RuleElementChangeTypeContext.class,0);
+	public static class ModelElementChangeContext extends ParserRuleContext {
+		public ElementChangeTypeContext elementChangeType() {
+			return getRuleContext(ElementChangeTypeContext.class,0);
 		}
-		public RuleUnnamedMetaclassReferenceContext ruleUnnamedMetaclassReference() {
-			return getRuleContext(RuleUnnamedMetaclassReferenceContext.class,0);
+		public UnnamedMetaclassReferenceContext unnamedMetaclassReference() {
+			return getRuleContext(UnnamedMetaclassReferenceContext.class,0);
 		}
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleModelElementChangeContext(ParserRuleContext parent, int invokingState) {
+		public ModelElementChangeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleModelElementChange; }
+		@Override public int getRuleIndex() { return RULE_modelElementChange; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleModelElementChange(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterModelElementChange(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleModelElementChange(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitModelElementChange(this);
 		}
 	}
 
-	public final RuleModelElementChangeContext ruleModelElementChange() throws RecognitionException {
-		RuleModelElementChangeContext _localctx = new RuleModelElementChangeContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_ruleModelElementChange);
+	public final ModelElementChangeContext modelElementChange() throws RecognitionException {
+		ModelElementChangeContext _localctx = new ModelElementChangeContext(_ctx, getState());
+		enterRule(_localctx, 16, RULE_modelElementChange);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -872,12 +867,12 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			if (_la==RULE_ID) {
 				{
 				setState(338);
-				ruleUnnamedMetaclassReference();
+				unnamedMetaclassReference();
 				}
 			}
 
 			setState(341);
-			ruleElementChangeType();
+			elementChangeType();
 			setState(344);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -886,7 +881,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				setState(342);
 				match(T__21);
 				setState(343);
-				ruleXExpression();
+				xExpression();
 				}
 			}
 
@@ -904,30 +899,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleModelAttributeChangeContext extends ParserRuleContext {
-		public RuleMetaclassEAttributeReferenceContext ruleMetaclassEAttributeReference() {
-			return getRuleContext(RuleMetaclassEAttributeReferenceContext.class,0);
+	public static class ModelAttributeChangeContext extends ParserRuleContext {
+		public MetaclassEAttributeReferenceContext metaclassEAttributeReference() {
+			return getRuleContext(MetaclassEAttributeReferenceContext.class,0);
 		}
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleModelAttributeChangeContext(ParserRuleContext parent, int invokingState) {
+		public ModelAttributeChangeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleModelAttributeChange; }
+		@Override public int getRuleIndex() { return RULE_modelAttributeChange; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleModelAttributeChange(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterModelAttributeChange(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleModelAttributeChange(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitModelAttributeChange(this);
 		}
 	}
 
-	public final RuleModelAttributeChangeContext ruleModelAttributeChange() throws RecognitionException {
-		RuleModelAttributeChangeContext _localctx = new RuleModelAttributeChangeContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_ruleModelAttributeChange);
+	public final ModelAttributeChangeContext modelAttributeChange() throws RecognitionException {
+		ModelAttributeChangeContext _localctx = new ModelAttributeChangeContext(_ctx, getState());
+		enterRule(_localctx, 18, RULE_modelAttributeChange);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -965,7 +960,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				throw new NoViableAltException(this);
 			}
 			setState(355);
-			ruleMetaclassEAttributeReference();
+			metaclassEAttributeReference();
 			setState(358);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -974,7 +969,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				setState(356);
 				match(T__21);
 				setState(357);
-				ruleXExpression();
+				xExpression();
 				}
 			}
 
@@ -992,27 +987,27 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleArbitraryModelChangeContext extends ParserRuleContext {
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+	public static class ArbitraryModelChangeContext extends ParserRuleContext {
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleArbitraryModelChangeContext(ParserRuleContext parent, int invokingState) {
+		public ArbitraryModelChangeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleArbitraryModelChange; }
+		@Override public int getRuleIndex() { return RULE_arbitraryModelChange; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleArbitraryModelChange(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterArbitraryModelChange(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleArbitraryModelChange(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitArbitraryModelChange(this);
 		}
 	}
 
-	public final RuleArbitraryModelChangeContext ruleArbitraryModelChange() throws RecognitionException {
-		RuleArbitraryModelChangeContext _localctx = new RuleArbitraryModelChangeContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_ruleArbitraryModelChange);
+	public final ArbitraryModelChangeContext arbitraryModelChange() throws RecognitionException {
+		ArbitraryModelChangeContext _localctx = new ArbitraryModelChangeContext(_ctx, getState());
+		enterRule(_localctx, 20, RULE_arbitraryModelChange);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1027,7 +1022,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				setState(361);
 				match(T__21);
 				setState(362);
-				ruleXExpression();
+				xExpression();
 				}
 			}
 
@@ -1045,30 +1040,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementExistenceChangeTypeContext extends ParserRuleContext {
-		public RuleElementCreationChangeTypeContext ruleElementCreationChangeType() {
-			return getRuleContext(RuleElementCreationChangeTypeContext.class,0);
+	public static class ElementExistenceChangeTypeContext extends ParserRuleContext {
+		public ElementCreationChangeTypeContext elementCreationChangeType() {
+			return getRuleContext(ElementCreationChangeTypeContext.class,0);
 		}
-		public RuleElementDeletionChangeTypeContext ruleElementDeletionChangeType() {
-			return getRuleContext(RuleElementDeletionChangeTypeContext.class,0);
+		public ElementDeletionChangeTypeContext elementDeletionChangeType() {
+			return getRuleContext(ElementDeletionChangeTypeContext.class,0);
 		}
-		public RuleElementExistenceChangeTypeContext(ParserRuleContext parent, int invokingState) {
+		public ElementExistenceChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementExistenceChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementExistenceChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementExistenceChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementExistenceChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementExistenceChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementExistenceChangeType(this);
 		}
 	}
 
-	public final RuleElementExistenceChangeTypeContext ruleElementExistenceChangeType() throws RecognitionException {
-		RuleElementExistenceChangeTypeContext _localctx = new RuleElementExistenceChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_ruleElementExistenceChangeType);
+	public final ElementExistenceChangeTypeContext elementExistenceChangeType() throws RecognitionException {
+		ElementExistenceChangeTypeContext _localctx = new ElementExistenceChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 22, RULE_elementExistenceChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1078,13 +1073,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__29:
 				{
 				setState(365);
-				ruleElementCreationChangeType();
+				elementCreationChangeType();
 				}
 				break;
 			case T__30:
 				{
 				setState(366);
-				ruleElementDeletionChangeType();
+				elementDeletionChangeType();
 				}
 				break;
 			default:
@@ -1104,33 +1099,33 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementUsageChangeTypeContext extends ParserRuleContext {
-		public RuleElementInsertionChangeTypeContext ruleElementInsertionChangeType() {
-			return getRuleContext(RuleElementInsertionChangeTypeContext.class,0);
+	public static class ElementUsageChangeTypeContext extends ParserRuleContext {
+		public ElementInsertionChangeTypeContext elementInsertionChangeType() {
+			return getRuleContext(ElementInsertionChangeTypeContext.class,0);
 		}
-		public RuleElementRemovalChangeTypeContext ruleElementRemovalChangeType() {
-			return getRuleContext(RuleElementRemovalChangeTypeContext.class,0);
+		public ElementRemovalChangeTypeContext elementRemovalChangeType() {
+			return getRuleContext(ElementRemovalChangeTypeContext.class,0);
 		}
-		public RuleElementReplacementChangeTypeContext ruleElementReplacementChangeType() {
-			return getRuleContext(RuleElementReplacementChangeTypeContext.class,0);
+		public ElementReplacementChangeTypeContext elementReplacementChangeType() {
+			return getRuleContext(ElementReplacementChangeTypeContext.class,0);
 		}
-		public RuleElementUsageChangeTypeContext(ParserRuleContext parent, int invokingState) {
+		public ElementUsageChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementUsageChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementUsageChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementUsageChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementUsageChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementUsageChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementUsageChangeType(this);
 		}
 	}
 
-	public final RuleElementUsageChangeTypeContext ruleElementUsageChangeType() throws RecognitionException {
-		RuleElementUsageChangeTypeContext _localctx = new RuleElementUsageChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_ruleElementUsageChangeType);
+	public final ElementUsageChangeTypeContext elementUsageChangeType() throws RecognitionException {
+		ElementUsageChangeTypeContext _localctx = new ElementUsageChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 24, RULE_elementUsageChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1140,19 +1135,19 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__23:
 				{
 				setState(369);
-				ruleElementInsertionChangeType();
+				elementInsertionChangeType();
 				}
 				break;
 			case T__24:
 				{
 				setState(370);
-				ruleElementRemovalChangeType();
+				elementRemovalChangeType();
 				}
 				break;
 			case T__26:
 				{
 				setState(371);
-				ruleElementReplacementChangeType();
+				elementReplacementChangeType();
 				}
 				break;
 			default:
@@ -1172,24 +1167,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementCreationChangeTypeContext extends ParserRuleContext {
-		public RuleElementCreationChangeTypeContext(ParserRuleContext parent, int invokingState) {
+	public static class ElementCreationChangeTypeContext extends ParserRuleContext {
+		public ElementCreationChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementCreationChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementCreationChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementCreationChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementCreationChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementCreationChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementCreationChangeType(this);
 		}
 	}
 
-	public final RuleElementCreationChangeTypeContext ruleElementCreationChangeType() throws RecognitionException {
-		RuleElementCreationChangeTypeContext _localctx = new RuleElementCreationChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 26, RULE_ruleElementCreationChangeType);
+	public final ElementCreationChangeTypeContext elementCreationChangeType() throws RecognitionException {
+		ElementCreationChangeTypeContext _localctx = new ElementCreationChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 26, RULE_elementCreationChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1209,24 +1204,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementDeletionChangeTypeContext extends ParserRuleContext {
-		public RuleElementDeletionChangeTypeContext(ParserRuleContext parent, int invokingState) {
+	public static class ElementDeletionChangeTypeContext extends ParserRuleContext {
+		public ElementDeletionChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementDeletionChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementDeletionChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementDeletionChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementDeletionChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementDeletionChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementDeletionChangeType(this);
 		}
 	}
 
-	public final RuleElementDeletionChangeTypeContext ruleElementDeletionChangeType() throws RecognitionException {
-		RuleElementDeletionChangeTypeContext _localctx = new RuleElementDeletionChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_ruleElementDeletionChangeType);
+	public final ElementDeletionChangeTypeContext elementDeletionChangeType() throws RecognitionException {
+		ElementDeletionChangeTypeContext _localctx = new ElementDeletionChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 28, RULE_elementDeletionChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1246,32 +1241,32 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementReferenceChangeTypeContext extends ParserRuleContext {
-		public RuleMetaclassEReferenceReferenceContext ruleMetaclassEReferenceReference() {
-			return getRuleContext(RuleMetaclassEReferenceReferenceContext.class,0);
+	public static class ElementReferenceChangeTypeContext extends ParserRuleContext {
+		public MetaclassEReferenceReferenceContext metaclassEReferenceReference() {
+			return getRuleContext(MetaclassEReferenceReferenceContext.class,0);
 		}
-		public RuleElementReferenceChangeTypeContext(ParserRuleContext parent, int invokingState) {
+		public ElementReferenceChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementReferenceChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementReferenceChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementReferenceChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementReferenceChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementReferenceChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementReferenceChangeType(this);
 		}
 	}
 
-	public final RuleElementReferenceChangeTypeContext ruleElementReferenceChangeType() throws RecognitionException {
-		RuleElementReferenceChangeTypeContext _localctx = new RuleElementReferenceChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_ruleElementReferenceChangeType);
+	public final ElementReferenceChangeTypeContext elementReferenceChangeType() throws RecognitionException {
+		ElementReferenceChangeTypeContext _localctx = new ElementReferenceChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 30, RULE_elementReferenceChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(378);
-			ruleMetaclassEReferenceReference();
+			metaclassEReferenceReference();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1286,30 +1281,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementInsertionChangeTypeContext extends ParserRuleContext {
-		public RuleElementInsertionInListChangeTypeContext ruleElementInsertionInListChangeType() {
-			return getRuleContext(RuleElementInsertionInListChangeTypeContext.class,0);
+	public static class ElementInsertionChangeTypeContext extends ParserRuleContext {
+		public ElementInsertionInListChangeTypeContext elementInsertionInListChangeType() {
+			return getRuleContext(ElementInsertionInListChangeTypeContext.class,0);
 		}
-		public RuleElementInsertionAsRootChangeTypeContext ruleElementInsertionAsRootChangeType() {
-			return getRuleContext(RuleElementInsertionAsRootChangeTypeContext.class,0);
+		public ElementInsertionAsRootChangeTypeContext elementInsertionAsRootChangeType() {
+			return getRuleContext(ElementInsertionAsRootChangeTypeContext.class,0);
 		}
-		public RuleElementInsertionChangeTypeContext(ParserRuleContext parent, int invokingState) {
+		public ElementInsertionChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementInsertionChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementInsertionChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementInsertionChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementInsertionChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementInsertionChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementInsertionChangeType(this);
 		}
 	}
 
-	public final RuleElementInsertionChangeTypeContext ruleElementInsertionChangeType() throws RecognitionException {
-		RuleElementInsertionChangeTypeContext _localctx = new RuleElementInsertionChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 32, RULE_ruleElementInsertionChangeType);
+	public final ElementInsertionChangeTypeContext elementInsertionChangeType() throws RecognitionException {
+		ElementInsertionChangeTypeContext _localctx = new ElementInsertionChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 32, RULE_elementInsertionChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1319,13 +1314,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case 1:
 				{
 				setState(380);
-				ruleElementInsertionInListChangeType();
+				elementInsertionInListChangeType();
 				}
 				break;
 			case 2:
 				{
 				setState(381);
-				ruleElementInsertionAsRootChangeType();
+				elementInsertionAsRootChangeType();
 				}
 				break;
 			}
@@ -1343,27 +1338,27 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementInsertionInListChangeTypeContext extends ParserRuleContext {
-		public RuleElementReferenceChangeTypeContext ruleElementReferenceChangeType() {
-			return getRuleContext(RuleElementReferenceChangeTypeContext.class,0);
+	public static class ElementInsertionInListChangeTypeContext extends ParserRuleContext {
+		public ElementReferenceChangeTypeContext elementReferenceChangeType() {
+			return getRuleContext(ElementReferenceChangeTypeContext.class,0);
 		}
-		public RuleElementInsertionInListChangeTypeContext(ParserRuleContext parent, int invokingState) {
+		public ElementInsertionInListChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementInsertionInListChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementInsertionInListChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementInsertionInListChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementInsertionInListChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementInsertionInListChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementInsertionInListChangeType(this);
 		}
 	}
 
-	public final RuleElementInsertionInListChangeTypeContext ruleElementInsertionInListChangeType() throws RecognitionException {
-		RuleElementInsertionInListChangeTypeContext _localctx = new RuleElementInsertionInListChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 34, RULE_ruleElementInsertionInListChangeType);
+	public final ElementInsertionInListChangeTypeContext elementInsertionInListChangeType() throws RecognitionException {
+		ElementInsertionInListChangeTypeContext _localctx = new ElementInsertionInListChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 34, RULE_elementInsertionInListChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1372,7 +1367,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			setState(385);
 			match(T__7);
 			setState(386);
-			ruleElementReferenceChangeType();
+			elementReferenceChangeType();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1387,24 +1382,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementInsertionAsRootChangeTypeContext extends ParserRuleContext {
-		public RuleElementInsertionAsRootChangeTypeContext(ParserRuleContext parent, int invokingState) {
+	public static class ElementInsertionAsRootChangeTypeContext extends ParserRuleContext {
+		public ElementInsertionAsRootChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementInsertionAsRootChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementInsertionAsRootChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementInsertionAsRootChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementInsertionAsRootChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementInsertionAsRootChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementInsertionAsRootChangeType(this);
 		}
 	}
 
-	public final RuleElementInsertionAsRootChangeTypeContext ruleElementInsertionAsRootChangeType() throws RecognitionException {
-		RuleElementInsertionAsRootChangeTypeContext _localctx = new RuleElementInsertionAsRootChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 36, RULE_ruleElementInsertionAsRootChangeType);
+	public final ElementInsertionAsRootChangeTypeContext elementInsertionAsRootChangeType() throws RecognitionException {
+		ElementInsertionAsRootChangeTypeContext _localctx = new ElementInsertionAsRootChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 36, RULE_elementInsertionAsRootChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1428,30 +1423,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementRemovalChangeTypeContext extends ParserRuleContext {
-		public RuleElementRemovalAsRootChangeTypeContext ruleElementRemovalAsRootChangeType() {
-			return getRuleContext(RuleElementRemovalAsRootChangeTypeContext.class,0);
+	public static class ElementRemovalChangeTypeContext extends ParserRuleContext {
+		public ElementRemovalAsRootChangeTypeContext elementRemovalAsRootChangeType() {
+			return getRuleContext(ElementRemovalAsRootChangeTypeContext.class,0);
 		}
-		public RuleElementRemovalFromListChangeTypeContext ruleElementRemovalFromListChangeType() {
-			return getRuleContext(RuleElementRemovalFromListChangeTypeContext.class,0);
+		public ElementRemovalFromListChangeTypeContext elementRemovalFromListChangeType() {
+			return getRuleContext(ElementRemovalFromListChangeTypeContext.class,0);
 		}
-		public RuleElementRemovalChangeTypeContext(ParserRuleContext parent, int invokingState) {
+		public ElementRemovalChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementRemovalChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementRemovalChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementRemovalChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementRemovalChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementRemovalChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementRemovalChangeType(this);
 		}
 	}
 
-	public final RuleElementRemovalChangeTypeContext ruleElementRemovalChangeType() throws RecognitionException {
-		RuleElementRemovalChangeTypeContext _localctx = new RuleElementRemovalChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 38, RULE_ruleElementRemovalChangeType);
+	public final ElementRemovalChangeTypeContext elementRemovalChangeType() throws RecognitionException {
+		ElementRemovalChangeTypeContext _localctx = new ElementRemovalChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 38, RULE_elementRemovalChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1461,13 +1456,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case 1:
 				{
 				setState(392);
-				ruleElementRemovalAsRootChangeType();
+				elementRemovalAsRootChangeType();
 				}
 				break;
 			case 2:
 				{
 				setState(393);
-				ruleElementRemovalFromListChangeType();
+				elementRemovalFromListChangeType();
 				}
 				break;
 			}
@@ -1485,24 +1480,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementRemovalAsRootChangeTypeContext extends ParserRuleContext {
-		public RuleElementRemovalAsRootChangeTypeContext(ParserRuleContext parent, int invokingState) {
+	public static class ElementRemovalAsRootChangeTypeContext extends ParserRuleContext {
+		public ElementRemovalAsRootChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementRemovalAsRootChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementRemovalAsRootChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementRemovalAsRootChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementRemovalAsRootChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementRemovalAsRootChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementRemovalAsRootChangeType(this);
 		}
 	}
 
-	public final RuleElementRemovalAsRootChangeTypeContext ruleElementRemovalAsRootChangeType() throws RecognitionException {
-		RuleElementRemovalAsRootChangeTypeContext _localctx = new RuleElementRemovalAsRootChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 40, RULE_ruleElementRemovalAsRootChangeType);
+	public final ElementRemovalAsRootChangeTypeContext elementRemovalAsRootChangeType() throws RecognitionException {
+		ElementRemovalAsRootChangeTypeContext _localctx = new ElementRemovalAsRootChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 40, RULE_elementRemovalAsRootChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1526,27 +1521,27 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementRemovalFromListChangeTypeContext extends ParserRuleContext {
-		public RuleElementReferenceChangeTypeContext ruleElementReferenceChangeType() {
-			return getRuleContext(RuleElementReferenceChangeTypeContext.class,0);
+	public static class ElementRemovalFromListChangeTypeContext extends ParserRuleContext {
+		public ElementReferenceChangeTypeContext elementReferenceChangeType() {
+			return getRuleContext(ElementReferenceChangeTypeContext.class,0);
 		}
-		public RuleElementRemovalFromListChangeTypeContext(ParserRuleContext parent, int invokingState) {
+		public ElementRemovalFromListChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementRemovalFromListChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementRemovalFromListChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementRemovalFromListChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementRemovalFromListChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementRemovalFromListChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementRemovalFromListChangeType(this);
 		}
 	}
 
-	public final RuleElementRemovalFromListChangeTypeContext ruleElementRemovalFromListChangeType() throws RecognitionException {
-		RuleElementRemovalFromListChangeTypeContext _localctx = new RuleElementRemovalFromListChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 42, RULE_ruleElementRemovalFromListChangeType);
+	public final ElementRemovalFromListChangeTypeContext elementRemovalFromListChangeType() throws RecognitionException {
+		ElementRemovalFromListChangeTypeContext _localctx = new ElementRemovalFromListChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 42, RULE_elementRemovalFromListChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1555,7 +1550,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			setState(401);
 			match(T__25);
 			setState(402);
-			ruleElementReferenceChangeType();
+			elementReferenceChangeType();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1570,27 +1565,27 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementReplacementChangeTypeContext extends ParserRuleContext {
-		public RuleElementReferenceChangeTypeContext ruleElementReferenceChangeType() {
-			return getRuleContext(RuleElementReferenceChangeTypeContext.class,0);
+	public static class ElementReplacementChangeTypeContext extends ParserRuleContext {
+		public ElementReferenceChangeTypeContext elementReferenceChangeType() {
+			return getRuleContext(ElementReferenceChangeTypeContext.class,0);
 		}
-		public RuleElementReplacementChangeTypeContext(ParserRuleContext parent, int invokingState) {
+		public ElementReplacementChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementReplacementChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementReplacementChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementReplacementChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementReplacementChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementReplacementChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementReplacementChangeType(this);
 		}
 	}
 
-	public final RuleElementReplacementChangeTypeContext ruleElementReplacementChangeType() throws RecognitionException {
-		RuleElementReplacementChangeTypeContext _localctx = new RuleElementReplacementChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 44, RULE_ruleElementReplacementChangeType);
+	public final ElementReplacementChangeTypeContext elementReplacementChangeType() throws RecognitionException {
+		ElementReplacementChangeTypeContext _localctx = new ElementReplacementChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 44, RULE_elementReplacementChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1599,7 +1594,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			setState(405);
 			match(T__27);
 			setState(406);
-			ruleElementReferenceChangeType();
+			elementReferenceChangeType();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1614,30 +1609,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleElementChangeTypeContext extends ParserRuleContext {
-		public RuleElementExistenceChangeTypeContext ruleElementExistenceChangeType() {
-			return getRuleContext(RuleElementExistenceChangeTypeContext.class,0);
+	public static class ElementChangeTypeContext extends ParserRuleContext {
+		public ElementExistenceChangeTypeContext elementExistenceChangeType() {
+			return getRuleContext(ElementExistenceChangeTypeContext.class,0);
 		}
-		public RuleElementUsageChangeTypeContext ruleElementUsageChangeType() {
-			return getRuleContext(RuleElementUsageChangeTypeContext.class,0);
+		public ElementUsageChangeTypeContext elementUsageChangeType() {
+			return getRuleContext(ElementUsageChangeTypeContext.class,0);
 		}
-		public RuleElementChangeTypeContext(ParserRuleContext parent, int invokingState) {
+		public ElementChangeTypeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleElementChangeType; }
+		@Override public int getRuleIndex() { return RULE_elementChangeType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleElementChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterElementChangeType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleElementChangeType(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitElementChangeType(this);
 		}
 	}
 
-	public final RuleElementChangeTypeContext ruleElementChangeType() throws RecognitionException {
-		RuleElementChangeTypeContext _localctx = new RuleElementChangeTypeContext(_ctx, getState());
-		enterRule(_localctx, 46, RULE_ruleElementChangeType);
+	public final ElementChangeTypeContext elementChangeType() throws RecognitionException {
+		ElementChangeTypeContext _localctx = new ElementChangeTypeContext(_ctx, getState());
+		enterRule(_localctx, 46, RULE_elementChangeType);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -1648,7 +1643,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__30:
 				{
 				setState(408);
-				ruleElementExistenceChangeType();
+				elementExistenceChangeType();
 				}
 				break;
 			case T__23:
@@ -1656,7 +1651,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__26:
 				{
 				setState(409);
-				ruleElementUsageChangeType();
+				elementUsageChangeType();
 				}
 				break;
 			default:
@@ -1676,43 +1671,43 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleRoutineContext extends ParserRuleContext {
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+	public static class RoutineContext extends ParserRuleContext {
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleRoutineInputContext ruleRoutineInput() {
-			return getRuleContext(RuleRoutineInputContext.class,0);
+		public RoutineInputContext routineInput() {
+			return getRuleContext(RoutineInputContext.class,0);
 		}
 		public TerminalNode RULE_ML_COMMENT() { return getToken(DebugInternalReactionsLanguageParser.RULE_ML_COMMENT, 0); }
-		public RuleRoutineOverrideImportPathContext ruleRoutineOverrideImportPath() {
-			return getRuleContext(RuleRoutineOverrideImportPathContext.class,0);
+		public RoutineOverrideImportPathContext routineOverrideImportPath() {
+			return getRuleContext(RoutineOverrideImportPathContext.class,0);
 		}
-		public RuleMatchBlockContext ruleMatchBlock() {
-			return getRuleContext(RuleMatchBlockContext.class,0);
+		public MatchBlockContext matchBlock() {
+			return getRuleContext(MatchBlockContext.class,0);
 		}
-		public RuleCreateBlockContext ruleCreateBlock() {
-			return getRuleContext(RuleCreateBlockContext.class,0);
+		public CreateBlockContext createBlock() {
+			return getRuleContext(CreateBlockContext.class,0);
 		}
-		public RuleUpdateBlockContext ruleUpdateBlock() {
-			return getRuleContext(RuleUpdateBlockContext.class,0);
+		public UpdateBlockContext updateBlock() {
+			return getRuleContext(UpdateBlockContext.class,0);
 		}
-		public RuleRoutineContext(ParserRuleContext parent, int invokingState) {
+		public RoutineContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleRoutine; }
+		@Override public int getRuleIndex() { return RULE_routine; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleRoutine(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRoutine(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleRoutine(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRoutine(this);
 		}
 	}
 
-	public final RuleRoutineContext ruleRoutine() throws RecognitionException {
-		RuleRoutineContext _localctx = new RuleRoutineContext(_ctx, getState());
-		enterRule(_localctx, 48, RULE_ruleRoutine);
+	public final RoutineContext routine() throws RecognitionException {
+		RoutineContext _localctx = new RoutineContext(_ctx, getState());
+		enterRule(_localctx, 48, RULE_routine);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1735,16 +1730,16 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case 1:
 				{
 				setState(416);
-				ruleRoutineOverrideImportPath();
+				routineOverrideImportPath();
 				setState(417);
 				match(T__15);
 				}
 				break;
 			}
 			setState(421);
-			ruleValidID();
+			validID();
 			setState(422);
-			ruleRoutineInput();
+			routineInput();
 			setState(423);
 			match(T__16);
 			setState(425);
@@ -1753,7 +1748,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			if (_la==T__38) {
 				{
 				setState(424);
-				ruleMatchBlock();
+				matchBlock();
 				}
 			}
 
@@ -1763,7 +1758,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			if (_la==T__51) {
 				{
 				setState(427);
-				ruleCreateBlock();
+				createBlock();
 				}
 			}
 
@@ -1773,7 +1768,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			if (_la==T__53) {
 				{
 				setState(430);
-				ruleUpdateBlock();
+				updateBlock();
 				}
 			}
 
@@ -1793,28 +1788,28 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleRoutineOverrideImportPathContext extends ParserRuleContext {
+	public static class RoutineOverrideImportPathContext extends ParserRuleContext {
 		public List<TerminalNode> RULE_ID() { return getTokens(DebugInternalReactionsLanguageParser.RULE_ID); }
 		public TerminalNode RULE_ID(int i) {
 			return getToken(DebugInternalReactionsLanguageParser.RULE_ID, i);
 		}
-		public RuleRoutineOverrideImportPathContext(ParserRuleContext parent, int invokingState) {
+		public RoutineOverrideImportPathContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleRoutineOverrideImportPath; }
+		@Override public int getRuleIndex() { return RULE_routineOverrideImportPath; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleRoutineOverrideImportPath(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRoutineOverrideImportPath(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleRoutineOverrideImportPath(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRoutineOverrideImportPath(this);
 		}
 	}
 
-	public final RuleRoutineOverrideImportPathContext ruleRoutineOverrideImportPath() throws RecognitionException {
-		RuleRoutineOverrideImportPathContext _localctx = new RuleRoutineOverrideImportPathContext(_ctx, getState());
-		enterRule(_localctx, 50, RULE_ruleRoutineOverrideImportPath);
+	public final RoutineOverrideImportPathContext routineOverrideImportPath() throws RecognitionException {
+		RoutineOverrideImportPathContext _localctx = new RoutineOverrideImportPathContext(_ctx, getState());
+		enterRule(_localctx, 50, RULE_routineOverrideImportPath);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1851,36 +1846,36 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleRoutineInputContext extends ParserRuleContext {
-		public List<RuleNamedMetaclassReferenceContext> ruleNamedMetaclassReference() {
-			return getRuleContexts(RuleNamedMetaclassReferenceContext.class);
+	public static class RoutineInputContext extends ParserRuleContext {
+		public List<NamedMetaclassReferenceContext> namedMetaclassReference() {
+			return getRuleContexts(NamedMetaclassReferenceContext.class);
 		}
-		public RuleNamedMetaclassReferenceContext ruleNamedMetaclassReference(int i) {
-			return getRuleContext(RuleNamedMetaclassReferenceContext.class,i);
+		public NamedMetaclassReferenceContext namedMetaclassReference(int i) {
+			return getRuleContext(NamedMetaclassReferenceContext.class,i);
 		}
-		public List<RuleNamedJavaElementReferenceContext> ruleNamedJavaElementReference() {
-			return getRuleContexts(RuleNamedJavaElementReferenceContext.class);
+		public List<NamedJavaElementReferenceContext> namedJavaElementReference() {
+			return getRuleContexts(NamedJavaElementReferenceContext.class);
 		}
-		public RuleNamedJavaElementReferenceContext ruleNamedJavaElementReference(int i) {
-			return getRuleContext(RuleNamedJavaElementReferenceContext.class,i);
+		public NamedJavaElementReferenceContext namedJavaElementReference(int i) {
+			return getRuleContext(NamedJavaElementReferenceContext.class,i);
 		}
-		public RuleRoutineInputContext(ParserRuleContext parent, int invokingState) {
+		public RoutineInputContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleRoutineInput; }
+		@Override public int getRuleIndex() { return RULE_routineInput; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleRoutineInput(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRoutineInput(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleRoutineInput(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRoutineInput(this);
 		}
 	}
 
-	public final RuleRoutineInputContext ruleRoutineInput() throws RecognitionException {
-		RuleRoutineInputContext _localctx = new RuleRoutineInputContext(_ctx, getState());
-		enterRule(_localctx, 52, RULE_ruleRoutineInput);
+	public final RoutineInputContext routineInput() throws RecognitionException {
+		RoutineInputContext _localctx = new RoutineInputContext(_ctx, getState());
+		enterRule(_localctx, 52, RULE_routineInput);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -1898,7 +1893,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				case RULE_ID:
 					{
 					setState(444);
-					ruleNamedMetaclassReference();
+					namedMetaclassReference();
 					}
 					break;
 				case T__35:
@@ -1906,7 +1901,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					setState(445);
 					match(T__35);
 					setState(446);
-					ruleNamedJavaElementReference();
+					namedJavaElementReference();
 					}
 					break;
 				default:
@@ -1926,7 +1921,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					case RULE_ID:
 						{
 						setState(450);
-						ruleNamedMetaclassReference();
+						namedMetaclassReference();
 						}
 						break;
 					case T__35:
@@ -1934,7 +1929,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 						setState(451);
 						match(T__35);
 						setState(452);
-						ruleNamedJavaElementReference();
+						namedJavaElementReference();
 						}
 						break;
 					default:
@@ -1965,30 +1960,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleMatchBlockContext extends ParserRuleContext {
-		public List<RuleMatchStatementContext> ruleMatchStatement() {
-			return getRuleContexts(RuleMatchStatementContext.class);
+	public static class MatchBlockContext extends ParserRuleContext {
+		public List<MatchStatementContext> matchStatement() {
+			return getRuleContexts(MatchStatementContext.class);
 		}
-		public RuleMatchStatementContext ruleMatchStatement(int i) {
-			return getRuleContext(RuleMatchStatementContext.class,i);
+		public MatchStatementContext matchStatement(int i) {
+			return getRuleContext(MatchStatementContext.class,i);
 		}
-		public RuleMatchBlockContext(ParserRuleContext parent, int invokingState) {
+		public MatchBlockContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleMatchBlock; }
+		@Override public int getRuleIndex() { return RULE_matchBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleMatchBlock(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterMatchBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleMatchBlock(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitMatchBlock(this);
 		}
 	}
 
-	public final RuleMatchBlockContext ruleMatchBlock() throws RecognitionException {
-		RuleMatchBlockContext _localctx = new RuleMatchBlockContext(_ctx, getState());
-		enterRule(_localctx, 54, RULE_ruleMatchBlock);
+	public final MatchBlockContext matchBlock() throws RecognitionException {
+		MatchBlockContext _localctx = new MatchBlockContext(_ctx, getState());
+		enterRule(_localctx, 54, RULE_matchBlock);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -2004,7 +1999,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				{
 				{
 				setState(466);
-				ruleMatchStatement();
+				matchStatement();
 				}
 				}
 				setState(469); 
@@ -2027,30 +2022,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleMatchStatementContext extends ParserRuleContext {
-		public RuleRetrieveOrRequireAbscenceOfModelElementContext ruleRetrieveOrRequireAbscenceOfModelElement() {
-			return getRuleContext(RuleRetrieveOrRequireAbscenceOfModelElementContext.class,0);
+	public static class MatchStatementContext extends ParserRuleContext {
+		public RetrieveOrRequireAbscenceOfModelElementContext retrieveOrRequireAbscenceOfModelElement() {
+			return getRuleContext(RetrieveOrRequireAbscenceOfModelElementContext.class,0);
 		}
-		public RuleMatchCheckStatementContext ruleMatchCheckStatement() {
-			return getRuleContext(RuleMatchCheckStatementContext.class,0);
+		public MatchCheckStatementContext matchCheckStatement() {
+			return getRuleContext(MatchCheckStatementContext.class,0);
 		}
-		public RuleMatchStatementContext(ParserRuleContext parent, int invokingState) {
+		public MatchStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleMatchStatement; }
+		@Override public int getRuleIndex() { return RULE_matchStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleMatchStatement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterMatchStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleMatchStatement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitMatchStatement(this);
 		}
 	}
 
-	public final RuleMatchStatementContext ruleMatchStatement() throws RecognitionException {
-		RuleMatchStatementContext _localctx = new RuleMatchStatementContext(_ctx, getState());
-		enterRule(_localctx, 56, RULE_ruleMatchStatement);
+	public final MatchStatementContext matchStatement() throws RecognitionException {
+		MatchStatementContext _localctx = new MatchStatementContext(_ctx, getState());
+		enterRule(_localctx, 56, RULE_matchStatement);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -2062,13 +2057,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__46:
 				{
 				setState(473);
-				ruleRetrieveOrRequireAbscenceOfModelElement();
+				retrieveOrRequireAbscenceOfModelElement();
 				}
 				break;
 			case T__50:
 				{
 				setState(474);
-				ruleMatchCheckStatement();
+				matchCheckStatement();
 				}
 				break;
 			default:
@@ -2088,30 +2083,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleRetrieveOrRequireAbscenceOfModelElementContext extends ParserRuleContext {
-		public RuleRequireAbscenceOfModelElementContext ruleRequireAbscenceOfModelElement() {
-			return getRuleContext(RuleRequireAbscenceOfModelElementContext.class,0);
+	public static class RetrieveOrRequireAbscenceOfModelElementContext extends ParserRuleContext {
+		public RequireAbscenceOfModelElementContext requireAbscenceOfModelElement() {
+			return getRuleContext(RequireAbscenceOfModelElementContext.class,0);
 		}
-		public RuleRetrieveModelElementContext ruleRetrieveModelElement() {
-			return getRuleContext(RuleRetrieveModelElementContext.class,0);
+		public RetrieveModelElementContext retrieveModelElement() {
+			return getRuleContext(RetrieveModelElementContext.class,0);
 		}
-		public RuleRetrieveOrRequireAbscenceOfModelElementContext(ParserRuleContext parent, int invokingState) {
+		public RetrieveOrRequireAbscenceOfModelElementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleRetrieveOrRequireAbscenceOfModelElement; }
+		@Override public int getRuleIndex() { return RULE_retrieveOrRequireAbscenceOfModelElement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleRetrieveOrRequireAbscenceOfModelElement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRetrieveOrRequireAbscenceOfModelElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleRetrieveOrRequireAbscenceOfModelElement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRetrieveOrRequireAbscenceOfModelElement(this);
 		}
 	}
 
-	public final RuleRetrieveOrRequireAbscenceOfModelElementContext ruleRetrieveOrRequireAbscenceOfModelElement() throws RecognitionException {
-		RuleRetrieveOrRequireAbscenceOfModelElementContext _localctx = new RuleRetrieveOrRequireAbscenceOfModelElementContext(_ctx, getState());
-		enterRule(_localctx, 58, RULE_ruleRetrieveOrRequireAbscenceOfModelElement);
+	public final RetrieveOrRequireAbscenceOfModelElementContext retrieveOrRequireAbscenceOfModelElement() throws RecognitionException {
+		RetrieveOrRequireAbscenceOfModelElementContext _localctx = new RetrieveOrRequireAbscenceOfModelElementContext(_ctx, getState());
+		enterRule(_localctx, 58, RULE_retrieveOrRequireAbscenceOfModelElement);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -2121,14 +2116,14 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__39:
 				{
 				setState(477);
-				ruleRequireAbscenceOfModelElement();
+				requireAbscenceOfModelElement();
 				}
 				break;
 			case T__44:
 			case T__46:
 				{
 				setState(478);
-				ruleRetrieveModelElement();
+				retrieveModelElement();
 				}
 				break;
 			default:
@@ -2148,33 +2143,33 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleRequireAbscenceOfModelElementContext extends ParserRuleContext {
-		public RuleUnnamedMetaclassReferenceContext ruleUnnamedMetaclassReference() {
-			return getRuleContext(RuleUnnamedMetaclassReferenceContext.class,0);
+	public static class RequireAbscenceOfModelElementContext extends ParserRuleContext {
+		public UnnamedMetaclassReferenceContext unnamedMetaclassReference() {
+			return getRuleContext(UnnamedMetaclassReferenceContext.class,0);
 		}
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleRequireAbscenceOfModelElementContext(ParserRuleContext parent, int invokingState) {
+		public RequireAbscenceOfModelElementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleRequireAbscenceOfModelElement; }
+		@Override public int getRuleIndex() { return RULE_requireAbscenceOfModelElement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleRequireAbscenceOfModelElement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRequireAbscenceOfModelElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleRequireAbscenceOfModelElement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRequireAbscenceOfModelElement(this);
 		}
 	}
 
-	public final RuleRequireAbscenceOfModelElementContext ruleRequireAbscenceOfModelElement() throws RecognitionException {
-		RuleRequireAbscenceOfModelElementContext _localctx = new RuleRequireAbscenceOfModelElementContext(_ctx, getState());
-		enterRule(_localctx, 60, RULE_ruleRequireAbscenceOfModelElement);
+	public final RequireAbscenceOfModelElementContext requireAbscenceOfModelElement() throws RecognitionException {
+		RequireAbscenceOfModelElementContext _localctx = new RequireAbscenceOfModelElementContext(_ctx, getState());
+		enterRule(_localctx, 60, RULE_requireAbscenceOfModelElement);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -2186,13 +2181,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			setState(483);
 			match(T__41);
 			setState(484);
-			ruleUnnamedMetaclassReference();
+			unnamedMetaclassReference();
 			setState(485);
 			match(T__42);
 			setState(486);
 			match(T__9);
 			setState(487);
-			ruleXExpression();
+			xExpression();
 			setState(490);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -2201,7 +2196,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				setState(488);
 				match(T__43);
 				setState(489);
-				ruleXExpression();
+				xExpression();
 				}
 			}
 
@@ -2213,7 +2208,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				setState(492);
 				match(T__21);
 				setState(493);
-				ruleXExpression();
+				xExpression();
 				}
 			}
 
@@ -2231,39 +2226,39 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleRetrieveModelElementContext extends ParserRuleContext {
-		public RuleRetrieveModelElementTypeStatementContext ruleRetrieveModelElementTypeStatement() {
-			return getRuleContext(RuleRetrieveModelElementTypeStatementContext.class,0);
+	public static class RetrieveModelElementContext extends ParserRuleContext {
+		public RetrieveModelElementTypeStatementContext retrieveModelElementTypeStatement() {
+			return getRuleContext(RetrieveModelElementTypeStatementContext.class,0);
 		}
-		public RuleUnnamedMetaclassReferenceContext ruleUnnamedMetaclassReference() {
-			return getRuleContext(RuleUnnamedMetaclassReferenceContext.class,0);
+		public UnnamedMetaclassReferenceContext unnamedMetaclassReference() {
+			return getRuleContext(UnnamedMetaclassReferenceContext.class,0);
 		}
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleRetrieveModelElementContext(ParserRuleContext parent, int invokingState) {
+		public RetrieveModelElementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleRetrieveModelElement; }
+		@Override public int getRuleIndex() { return RULE_retrieveModelElement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleRetrieveModelElement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRetrieveModelElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleRetrieveModelElement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRetrieveModelElement(this);
 		}
 	}
 
-	public final RuleRetrieveModelElementContext ruleRetrieveModelElement() throws RecognitionException {
-		RuleRetrieveModelElementContext _localctx = new RuleRetrieveModelElementContext(_ctx, getState());
-		enterRule(_localctx, 62, RULE_ruleRetrieveModelElement);
+	public final RetrieveModelElementContext retrieveModelElement() throws RecognitionException {
+		RetrieveModelElementContext _localctx = new RetrieveModelElementContext(_ctx, getState());
+		enterRule(_localctx, 62, RULE_retrieveModelElement);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -2276,7 +2271,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				setState(496);
 				match(T__44);
 				setState(497);
-				ruleValidID();
+				validID();
 				setState(498);
 				match(T__45);
 				}
@@ -2285,15 +2280,15 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			setState(502);
 			match(T__46);
 			setState(503);
-			ruleRetrieveModelElementTypeStatement();
+			retrieveModelElementTypeStatement();
 			setState(504);
-			ruleUnnamedMetaclassReference();
+			unnamedMetaclassReference();
 			setState(505);
 			match(T__42);
 			setState(506);
 			match(T__9);
 			setState(507);
-			ruleXExpression();
+			xExpression();
 			setState(510);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
@@ -2302,7 +2297,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				setState(508);
 				match(T__43);
 				setState(509);
-				ruleXExpression();
+				xExpression();
 				}
 			}
 
@@ -2314,7 +2309,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				setState(512);
 				match(T__21);
 				setState(513);
-				ruleXExpression();
+				xExpression();
 				}
 			}
 
@@ -2332,24 +2327,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleRetrieveModelElementTypeStatementContext extends ParserRuleContext {
-		public RuleRetrieveModelElementTypeStatementContext(ParserRuleContext parent, int invokingState) {
+	public static class RetrieveModelElementTypeStatementContext extends ParserRuleContext {
+		public RetrieveModelElementTypeStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleRetrieveModelElementTypeStatement; }
+		@Override public int getRuleIndex() { return RULE_retrieveModelElementTypeStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleRetrieveModelElementTypeStatement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRetrieveModelElementTypeStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleRetrieveModelElementTypeStatement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRetrieveModelElementTypeStatement(this);
 		}
 	}
 
-	public final RuleRetrieveModelElementTypeStatementContext ruleRetrieveModelElementTypeStatement() throws RecognitionException {
-		RuleRetrieveModelElementTypeStatementContext _localctx = new RuleRetrieveModelElementTypeStatementContext(_ctx, getState());
-		enterRule(_localctx, 64, RULE_ruleRetrieveModelElementTypeStatement);
+	public final RetrieveModelElementTypeStatementContext retrieveModelElementTypeStatement() throws RecognitionException {
+		RetrieveModelElementTypeStatementContext _localctx = new RetrieveModelElementTypeStatementContext(_ctx, getState());
+		enterRule(_localctx, 64, RULE_retrieveModelElementTypeStatement);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -2404,27 +2399,27 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleMatchCheckStatementContext extends ParserRuleContext {
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+	public static class MatchCheckStatementContext extends ParserRuleContext {
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleMatchCheckStatementContext(ParserRuleContext parent, int invokingState) {
+		public MatchCheckStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleMatchCheckStatement; }
+		@Override public int getRuleIndex() { return RULE_matchCheckStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleMatchCheckStatement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterMatchCheckStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleMatchCheckStatement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitMatchCheckStatement(this);
 		}
 	}
 
-	public final RuleMatchCheckStatementContext ruleMatchCheckStatement() throws RecognitionException {
-		RuleMatchCheckStatementContext _localctx = new RuleMatchCheckStatementContext(_ctx, getState());
-		enterRule(_localctx, 66, RULE_ruleMatchCheckStatement);
+	public final MatchCheckStatementContext matchCheckStatement() throws RecognitionException {
+		MatchCheckStatementContext _localctx = new MatchCheckStatementContext(_ctx, getState());
+		enterRule(_localctx, 66, RULE_matchCheckStatement);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -2442,7 +2437,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			}
 
 			setState(526);
-			ruleXExpression();
+			xExpression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2457,30 +2452,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleCreateBlockContext extends ParserRuleContext {
-		public List<RuleCreateStatementContext> ruleCreateStatement() {
-			return getRuleContexts(RuleCreateStatementContext.class);
+	public static class CreateBlockContext extends ParserRuleContext {
+		public List<CreateStatementContext> createStatement() {
+			return getRuleContexts(CreateStatementContext.class);
 		}
-		public RuleCreateStatementContext ruleCreateStatement(int i) {
-			return getRuleContext(RuleCreateStatementContext.class,i);
+		public CreateStatementContext createStatement(int i) {
+			return getRuleContext(CreateStatementContext.class,i);
 		}
-		public RuleCreateBlockContext(ParserRuleContext parent, int invokingState) {
+		public CreateBlockContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleCreateBlock; }
+		@Override public int getRuleIndex() { return RULE_createBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleCreateBlock(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterCreateBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleCreateBlock(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitCreateBlock(this);
 		}
 	}
 
-	public final RuleCreateBlockContext ruleCreateBlock() throws RecognitionException {
-		RuleCreateBlockContext _localctx = new RuleCreateBlockContext(_ctx, getState());
-		enterRule(_localctx, 68, RULE_ruleCreateBlock);
+	public final CreateBlockContext createBlock() throws RecognitionException {
+		CreateBlockContext _localctx = new CreateBlockContext(_ctx, getState());
+		enterRule(_localctx, 68, RULE_createBlock);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -2496,7 +2491,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				{
 				{
 				setState(530);
-				ruleCreateStatement();
+				createStatement();
 				}
 				}
 				setState(535);
@@ -2519,43 +2514,43 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleCreateStatementContext extends ParserRuleContext {
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+	public static class CreateStatementContext extends ParserRuleContext {
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleMetaclassReferenceContext ruleMetaclassReference() {
-			return getRuleContext(RuleMetaclassReferenceContext.class,0);
+		public MetaclassReferenceContext metaclassReference() {
+			return getRuleContext(MetaclassReferenceContext.class,0);
 		}
-		public RuleCreateStatementContext(ParserRuleContext parent, int invokingState) {
+		public CreateStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleCreateStatement; }
+		@Override public int getRuleIndex() { return RULE_createStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleCreateStatement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterCreateStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleCreateStatement(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitCreateStatement(this);
 		}
 	}
 
-	public final RuleCreateStatementContext ruleCreateStatement() throws RecognitionException {
-		RuleCreateStatementContext _localctx = new RuleCreateStatementContext(_ctx, getState());
-		enterRule(_localctx, 70, RULE_ruleCreateStatement);
+	public final CreateStatementContext createStatement() throws RecognitionException {
+		CreateStatementContext _localctx = new CreateStatementContext(_ctx, getState());
+		enterRule(_localctx, 70, RULE_createStatement);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(538);
 			match(T__44);
 			setState(539);
-			ruleValidID();
+			validID();
 			setState(540);
 			match(T__45);
 			setState(541);
 			match(T__52);
 			setState(542);
-			ruleMetaclassReference();
+			metaclassReference();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2570,34 +2565,34 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleUpdateBlockContext extends ParserRuleContext {
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+	public static class UpdateBlockContext extends ParserRuleContext {
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleUpdateBlockContext(ParserRuleContext parent, int invokingState) {
+		public UpdateBlockContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleUpdateBlock; }
+		@Override public int getRuleIndex() { return RULE_updateBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleUpdateBlock(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterUpdateBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleUpdateBlock(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitUpdateBlock(this);
 		}
 	}
 
-	public final RuleUpdateBlockContext ruleUpdateBlock() throws RecognitionException {
-		RuleUpdateBlockContext _localctx = new RuleUpdateBlockContext(_ctx, getState());
-		enterRule(_localctx, 72, RULE_ruleUpdateBlock);
+	public final UpdateBlockContext updateBlock() throws RecognitionException {
+		UpdateBlockContext _localctx = new UpdateBlockContext(_ctx, getState());
+		enterRule(_localctx, 72, RULE_updateBlock);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(544);
 			match(T__53);
 			setState(545);
-			ruleXExpression();
+			xExpression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2612,28 +2607,28 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleMetaclassReferenceContext extends ParserRuleContext {
-		public RuleQualifiedNameContext ruleQualifiedName() {
-			return getRuleContext(RuleQualifiedNameContext.class,0);
+	public static class MetaclassReferenceContext extends ParserRuleContext {
+		public QualifiedNameContext qualifiedName() {
+			return getRuleContext(QualifiedNameContext.class,0);
 		}
 		public TerminalNode RULE_ID() { return getToken(DebugInternalReactionsLanguageParser.RULE_ID, 0); }
-		public RuleMetaclassReferenceContext(ParserRuleContext parent, int invokingState) {
+		public MetaclassReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleMetaclassReference; }
+		@Override public int getRuleIndex() { return RULE_metaclassReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleMetaclassReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterMetaclassReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleMetaclassReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitMetaclassReference(this);
 		}
 	}
 
-	public final RuleMetaclassReferenceContext ruleMetaclassReference() throws RecognitionException {
-		RuleMetaclassReferenceContext _localctx = new RuleMetaclassReferenceContext(_ctx, getState());
-		enterRule(_localctx, 74, RULE_ruleMetaclassReference);
+	public final MetaclassReferenceContext metaclassReference() throws RecognitionException {
+		MetaclassReferenceContext _localctx = new MetaclassReferenceContext(_ctx, getState());
+		enterRule(_localctx, 74, RULE_metaclassReference);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -2650,7 +2645,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				break;
 			}
 			setState(551);
-			ruleQualifiedName();
+			qualifiedName();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2665,32 +2660,32 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleUnnamedMetaclassReferenceContext extends ParserRuleContext {
-		public RuleMetaclassReferenceContext ruleMetaclassReference() {
-			return getRuleContext(RuleMetaclassReferenceContext.class,0);
+	public static class UnnamedMetaclassReferenceContext extends ParserRuleContext {
+		public MetaclassReferenceContext metaclassReference() {
+			return getRuleContext(MetaclassReferenceContext.class,0);
 		}
-		public RuleUnnamedMetaclassReferenceContext(ParserRuleContext parent, int invokingState) {
+		public UnnamedMetaclassReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleUnnamedMetaclassReference; }
+		@Override public int getRuleIndex() { return RULE_unnamedMetaclassReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleUnnamedMetaclassReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterUnnamedMetaclassReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleUnnamedMetaclassReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitUnnamedMetaclassReference(this);
 		}
 	}
 
-	public final RuleUnnamedMetaclassReferenceContext ruleUnnamedMetaclassReference() throws RecognitionException {
-		RuleUnnamedMetaclassReferenceContext _localctx = new RuleUnnamedMetaclassReferenceContext(_ctx, getState());
-		enterRule(_localctx, 76, RULE_ruleUnnamedMetaclassReference);
+	public final UnnamedMetaclassReferenceContext unnamedMetaclassReference() throws RecognitionException {
+		UnnamedMetaclassReferenceContext _localctx = new UnnamedMetaclassReferenceContext(_ctx, getState());
+		enterRule(_localctx, 76, RULE_unnamedMetaclassReference);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(553);
-			ruleMetaclassReference();
+			metaclassReference();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2705,37 +2700,37 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleNamedMetaclassReferenceContext extends ParserRuleContext {
-		public RuleMetaclassReferenceContext ruleMetaclassReference() {
-			return getRuleContext(RuleMetaclassReferenceContext.class,0);
+	public static class NamedMetaclassReferenceContext extends ParserRuleContext {
+		public MetaclassReferenceContext metaclassReference() {
+			return getRuleContext(MetaclassReferenceContext.class,0);
 		}
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleNamedMetaclassReferenceContext(ParserRuleContext parent, int invokingState) {
+		public NamedMetaclassReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleNamedMetaclassReference; }
+		@Override public int getRuleIndex() { return RULE_namedMetaclassReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleNamedMetaclassReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterNamedMetaclassReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleNamedMetaclassReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitNamedMetaclassReference(this);
 		}
 	}
 
-	public final RuleNamedMetaclassReferenceContext ruleNamedMetaclassReference() throws RecognitionException {
-		RuleNamedMetaclassReferenceContext _localctx = new RuleNamedMetaclassReferenceContext(_ctx, getState());
-		enterRule(_localctx, 78, RULE_ruleNamedMetaclassReference);
+	public final NamedMetaclassReferenceContext namedMetaclassReference() throws RecognitionException {
+		NamedMetaclassReferenceContext _localctx = new NamedMetaclassReferenceContext(_ctx, getState());
+		enterRule(_localctx, 78, RULE_namedMetaclassReference);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(555);
-			ruleMetaclassReference();
+			metaclassReference();
 			setState(556);
-			ruleValidID();
+			validID();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2750,39 +2745,39 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleNamedJavaElementReferenceContext extends ParserRuleContext {
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
+	public static class NamedJavaElementReferenceContext extends ParserRuleContext {
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
 		}
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleNamedJavaElementReferenceContext(ParserRuleContext parent, int invokingState) {
+		public NamedJavaElementReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleNamedJavaElementReference; }
+		@Override public int getRuleIndex() { return RULE_namedJavaElementReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleNamedJavaElementReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterNamedJavaElementReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleNamedJavaElementReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitNamedJavaElementReference(this);
 		}
 	}
 
-	public final RuleNamedJavaElementReferenceContext ruleNamedJavaElementReference() throws RecognitionException {
-		RuleNamedJavaElementReferenceContext _localctx = new RuleNamedJavaElementReferenceContext(_ctx, getState());
-		enterRule(_localctx, 80, RULE_ruleNamedJavaElementReference);
+	public final NamedJavaElementReferenceContext namedJavaElementReference() throws RecognitionException {
+		NamedJavaElementReferenceContext _localctx = new NamedJavaElementReferenceContext(_ctx, getState());
+		enterRule(_localctx, 80, RULE_namedJavaElementReference);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(558);
-			ruleJvmTypeReference();
+			jvmTypeReference();
 			setState(559);
 			match(T__1);
 			setState(560);
-			ruleValidID();
+			validID();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2797,39 +2792,39 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleMetaclassEAttributeReferenceContext extends ParserRuleContext {
-		public RuleMetaclassReferenceContext ruleMetaclassReference() {
-			return getRuleContext(RuleMetaclassReferenceContext.class,0);
+	public static class MetaclassEAttributeReferenceContext extends ParserRuleContext {
+		public MetaclassReferenceContext metaclassReference() {
+			return getRuleContext(MetaclassReferenceContext.class,0);
 		}
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleMetaclassEAttributeReferenceContext(ParserRuleContext parent, int invokingState) {
+		public MetaclassEAttributeReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleMetaclassEAttributeReference; }
+		@Override public int getRuleIndex() { return RULE_metaclassEAttributeReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleMetaclassEAttributeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterMetaclassEAttributeReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleMetaclassEAttributeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitMetaclassEAttributeReference(this);
 		}
 	}
 
-	public final RuleMetaclassEAttributeReferenceContext ruleMetaclassEAttributeReference() throws RecognitionException {
-		RuleMetaclassEAttributeReferenceContext _localctx = new RuleMetaclassEAttributeReferenceContext(_ctx, getState());
-		enterRule(_localctx, 82, RULE_ruleMetaclassEAttributeReference);
+	public final MetaclassEAttributeReferenceContext metaclassEAttributeReference() throws RecognitionException {
+		MetaclassEAttributeReferenceContext _localctx = new MetaclassEAttributeReferenceContext(_ctx, getState());
+		enterRule(_localctx, 82, RULE_metaclassEAttributeReference);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(562);
-			ruleMetaclassReference();
+			metaclassReference();
 			setState(563);
 			match(T__54);
 			setState(564);
-			ruleValidID();
+			validID();
 			setState(565);
 			match(T__55);
 			}
@@ -2846,39 +2841,39 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleMetaclassEReferenceReferenceContext extends ParserRuleContext {
-		public RuleMetaclassReferenceContext ruleMetaclassReference() {
-			return getRuleContext(RuleMetaclassReferenceContext.class,0);
+	public static class MetaclassEReferenceReferenceContext extends ParserRuleContext {
+		public MetaclassReferenceContext metaclassReference() {
+			return getRuleContext(MetaclassReferenceContext.class,0);
 		}
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleMetaclassEReferenceReferenceContext(ParserRuleContext parent, int invokingState) {
+		public MetaclassEReferenceReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleMetaclassEReferenceReference; }
+		@Override public int getRuleIndex() { return RULE_metaclassEReferenceReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleMetaclassEReferenceReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterMetaclassEReferenceReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleMetaclassEReferenceReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitMetaclassEReferenceReference(this);
 		}
 	}
 
-	public final RuleMetaclassEReferenceReferenceContext ruleMetaclassEReferenceReference() throws RecognitionException {
-		RuleMetaclassEReferenceReferenceContext _localctx = new RuleMetaclassEReferenceReferenceContext(_ctx, getState());
-		enterRule(_localctx, 84, RULE_ruleMetaclassEReferenceReference);
+	public final MetaclassEReferenceReferenceContext metaclassEReferenceReference() throws RecognitionException {
+		MetaclassEReferenceReferenceContext _localctx = new MetaclassEReferenceReferenceContext(_ctx, getState());
+		enterRule(_localctx, 84, RULE_metaclassEReferenceReference);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(567);
-			ruleMetaclassReference();
+			metaclassReference();
 			setState(568);
 			match(T__54);
 			setState(569);
-			ruleValidID();
+			validID();
 			setState(570);
 			match(T__55);
 			}
@@ -2895,32 +2890,32 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXExpressionContext extends ParserRuleContext {
-		public RuleXAssignmentContext ruleXAssignment() {
-			return getRuleContext(RuleXAssignmentContext.class,0);
+	public static class XExpressionContext extends ParserRuleContext {
+		public XAssignmentContext xAssignment() {
+			return getRuleContext(XAssignmentContext.class,0);
 		}
-		public RuleXExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXExpression; }
+		@Override public int getRuleIndex() { return RULE_xExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXExpression(this);
 		}
 	}
 
-	public final RuleXExpressionContext ruleXExpression() throws RecognitionException {
-		RuleXExpressionContext _localctx = new RuleXExpressionContext(_ctx, getState());
-		enterRule(_localctx, 86, RULE_ruleXExpression);
+	public final XExpressionContext xExpression() throws RecognitionException {
+		XExpressionContext _localctx = new XExpressionContext(_ctx, getState());
+		enterRule(_localctx, 86, RULE_xExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(572);
-			ruleXAssignment();
+			xAssignment();
 			}
 		}
 		catch (RecognitionException re) {
@@ -2935,39 +2930,39 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXAssignmentContext extends ParserRuleContext {
-		public RuleFeatureCallIDContext ruleFeatureCallID() {
-			return getRuleContext(RuleFeatureCallIDContext.class,0);
+	public static class XAssignmentContext extends ParserRuleContext {
+		public FeatureCallIDContext featureCallID() {
+			return getRuleContext(FeatureCallIDContext.class,0);
 		}
-		public RuleOpSingleAssignContext ruleOpSingleAssign() {
-			return getRuleContext(RuleOpSingleAssignContext.class,0);
+		public OpSingleAssignContext opSingleAssign() {
+			return getRuleContext(OpSingleAssignContext.class,0);
 		}
-		public RuleXAssignmentContext ruleXAssignment() {
-			return getRuleContext(RuleXAssignmentContext.class,0);
+		public XAssignmentContext xAssignment() {
+			return getRuleContext(XAssignmentContext.class,0);
 		}
-		public RuleXOrExpressionContext ruleXOrExpression() {
-			return getRuleContext(RuleXOrExpressionContext.class,0);
+		public XOrExpressionContext xOrExpression() {
+			return getRuleContext(XOrExpressionContext.class,0);
 		}
-		public RuleOpMultiAssignContext ruleOpMultiAssign() {
-			return getRuleContext(RuleOpMultiAssignContext.class,0);
+		public OpMultiAssignContext opMultiAssign() {
+			return getRuleContext(OpMultiAssignContext.class,0);
 		}
-		public RuleXAssignmentContext(ParserRuleContext parent, int invokingState) {
+		public XAssignmentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXAssignment; }
+		@Override public int getRuleIndex() { return RULE_xAssignment; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXAssignment(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXAssignment(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXAssignment(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXAssignment(this);
 		}
 	}
 
-	public final RuleXAssignmentContext ruleXAssignment() throws RecognitionException {
-		RuleXAssignmentContext _localctx = new RuleXAssignmentContext(_ctx, getState());
-		enterRule(_localctx, 88, RULE_ruleXAssignment);
+	public final XAssignmentContext xAssignment() throws RecognitionException {
+		XAssignmentContext _localctx = new XAssignmentContext(_ctx, getState());
+		enterRule(_localctx, 88, RULE_xAssignment);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -2977,17 +2972,17 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case 1:
 				{
 				setState(574);
-				ruleFeatureCallID();
+				featureCallID();
 				setState(575);
-				ruleOpSingleAssign();
+				opSingleAssign();
 				setState(576);
-				ruleXAssignment();
+				xAssignment();
 				}
 				break;
 			case 2:
 				{
 				setState(578);
-				ruleXOrExpression();
+				xOrExpression();
 				setState(582);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,48,_ctx) ) {
@@ -2996,11 +2991,11 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					{
 					{
 					setState(579);
-					ruleOpMultiAssign();
+					opMultiAssign();
 					}
 					}
 					setState(580);
-					ruleXAssignment();
+					xAssignment();
 					}
 					break;
 				}
@@ -3021,24 +3016,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpSingleAssignContext extends ParserRuleContext {
-		public RuleOpSingleAssignContext(ParserRuleContext parent, int invokingState) {
+	public static class OpSingleAssignContext extends ParserRuleContext {
+		public OpSingleAssignContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpSingleAssign; }
+		@Override public int getRuleIndex() { return RULE_opSingleAssign; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpSingleAssign(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpSingleAssign(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpSingleAssign(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpSingleAssign(this);
 		}
 	}
 
-	public final RuleOpSingleAssignContext ruleOpSingleAssign() throws RecognitionException {
-		RuleOpSingleAssignContext _localctx = new RuleOpSingleAssignContext(_ctx, getState());
-		enterRule(_localctx, 90, RULE_ruleOpSingleAssign);
+	public final OpSingleAssignContext opSingleAssign() throws RecognitionException {
+		OpSingleAssignContext _localctx = new OpSingleAssignContext(_ctx, getState());
+		enterRule(_localctx, 90, RULE_opSingleAssign);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -3058,24 +3053,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpMultiAssignContext extends ParserRuleContext {
-		public RuleOpMultiAssignContext(ParserRuleContext parent, int invokingState) {
+	public static class OpMultiAssignContext extends ParserRuleContext {
+		public OpMultiAssignContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpMultiAssign; }
+		@Override public int getRuleIndex() { return RULE_opMultiAssign; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpMultiAssign(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpMultiAssign(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpMultiAssign(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpMultiAssign(this);
 		}
 	}
 
-	public final RuleOpMultiAssignContext ruleOpMultiAssign() throws RecognitionException {
-		RuleOpMultiAssignContext _localctx = new RuleOpMultiAssignContext(_ctx, getState());
-		enterRule(_localctx, 92, RULE_ruleOpMultiAssign);
+	public final OpMultiAssignContext opMultiAssign() throws RecognitionException {
+		OpMultiAssignContext _localctx = new OpMultiAssignContext(_ctx, getState());
+		enterRule(_localctx, 92, RULE_opMultiAssign);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -3158,42 +3153,42 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXOrExpressionContext extends ParserRuleContext {
-		public List<RuleXAndExpressionContext> ruleXAndExpression() {
-			return getRuleContexts(RuleXAndExpressionContext.class);
+	public static class XOrExpressionContext extends ParserRuleContext {
+		public List<XAndExpressionContext> xAndExpression() {
+			return getRuleContexts(XAndExpressionContext.class);
 		}
-		public RuleXAndExpressionContext ruleXAndExpression(int i) {
-			return getRuleContext(RuleXAndExpressionContext.class,i);
+		public XAndExpressionContext xAndExpression(int i) {
+			return getRuleContext(XAndExpressionContext.class,i);
 		}
-		public List<RuleOpOrContext> ruleOpOr() {
-			return getRuleContexts(RuleOpOrContext.class);
+		public List<OpOrContext> opOr() {
+			return getRuleContexts(OpOrContext.class);
 		}
-		public RuleOpOrContext ruleOpOr(int i) {
-			return getRuleContext(RuleOpOrContext.class,i);
+		public OpOrContext opOr(int i) {
+			return getRuleContext(OpOrContext.class,i);
 		}
-		public RuleXOrExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XOrExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXOrExpression; }
+		@Override public int getRuleIndex() { return RULE_xOrExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXOrExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXOrExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXOrExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXOrExpression(this);
 		}
 	}
 
-	public final RuleXOrExpressionContext ruleXOrExpression() throws RecognitionException {
-		RuleXOrExpressionContext _localctx = new RuleXOrExpressionContext(_ctx, getState());
-		enterRule(_localctx, 94, RULE_ruleXOrExpression);
+	public final XOrExpressionContext xOrExpression() throws RecognitionException {
+		XOrExpressionContext _localctx = new XOrExpressionContext(_ctx, getState());
+		enterRule(_localctx, 94, RULE_xOrExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(603);
-			ruleXAndExpression();
+			xAndExpression();
 			setState(609);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,52,_ctx);
@@ -3204,11 +3199,11 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					{
 					{
 					setState(604);
-					ruleOpOr();
+					opOr();
 					}
 					}
 					setState(605);
-					ruleXAndExpression();
+					xAndExpression();
 					}
 					} 
 				}
@@ -3230,24 +3225,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpOrContext extends ParserRuleContext {
-		public RuleOpOrContext(ParserRuleContext parent, int invokingState) {
+	public static class OpOrContext extends ParserRuleContext {
+		public OpOrContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpOr; }
+		@Override public int getRuleIndex() { return RULE_opOr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpOr(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpOr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpOr(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpOr(this);
 		}
 	}
 
-	public final RuleOpOrContext ruleOpOr() throws RecognitionException {
-		RuleOpOrContext _localctx = new RuleOpOrContext(_ctx, getState());
-		enterRule(_localctx, 96, RULE_ruleOpOr);
+	public final OpOrContext opOr() throws RecognitionException {
+		OpOrContext _localctx = new OpOrContext(_ctx, getState());
+		enterRule(_localctx, 96, RULE_opOr);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -3267,42 +3262,42 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXAndExpressionContext extends ParserRuleContext {
-		public List<RuleXEqualityExpressionContext> ruleXEqualityExpression() {
-			return getRuleContexts(RuleXEqualityExpressionContext.class);
+	public static class XAndExpressionContext extends ParserRuleContext {
+		public List<XEqualityExpressionContext> xEqualityExpression() {
+			return getRuleContexts(XEqualityExpressionContext.class);
 		}
-		public RuleXEqualityExpressionContext ruleXEqualityExpression(int i) {
-			return getRuleContext(RuleXEqualityExpressionContext.class,i);
+		public XEqualityExpressionContext xEqualityExpression(int i) {
+			return getRuleContext(XEqualityExpressionContext.class,i);
 		}
-		public List<RuleOpAddContext> ruleOpAdd() {
-			return getRuleContexts(RuleOpAddContext.class);
+		public List<OpAddContext> opAdd() {
+			return getRuleContexts(OpAddContext.class);
 		}
-		public RuleOpAddContext ruleOpAdd(int i) {
-			return getRuleContext(RuleOpAddContext.class,i);
+		public OpAddContext opAdd(int i) {
+			return getRuleContext(OpAddContext.class,i);
 		}
-		public RuleXAndExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XAndExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXAndExpression; }
+		@Override public int getRuleIndex() { return RULE_xAndExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXAndExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXAndExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXAndExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXAndExpression(this);
 		}
 	}
 
-	public final RuleXAndExpressionContext ruleXAndExpression() throws RecognitionException {
-		RuleXAndExpressionContext _localctx = new RuleXAndExpressionContext(_ctx, getState());
-		enterRule(_localctx, 98, RULE_ruleXAndExpression);
+	public final XAndExpressionContext xAndExpression() throws RecognitionException {
+		XAndExpressionContext _localctx = new XAndExpressionContext(_ctx, getState());
+		enterRule(_localctx, 98, RULE_xAndExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(614);
-			ruleXEqualityExpression();
+			xEqualityExpression();
 			setState(620);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,53,_ctx);
@@ -3312,10 +3307,10 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					{
 					{
 					setState(615);
-					ruleOpAdd();
+					opAdd();
 					}
 					setState(616);
-					ruleXEqualityExpression();
+					xEqualityExpression();
 					}
 					} 
 				}
@@ -3337,24 +3332,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpAndContext extends ParserRuleContext {
-		public RuleOpAndContext(ParserRuleContext parent, int invokingState) {
+	public static class OpAndContext extends ParserRuleContext {
+		public OpAndContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpAnd; }
+		@Override public int getRuleIndex() { return RULE_opAnd; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpAnd(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpAnd(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpAnd(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpAnd(this);
 		}
 	}
 
-	public final RuleOpAndContext ruleOpAnd() throws RecognitionException {
-		RuleOpAndContext _localctx = new RuleOpAndContext(_ctx, getState());
-		enterRule(_localctx, 100, RULE_ruleOpAnd);
+	public final OpAndContext opAnd() throws RecognitionException {
+		OpAndContext _localctx = new OpAndContext(_ctx, getState());
+		enterRule(_localctx, 100, RULE_opAnd);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -3374,42 +3369,42 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXEqualityExpressionContext extends ParserRuleContext {
-		public List<RuleXRelationalExpressionContext> ruleXRelationalExpression() {
-			return getRuleContexts(RuleXRelationalExpressionContext.class);
+	public static class XEqualityExpressionContext extends ParserRuleContext {
+		public List<XRelationalExpressionContext> xRelationalExpression() {
+			return getRuleContexts(XRelationalExpressionContext.class);
 		}
-		public RuleXRelationalExpressionContext ruleXRelationalExpression(int i) {
-			return getRuleContext(RuleXRelationalExpressionContext.class,i);
+		public XRelationalExpressionContext xRelationalExpression(int i) {
+			return getRuleContext(XRelationalExpressionContext.class,i);
 		}
-		public List<RuleOpEqualityContext> ruleOpEquality() {
-			return getRuleContexts(RuleOpEqualityContext.class);
+		public List<OpEqualityContext> opEquality() {
+			return getRuleContexts(OpEqualityContext.class);
 		}
-		public RuleOpEqualityContext ruleOpEquality(int i) {
-			return getRuleContext(RuleOpEqualityContext.class,i);
+		public OpEqualityContext opEquality(int i) {
+			return getRuleContext(OpEqualityContext.class,i);
 		}
-		public RuleXEqualityExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XEqualityExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXEqualityExpression; }
+		@Override public int getRuleIndex() { return RULE_xEqualityExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXEqualityExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXEqualityExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXEqualityExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXEqualityExpression(this);
 		}
 	}
 
-	public final RuleXEqualityExpressionContext ruleXEqualityExpression() throws RecognitionException {
-		RuleXEqualityExpressionContext _localctx = new RuleXEqualityExpressionContext(_ctx, getState());
-		enterRule(_localctx, 102, RULE_ruleXEqualityExpression);
+	public final XEqualityExpressionContext xEqualityExpression() throws RecognitionException {
+		XEqualityExpressionContext _localctx = new XEqualityExpressionContext(_ctx, getState());
+		enterRule(_localctx, 102, RULE_xEqualityExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(625);
-			ruleXRelationalExpression();
+			xRelationalExpression();
 			setState(631);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,54,_ctx);
@@ -3419,10 +3414,10 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					{
 					{
 					setState(626);
-					ruleOpEquality();
+					opEquality();
 					}
 					setState(627);
-					ruleXRelationalExpression();
+					xRelationalExpression();
 					}
 					} 
 				}
@@ -3444,24 +3439,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpEqualityContext extends ParserRuleContext {
-		public RuleOpEqualityContext(ParserRuleContext parent, int invokingState) {
+	public static class OpEqualityContext extends ParserRuleContext {
+		public OpEqualityContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpEquality; }
+		@Override public int getRuleIndex() { return RULE_opEquality; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpEquality(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpEquality(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpEquality(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpEquality(this);
 		}
 	}
 
-	public final RuleOpEqualityContext ruleOpEquality() throws RecognitionException {
-		RuleOpEqualityContext _localctx = new RuleOpEqualityContext(_ctx, getState());
-		enterRule(_localctx, 104, RULE_ruleOpEquality);
+	public final OpEqualityContext opEquality() throws RecognitionException {
+		OpEqualityContext _localctx = new OpEqualityContext(_ctx, getState());
+		enterRule(_localctx, 104, RULE_opEquality);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -3490,48 +3485,48 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXRelationalExpressionContext extends ParserRuleContext {
-		public List<RuleXOtherOperatorExpressionContext> ruleXOtherOperatorExpression() {
-			return getRuleContexts(RuleXOtherOperatorExpressionContext.class);
+	public static class XRelationalExpressionContext extends ParserRuleContext {
+		public List<XOtherOperatorExpressionContext> xOtherOperatorExpression() {
+			return getRuleContexts(XOtherOperatorExpressionContext.class);
 		}
-		public RuleXOtherOperatorExpressionContext ruleXOtherOperatorExpression(int i) {
-			return getRuleContext(RuleXOtherOperatorExpressionContext.class,i);
+		public XOtherOperatorExpressionContext xOtherOperatorExpression(int i) {
+			return getRuleContext(XOtherOperatorExpressionContext.class,i);
 		}
-		public List<RuleJvmTypeReferenceContext> ruleJvmTypeReference() {
-			return getRuleContexts(RuleJvmTypeReferenceContext.class);
+		public List<JvmTypeReferenceContext> jvmTypeReference() {
+			return getRuleContexts(JvmTypeReferenceContext.class);
 		}
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference(int i) {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,i);
+		public JvmTypeReferenceContext jvmTypeReference(int i) {
+			return getRuleContext(JvmTypeReferenceContext.class,i);
 		}
-		public List<RuleOpCompareContext> ruleOpCompare() {
-			return getRuleContexts(RuleOpCompareContext.class);
+		public List<OpCompareContext> opCompare() {
+			return getRuleContexts(OpCompareContext.class);
 		}
-		public RuleOpCompareContext ruleOpCompare(int i) {
-			return getRuleContext(RuleOpCompareContext.class,i);
+		public OpCompareContext opCompare(int i) {
+			return getRuleContext(OpCompareContext.class,i);
 		}
-		public RuleXRelationalExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XRelationalExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXRelationalExpression; }
+		@Override public int getRuleIndex() { return RULE_xRelationalExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXRelationalExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXRelationalExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXRelationalExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXRelationalExpression(this);
 		}
 	}
 
-	public final RuleXRelationalExpressionContext ruleXRelationalExpression() throws RecognitionException {
-		RuleXRelationalExpressionContext _localctx = new RuleXRelationalExpressionContext(_ctx, getState());
-		enterRule(_localctx, 106, RULE_ruleXRelationalExpression);
+	public final XRelationalExpressionContext xRelationalExpression() throws RecognitionException {
+		XRelationalExpressionContext _localctx = new XRelationalExpressionContext(_ctx, getState());
+		enterRule(_localctx, 106, RULE_xRelationalExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(636);
-			ruleXOtherOperatorExpression();
+			xOtherOperatorExpression();
 			setState(644);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,56,_ctx);
@@ -3548,7 +3543,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 						match(T__70);
 						}
 						setState(638);
-						ruleJvmTypeReference();
+						jvmTypeReference();
 						}
 						break;
 					case T__61:
@@ -3557,10 +3552,10 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 						{
 						{
 						setState(639);
-						ruleOpCompare();
+						opCompare();
 						}
 						setState(640);
-						ruleXOtherOperatorExpression();
+						xOtherOperatorExpression();
 						}
 						break;
 					default:
@@ -3586,24 +3581,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpCompareContext extends ParserRuleContext {
-		public RuleOpCompareContext(ParserRuleContext parent, int invokingState) {
+	public static class OpCompareContext extends ParserRuleContext {
+		public OpCompareContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpCompare; }
+		@Override public int getRuleIndex() { return RULE_opCompare; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpCompare(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpCompare(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpCompare(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpCompare(this);
 		}
 	}
 
-	public final RuleOpCompareContext ruleOpCompare() throws RecognitionException {
-		RuleOpCompareContext _localctx = new RuleOpCompareContext(_ctx, getState());
-		enterRule(_localctx, 108, RULE_ruleOpCompare);
+	public final OpCompareContext opCompare() throws RecognitionException {
+		OpCompareContext _localctx = new OpCompareContext(_ctx, getState());
+		enterRule(_localctx, 108, RULE_opCompare);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -3651,42 +3646,42 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXOtherOperatorExpressionContext extends ParserRuleContext {
-		public List<RuleXAdditiveExpressionContext> ruleXAdditiveExpression() {
-			return getRuleContexts(RuleXAdditiveExpressionContext.class);
+	public static class XOtherOperatorExpressionContext extends ParserRuleContext {
+		public List<XAdditiveExpressionContext> xAdditiveExpression() {
+			return getRuleContexts(XAdditiveExpressionContext.class);
 		}
-		public RuleXAdditiveExpressionContext ruleXAdditiveExpression(int i) {
-			return getRuleContext(RuleXAdditiveExpressionContext.class,i);
+		public XAdditiveExpressionContext xAdditiveExpression(int i) {
+			return getRuleContext(XAdditiveExpressionContext.class,i);
 		}
-		public List<RuleOpOtherContext> ruleOpOther() {
-			return getRuleContexts(RuleOpOtherContext.class);
+		public List<OpOtherContext> opOther() {
+			return getRuleContexts(OpOtherContext.class);
 		}
-		public RuleOpOtherContext ruleOpOther(int i) {
-			return getRuleContext(RuleOpOtherContext.class,i);
+		public OpOtherContext opOther(int i) {
+			return getRuleContext(OpOtherContext.class,i);
 		}
-		public RuleXOtherOperatorExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XOtherOperatorExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXOtherOperatorExpression; }
+		@Override public int getRuleIndex() { return RULE_xOtherOperatorExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXOtherOperatorExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXOtherOperatorExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXOtherOperatorExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXOtherOperatorExpression(this);
 		}
 	}
 
-	public final RuleXOtherOperatorExpressionContext ruleXOtherOperatorExpression() throws RecognitionException {
-		RuleXOtherOperatorExpressionContext _localctx = new RuleXOtherOperatorExpressionContext(_ctx, getState());
-		enterRule(_localctx, 110, RULE_ruleXOtherOperatorExpression);
+	public final XOtherOperatorExpressionContext xOtherOperatorExpression() throws RecognitionException {
+		XOtherOperatorExpressionContext _localctx = new XOtherOperatorExpressionContext(_ctx, getState());
+		enterRule(_localctx, 110, RULE_xOtherOperatorExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(654);
-			ruleXAdditiveExpression();
+			xAdditiveExpression();
 			setState(660);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,58,_ctx);
@@ -3696,10 +3691,10 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					{
 					{
 					setState(655);
-					ruleOpOther();
+					opOther();
 					}
 					setState(656);
-					ruleXAdditiveExpression();
+					xAdditiveExpression();
 					}
 					} 
 				}
@@ -3721,24 +3716,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpOtherContext extends ParserRuleContext {
-		public RuleOpOtherContext(ParserRuleContext parent, int invokingState) {
+	public static class OpOtherContext extends ParserRuleContext {
+		public OpOtherContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpOther; }
+		@Override public int getRuleIndex() { return RULE_opOther; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpOther(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpOther(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpOther(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpOther(this);
 		}
 	}
 
-	public final RuleOpOtherContext ruleOpOther() throws RecognitionException {
-		RuleOpOtherContext _localctx = new RuleOpOtherContext(_ctx, getState());
-		enterRule(_localctx, 112, RULE_ruleOpOther);
+	public final OpOtherContext opOther() throws RecognitionException {
+		OpOtherContext _localctx = new OpOtherContext(_ctx, getState());
+		enterRule(_localctx, 112, RULE_opOther);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -3866,42 +3861,42 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXAdditiveExpressionContext extends ParserRuleContext {
-		public List<RuleXMultiplicativeExpressionContext> ruleXMultiplicativeExpression() {
-			return getRuleContexts(RuleXMultiplicativeExpressionContext.class);
+	public static class XAdditiveExpressionContext extends ParserRuleContext {
+		public List<XMultiplicativeExpressionContext> xMultiplicativeExpression() {
+			return getRuleContexts(XMultiplicativeExpressionContext.class);
 		}
-		public RuleXMultiplicativeExpressionContext ruleXMultiplicativeExpression(int i) {
-			return getRuleContext(RuleXMultiplicativeExpressionContext.class,i);
+		public XMultiplicativeExpressionContext xMultiplicativeExpression(int i) {
+			return getRuleContext(XMultiplicativeExpressionContext.class,i);
 		}
-		public List<RuleOpAddContext> ruleOpAdd() {
-			return getRuleContexts(RuleOpAddContext.class);
+		public List<OpAddContext> opAdd() {
+			return getRuleContexts(OpAddContext.class);
 		}
-		public RuleOpAddContext ruleOpAdd(int i) {
-			return getRuleContext(RuleOpAddContext.class,i);
+		public OpAddContext opAdd(int i) {
+			return getRuleContext(OpAddContext.class,i);
 		}
-		public RuleXAdditiveExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XAdditiveExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXAdditiveExpression; }
+		@Override public int getRuleIndex() { return RULE_xAdditiveExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXAdditiveExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXAdditiveExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXAdditiveExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXAdditiveExpression(this);
 		}
 	}
 
-	public final RuleXAdditiveExpressionContext ruleXAdditiveExpression() throws RecognitionException {
-		RuleXAdditiveExpressionContext _localctx = new RuleXAdditiveExpressionContext(_ctx, getState());
-		enterRule(_localctx, 114, RULE_ruleXAdditiveExpression);
+	public final XAdditiveExpressionContext xAdditiveExpression() throws RecognitionException {
+		XAdditiveExpressionContext _localctx = new XAdditiveExpressionContext(_ctx, getState());
+		enterRule(_localctx, 114, RULE_xAdditiveExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(686);
-			ruleXMultiplicativeExpression();
+			xMultiplicativeExpression();
 			setState(692);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,62,_ctx);
@@ -3911,10 +3906,10 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					{
 					{
 					setState(687);
-					ruleOpAdd();
+					opAdd();
 					}
 					setState(688);
-					ruleXMultiplicativeExpression();
+					xMultiplicativeExpression();
 					}
 					} 
 				}
@@ -3936,24 +3931,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpAddContext extends ParserRuleContext {
-		public RuleOpAddContext(ParserRuleContext parent, int invokingState) {
+	public static class OpAddContext extends ParserRuleContext {
+		public OpAddContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpAdd; }
+		@Override public int getRuleIndex() { return RULE_opAdd; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpAdd(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpAdd(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpAdd(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpAdd(this);
 		}
 	}
 
-	public final RuleOpAddContext ruleOpAdd() throws RecognitionException {
-		RuleOpAddContext _localctx = new RuleOpAddContext(_ctx, getState());
-		enterRule(_localctx, 116, RULE_ruleOpAdd);
+	public final OpAddContext opAdd() throws RecognitionException {
+		OpAddContext _localctx = new OpAddContext(_ctx, getState());
+		enterRule(_localctx, 116, RULE_opAdd);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -3982,42 +3977,42 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXMultiplicativeExpressionContext extends ParserRuleContext {
-		public List<RuleXUnaryOperationContext> ruleXUnaryOperation() {
-			return getRuleContexts(RuleXUnaryOperationContext.class);
+	public static class XMultiplicativeExpressionContext extends ParserRuleContext {
+		public List<XUnaryOperationContext> xUnaryOperation() {
+			return getRuleContexts(XUnaryOperationContext.class);
 		}
-		public RuleXUnaryOperationContext ruleXUnaryOperation(int i) {
-			return getRuleContext(RuleXUnaryOperationContext.class,i);
+		public XUnaryOperationContext xUnaryOperation(int i) {
+			return getRuleContext(XUnaryOperationContext.class,i);
 		}
-		public List<RuleOpMultiContext> ruleOpMulti() {
-			return getRuleContexts(RuleOpMultiContext.class);
+		public List<OpMultiContext> opMulti() {
+			return getRuleContexts(OpMultiContext.class);
 		}
-		public RuleOpMultiContext ruleOpMulti(int i) {
-			return getRuleContext(RuleOpMultiContext.class,i);
+		public OpMultiContext opMulti(int i) {
+			return getRuleContext(OpMultiContext.class,i);
 		}
-		public RuleXMultiplicativeExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XMultiplicativeExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXMultiplicativeExpression; }
+		@Override public int getRuleIndex() { return RULE_xMultiplicativeExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXMultiplicativeExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXMultiplicativeExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXMultiplicativeExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXMultiplicativeExpression(this);
 		}
 	}
 
-	public final RuleXMultiplicativeExpressionContext ruleXMultiplicativeExpression() throws RecognitionException {
-		RuleXMultiplicativeExpressionContext _localctx = new RuleXMultiplicativeExpressionContext(_ctx, getState());
-		enterRule(_localctx, 118, RULE_ruleXMultiplicativeExpression);
+	public final XMultiplicativeExpressionContext xMultiplicativeExpression() throws RecognitionException {
+		XMultiplicativeExpressionContext _localctx = new XMultiplicativeExpressionContext(_ctx, getState());
+		enterRule(_localctx, 118, RULE_xMultiplicativeExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(697);
-			ruleXUnaryOperation();
+			xUnaryOperation();
 			setState(703);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,63,_ctx);
@@ -4027,10 +4022,10 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					{
 					{
 					setState(698);
-					ruleOpMulti();
+					opMulti();
 					}
 					setState(699);
-					ruleXUnaryOperation();
+					xUnaryOperation();
 					}
 					} 
 				}
@@ -4052,24 +4047,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpMultiContext extends ParserRuleContext {
-		public RuleOpMultiContext(ParserRuleContext parent, int invokingState) {
+	public static class OpMultiContext extends ParserRuleContext {
+		public OpMultiContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpMulti; }
+		@Override public int getRuleIndex() { return RULE_opMulti; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpMulti(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpMulti(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpMulti(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpMulti(this);
 		}
 	}
 
-	public final RuleOpMultiContext ruleOpMulti() throws RecognitionException {
-		RuleOpMultiContext _localctx = new RuleOpMultiContext(_ctx, getState());
-		enterRule(_localctx, 120, RULE_ruleOpMulti);
+	public final OpMultiContext opMulti() throws RecognitionException {
+		OpMultiContext _localctx = new OpMultiContext(_ctx, getState());
+		enterRule(_localctx, 120, RULE_opMulti);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -4098,33 +4093,33 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXUnaryOperationContext extends ParserRuleContext {
-		public RuleOpUnaryContext ruleOpUnary() {
-			return getRuleContext(RuleOpUnaryContext.class,0);
+	public static class XUnaryOperationContext extends ParserRuleContext {
+		public OpUnaryContext opUnary() {
+			return getRuleContext(OpUnaryContext.class,0);
 		}
-		public RuleXUnaryOperationContext ruleXUnaryOperation() {
-			return getRuleContext(RuleXUnaryOperationContext.class,0);
+		public XUnaryOperationContext xUnaryOperation() {
+			return getRuleContext(XUnaryOperationContext.class,0);
 		}
-		public RuleXCastedExpressionContext ruleXCastedExpression() {
-			return getRuleContext(RuleXCastedExpressionContext.class,0);
+		public XCastedExpressionContext xCastedExpression() {
+			return getRuleContext(XCastedExpressionContext.class,0);
 		}
-		public RuleXUnaryOperationContext(ParserRuleContext parent, int invokingState) {
+		public XUnaryOperationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXUnaryOperation; }
+		@Override public int getRuleIndex() { return RULE_xUnaryOperation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXUnaryOperation(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXUnaryOperation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXUnaryOperation(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXUnaryOperation(this);
 		}
 	}
 
-	public final RuleXUnaryOperationContext ruleXUnaryOperation() throws RecognitionException {
-		RuleXUnaryOperationContext _localctx = new RuleXUnaryOperationContext(_ctx, getState());
-		enterRule(_localctx, 122, RULE_ruleXUnaryOperation);
+	public final XUnaryOperationContext xUnaryOperation() throws RecognitionException {
+		XUnaryOperationContext _localctx = new XUnaryOperationContext(_ctx, getState());
+		enterRule(_localctx, 122, RULE_xUnaryOperation);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -4136,9 +4131,9 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__83:
 				{
 				setState(708);
-				ruleOpUnary();
+				opUnary();
 				setState(709);
-				ruleXUnaryOperation();
+				xUnaryOperation();
 				}
 				break;
 			case T__0:
@@ -4172,7 +4167,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case RULE_STRING:
 				{
 				setState(711);
-				ruleXCastedExpression();
+				xCastedExpression();
 				}
 				break;
 			default:
@@ -4192,24 +4187,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpUnaryContext extends ParserRuleContext {
-		public RuleOpUnaryContext(ParserRuleContext parent, int invokingState) {
+	public static class OpUnaryContext extends ParserRuleContext {
+		public OpUnaryContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpUnary; }
+		@Override public int getRuleIndex() { return RULE_opUnary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpUnary(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpUnary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpUnary(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpUnary(this);
 		}
 	}
 
-	public final RuleOpUnaryContext ruleOpUnary() throws RecognitionException {
-		RuleOpUnaryContext _localctx = new RuleOpUnaryContext(_ctx, getState());
-		enterRule(_localctx, 124, RULE_ruleOpUnary);
+	public final OpUnaryContext opUnary() throws RecognitionException {
+		OpUnaryContext _localctx = new OpUnaryContext(_ctx, getState());
+		enterRule(_localctx, 124, RULE_opUnary);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -4238,39 +4233,39 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXCastedExpressionContext extends ParserRuleContext {
-		public RuleXPostfixOperationContext ruleXPostfixOperation() {
-			return getRuleContext(RuleXPostfixOperationContext.class,0);
+	public static class XCastedExpressionContext extends ParserRuleContext {
+		public XPostfixOperationContext xPostfixOperation() {
+			return getRuleContext(XPostfixOperationContext.class,0);
 		}
-		public List<RuleJvmTypeReferenceContext> ruleJvmTypeReference() {
-			return getRuleContexts(RuleJvmTypeReferenceContext.class);
+		public List<JvmTypeReferenceContext> jvmTypeReference() {
+			return getRuleContexts(JvmTypeReferenceContext.class);
 		}
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference(int i) {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,i);
+		public JvmTypeReferenceContext jvmTypeReference(int i) {
+			return getRuleContext(JvmTypeReferenceContext.class,i);
 		}
-		public RuleXCastedExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XCastedExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXCastedExpression; }
+		@Override public int getRuleIndex() { return RULE_xCastedExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXCastedExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXCastedExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXCastedExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXCastedExpression(this);
 		}
 	}
 
-	public final RuleXCastedExpressionContext ruleXCastedExpression() throws RecognitionException {
-		RuleXCastedExpressionContext _localctx = new RuleXCastedExpressionContext(_ctx, getState());
-		enterRule(_localctx, 126, RULE_ruleXCastedExpression);
+	public final XCastedExpressionContext xCastedExpression() throws RecognitionException {
+		XCastedExpressionContext _localctx = new XCastedExpressionContext(_ctx, getState());
+		enterRule(_localctx, 126, RULE_xCastedExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(716);
-			ruleXPostfixOperation();
+			xPostfixOperation();
 			setState(721);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,65,_ctx);
@@ -4283,7 +4278,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					match(T__1);
 					}
 					setState(718);
-					ruleJvmTypeReference();
+					jvmTypeReference();
 					}
 					} 
 				}
@@ -4305,42 +4300,42 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXPostfixOperationContext extends ParserRuleContext {
-		public RuleXMemberFeatureCallContext ruleXMemberFeatureCall() {
-			return getRuleContext(RuleXMemberFeatureCallContext.class,0);
+	public static class XPostfixOperationContext extends ParserRuleContext {
+		public XMemberFeatureCallContext xMemberFeatureCall() {
+			return getRuleContext(XMemberFeatureCallContext.class,0);
 		}
-		public RuleOpPostfixContext ruleOpPostfix() {
-			return getRuleContext(RuleOpPostfixContext.class,0);
+		public OpPostfixContext opPostfix() {
+			return getRuleContext(OpPostfixContext.class,0);
 		}
-		public RuleXPostfixOperationContext(ParserRuleContext parent, int invokingState) {
+		public XPostfixOperationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXPostfixOperation; }
+		@Override public int getRuleIndex() { return RULE_xPostfixOperation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXPostfixOperation(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXPostfixOperation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXPostfixOperation(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXPostfixOperation(this);
 		}
 	}
 
-	public final RuleXPostfixOperationContext ruleXPostfixOperation() throws RecognitionException {
-		RuleXPostfixOperationContext _localctx = new RuleXPostfixOperationContext(_ctx, getState());
-		enterRule(_localctx, 128, RULE_ruleXPostfixOperation);
+	public final XPostfixOperationContext xPostfixOperation() throws RecognitionException {
+		XPostfixOperationContext _localctx = new XPostfixOperationContext(_ctx, getState());
+		enterRule(_localctx, 128, RULE_xPostfixOperation);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(724);
-			ruleXMemberFeatureCall();
+			xMemberFeatureCall();
 			setState(726);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,66,_ctx) ) {
 			case 1:
 				{
 				setState(725);
-				ruleOpPostfix();
+				opPostfix();
 				}
 				break;
 			}
@@ -4358,24 +4353,24 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleOpPostfixContext extends ParserRuleContext {
-		public RuleOpPostfixContext(ParserRuleContext parent, int invokingState) {
+	public static class OpPostfixContext extends ParserRuleContext {
+		public OpPostfixContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleOpPostfix; }
+		@Override public int getRuleIndex() { return RULE_opPostfix; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleOpPostfix(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterOpPostfix(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleOpPostfix(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitOpPostfix(this);
 		}
 	}
 
-	public final RuleOpPostfixContext ruleOpPostfix() throws RecognitionException {
-		RuleOpPostfixContext _localctx = new RuleOpPostfixContext(_ctx, getState());
-		enterRule(_localctx, 130, RULE_ruleOpPostfix);
+	public final OpPostfixContext opPostfix() throws RecognitionException {
+		OpPostfixContext _localctx = new OpPostfixContext(_ctx, getState());
+		enterRule(_localctx, 130, RULE_opPostfix);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -4404,82 +4399,82 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXMemberFeatureCallContext extends ParserRuleContext {
-		public RuleXPrimaryExpressionContext ruleXPrimaryExpression() {
-			return getRuleContext(RuleXPrimaryExpressionContext.class,0);
+	public static class XMemberFeatureCallContext extends ParserRuleContext {
+		public XPrimaryExpressionContext xPrimaryExpression() {
+			return getRuleContext(XPrimaryExpressionContext.class,0);
 		}
-		public List<RuleXAssignmentContext> ruleXAssignment() {
-			return getRuleContexts(RuleXAssignmentContext.class);
+		public List<XAssignmentContext> xAssignment() {
+			return getRuleContexts(XAssignmentContext.class);
 		}
-		public RuleXAssignmentContext ruleXAssignment(int i) {
-			return getRuleContext(RuleXAssignmentContext.class,i);
+		public XAssignmentContext xAssignment(int i) {
+			return getRuleContext(XAssignmentContext.class,i);
 		}
-		public List<RuleIdOrSuperContext> ruleIdOrSuper() {
-			return getRuleContexts(RuleIdOrSuperContext.class);
+		public List<IdOrSuperContext> idOrSuper() {
+			return getRuleContexts(IdOrSuperContext.class);
 		}
-		public RuleIdOrSuperContext ruleIdOrSuper(int i) {
-			return getRuleContext(RuleIdOrSuperContext.class,i);
+		public IdOrSuperContext idOrSuper(int i) {
+			return getRuleContext(IdOrSuperContext.class,i);
 		}
-		public List<RuleJvmArgumentTypeReferenceContext> ruleJvmArgumentTypeReference() {
-			return getRuleContexts(RuleJvmArgumentTypeReferenceContext.class);
+		public List<JvmArgumentTypeReferenceContext> jvmArgumentTypeReference() {
+			return getRuleContexts(JvmArgumentTypeReferenceContext.class);
 		}
-		public RuleJvmArgumentTypeReferenceContext ruleJvmArgumentTypeReference(int i) {
-			return getRuleContext(RuleJvmArgumentTypeReferenceContext.class,i);
+		public JvmArgumentTypeReferenceContext jvmArgumentTypeReference(int i) {
+			return getRuleContext(JvmArgumentTypeReferenceContext.class,i);
 		}
-		public List<RuleXClosureContext> ruleXClosure() {
-			return getRuleContexts(RuleXClosureContext.class);
+		public List<XClosureContext> xClosure() {
+			return getRuleContexts(XClosureContext.class);
 		}
-		public RuleXClosureContext ruleXClosure(int i) {
-			return getRuleContext(RuleXClosureContext.class,i);
+		public XClosureContext xClosure(int i) {
+			return getRuleContext(XClosureContext.class,i);
 		}
-		public List<RuleFeatureCallIDContext> ruleFeatureCallID() {
-			return getRuleContexts(RuleFeatureCallIDContext.class);
+		public List<FeatureCallIDContext> featureCallID() {
+			return getRuleContexts(FeatureCallIDContext.class);
 		}
-		public RuleFeatureCallIDContext ruleFeatureCallID(int i) {
-			return getRuleContext(RuleFeatureCallIDContext.class,i);
+		public FeatureCallIDContext featureCallID(int i) {
+			return getRuleContext(FeatureCallIDContext.class,i);
 		}
-		public List<RuleOpSingleAssignContext> ruleOpSingleAssign() {
-			return getRuleContexts(RuleOpSingleAssignContext.class);
+		public List<OpSingleAssignContext> opSingleAssign() {
+			return getRuleContexts(OpSingleAssignContext.class);
 		}
-		public RuleOpSingleAssignContext ruleOpSingleAssign(int i) {
-			return getRuleContext(RuleOpSingleAssignContext.class,i);
+		public OpSingleAssignContext opSingleAssign(int i) {
+			return getRuleContext(OpSingleAssignContext.class,i);
 		}
-		public List<RuleXShortClosureContext> ruleXShortClosure() {
-			return getRuleContexts(RuleXShortClosureContext.class);
+		public List<XShortClosureContext> xShortClosure() {
+			return getRuleContexts(XShortClosureContext.class);
 		}
-		public RuleXShortClosureContext ruleXShortClosure(int i) {
-			return getRuleContext(RuleXShortClosureContext.class,i);
+		public XShortClosureContext xShortClosure(int i) {
+			return getRuleContext(XShortClosureContext.class,i);
 		}
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXMemberFeatureCallContext(ParserRuleContext parent, int invokingState) {
+		public XMemberFeatureCallContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXMemberFeatureCall; }
+		@Override public int getRuleIndex() { return RULE_xMemberFeatureCall; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXMemberFeatureCall(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXMemberFeatureCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXMemberFeatureCall(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXMemberFeatureCall(this);
 		}
 	}
 
-	public final RuleXMemberFeatureCallContext ruleXMemberFeatureCall() throws RecognitionException {
-		RuleXMemberFeatureCallContext _localctx = new RuleXMemberFeatureCallContext(_ctx, getState());
-		enterRule(_localctx, 132, RULE_ruleXMemberFeatureCall);
+	public final XMemberFeatureCallContext xMemberFeatureCall() throws RecognitionException {
+		XMemberFeatureCallContext _localctx = new XMemberFeatureCallContext(_ctx, getState());
+		enterRule(_localctx, 132, RULE_xMemberFeatureCall);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(730);
-			ruleXPrimaryExpression();
+			xPrimaryExpression();
 			setState(772);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,74,_ctx);
@@ -4504,13 +4499,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 							consume();
 						}
 						setState(732);
-						ruleFeatureCallID();
+						featureCallID();
 						setState(733);
-						ruleOpSingleAssign();
+						opSingleAssign();
 						}
 						}
 						setState(735);
-						ruleXAssignment();
+						xAssignment();
 						}
 						break;
 					case 2:
@@ -4537,7 +4532,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 							setState(738);
 							match(T__61);
 							setState(739);
-							ruleJvmArgumentTypeReference();
+							jvmArgumentTypeReference();
 							setState(744);
 							_errHandler.sync(this);
 							_la = _input.LA(1);
@@ -4547,7 +4542,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 								setState(740);
 								match(T__36);
 								setState(741);
-								ruleJvmArgumentTypeReference();
+								jvmArgumentTypeReference();
 								}
 								}
 								setState(746);
@@ -4560,7 +4555,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 						}
 
 						setState(751);
-						ruleIdOrSuper();
+						idOrSuper();
 						setState(765);
 						_errHandler.sync(this);
 						switch ( getInterpreter().adaptivePredict(_input,71,_ctx) ) {
@@ -4576,13 +4571,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 							case 1:
 								{
 								setState(753);
-								ruleXShortClosure();
+								xShortClosure();
 								}
 								break;
 							case 2:
 								{
 								setState(754);
-								ruleXExpression();
+								xExpression();
 								setState(759);
 								_errHandler.sync(this);
 								_la = _input.LA(1);
@@ -4592,7 +4587,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 									setState(755);
 									match(T__36);
 									setState(756);
-									ruleXExpression();
+									xExpression();
 									}
 									}
 									setState(761);
@@ -4613,7 +4608,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 						case 1:
 							{
 							setState(767);
-							ruleXClosure();
+							xClosure();
 							}
 							break;
 						}
@@ -4640,69 +4635,69 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXPrimaryExpressionContext extends ParserRuleContext {
-		public RuleXConstructorCallContext ruleXConstructorCall() {
-			return getRuleContext(RuleXConstructorCallContext.class,0);
+	public static class XPrimaryExpressionContext extends ParserRuleContext {
+		public XConstructorCallContext xConstructorCall() {
+			return getRuleContext(XConstructorCallContext.class,0);
 		}
-		public RuleXBlockExpressionContext ruleXBlockExpression() {
-			return getRuleContext(RuleXBlockExpressionContext.class,0);
+		public XBlockExpressionContext xBlockExpression() {
+			return getRuleContext(XBlockExpressionContext.class,0);
 		}
-		public RuleXSwitchExpressionContext ruleXSwitchExpression() {
-			return getRuleContext(RuleXSwitchExpressionContext.class,0);
+		public XSwitchExpressionContext xSwitchExpression() {
+			return getRuleContext(XSwitchExpressionContext.class,0);
 		}
-		public RuleXSynchronizedExpressionContext ruleXSynchronizedExpression() {
-			return getRuleContext(RuleXSynchronizedExpressionContext.class,0);
+		public XSynchronizedExpressionContext xSynchronizedExpression() {
+			return getRuleContext(XSynchronizedExpressionContext.class,0);
 		}
-		public RuleXFeatureCallContext ruleXFeatureCall() {
-			return getRuleContext(RuleXFeatureCallContext.class,0);
+		public XFeatureCallContext xFeatureCall() {
+			return getRuleContext(XFeatureCallContext.class,0);
 		}
-		public RuleXLiteralContext ruleXLiteral() {
-			return getRuleContext(RuleXLiteralContext.class,0);
+		public XLiteralContext xLiteral() {
+			return getRuleContext(XLiteralContext.class,0);
 		}
-		public RuleXIfExpressionContext ruleXIfExpression() {
-			return getRuleContext(RuleXIfExpressionContext.class,0);
+		public XIfExpressionContext xIfExpression() {
+			return getRuleContext(XIfExpressionContext.class,0);
 		}
-		public RuleXForLoopExpressionContext ruleXForLoopExpression() {
-			return getRuleContext(RuleXForLoopExpressionContext.class,0);
+		public XForLoopExpressionContext xForLoopExpression() {
+			return getRuleContext(XForLoopExpressionContext.class,0);
 		}
-		public RuleXBasicForLoopExpressionContext ruleXBasicForLoopExpression() {
-			return getRuleContext(RuleXBasicForLoopExpressionContext.class,0);
+		public XBasicForLoopExpressionContext xBasicForLoopExpression() {
+			return getRuleContext(XBasicForLoopExpressionContext.class,0);
 		}
-		public RuleXWhileExpressionContext ruleXWhileExpression() {
-			return getRuleContext(RuleXWhileExpressionContext.class,0);
+		public XWhileExpressionContext xWhileExpression() {
+			return getRuleContext(XWhileExpressionContext.class,0);
 		}
-		public RuleXDoWhileExpressionContext ruleXDoWhileExpression() {
-			return getRuleContext(RuleXDoWhileExpressionContext.class,0);
+		public XDoWhileExpressionContext xDoWhileExpression() {
+			return getRuleContext(XDoWhileExpressionContext.class,0);
 		}
-		public RuleXThrowExpressionContext ruleXThrowExpression() {
-			return getRuleContext(RuleXThrowExpressionContext.class,0);
+		public XThrowExpressionContext xThrowExpression() {
+			return getRuleContext(XThrowExpressionContext.class,0);
 		}
-		public RuleXReturnExpressionContext ruleXReturnExpression() {
-			return getRuleContext(RuleXReturnExpressionContext.class,0);
+		public XReturnExpressionContext xReturnExpression() {
+			return getRuleContext(XReturnExpressionContext.class,0);
 		}
-		public RuleXTryCatchFinallyExpressionContext ruleXTryCatchFinallyExpression() {
-			return getRuleContext(RuleXTryCatchFinallyExpressionContext.class,0);
+		public XTryCatchFinallyExpressionContext xTryCatchFinallyExpression() {
+			return getRuleContext(XTryCatchFinallyExpressionContext.class,0);
 		}
-		public RuleXParenthesizedExpressionContext ruleXParenthesizedExpression() {
-			return getRuleContext(RuleXParenthesizedExpressionContext.class,0);
+		public XParenthesizedExpressionContext xParenthesizedExpression() {
+			return getRuleContext(XParenthesizedExpressionContext.class,0);
 		}
-		public RuleXPrimaryExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XPrimaryExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXPrimaryExpression; }
+		@Override public int getRuleIndex() { return RULE_xPrimaryExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXPrimaryExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXPrimaryExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXPrimaryExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXPrimaryExpression(this);
 		}
 	}
 
-	public final RuleXPrimaryExpressionContext ruleXPrimaryExpression() throws RecognitionException {
-		RuleXPrimaryExpressionContext _localctx = new RuleXPrimaryExpressionContext(_ctx, getState());
-		enterRule(_localctx, 134, RULE_ruleXPrimaryExpression);
+	public final XPrimaryExpressionContext xPrimaryExpression() throws RecognitionException {
+		XPrimaryExpressionContext _localctx = new XPrimaryExpressionContext(_ctx, getState());
+		enterRule(_localctx, 134, RULE_xPrimaryExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -4712,91 +4707,91 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case 1:
 				{
 				setState(775);
-				ruleXConstructorCall();
+				xConstructorCall();
 				}
 				break;
 			case 2:
 				{
 				setState(776);
-				ruleXBlockExpression();
+				xBlockExpression();
 				}
 				break;
 			case 3:
 				{
 				setState(777);
-				ruleXSwitchExpression();
+				xSwitchExpression();
 				}
 				break;
 			case 4:
 				{
 				setState(778);
-				ruleXSynchronizedExpression();
+				xSynchronizedExpression();
 				}
 				break;
 			case 5:
 				{
 				setState(779);
-				ruleXFeatureCall();
+				xFeatureCall();
 				}
 				break;
 			case 6:
 				{
 				setState(780);
-				ruleXLiteral();
+				xLiteral();
 				}
 				break;
 			case 7:
 				{
 				setState(781);
-				ruleXIfExpression();
+				xIfExpression();
 				}
 				break;
 			case 8:
 				{
 				setState(782);
-				ruleXForLoopExpression();
+				xForLoopExpression();
 				}
 				break;
 			case 9:
 				{
 				setState(783);
-				ruleXBasicForLoopExpression();
+				xBasicForLoopExpression();
 				}
 				break;
 			case 10:
 				{
 				setState(784);
-				ruleXWhileExpression();
+				xWhileExpression();
 				}
 				break;
 			case 11:
 				{
 				setState(785);
-				ruleXDoWhileExpression();
+				xDoWhileExpression();
 				}
 				break;
 			case 12:
 				{
 				setState(786);
-				ruleXThrowExpression();
+				xThrowExpression();
 				}
 				break;
 			case 13:
 				{
 				setState(787);
-				ruleXReturnExpression();
+				xReturnExpression();
 				}
 				break;
 			case 14:
 				{
 				setState(788);
-				ruleXTryCatchFinallyExpression();
+				xTryCatchFinallyExpression();
 				}
 				break;
 			case 15:
 				{
 				setState(789);
-				ruleXParenthesizedExpression();
+				xParenthesizedExpression();
 				}
 				break;
 			}
@@ -4814,45 +4809,45 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXLiteralContext extends ParserRuleContext {
-		public RuleXCollectionLiteralContext ruleXCollectionLiteral() {
-			return getRuleContext(RuleXCollectionLiteralContext.class,0);
+	public static class XLiteralContext extends ParserRuleContext {
+		public XCollectionLiteralContext xCollectionLiteral() {
+			return getRuleContext(XCollectionLiteralContext.class,0);
 		}
-		public RuleXClosureContext ruleXClosure() {
-			return getRuleContext(RuleXClosureContext.class,0);
+		public XClosureContext xClosure() {
+			return getRuleContext(XClosureContext.class,0);
 		}
-		public RuleXBooleanLiteralContext ruleXBooleanLiteral() {
-			return getRuleContext(RuleXBooleanLiteralContext.class,0);
+		public XBooleanLiteralContext xBooleanLiteral() {
+			return getRuleContext(XBooleanLiteralContext.class,0);
 		}
-		public RuleXNumberLiteralContext ruleXNumberLiteral() {
-			return getRuleContext(RuleXNumberLiteralContext.class,0);
+		public XNumberLiteralContext xNumberLiteral() {
+			return getRuleContext(XNumberLiteralContext.class,0);
 		}
-		public RuleXNullLiteralContext ruleXNullLiteral() {
-			return getRuleContext(RuleXNullLiteralContext.class,0);
+		public XNullLiteralContext xNullLiteral() {
+			return getRuleContext(XNullLiteralContext.class,0);
 		}
-		public RuleXStringLiteralContext ruleXStringLiteral() {
-			return getRuleContext(RuleXStringLiteralContext.class,0);
+		public XStringLiteralContext xStringLiteral() {
+			return getRuleContext(XStringLiteralContext.class,0);
 		}
-		public RuleXTypeLiteralContext ruleXTypeLiteral() {
-			return getRuleContext(RuleXTypeLiteralContext.class,0);
+		public XTypeLiteralContext xTypeLiteral() {
+			return getRuleContext(XTypeLiteralContext.class,0);
 		}
-		public RuleXLiteralContext(ParserRuleContext parent, int invokingState) {
+		public XLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXLiteral; }
+		@Override public int getRuleIndex() { return RULE_xLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXLiteral(this);
 		}
 	}
 
-	public final RuleXLiteralContext ruleXLiteral() throws RecognitionException {
-		RuleXLiteralContext _localctx = new RuleXLiteralContext(_ctx, getState());
-		enterRule(_localctx, 136, RULE_ruleXLiteral);
+	public final XLiteralContext xLiteral() throws RecognitionException {
+		XLiteralContext _localctx = new XLiteralContext(_ctx, getState());
+		enterRule(_localctx, 136, RULE_xLiteral);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -4862,20 +4857,20 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__87:
 				{
 				setState(792);
-				ruleXCollectionLiteral();
+				xCollectionLiteral();
 				}
 				break;
 			case T__54:
 				{
 				setState(793);
-				ruleXClosure();
+				xClosure();
 				}
 				break;
 			case T__103:
 			case T__104:
 				{
 				setState(794);
-				ruleXBooleanLiteral();
+				xBooleanLiteral();
 				}
 				break;
 			case RULE_HEX:
@@ -4883,25 +4878,25 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case RULE_DECIMAL:
 				{
 				setState(795);
-				ruleXNumberLiteral();
+				xNumberLiteral();
 				}
 				break;
 			case T__105:
 				{
 				setState(796);
-				ruleXNullLiteral();
+				xNullLiteral();
 				}
 				break;
 			case RULE_STRING:
 				{
 				setState(797);
-				ruleXStringLiteral();
+				xStringLiteral();
 				}
 				break;
 			case T__106:
 				{
 				setState(798);
-				ruleXTypeLiteral();
+				xTypeLiteral();
 				}
 				break;
 			default:
@@ -4921,30 +4916,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXCollectionLiteralContext extends ParserRuleContext {
-		public RuleXSetLiteralContext ruleXSetLiteral() {
-			return getRuleContext(RuleXSetLiteralContext.class,0);
+	public static class XCollectionLiteralContext extends ParserRuleContext {
+		public XSetLiteralContext xSetLiteral() {
+			return getRuleContext(XSetLiteralContext.class,0);
 		}
-		public RuleXListLiteralContext ruleXListLiteral() {
-			return getRuleContext(RuleXListLiteralContext.class,0);
+		public XListLiteralContext xListLiteral() {
+			return getRuleContext(XListLiteralContext.class,0);
 		}
-		public RuleXCollectionLiteralContext(ParserRuleContext parent, int invokingState) {
+		public XCollectionLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXCollectionLiteral; }
+		@Override public int getRuleIndex() { return RULE_xCollectionLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXCollectionLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXCollectionLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXCollectionLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXCollectionLiteral(this);
 		}
 	}
 
-	public final RuleXCollectionLiteralContext ruleXCollectionLiteral() throws RecognitionException {
-		RuleXCollectionLiteralContext _localctx = new RuleXCollectionLiteralContext(_ctx, getState());
-		enterRule(_localctx, 138, RULE_ruleXCollectionLiteral);
+	public final XCollectionLiteralContext xCollectionLiteral() throws RecognitionException {
+		XCollectionLiteralContext _localctx = new XCollectionLiteralContext(_ctx, getState());
+		enterRule(_localctx, 138, RULE_xCollectionLiteral);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
@@ -4954,13 +4949,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case 1:
 				{
 				setState(801);
-				ruleXSetLiteral();
+				xSetLiteral();
 				}
 				break;
 			case 2:
 				{
 				setState(802);
-				ruleXListLiteral();
+				xListLiteral();
 				}
 				break;
 			}
@@ -4978,30 +4973,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXSetLiteralContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XSetLiteralContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXSetLiteralContext(ParserRuleContext parent, int invokingState) {
+		public XSetLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXSetLiteral; }
+		@Override public int getRuleIndex() { return RULE_xSetLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXSetLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXSetLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXSetLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXSetLiteral(this);
 		}
 	}
 
-	public final RuleXSetLiteralContext ruleXSetLiteral() throws RecognitionException {
-		RuleXSetLiteralContext _localctx = new RuleXSetLiteralContext(_ctx, getState());
-		enterRule(_localctx, 140, RULE_ruleXSetLiteral);
+	public final XSetLiteralContext xSetLiteral() throws RecognitionException {
+		XSetLiteralContext _localctx = new XSetLiteralContext(_ctx, getState());
+		enterRule(_localctx, 140, RULE_xSetLiteral);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -5016,7 +5011,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 4656722049060962306L) != 0) || ((((_la - 78)) & ~0x3f) == 0 && ((1L << (_la - 78)) & 8546982601795L) != 0)) {
 				{
 				setState(807);
-				ruleXExpression();
+				xExpression();
 				setState(812);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -5026,7 +5021,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					setState(808);
 					match(T__36);
 					setState(809);
-					ruleXExpression();
+					xExpression();
 					}
 					}
 					setState(814);
@@ -5052,30 +5047,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXListLiteralContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XListLiteralContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXListLiteralContext(ParserRuleContext parent, int invokingState) {
+		public XListLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXListLiteral; }
+		@Override public int getRuleIndex() { return RULE_xListLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXListLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXListLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXListLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXListLiteral(this);
 		}
 	}
 
-	public final RuleXListLiteralContext ruleXListLiteral() throws RecognitionException {
-		RuleXListLiteralContext _localctx = new RuleXListLiteralContext(_ctx, getState());
-		enterRule(_localctx, 142, RULE_ruleXListLiteral);
+	public final XListLiteralContext xListLiteral() throws RecognitionException {
+		XListLiteralContext _localctx = new XListLiteralContext(_ctx, getState());
+		enterRule(_localctx, 142, RULE_xListLiteral);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -5090,7 +5085,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 4656722049060962306L) != 0) || ((((_la - 78)) & ~0x3f) == 0 && ((1L << (_la - 78)) & 8546982601795L) != 0)) {
 				{
 				setState(821);
-				ruleXExpression();
+				xExpression();
 				setState(826);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -5100,7 +5095,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					setState(822);
 					match(T__36);
 					setState(823);
-					ruleXExpression();
+					xExpression();
 					}
 					}
 					setState(828);
@@ -5126,33 +5121,33 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXClosureContext extends ParserRuleContext {
-		public RuleXExpressionInClosureContext ruleXExpressionInClosure() {
-			return getRuleContext(RuleXExpressionInClosureContext.class,0);
+	public static class XClosureContext extends ParserRuleContext {
+		public XExpressionInClosureContext xExpressionInClosure() {
+			return getRuleContext(XExpressionInClosureContext.class,0);
 		}
-		public List<RuleJvmFormalParameterContext> ruleJvmFormalParameter() {
-			return getRuleContexts(RuleJvmFormalParameterContext.class);
+		public List<JvmFormalParameterContext> jvmFormalParameter() {
+			return getRuleContexts(JvmFormalParameterContext.class);
 		}
-		public RuleJvmFormalParameterContext ruleJvmFormalParameter(int i) {
-			return getRuleContext(RuleJvmFormalParameterContext.class,i);
+		public JvmFormalParameterContext jvmFormalParameter(int i) {
+			return getRuleContext(JvmFormalParameterContext.class,i);
 		}
-		public RuleXClosureContext(ParserRuleContext parent, int invokingState) {
+		public XClosureContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXClosure; }
+		@Override public int getRuleIndex() { return RULE_xClosure; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXClosure(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXClosure(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXClosure(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXClosure(this);
 		}
 	}
 
-	public final RuleXClosureContext ruleXClosure() throws RecognitionException {
-		RuleXClosureContext _localctx = new RuleXClosureContext(_ctx, getState());
-		enterRule(_localctx, 144, RULE_ruleXClosure);
+	public final XClosureContext xClosure() throws RecognitionException {
+		XClosureContext _localctx = new XClosureContext(_ctx, getState());
+		enterRule(_localctx, 144, RULE_xClosure);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -5173,7 +5168,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				if (_la==T__34 || _la==T__74 || _la==RULE_ID) {
 					{
 					setState(834);
-					ruleJvmFormalParameter();
+					jvmFormalParameter();
 					setState(839);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
@@ -5183,7 +5178,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 						setState(835);
 						match(T__36);
 						setState(836);
-						ruleJvmFormalParameter();
+						jvmFormalParameter();
 						}
 						}
 						setState(841);
@@ -5200,7 +5195,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				break;
 			}
 			setState(847);
-			ruleXExpressionInClosure();
+			xExpressionInClosure();
 			setState(848);
 			match(T__55);
 			}
@@ -5217,30 +5212,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXExpressionInClosureContext extends ParserRuleContext {
-		public List<RuleXExpressionOrVarDeclarationContext> ruleXExpressionOrVarDeclaration() {
-			return getRuleContexts(RuleXExpressionOrVarDeclarationContext.class);
+	public static class XExpressionInClosureContext extends ParserRuleContext {
+		public List<XExpressionOrVarDeclarationContext> xExpressionOrVarDeclaration() {
+			return getRuleContexts(XExpressionOrVarDeclarationContext.class);
 		}
-		public RuleXExpressionOrVarDeclarationContext ruleXExpressionOrVarDeclaration(int i) {
-			return getRuleContext(RuleXExpressionOrVarDeclarationContext.class,i);
+		public XExpressionOrVarDeclarationContext xExpressionOrVarDeclaration(int i) {
+			return getRuleContext(XExpressionOrVarDeclarationContext.class,i);
 		}
-		public RuleXExpressionInClosureContext(ParserRuleContext parent, int invokingState) {
+		public XExpressionInClosureContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXExpressionInClosure; }
+		@Override public int getRuleIndex() { return RULE_xExpressionInClosure; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXExpressionInClosure(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXExpressionInClosure(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXExpressionInClosure(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXExpressionInClosure(this);
 		}
 	}
 
-	public final RuleXExpressionInClosureContext ruleXExpressionInClosure() throws RecognitionException {
-		RuleXExpressionInClosureContext _localctx = new RuleXExpressionInClosureContext(_ctx, getState());
-		enterRule(_localctx, 146, RULE_ruleXExpressionInClosure);
+	public final XExpressionInClosureContext xExpressionInClosure() throws RecognitionException {
+		XExpressionInClosureContext _localctx = new XExpressionInClosureContext(_ctx, getState());
+		enterRule(_localctx, 146, RULE_xExpressionInClosure);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -5252,7 +5247,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				{
 				{
 				setState(850);
-				ruleXExpressionOrVarDeclaration();
+				xExpressionOrVarDeclaration();
 				setState(852);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -5283,33 +5278,33 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXShortClosureContext extends ParserRuleContext {
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+	public static class XShortClosureContext extends ParserRuleContext {
+		public XExpressionInClosureContext xExpressionInClosure() {
+			return getRuleContext(XExpressionInClosureContext.class,0);
 		}
-		public List<RuleJvmFormalParameterContext> ruleJvmFormalParameter() {
-			return getRuleContexts(RuleJvmFormalParameterContext.class);
+		public List<JvmFormalParameterContext> jvmFormalParameter() {
+			return getRuleContexts(JvmFormalParameterContext.class);
 		}
-		public RuleJvmFormalParameterContext ruleJvmFormalParameter(int i) {
-			return getRuleContext(RuleJvmFormalParameterContext.class,i);
+		public JvmFormalParameterContext jvmFormalParameter(int i) {
+			return getRuleContext(JvmFormalParameterContext.class,i);
 		}
-		public RuleXShortClosureContext(ParserRuleContext parent, int invokingState) {
+		public XShortClosureContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXShortClosure; }
+		@Override public int getRuleIndex() { return RULE_xShortClosure; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXShortClosure(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXShortClosure(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXShortClosure(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXShortClosure(this);
 		}
 	}
 
-	public final RuleXShortClosureContext ruleXShortClosure() throws RecognitionException {
-		RuleXShortClosureContext _localctx = new RuleXShortClosureContext(_ctx, getState());
-		enterRule(_localctx, 148, RULE_ruleXShortClosure);
+	public final XShortClosureContext xShortClosure() throws RecognitionException {
+		XShortClosureContext _localctx = new XShortClosureContext(_ctx, getState());
+		enterRule(_localctx, 148, RULE_xShortClosure);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -5322,7 +5317,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			if (_la==T__34 || _la==T__74 || _la==RULE_ID) {
 				{
 				setState(859);
-				ruleJvmFormalParameter();
+				jvmFormalParameter();
 				setState(864);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
@@ -5332,7 +5327,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					setState(860);
 					match(T__36);
 					setState(861);
-					ruleJvmFormalParameter();
+					jvmFormalParameter();
 					}
 					}
 					setState(866);
@@ -5347,7 +5342,9 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			}
 			}
 			setState(871);
-			ruleXExpression();
+			xExpressionInClosure();
+			setState(872);
+			match(T__55);
 			}
 		}
 		catch (RecognitionException re) {
@@ -5362,35 +5359,35 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXParenthesizedExpressionContext extends ParserRuleContext {
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+	public static class XParenthesizedExpressionContext extends ParserRuleContext {
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleXParenthesizedExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XParenthesizedExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXParenthesizedExpression; }
+		@Override public int getRuleIndex() { return RULE_xParenthesizedExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXParenthesizedExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXParenthesizedExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXParenthesizedExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXParenthesizedExpression(this);
 		}
 	}
 
-	public final RuleXParenthesizedExpressionContext ruleXParenthesizedExpression() throws RecognitionException {
-		RuleXParenthesizedExpressionContext _localctx = new RuleXParenthesizedExpressionContext(_ctx, getState());
-		enterRule(_localctx, 150, RULE_ruleXParenthesizedExpression);
+	public final XParenthesizedExpressionContext xParenthesizedExpression() throws RecognitionException {
+		XParenthesizedExpressionContext _localctx = new XParenthesizedExpressionContext(_ctx, getState());
+		enterRule(_localctx, 150, RULE_xParenthesizedExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(873);
-			match(T__34);
 			setState(874);
-			ruleXExpression();
+			match(T__34);
 			setState(875);
+			xExpression();
+			setState(876);
 			match(T__37);
 			}
 		}
@@ -5406,54 +5403,54 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXIfExpressionContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XIfExpressionContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXIfExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XIfExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXIfExpression; }
+		@Override public int getRuleIndex() { return RULE_xIfExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXIfExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXIfExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXIfExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXIfExpression(this);
 		}
 	}
 
-	public final RuleXIfExpressionContext ruleXIfExpression() throws RecognitionException {
-		RuleXIfExpressionContext _localctx = new RuleXIfExpressionContext(_ctx, getState());
-		enterRule(_localctx, 152, RULE_ruleXIfExpression);
+	public final XIfExpressionContext xIfExpression() throws RecognitionException {
+		XIfExpressionContext _localctx = new XIfExpressionContext(_ctx, getState());
+		enterRule(_localctx, 152, RULE_xIfExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(877);
-			match(T__90);
 			setState(878);
-			match(T__34);
+			match(T__90);
 			setState(879);
-			ruleXExpression();
+			match(T__34);
 			setState(880);
-			match(T__37);
+			xExpression();
 			setState(881);
-			ruleXExpression();
-			setState(884);
+			match(T__37);
+			setState(882);
+			xExpression();
+			setState(885);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,89,_ctx) ) {
 			case 1:
 				{
 				{
-				setState(882);
+				setState(883);
 				match(T__91);
 				}
-				setState(883);
-				ruleXExpression();
+				setState(884);
+				xExpression();
 				}
 				break;
 			}
@@ -5471,114 +5468,114 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXSwitchExpressionContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XSwitchExpressionContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public List<RuleXCasePartContext> ruleXCasePart() {
-			return getRuleContexts(RuleXCasePartContext.class);
+		public List<XCasePartContext> xCasePart() {
+			return getRuleContexts(XCasePartContext.class);
 		}
-		public RuleXCasePartContext ruleXCasePart(int i) {
-			return getRuleContext(RuleXCasePartContext.class,i);
+		public XCasePartContext xCasePart(int i) {
+			return getRuleContext(XCasePartContext.class,i);
 		}
-		public RuleJvmFormalParameterContext ruleJvmFormalParameter() {
-			return getRuleContext(RuleJvmFormalParameterContext.class,0);
+		public JvmFormalParameterContext jvmFormalParameter() {
+			return getRuleContext(JvmFormalParameterContext.class,0);
 		}
-		public RuleXSwitchExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XSwitchExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXSwitchExpression; }
+		@Override public int getRuleIndex() { return RULE_xSwitchExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXSwitchExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXSwitchExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXSwitchExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXSwitchExpression(this);
 		}
 	}
 
-	public final RuleXSwitchExpressionContext ruleXSwitchExpression() throws RecognitionException {
-		RuleXSwitchExpressionContext _localctx = new RuleXSwitchExpressionContext(_ctx, getState());
-		enterRule(_localctx, 154, RULE_ruleXSwitchExpression);
+	public final XSwitchExpressionContext xSwitchExpression() throws RecognitionException {
+		XSwitchExpressionContext _localctx = new XSwitchExpressionContext(_ctx, getState());
+		enterRule(_localctx, 154, RULE_xSwitchExpression);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(886);
+			setState(887);
 			match(T__92);
-			setState(900);
+			setState(901);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,91,_ctx) ) {
 			case 1:
 				{
 				{
-				setState(887);
-				match(T__34);
 				setState(888);
-				ruleJvmFormalParameter();
+				match(T__34);
 				setState(889);
+				jvmFormalParameter();
+				setState(890);
 				match(T__6);
 				}
-				setState(891);
-				ruleXExpression();
 				setState(892);
+				xExpression();
+				setState(893);
 				match(T__37);
 				}
 				break;
 			case 2:
 				{
-				setState(897);
+				setState(898);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,90,_ctx) ) {
 				case 1:
 					{
-					setState(894);
-					ruleJvmFormalParameter();
 					setState(895);
+					jvmFormalParameter();
+					setState(896);
 					match(T__6);
 					}
 					break;
 				}
-				setState(899);
-				ruleXExpression();
+				setState(900);
+				xExpression();
 				}
 				break;
 			}
-			setState(902);
+			setState(903);
 			match(T__16);
-			setState(906);
+			setState(907);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 171798691968L) != 0) || ((((_la - 75)) & ~0x3f) == 0 && ((1L << (_la - 75)) & 17592187092993L) != 0)) {
 				{
 				{
-				setState(903);
-				ruleXCasePart();
+				setState(904);
+				xCasePart();
 				}
 				}
-				setState(908);
+				setState(909);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(912);
+			setState(913);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__93) {
 				{
-				setState(909);
-				match(T__93);
 				setState(910);
-				match(T__6);
+				match(T__93);
 				setState(911);
-				ruleXExpression();
+				match(T__6);
+				setState(912);
+				xExpression();
 				}
 			}
 
-			setState(914);
+			setState(915);
 			match(T__17);
 			}
 		}
@@ -5594,73 +5591,73 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXCasePartContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XCasePartContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
 		}
-		public RuleXCasePartContext(ParserRuleContext parent, int invokingState) {
+		public XCasePartContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXCasePart; }
+		@Override public int getRuleIndex() { return RULE_xCasePart; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXCasePart(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXCasePart(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXCasePart(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXCasePart(this);
 		}
 	}
 
-	public final RuleXCasePartContext ruleXCasePart() throws RecognitionException {
-		RuleXCasePartContext _localctx = new RuleXCasePartContext(_ctx, getState());
-		enterRule(_localctx, 156, RULE_ruleXCasePart);
+	public final XCasePartContext xCasePart() throws RecognitionException {
+		XCasePartContext _localctx = new XCasePartContext(_ctx, getState());
+		enterRule(_localctx, 156, RULE_xCasePart);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(917);
+			setState(918);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__34 || _la==T__74 || _la==RULE_ID) {
 				{
-				setState(916);
-				ruleJvmTypeReference();
+				setState(917);
+				jvmTypeReference();
 				}
 			}
 
-			setState(921);
+			setState(922);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__94) {
 				{
-				setState(919);
-				match(T__94);
 				setState(920);
-				ruleXExpression();
+				match(T__94);
+				setState(921);
+				xExpression();
 				}
 			}
 
-			setState(926);
+			setState(927);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__6:
 				{
-				setState(923);
-				match(T__6);
 				setState(924);
-				ruleXExpression();
+				match(T__6);
+				setState(925);
+				xExpression();
 				}
 				break;
 			case T__36:
 				{
-				setState(925);
+				setState(926);
 				match(T__36);
 				}
 				break;
@@ -5681,50 +5678,50 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXForLoopExpressionContext extends ParserRuleContext {
-		public RuleJvmFormalParameterContext ruleJvmFormalParameter() {
-			return getRuleContext(RuleJvmFormalParameterContext.class,0);
+	public static class XForLoopExpressionContext extends ParserRuleContext {
+		public JvmFormalParameterContext jvmFormalParameter() {
+			return getRuleContext(JvmFormalParameterContext.class,0);
 		}
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXForLoopExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XForLoopExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXForLoopExpression; }
+		@Override public int getRuleIndex() { return RULE_xForLoopExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXForLoopExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXForLoopExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXForLoopExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXForLoopExpression(this);
 		}
 	}
 
-	public final RuleXForLoopExpressionContext ruleXForLoopExpression() throws RecognitionException {
-		RuleXForLoopExpressionContext _localctx = new RuleXForLoopExpressionContext(_ctx, getState());
-		enterRule(_localctx, 158, RULE_ruleXForLoopExpression);
+	public final XForLoopExpressionContext xForLoopExpression() throws RecognitionException {
+		XForLoopExpressionContext _localctx = new XForLoopExpressionContext(_ctx, getState());
+		enterRule(_localctx, 158, RULE_xForLoopExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(928);
-			match(T__95);
 			setState(929);
-			match(T__34);
+			match(T__95);
 			setState(930);
-			ruleJvmFormalParameter();
+			match(T__34);
 			setState(931);
-			match(T__6);
+			jvmFormalParameter();
 			setState(932);
-			ruleXExpression();
+			match(T__6);
 			setState(933);
-			match(T__37);
+			xExpression();
 			setState(934);
-			ruleXExpression();
+			match(T__37);
+			setState(935);
+			xExpression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -5739,114 +5736,114 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXBasicForLoopExpressionContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XBasicForLoopExpressionContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public List<RuleXExpressionOrVarDeclarationContext> ruleXExpressionOrVarDeclaration() {
-			return getRuleContexts(RuleXExpressionOrVarDeclarationContext.class);
+		public List<XExpressionOrVarDeclarationContext> xExpressionOrVarDeclaration() {
+			return getRuleContexts(XExpressionOrVarDeclarationContext.class);
 		}
-		public RuleXExpressionOrVarDeclarationContext ruleXExpressionOrVarDeclaration(int i) {
-			return getRuleContext(RuleXExpressionOrVarDeclarationContext.class,i);
+		public XExpressionOrVarDeclarationContext xExpressionOrVarDeclaration(int i) {
+			return getRuleContext(XExpressionOrVarDeclarationContext.class,i);
 		}
-		public RuleXBasicForLoopExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XBasicForLoopExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXBasicForLoopExpression; }
+		@Override public int getRuleIndex() { return RULE_xBasicForLoopExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXBasicForLoopExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXBasicForLoopExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXBasicForLoopExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXBasicForLoopExpression(this);
 		}
 	}
 
-	public final RuleXBasicForLoopExpressionContext ruleXBasicForLoopExpression() throws RecognitionException {
-		RuleXBasicForLoopExpressionContext _localctx = new RuleXBasicForLoopExpressionContext(_ctx, getState());
-		enterRule(_localctx, 160, RULE_ruleXBasicForLoopExpression);
+	public final XBasicForLoopExpressionContext xBasicForLoopExpression() throws RecognitionException {
+		XBasicForLoopExpressionContext _localctx = new XBasicForLoopExpressionContext(_ctx, getState());
+		enterRule(_localctx, 160, RULE_xBasicForLoopExpression);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(936);
-			match(T__95);
 			setState(937);
+			match(T__95);
+			setState(938);
 			match(T__34);
-			setState(946);
+			setState(947);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 4656757233433051138L) != 0) || ((((_la - 78)) & ~0x3f) == 0 && ((1L << (_la - 78)) & 8546984698947L) != 0)) {
 				{
-				setState(938);
-				ruleXExpressionOrVarDeclaration();
-				setState(943);
+				setState(939);
+				xExpressionOrVarDeclaration();
+				setState(944);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__36) {
 					{
 					{
-					setState(939);
-					match(T__36);
 					setState(940);
-					ruleXExpressionOrVarDeclaration();
+					match(T__36);
+					setState(941);
+					xExpressionOrVarDeclaration();
 					}
 					}
-					setState(945);
+					setState(946);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
 				}
 			}
 
-			setState(948);
+			setState(949);
 			match(T__89);
-			setState(950);
+			setState(951);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 4656722049060962306L) != 0) || ((((_la - 78)) & ~0x3f) == 0 && ((1L << (_la - 78)) & 8546982601795L) != 0)) {
 				{
-				setState(949);
-				ruleXExpression();
+				setState(950);
+				xExpression();
 				}
 			}
 
-			setState(952);
+			setState(953);
 			match(T__89);
-			setState(961);
+			setState(962);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 4656722049060962306L) != 0) || ((((_la - 78)) & ~0x3f) == 0 && ((1L << (_la - 78)) & 8546982601795L) != 0)) {
 				{
-				setState(953);
-				ruleXExpression();
-				setState(958);
+				setState(954);
+				xExpression();
+				setState(959);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__36) {
 					{
 					{
-					setState(954);
-					match(T__36);
 					setState(955);
-					ruleXExpression();
+					match(T__36);
+					setState(956);
+					xExpression();
 					}
 					}
-					setState(960);
+					setState(961);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
 				}
 			}
 
-			setState(963);
-			match(T__37);
 			setState(964);
-			ruleXExpression();
+			match(T__37);
+			setState(965);
+			xExpression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -5861,43 +5858,43 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXWhileExpressionContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XWhileExpressionContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXWhileExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XWhileExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXWhileExpression; }
+		@Override public int getRuleIndex() { return RULE_xWhileExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXWhileExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXWhileExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXWhileExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXWhileExpression(this);
 		}
 	}
 
-	public final RuleXWhileExpressionContext ruleXWhileExpression() throws RecognitionException {
-		RuleXWhileExpressionContext _localctx = new RuleXWhileExpressionContext(_ctx, getState());
-		enterRule(_localctx, 162, RULE_ruleXWhileExpression);
+	public final XWhileExpressionContext xWhileExpression() throws RecognitionException {
+		XWhileExpressionContext _localctx = new XWhileExpressionContext(_ctx, getState());
+		enterRule(_localctx, 162, RULE_xWhileExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(966);
-			match(T__96);
 			setState(967);
-			match(T__34);
+			match(T__96);
 			setState(968);
-			ruleXExpression();
+			match(T__34);
 			setState(969);
-			match(T__37);
+			xExpression();
 			setState(970);
-			ruleXExpression();
+			match(T__37);
+			setState(971);
+			xExpression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -5912,44 +5909,44 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXDoWhileExpressionContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XDoWhileExpressionContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXDoWhileExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XDoWhileExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXDoWhileExpression; }
+		@Override public int getRuleIndex() { return RULE_xDoWhileExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXDoWhileExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXDoWhileExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXDoWhileExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXDoWhileExpression(this);
 		}
 	}
 
-	public final RuleXDoWhileExpressionContext ruleXDoWhileExpression() throws RecognitionException {
-		RuleXDoWhileExpressionContext _localctx = new RuleXDoWhileExpressionContext(_ctx, getState());
-		enterRule(_localctx, 164, RULE_ruleXDoWhileExpression);
+	public final XDoWhileExpressionContext xDoWhileExpression() throws RecognitionException {
+		XDoWhileExpressionContext _localctx = new XDoWhileExpressionContext(_ctx, getState());
+		enterRule(_localctx, 164, RULE_xDoWhileExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(972);
-			match(T__97);
 			setState(973);
-			ruleXExpression();
+			match(T__97);
 			setState(974);
-			match(T__96);
+			xExpression();
 			setState(975);
-			match(T__34);
+			match(T__96);
 			setState(976);
-			ruleXExpression();
+			match(T__34);
 			setState(977);
+			xExpression();
+			setState(978);
 			match(T__37);
 			}
 		}
@@ -5965,61 +5962,61 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXBlockExpressionContext extends ParserRuleContext {
-		public List<RuleXExpressionOrVarDeclarationContext> ruleXExpressionOrVarDeclaration() {
-			return getRuleContexts(RuleXExpressionOrVarDeclarationContext.class);
+	public static class XBlockExpressionContext extends ParserRuleContext {
+		public List<XExpressionOrVarDeclarationContext> xExpressionOrVarDeclaration() {
+			return getRuleContexts(XExpressionOrVarDeclarationContext.class);
 		}
-		public RuleXExpressionOrVarDeclarationContext ruleXExpressionOrVarDeclaration(int i) {
-			return getRuleContext(RuleXExpressionOrVarDeclarationContext.class,i);
+		public XExpressionOrVarDeclarationContext xExpressionOrVarDeclaration(int i) {
+			return getRuleContext(XExpressionOrVarDeclarationContext.class,i);
 		}
-		public RuleXBlockExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XBlockExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXBlockExpression; }
+		@Override public int getRuleIndex() { return RULE_xBlockExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXBlockExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXBlockExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXBlockExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXBlockExpression(this);
 		}
 	}
 
-	public final RuleXBlockExpressionContext ruleXBlockExpression() throws RecognitionException {
-		RuleXBlockExpressionContext _localctx = new RuleXBlockExpressionContext(_ctx, getState());
-		enterRule(_localctx, 166, RULE_ruleXBlockExpression);
+	public final XBlockExpressionContext xBlockExpression() throws RecognitionException {
+		XBlockExpressionContext _localctx = new XBlockExpressionContext(_ctx, getState());
+		enterRule(_localctx, 166, RULE_xBlockExpression);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(979);
+			setState(980);
 			match(T__16);
-			setState(986);
+			setState(987);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 4656757233433051138L) != 0) || ((((_la - 78)) & ~0x3f) == 0 && ((1L << (_la - 78)) & 8546984698947L) != 0)) {
 				{
 				{
-				setState(980);
-				ruleXExpressionOrVarDeclaration();
-				setState(982);
+				setState(981);
+				xExpressionOrVarDeclaration();
+				setState(983);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==T__89) {
 					{
-					setState(981);
+					setState(982);
 					match(T__89);
 					}
 				}
 
 				}
 				}
-				setState(988);
+				setState(989);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(989);
+			setState(990);
 			match(T__17);
 			}
 		}
@@ -6035,41 +6032,41 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXExpressionOrVarDeclarationContext extends ParserRuleContext {
-		public RuleXVariableDeclarationContext ruleXVariableDeclaration() {
-			return getRuleContext(RuleXVariableDeclarationContext.class,0);
+	public static class XExpressionOrVarDeclarationContext extends ParserRuleContext {
+		public XVariableDeclarationContext xVariableDeclaration() {
+			return getRuleContext(XVariableDeclarationContext.class,0);
 		}
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleXExpressionOrVarDeclarationContext(ParserRuleContext parent, int invokingState) {
+		public XExpressionOrVarDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXExpressionOrVarDeclaration; }
+		@Override public int getRuleIndex() { return RULE_xExpressionOrVarDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXExpressionOrVarDeclaration(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXExpressionOrVarDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXExpressionOrVarDeclaration(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXExpressionOrVarDeclaration(this);
 		}
 	}
 
-	public final RuleXExpressionOrVarDeclarationContext ruleXExpressionOrVarDeclaration() throws RecognitionException {
-		RuleXExpressionOrVarDeclarationContext _localctx = new RuleXExpressionOrVarDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 168, RULE_ruleXExpressionOrVarDeclaration);
+	public final XExpressionOrVarDeclarationContext xExpressionOrVarDeclaration() throws RecognitionException {
+		XExpressionOrVarDeclarationContext _localctx = new XExpressionOrVarDeclarationContext(_ctx, getState());
+		enterRule(_localctx, 168, RULE_xExpressionOrVarDeclaration);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(993);
+			setState(994);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__44:
 			case T__98:
 				{
-				setState(991);
-				ruleXVariableDeclaration();
+				setState(992);
+				xVariableDeclaration();
 				}
 				break;
 			case T__0:
@@ -6105,8 +6102,8 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case RULE_ID:
 			case RULE_STRING:
 				{
-				setState(992);
-				ruleXExpression();
+				setState(993);
+				xExpression();
 				}
 				break;
 			default:
@@ -6126,38 +6123,38 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXVariableDeclarationContext extends ParserRuleContext {
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+	public static class XVariableDeclarationContext extends ParserRuleContext {
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
 		}
-		public RuleXVariableDeclarationContext(ParserRuleContext parent, int invokingState) {
+		public XVariableDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXVariableDeclaration; }
+		@Override public int getRuleIndex() { return RULE_xVariableDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXVariableDeclaration(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXVariableDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXVariableDeclaration(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXVariableDeclaration(this);
 		}
 	}
 
-	public final RuleXVariableDeclarationContext ruleXVariableDeclaration() throws RecognitionException {
-		RuleXVariableDeclarationContext _localctx = new RuleXVariableDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 170, RULE_ruleXVariableDeclaration);
+	public final XVariableDeclarationContext xVariableDeclaration() throws RecognitionException {
+		XVariableDeclarationContext _localctx = new XVariableDeclarationContext(_ctx, getState());
+		enterRule(_localctx, 170, RULE_xVariableDeclaration);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(995);
+			setState(996);
 			_la = _input.LA(1);
 			if ( !(_la==T__44 || _la==T__98) ) {
 			_errHandler.recoverInline(this);
@@ -6167,35 +6164,35 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				_errHandler.reportMatch(this);
 				consume();
 			}
-			setState(1000);
+			setState(1001);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,105,_ctx) ) {
 			case 1:
 				{
 				{
-				setState(996);
-				ruleJvmTypeReference();
 				setState(997);
-				ruleValidID();
+				jvmTypeReference();
+				setState(998);
+				validID();
 				}
 				}
 				break;
 			case 2:
 				{
-				setState(999);
-				ruleValidID();
+				setState(1000);
+				validID();
 				}
 				break;
 			}
-			setState(1004);
+			setState(1005);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__45) {
 				{
-				setState(1002);
-				match(T__45);
 				setState(1003);
-				ruleXExpression();
+				match(T__45);
+				setState(1004);
+				xExpression();
 				}
 			}
 
@@ -6213,45 +6210,45 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleJvmFormalParameterContext extends ParserRuleContext {
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+	public static class JvmFormalParameterContext extends ParserRuleContext {
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
 		}
-		public RuleJvmFormalParameterContext(ParserRuleContext parent, int invokingState) {
+		public JvmFormalParameterContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleJvmFormalParameter; }
+		@Override public int getRuleIndex() { return RULE_jvmFormalParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleJvmFormalParameter(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterJvmFormalParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleJvmFormalParameter(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitJvmFormalParameter(this);
 		}
 	}
 
-	public final RuleJvmFormalParameterContext ruleJvmFormalParameter() throws RecognitionException {
-		RuleJvmFormalParameterContext _localctx = new RuleJvmFormalParameterContext(_ctx, getState());
-		enterRule(_localctx, 172, RULE_ruleJvmFormalParameter);
+	public final JvmFormalParameterContext jvmFormalParameter() throws RecognitionException {
+		JvmFormalParameterContext _localctx = new JvmFormalParameterContext(_ctx, getState());
+		enterRule(_localctx, 172, RULE_jvmFormalParameter);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1007);
+			setState(1008);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,107,_ctx) ) {
 			case 1:
 				{
-				setState(1006);
-				ruleJvmTypeReference();
+				setState(1007);
+				jvmTypeReference();
 				}
 				break;
 			}
-			setState(1009);
-			ruleValidID();
+			setState(1010);
+			validID();
 			}
 		}
 		catch (RecognitionException re) {
@@ -6266,37 +6263,37 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleFullJvmFormalParameterContext extends ParserRuleContext {
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
+	public static class FullJvmFormalParameterContext extends ParserRuleContext {
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
 		}
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleFullJvmFormalParameterContext(ParserRuleContext parent, int invokingState) {
+		public FullJvmFormalParameterContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleFullJvmFormalParameter; }
+		@Override public int getRuleIndex() { return RULE_fullJvmFormalParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleFullJvmFormalParameter(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterFullJvmFormalParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleFullJvmFormalParameter(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitFullJvmFormalParameter(this);
 		}
 	}
 
-	public final RuleFullJvmFormalParameterContext ruleFullJvmFormalParameter() throws RecognitionException {
-		RuleFullJvmFormalParameterContext _localctx = new RuleFullJvmFormalParameterContext(_ctx, getState());
-		enterRule(_localctx, 174, RULE_ruleFullJvmFormalParameter);
+	public final FullJvmFormalParameterContext fullJvmFormalParameter() throws RecognitionException {
+		FullJvmFormalParameterContext _localctx = new FullJvmFormalParameterContext(_ctx, getState());
+		enterRule(_localctx, 174, RULE_fullJvmFormalParameter);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1011);
-			ruleJvmTypeReference();
 			setState(1012);
-			ruleValidID();
+			jvmTypeReference();
+			setState(1013);
+			validID();
 			}
 		}
 		catch (RecognitionException re) {
@@ -6311,132 +6308,132 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXFeatureCallContext extends ParserRuleContext {
-		public RuleIdOrSuperContext ruleIdOrSuper() {
-			return getRuleContext(RuleIdOrSuperContext.class,0);
+	public static class XFeatureCallContext extends ParserRuleContext {
+		public IdOrSuperContext idOrSuper() {
+			return getRuleContext(IdOrSuperContext.class,0);
 		}
-		public List<RuleJvmArgumentTypeReferenceContext> ruleJvmArgumentTypeReference() {
-			return getRuleContexts(RuleJvmArgumentTypeReferenceContext.class);
+		public List<JvmArgumentTypeReferenceContext> jvmArgumentTypeReference() {
+			return getRuleContexts(JvmArgumentTypeReferenceContext.class);
 		}
-		public RuleJvmArgumentTypeReferenceContext ruleJvmArgumentTypeReference(int i) {
-			return getRuleContext(RuleJvmArgumentTypeReferenceContext.class,i);
+		public JvmArgumentTypeReferenceContext jvmArgumentTypeReference(int i) {
+			return getRuleContext(JvmArgumentTypeReferenceContext.class,i);
 		}
-		public RuleXClosureContext ruleXClosure() {
-			return getRuleContext(RuleXClosureContext.class,0);
+		public XClosureContext xClosure() {
+			return getRuleContext(XClosureContext.class,0);
 		}
-		public RuleXShortClosureContext ruleXShortClosure() {
-			return getRuleContext(RuleXShortClosureContext.class,0);
+		public XShortClosureContext xShortClosure() {
+			return getRuleContext(XShortClosureContext.class,0);
 		}
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXFeatureCallContext(ParserRuleContext parent, int invokingState) {
+		public XFeatureCallContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXFeatureCall; }
+		@Override public int getRuleIndex() { return RULE_xFeatureCall; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXFeatureCall(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXFeatureCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXFeatureCall(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXFeatureCall(this);
 		}
 	}
 
-	public final RuleXFeatureCallContext ruleXFeatureCall() throws RecognitionException {
-		RuleXFeatureCallContext _localctx = new RuleXFeatureCallContext(_ctx, getState());
-		enterRule(_localctx, 176, RULE_ruleXFeatureCall);
+	public final XFeatureCallContext xFeatureCall() throws RecognitionException {
+		XFeatureCallContext _localctx = new XFeatureCallContext(_ctx, getState());
+		enterRule(_localctx, 176, RULE_xFeatureCall);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1025);
+			setState(1026);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__61) {
 				{
-				setState(1014);
-				match(T__61);
 				setState(1015);
-				ruleJvmArgumentTypeReference();
-				setState(1020);
+				match(T__61);
+				setState(1016);
+				jvmArgumentTypeReference();
+				setState(1021);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__36) {
 					{
 					{
-					setState(1016);
-					match(T__36);
 					setState(1017);
-					ruleJvmArgumentTypeReference();
+					match(T__36);
+					setState(1018);
+					jvmArgumentTypeReference();
 					}
 					}
-					setState(1022);
+					setState(1023);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(1023);
+				setState(1024);
 				match(T__62);
 				}
 			}
 
-			setState(1027);
-			ruleIdOrSuper();
-			setState(1041);
+			setState(1028);
+			idOrSuper();
+			setState(1042);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,112,_ctx) ) {
 			case 1:
 				{
-				setState(1028);
+				setState(1029);
 				match(T__34);
-				setState(1038);
+				setState(1039);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,111,_ctx) ) {
 				case 1:
 					{
-					setState(1029);
-					ruleXShortClosure();
+					setState(1030);
+					xShortClosure();
 					}
 					break;
 				case 2:
 					{
-					setState(1030);
-					ruleXExpression();
-					setState(1035);
+					setState(1031);
+					xExpression();
+					setState(1036);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 					while (_la==T__36) {
 						{
 						{
-						setState(1031);
-						match(T__36);
 						setState(1032);
-						ruleXExpression();
+						match(T__36);
+						setState(1033);
+						xExpression();
 						}
 						}
-						setState(1037);
+						setState(1038);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
 					}
 					}
 					break;
 				}
-				setState(1040);
+				setState(1041);
 				match(T__37);
 				}
 				break;
 			}
-			setState(1044);
+			setState(1045);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,113,_ctx) ) {
 			case 1:
 				{
-				setState(1043);
-				ruleXClosure();
+				setState(1044);
+				xClosure();
 				}
 				break;
 			}
@@ -6454,60 +6451,60 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleFeatureCallIDContext extends ParserRuleContext {
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+	public static class FeatureCallIDContext extends ParserRuleContext {
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleFeatureCallIDContext(ParserRuleContext parent, int invokingState) {
+		public FeatureCallIDContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleFeatureCallID; }
+		@Override public int getRuleIndex() { return RULE_featureCallID; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleFeatureCallID(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterFeatureCallID(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleFeatureCallID(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitFeatureCallID(this);
 		}
 	}
 
-	public final RuleFeatureCallIDContext ruleFeatureCallID() throws RecognitionException {
-		RuleFeatureCallIDContext _localctx = new RuleFeatureCallIDContext(_ctx, getState());
-		enterRule(_localctx, 178, RULE_ruleFeatureCallID);
+	public final FeatureCallIDContext featureCallID() throws RecognitionException {
+		FeatureCallIDContext _localctx = new FeatureCallIDContext(_ctx, getState());
+		enterRule(_localctx, 178, RULE_featureCallID);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1051);
+			setState(1052);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case RULE_ID:
 				{
-				setState(1046);
-				ruleValidID();
+				setState(1047);
+				validID();
 				}
 				break;
 			case T__99:
 				{
-				setState(1047);
+				setState(1048);
 				match(T__99);
 				}
 				break;
 			case T__100:
 				{
-				setState(1048);
+				setState(1049);
 				match(T__100);
 				}
 				break;
 			case T__0:
 				{
-				setState(1049);
+				setState(1050);
 				match(T__0);
 				}
 				break;
 			case T__101:
 				{
-				setState(1050);
+				setState(1051);
 				match(T__101);
 				}
 				break;
@@ -6528,31 +6525,31 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleIdOrSuperContext extends ParserRuleContext {
-		public RuleFeatureCallIDContext ruleFeatureCallID() {
-			return getRuleContext(RuleFeatureCallIDContext.class,0);
+	public static class IdOrSuperContext extends ParserRuleContext {
+		public FeatureCallIDContext featureCallID() {
+			return getRuleContext(FeatureCallIDContext.class,0);
 		}
-		public RuleIdOrSuperContext(ParserRuleContext parent, int invokingState) {
+		public IdOrSuperContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleIdOrSuper; }
+		@Override public int getRuleIndex() { return RULE_idOrSuper; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleIdOrSuper(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterIdOrSuper(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleIdOrSuper(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitIdOrSuper(this);
 		}
 	}
 
-	public final RuleIdOrSuperContext ruleIdOrSuper() throws RecognitionException {
-		RuleIdOrSuperContext _localctx = new RuleIdOrSuperContext(_ctx, getState());
-		enterRule(_localctx, 180, RULE_ruleIdOrSuper);
+	public final IdOrSuperContext idOrSuper() throws RecognitionException {
+		IdOrSuperContext _localctx = new IdOrSuperContext(_ctx, getState());
+		enterRule(_localctx, 180, RULE_idOrSuper);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1055);
+			setState(1056);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__0:
@@ -6561,13 +6558,13 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__101:
 			case RULE_ID:
 				{
-				setState(1053);
-				ruleFeatureCallID();
+				setState(1054);
+				featureCallID();
 				}
 				break;
 			case T__102:
 				{
-				setState(1054);
+				setState(1055);
 				match(T__102);
 				}
 				break;
@@ -6588,134 +6585,134 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXConstructorCallContext extends ParserRuleContext {
-		public RuleQualifiedNameContext ruleQualifiedName() {
-			return getRuleContext(RuleQualifiedNameContext.class,0);
+	public static class XConstructorCallContext extends ParserRuleContext {
+		public QualifiedNameContext qualifiedName() {
+			return getRuleContext(QualifiedNameContext.class,0);
 		}
-		public List<RuleJvmArgumentTypeReferenceContext> ruleJvmArgumentTypeReference() {
-			return getRuleContexts(RuleJvmArgumentTypeReferenceContext.class);
+		public List<JvmArgumentTypeReferenceContext> jvmArgumentTypeReference() {
+			return getRuleContexts(JvmArgumentTypeReferenceContext.class);
 		}
-		public RuleJvmArgumentTypeReferenceContext ruleJvmArgumentTypeReference(int i) {
-			return getRuleContext(RuleJvmArgumentTypeReferenceContext.class,i);
+		public JvmArgumentTypeReferenceContext jvmArgumentTypeReference(int i) {
+			return getRuleContext(JvmArgumentTypeReferenceContext.class,i);
 		}
-		public RuleXClosureContext ruleXClosure() {
-			return getRuleContext(RuleXClosureContext.class,0);
+		public XClosureContext xClosure() {
+			return getRuleContext(XClosureContext.class,0);
 		}
-		public RuleXShortClosureContext ruleXShortClosure() {
-			return getRuleContext(RuleXShortClosureContext.class,0);
+		public XShortClosureContext xShortClosure() {
+			return getRuleContext(XShortClosureContext.class,0);
 		}
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXConstructorCallContext(ParserRuleContext parent, int invokingState) {
+		public XConstructorCallContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXConstructorCall; }
+		@Override public int getRuleIndex() { return RULE_xConstructorCall; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXConstructorCall(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXConstructorCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXConstructorCall(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXConstructorCall(this);
 		}
 	}
 
-	public final RuleXConstructorCallContext ruleXConstructorCall() throws RecognitionException {
-		RuleXConstructorCallContext _localctx = new RuleXConstructorCallContext(_ctx, getState());
-		enterRule(_localctx, 182, RULE_ruleXConstructorCall);
+	public final XConstructorCallContext xConstructorCall() throws RecognitionException {
+		XConstructorCallContext _localctx = new XConstructorCallContext(_ctx, getState());
+		enterRule(_localctx, 182, RULE_xConstructorCall);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1057);
-			match(T__52);
 			setState(1058);
-			ruleQualifiedName();
-			setState(1070);
+			match(T__52);
+			setState(1059);
+			qualifiedName();
+			setState(1071);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,117,_ctx) ) {
 			case 1:
 				{
-				setState(1059);
-				match(T__61);
 				setState(1060);
-				ruleJvmArgumentTypeReference();
-				setState(1065);
+				match(T__61);
+				setState(1061);
+				jvmArgumentTypeReference();
+				setState(1066);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__36) {
 					{
 					{
-					setState(1061);
-					match(T__36);
 					setState(1062);
-					ruleJvmArgumentTypeReference();
+					match(T__36);
+					setState(1063);
+					jvmArgumentTypeReference();
 					}
 					}
-					setState(1067);
+					setState(1068);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(1068);
+				setState(1069);
 				match(T__62);
 				}
 				break;
 			}
-			setState(1085);
+			setState(1086);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,120,_ctx) ) {
 			case 1:
 				{
-				setState(1072);
+				setState(1073);
 				match(T__34);
-				setState(1082);
+				setState(1083);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,119,_ctx) ) {
 				case 1:
 					{
-					setState(1073);
-					ruleXShortClosure();
+					setState(1074);
+					xShortClosure();
 					}
 					break;
 				case 2:
 					{
-					setState(1074);
-					ruleXExpression();
-					setState(1079);
+					setState(1075);
+					xExpression();
+					setState(1080);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 					while (_la==T__36) {
 						{
 						{
-						setState(1075);
-						match(T__36);
 						setState(1076);
-						ruleXExpression();
+						match(T__36);
+						setState(1077);
+						xExpression();
 						}
 						}
-						setState(1081);
+						setState(1082);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
 					}
 					}
 					break;
 				}
-				setState(1084);
+				setState(1085);
 				match(T__37);
 				}
 				break;
 			}
-			setState(1088);
+			setState(1089);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,121,_ctx) ) {
 			case 1:
 				{
-				setState(1087);
-				ruleXClosure();
+				setState(1088);
+				xClosure();
 				}
 				break;
 			}
@@ -6733,29 +6730,29 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXBooleanLiteralContext extends ParserRuleContext {
-		public RuleXBooleanLiteralContext(ParserRuleContext parent, int invokingState) {
+	public static class XBooleanLiteralContext extends ParserRuleContext {
+		public XBooleanLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXBooleanLiteral; }
+		@Override public int getRuleIndex() { return RULE_xBooleanLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXBooleanLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXBooleanLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXBooleanLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXBooleanLiteral(this);
 		}
 	}
 
-	public final RuleXBooleanLiteralContext ruleXBooleanLiteral() throws RecognitionException {
-		RuleXBooleanLiteralContext _localctx = new RuleXBooleanLiteralContext(_ctx, getState());
-		enterRule(_localctx, 184, RULE_ruleXBooleanLiteral);
+	public final XBooleanLiteralContext xBooleanLiteral() throws RecognitionException {
+		XBooleanLiteralContext _localctx = new XBooleanLiteralContext(_ctx, getState());
+		enterRule(_localctx, 184, RULE_xBooleanLiteral);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1090);
+			setState(1091);
 			_la = _input.LA(1);
 			if ( !(_la==T__103 || _la==T__104) ) {
 			_errHandler.recoverInline(this);
@@ -6779,28 +6776,28 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXNullLiteralContext extends ParserRuleContext {
-		public RuleXNullLiteralContext(ParserRuleContext parent, int invokingState) {
+	public static class XNullLiteralContext extends ParserRuleContext {
+		public XNullLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXNullLiteral; }
+		@Override public int getRuleIndex() { return RULE_xNullLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXNullLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXNullLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXNullLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXNullLiteral(this);
 		}
 	}
 
-	public final RuleXNullLiteralContext ruleXNullLiteral() throws RecognitionException {
-		RuleXNullLiteralContext _localctx = new RuleXNullLiteralContext(_ctx, getState());
-		enterRule(_localctx, 186, RULE_ruleXNullLiteral);
+	public final XNullLiteralContext xNullLiteral() throws RecognitionException {
+		XNullLiteralContext _localctx = new XNullLiteralContext(_ctx, getState());
+		enterRule(_localctx, 186, RULE_xNullLiteral);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1092);
+			setState(1093);
 			match(T__105);
 			}
 		}
@@ -6816,32 +6813,32 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXNumberLiteralContext extends ParserRuleContext {
-		public RuleNumberContext ruleNumber() {
-			return getRuleContext(RuleNumberContext.class,0);
+	public static class XNumberLiteralContext extends ParserRuleContext {
+		public NumberContext number() {
+			return getRuleContext(NumberContext.class,0);
 		}
-		public RuleXNumberLiteralContext(ParserRuleContext parent, int invokingState) {
+		public XNumberLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXNumberLiteral; }
+		@Override public int getRuleIndex() { return RULE_xNumberLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXNumberLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXNumberLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXNumberLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXNumberLiteral(this);
 		}
 	}
 
-	public final RuleXNumberLiteralContext ruleXNumberLiteral() throws RecognitionException {
-		RuleXNumberLiteralContext _localctx = new RuleXNumberLiteralContext(_ctx, getState());
-		enterRule(_localctx, 188, RULE_ruleXNumberLiteral);
+	public final XNumberLiteralContext xNumberLiteral() throws RecognitionException {
+		XNumberLiteralContext _localctx = new XNumberLiteralContext(_ctx, getState());
+		enterRule(_localctx, 188, RULE_xNumberLiteral);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1094);
-			ruleNumber();
+			setState(1095);
+			number();
 			}
 		}
 		catch (RecognitionException re) {
@@ -6856,29 +6853,29 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXStringLiteralContext extends ParserRuleContext {
+	public static class XStringLiteralContext extends ParserRuleContext {
 		public TerminalNode RULE_STRING() { return getToken(DebugInternalReactionsLanguageParser.RULE_STRING, 0); }
-		public RuleXStringLiteralContext(ParserRuleContext parent, int invokingState) {
+		public XStringLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXStringLiteral; }
+		@Override public int getRuleIndex() { return RULE_xStringLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXStringLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXStringLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXStringLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXStringLiteral(this);
 		}
 	}
 
-	public final RuleXStringLiteralContext ruleXStringLiteral() throws RecognitionException {
-		RuleXStringLiteralContext _localctx = new RuleXStringLiteralContext(_ctx, getState());
-		enterRule(_localctx, 190, RULE_ruleXStringLiteral);
+	public final XStringLiteralContext xStringLiteral() throws RecognitionException {
+		XStringLiteralContext _localctx = new XStringLiteralContext(_ctx, getState());
+		enterRule(_localctx, 190, RULE_xStringLiteral);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1096);
+			setState(1097);
 			match(RULE_STRING);
 			}
 		}
@@ -6894,58 +6891,58 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXTypeLiteralContext extends ParserRuleContext {
-		public RuleQualifiedNameContext ruleQualifiedName() {
-			return getRuleContext(RuleQualifiedNameContext.class,0);
+	public static class XTypeLiteralContext extends ParserRuleContext {
+		public QualifiedNameContext qualifiedName() {
+			return getRuleContext(QualifiedNameContext.class,0);
 		}
-		public List<RuleArrayBracketsContext> ruleArrayBrackets() {
-			return getRuleContexts(RuleArrayBracketsContext.class);
+		public List<ArrayBracketsContext> arrayBrackets() {
+			return getRuleContexts(ArrayBracketsContext.class);
 		}
-		public RuleArrayBracketsContext ruleArrayBrackets(int i) {
-			return getRuleContext(RuleArrayBracketsContext.class,i);
+		public ArrayBracketsContext arrayBrackets(int i) {
+			return getRuleContext(ArrayBracketsContext.class,i);
 		}
-		public RuleXTypeLiteralContext(ParserRuleContext parent, int invokingState) {
+		public XTypeLiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXTypeLiteral; }
+		@Override public int getRuleIndex() { return RULE_xTypeLiteral; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXTypeLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXTypeLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXTypeLiteral(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXTypeLiteral(this);
 		}
 	}
 
-	public final RuleXTypeLiteralContext ruleXTypeLiteral() throws RecognitionException {
-		RuleXTypeLiteralContext _localctx = new RuleXTypeLiteralContext(_ctx, getState());
-		enterRule(_localctx, 192, RULE_ruleXTypeLiteral);
+	public final XTypeLiteralContext xTypeLiteral() throws RecognitionException {
+		XTypeLiteralContext _localctx = new XTypeLiteralContext(_ctx, getState());
+		enterRule(_localctx, 192, RULE_xTypeLiteral);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1098);
-			match(T__106);
 			setState(1099);
-			match(T__34);
+			match(T__106);
 			setState(1100);
-			ruleQualifiedName();
-			setState(1104);
+			match(T__34);
+			setState(1101);
+			qualifiedName();
+			setState(1105);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==T__54) {
 				{
 				{
-				setState(1101);
-				ruleArrayBrackets();
+				setState(1102);
+				arrayBrackets();
 				}
 				}
-				setState(1106);
+				setState(1107);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(1107);
+			setState(1108);
 			match(T__37);
 			}
 		}
@@ -6961,34 +6958,34 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXThrowExpressionContext extends ParserRuleContext {
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+	public static class XThrowExpressionContext extends ParserRuleContext {
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleXThrowExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XThrowExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXThrowExpression; }
+		@Override public int getRuleIndex() { return RULE_xThrowExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXThrowExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXThrowExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXThrowExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXThrowExpression(this);
 		}
 	}
 
-	public final RuleXThrowExpressionContext ruleXThrowExpression() throws RecognitionException {
-		RuleXThrowExpressionContext _localctx = new RuleXThrowExpressionContext(_ctx, getState());
-		enterRule(_localctx, 194, RULE_ruleXThrowExpression);
+	public final XThrowExpressionContext xThrowExpression() throws RecognitionException {
+		XThrowExpressionContext _localctx = new XThrowExpressionContext(_ctx, getState());
+		enterRule(_localctx, 194, RULE_xThrowExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1109);
-			match(T__107);
 			setState(1110);
-			ruleXExpression();
+			match(T__107);
+			setState(1111);
+			xExpression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -7003,39 +7000,39 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXReturnExpressionContext extends ParserRuleContext {
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+	public static class XReturnExpressionContext extends ParserRuleContext {
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleXReturnExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XReturnExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXReturnExpression; }
+		@Override public int getRuleIndex() { return RULE_xReturnExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXReturnExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXReturnExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXReturnExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXReturnExpression(this);
 		}
 	}
 
-	public final RuleXReturnExpressionContext ruleXReturnExpression() throws RecognitionException {
-		RuleXReturnExpressionContext _localctx = new RuleXReturnExpressionContext(_ctx, getState());
-		enterRule(_localctx, 196, RULE_ruleXReturnExpression);
+	public final XReturnExpressionContext xReturnExpression() throws RecognitionException {
+		XReturnExpressionContext _localctx = new XReturnExpressionContext(_ctx, getState());
+		enterRule(_localctx, 196, RULE_xReturnExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1112);
+			setState(1113);
 			match(T__108);
-			setState(1114);
+			setState(1115);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,123,_ctx) ) {
 			case 1:
 				{
-				setState(1113);
-				ruleXExpression();
+				setState(1114);
+				xExpression();
 				}
 				break;
 			}
@@ -7053,50 +7050,50 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXTryCatchFinallyExpressionContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XTryCatchFinallyExpressionContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public List<RuleXCatchClauseContext> ruleXCatchClause() {
-			return getRuleContexts(RuleXCatchClauseContext.class);
+		public List<XCatchClauseContext> xCatchClause() {
+			return getRuleContexts(XCatchClauseContext.class);
 		}
-		public RuleXCatchClauseContext ruleXCatchClause(int i) {
-			return getRuleContext(RuleXCatchClauseContext.class,i);
+		public XCatchClauseContext xCatchClause(int i) {
+			return getRuleContext(XCatchClauseContext.class,i);
 		}
-		public RuleXTryCatchFinallyExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XTryCatchFinallyExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXTryCatchFinallyExpression; }
+		@Override public int getRuleIndex() { return RULE_xTryCatchFinallyExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXTryCatchFinallyExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXTryCatchFinallyExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXTryCatchFinallyExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXTryCatchFinallyExpression(this);
 		}
 	}
 
-	public final RuleXTryCatchFinallyExpressionContext ruleXTryCatchFinallyExpression() throws RecognitionException {
-		RuleXTryCatchFinallyExpressionContext _localctx = new RuleXTryCatchFinallyExpressionContext(_ctx, getState());
-		enterRule(_localctx, 198, RULE_ruleXTryCatchFinallyExpression);
+	public final XTryCatchFinallyExpressionContext xTryCatchFinallyExpression() throws RecognitionException {
+		XTryCatchFinallyExpressionContext _localctx = new XTryCatchFinallyExpressionContext(_ctx, getState());
+		enterRule(_localctx, 198, RULE_xTryCatchFinallyExpression);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1116);
-			match(T__109);
 			setState(1117);
-			ruleXExpression();
-			setState(1129);
+			match(T__109);
+			setState(1118);
+			xExpression();
+			setState(1130);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__112:
 				{
-				setState(1119); 
+				setState(1120); 
 				_errHandler.sync(this);
 				_alt = 1;
 				do {
@@ -7104,27 +7101,27 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					case 1:
 						{
 						{
-						setState(1118);
-						ruleXCatchClause();
+						setState(1119);
+						xCatchClause();
 						}
 						}
 						break;
 					default:
 						throw new NoViableAltException(this);
 					}
-					setState(1121); 
+					setState(1122); 
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input,124,_ctx);
 				} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
-				setState(1125);
+				setState(1126);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,125,_ctx) ) {
 				case 1:
 					{
-					setState(1123);
-					match(T__110);
 					setState(1124);
-					ruleXExpression();
+					match(T__110);
+					setState(1125);
+					xExpression();
 					}
 					break;
 				}
@@ -7132,10 +7129,10 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				break;
 			case T__110:
 				{
-				setState(1127);
-				match(T__110);
 				setState(1128);
-				ruleXExpression();
+				match(T__110);
+				setState(1129);
+				xExpression();
 				}
 				break;
 			default:
@@ -7155,43 +7152,43 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXSynchronizedExpressionContext extends ParserRuleContext {
-		public List<RuleXExpressionContext> ruleXExpression() {
-			return getRuleContexts(RuleXExpressionContext.class);
+	public static class XSynchronizedExpressionContext extends ParserRuleContext {
+		public List<XExpressionContext> xExpression() {
+			return getRuleContexts(XExpressionContext.class);
 		}
-		public RuleXExpressionContext ruleXExpression(int i) {
-			return getRuleContext(RuleXExpressionContext.class,i);
+		public XExpressionContext xExpression(int i) {
+			return getRuleContext(XExpressionContext.class,i);
 		}
-		public RuleXSynchronizedExpressionContext(ParserRuleContext parent, int invokingState) {
+		public XSynchronizedExpressionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXSynchronizedExpression; }
+		@Override public int getRuleIndex() { return RULE_xSynchronizedExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXSynchronizedExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXSynchronizedExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXSynchronizedExpression(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXSynchronizedExpression(this);
 		}
 	}
 
-	public final RuleXSynchronizedExpressionContext ruleXSynchronizedExpression() throws RecognitionException {
-		RuleXSynchronizedExpressionContext _localctx = new RuleXSynchronizedExpressionContext(_ctx, getState());
-		enterRule(_localctx, 200, RULE_ruleXSynchronizedExpression);
+	public final XSynchronizedExpressionContext xSynchronizedExpression() throws RecognitionException {
+		XSynchronizedExpressionContext _localctx = new XSynchronizedExpressionContext(_ctx, getState());
+		enterRule(_localctx, 200, RULE_xSynchronizedExpression);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1131);
-			match(T__111);
 			setState(1132);
-			match(T__34);
+			match(T__111);
 			setState(1133);
-			ruleXExpression();
+			match(T__34);
 			setState(1134);
-			match(T__37);
+			xExpression();
 			setState(1135);
-			ruleXExpression();
+			match(T__37);
+			setState(1136);
+			xExpression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -7206,45 +7203,45 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXCatchClauseContext extends ParserRuleContext {
-		public RuleFullJvmFormalParameterContext ruleFullJvmFormalParameter() {
-			return getRuleContext(RuleFullJvmFormalParameterContext.class,0);
+	public static class XCatchClauseContext extends ParserRuleContext {
+		public FullJvmFormalParameterContext fullJvmFormalParameter() {
+			return getRuleContext(FullJvmFormalParameterContext.class,0);
 		}
-		public RuleXExpressionContext ruleXExpression() {
-			return getRuleContext(RuleXExpressionContext.class,0);
+		public XExpressionContext xExpression() {
+			return getRuleContext(XExpressionContext.class,0);
 		}
-		public RuleXCatchClauseContext(ParserRuleContext parent, int invokingState) {
+		public XCatchClauseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXCatchClause; }
+		@Override public int getRuleIndex() { return RULE_xCatchClause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXCatchClause(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXCatchClause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXCatchClause(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXCatchClause(this);
 		}
 	}
 
-	public final RuleXCatchClauseContext ruleXCatchClause() throws RecognitionException {
-		RuleXCatchClauseContext _localctx = new RuleXCatchClauseContext(_ctx, getState());
-		enterRule(_localctx, 202, RULE_ruleXCatchClause);
+	public final XCatchClauseContext xCatchClause() throws RecognitionException {
+		XCatchClauseContext _localctx = new XCatchClauseContext(_ctx, getState());
+		enterRule(_localctx, 202, RULE_xCatchClause);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(1137);
+			setState(1138);
 			match(T__112);
 			}
-			setState(1138);
-			match(T__34);
 			setState(1139);
-			ruleFullJvmFormalParameter();
+			match(T__34);
 			setState(1140);
-			match(T__37);
+			fullJvmFormalParameter();
 			setState(1141);
-			ruleXExpression();
+			match(T__37);
+			setState(1142);
+			xExpression();
 			}
 		}
 		catch (RecognitionException re) {
@@ -7259,51 +7256,51 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleQualifiedNameContext extends ParserRuleContext {
-		public List<RuleValidIDContext> ruleValidID() {
-			return getRuleContexts(RuleValidIDContext.class);
+	public static class QualifiedNameContext extends ParserRuleContext {
+		public List<ValidIDContext> validID() {
+			return getRuleContexts(ValidIDContext.class);
 		}
-		public RuleValidIDContext ruleValidID(int i) {
-			return getRuleContext(RuleValidIDContext.class,i);
+		public ValidIDContext validID(int i) {
+			return getRuleContext(ValidIDContext.class,i);
 		}
-		public RuleQualifiedNameContext(ParserRuleContext parent, int invokingState) {
+		public QualifiedNameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleQualifiedName; }
+		@Override public int getRuleIndex() { return RULE_qualifiedName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleQualifiedName(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterQualifiedName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleQualifiedName(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitQualifiedName(this);
 		}
 	}
 
-	public final RuleQualifiedNameContext ruleQualifiedName() throws RecognitionException {
-		RuleQualifiedNameContext _localctx = new RuleQualifiedNameContext(_ctx, getState());
-		enterRule(_localctx, 204, RULE_ruleQualifiedName);
+	public final QualifiedNameContext qualifiedName() throws RecognitionException {
+		QualifiedNameContext _localctx = new QualifiedNameContext(_ctx, getState());
+		enterRule(_localctx, 204, RULE_qualifiedName);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1143);
-			ruleValidID();
-			setState(1148);
+			setState(1144);
+			validID();
+			setState(1149);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,127,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(1144);
-					match(T__33);
 					setState(1145);
-					ruleValidID();
+					match(T__33);
+					setState(1146);
+					validID();
 					}
 					} 
 				}
-				setState(1150);
+				setState(1151);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,127,_ctx);
 			}
@@ -7321,7 +7318,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleNumberContext extends ParserRuleContext {
+	public static class NumberContext extends ParserRuleContext {
 		public TerminalNode RULE_HEX() { return getToken(DebugInternalReactionsLanguageParser.RULE_HEX, 0); }
 		public List<TerminalNode> RULE_INT() { return getTokens(DebugInternalReactionsLanguageParser.RULE_INT); }
 		public TerminalNode RULE_INT(int i) {
@@ -7331,40 +7328,40 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 		public TerminalNode RULE_DECIMAL(int i) {
 			return getToken(DebugInternalReactionsLanguageParser.RULE_DECIMAL, i);
 		}
-		public RuleNumberContext(ParserRuleContext parent, int invokingState) {
+		public NumberContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleNumber; }
+		@Override public int getRuleIndex() { return RULE_number; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleNumber(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterNumber(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleNumber(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitNumber(this);
 		}
 	}
 
-	public final RuleNumberContext ruleNumber() throws RecognitionException {
-		RuleNumberContext _localctx = new RuleNumberContext(_ctx, getState());
-		enterRule(_localctx, 206, RULE_ruleNumber);
+	public final NumberContext number() throws RecognitionException {
+		NumberContext _localctx = new NumberContext(_ctx, getState());
+		enterRule(_localctx, 206, RULE_number);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1157);
+			setState(1158);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case RULE_HEX:
 				{
-				setState(1151);
+				setState(1152);
 				match(RULE_HEX);
 				}
 				break;
 			case RULE_INT:
 			case RULE_DECIMAL:
 				{
-				setState(1152);
+				setState(1153);
 				_la = _input.LA(1);
 				if ( !(_la==RULE_INT || _la==RULE_DECIMAL) ) {
 				_errHandler.recoverInline(this);
@@ -7374,14 +7371,14 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 					_errHandler.reportMatch(this);
 					consume();
 				}
-				setState(1155);
+				setState(1156);
 				_errHandler.sync(this);
 				switch ( getInterpreter().adaptivePredict(_input,128,_ctx) ) {
 				case 1:
 					{
-					setState(1153);
-					match(T__33);
 					setState(1154);
+					match(T__33);
+					setState(1155);
 					_la = _input.LA(1);
 					if ( !(_la==RULE_INT || _la==RULE_DECIMAL) ) {
 					_errHandler.recoverInline(this);
@@ -7413,60 +7410,60 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleJvmTypeReferenceContext extends ParserRuleContext {
-		public RuleJvmParameterizedTypeReferenceContext ruleJvmParameterizedTypeReference() {
-			return getRuleContext(RuleJvmParameterizedTypeReferenceContext.class,0);
+	public static class JvmTypeReferenceContext extends ParserRuleContext {
+		public JvmParameterizedTypeReferenceContext jvmParameterizedTypeReference() {
+			return getRuleContext(JvmParameterizedTypeReferenceContext.class,0);
 		}
-		public RuleXFunctionTypeRefContext ruleXFunctionTypeRef() {
-			return getRuleContext(RuleXFunctionTypeRefContext.class,0);
+		public XFunctionTypeRefContext xFunctionTypeRef() {
+			return getRuleContext(XFunctionTypeRefContext.class,0);
 		}
-		public List<RuleArrayBracketsContext> ruleArrayBrackets() {
-			return getRuleContexts(RuleArrayBracketsContext.class);
+		public List<ArrayBracketsContext> arrayBrackets() {
+			return getRuleContexts(ArrayBracketsContext.class);
 		}
-		public RuleArrayBracketsContext ruleArrayBrackets(int i) {
-			return getRuleContext(RuleArrayBracketsContext.class,i);
+		public ArrayBracketsContext arrayBrackets(int i) {
+			return getRuleContext(ArrayBracketsContext.class,i);
 		}
-		public RuleJvmTypeReferenceContext(ParserRuleContext parent, int invokingState) {
+		public JvmTypeReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleJvmTypeReference; }
+		@Override public int getRuleIndex() { return RULE_jvmTypeReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleJvmTypeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterJvmTypeReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleJvmTypeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitJvmTypeReference(this);
 		}
 	}
 
-	public final RuleJvmTypeReferenceContext ruleJvmTypeReference() throws RecognitionException {
-		RuleJvmTypeReferenceContext _localctx = new RuleJvmTypeReferenceContext(_ctx, getState());
-		enterRule(_localctx, 208, RULE_ruleJvmTypeReference);
+	public final JvmTypeReferenceContext jvmTypeReference() throws RecognitionException {
+		JvmTypeReferenceContext _localctx = new JvmTypeReferenceContext(_ctx, getState());
+		enterRule(_localctx, 208, RULE_jvmTypeReference);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1167);
+			setState(1168);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case RULE_ID:
 				{
-				setState(1159);
-				ruleJvmParameterizedTypeReference();
-				setState(1163);
+				setState(1160);
+				jvmParameterizedTypeReference();
+				setState(1164);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,130,_ctx);
 				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
-						setState(1160);
-						ruleArrayBrackets();
+						setState(1161);
+						arrayBrackets();
 						}
 						} 
 					}
-					setState(1165);
+					setState(1166);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input,130,_ctx);
 				}
@@ -7475,8 +7472,8 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 			case T__34:
 			case T__74:
 				{
-				setState(1166);
-				ruleXFunctionTypeRef();
+				setState(1167);
+				xFunctionTypeRef();
 				}
 				break;
 			default:
@@ -7496,30 +7493,30 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleArrayBracketsContext extends ParserRuleContext {
-		public RuleArrayBracketsContext(ParserRuleContext parent, int invokingState) {
+	public static class ArrayBracketsContext extends ParserRuleContext {
+		public ArrayBracketsContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleArrayBrackets; }
+		@Override public int getRuleIndex() { return RULE_arrayBrackets; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleArrayBrackets(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterArrayBrackets(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleArrayBrackets(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitArrayBrackets(this);
 		}
 	}
 
-	public final RuleArrayBracketsContext ruleArrayBrackets() throws RecognitionException {
-		RuleArrayBracketsContext _localctx = new RuleArrayBracketsContext(_ctx, getState());
-		enterRule(_localctx, 210, RULE_ruleArrayBrackets);
+	public final ArrayBracketsContext arrayBrackets() throws RecognitionException {
+		ArrayBracketsContext _localctx = new ArrayBracketsContext(_ctx, getState());
+		enterRule(_localctx, 210, RULE_arrayBrackets);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1169);
-			match(T__54);
 			setState(1170);
+			match(T__54);
+			setState(1171);
 			match(T__55);
 			}
 		}
@@ -7535,76 +7532,76 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXFunctionTypeRefContext extends ParserRuleContext {
-		public List<RuleJvmTypeReferenceContext> ruleJvmTypeReference() {
-			return getRuleContexts(RuleJvmTypeReferenceContext.class);
+	public static class XFunctionTypeRefContext extends ParserRuleContext {
+		public List<JvmTypeReferenceContext> jvmTypeReference() {
+			return getRuleContexts(JvmTypeReferenceContext.class);
 		}
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference(int i) {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,i);
+		public JvmTypeReferenceContext jvmTypeReference(int i) {
+			return getRuleContext(JvmTypeReferenceContext.class,i);
 		}
-		public RuleXFunctionTypeRefContext(ParserRuleContext parent, int invokingState) {
+		public XFunctionTypeRefContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXFunctionTypeRef; }
+		@Override public int getRuleIndex() { return RULE_xFunctionTypeRef; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXFunctionTypeRef(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXFunctionTypeRef(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXFunctionTypeRef(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXFunctionTypeRef(this);
 		}
 	}
 
-	public final RuleXFunctionTypeRefContext ruleXFunctionTypeRef() throws RecognitionException {
-		RuleXFunctionTypeRefContext _localctx = new RuleXFunctionTypeRefContext(_ctx, getState());
-		enterRule(_localctx, 212, RULE_ruleXFunctionTypeRef);
+	public final XFunctionTypeRefContext xFunctionTypeRef() throws RecognitionException {
+		XFunctionTypeRefContext _localctx = new XFunctionTypeRefContext(_ctx, getState());
+		enterRule(_localctx, 212, RULE_xFunctionTypeRef);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1184);
+			setState(1185);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__34) {
 				{
-				setState(1172);
+				setState(1173);
 				match(T__34);
-				setState(1181);
+				setState(1182);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==T__34 || _la==T__74 || _la==RULE_ID) {
 					{
-					setState(1173);
-					ruleJvmTypeReference();
-					setState(1178);
+					setState(1174);
+					jvmTypeReference();
+					setState(1179);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 					while (_la==T__36) {
 						{
 						{
-						setState(1174);
-						match(T__36);
 						setState(1175);
-						ruleJvmTypeReference();
+						match(T__36);
+						setState(1176);
+						jvmTypeReference();
 						}
 						}
-						setState(1180);
+						setState(1181);
 						_errHandler.sync(this);
 						_la = _input.LA(1);
 					}
 					}
 				}
 
-				setState(1183);
+				setState(1184);
 				match(T__37);
 				}
 			}
 
-			setState(1186);
-			match(T__74);
 			setState(1187);
-			ruleJvmTypeReference();
+			match(T__74);
+			setState(1188);
+			jvmTypeReference();
 			}
 		}
 		catch (RecognitionException re) {
@@ -7619,76 +7616,76 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleJvmParameterizedTypeReferenceContext extends ParserRuleContext {
-		public RuleQualifiedNameContext ruleQualifiedName() {
-			return getRuleContext(RuleQualifiedNameContext.class,0);
+	public static class JvmParameterizedTypeReferenceContext extends ParserRuleContext {
+		public QualifiedNameContext qualifiedName() {
+			return getRuleContext(QualifiedNameContext.class,0);
 		}
-		public List<RuleJvmArgumentTypeReferenceContext> ruleJvmArgumentTypeReference() {
-			return getRuleContexts(RuleJvmArgumentTypeReferenceContext.class);
+		public List<JvmArgumentTypeReferenceContext> jvmArgumentTypeReference() {
+			return getRuleContexts(JvmArgumentTypeReferenceContext.class);
 		}
-		public RuleJvmArgumentTypeReferenceContext ruleJvmArgumentTypeReference(int i) {
-			return getRuleContext(RuleJvmArgumentTypeReferenceContext.class,i);
+		public JvmArgumentTypeReferenceContext jvmArgumentTypeReference(int i) {
+			return getRuleContext(JvmArgumentTypeReferenceContext.class,i);
 		}
-		public List<RuleValidIDContext> ruleValidID() {
-			return getRuleContexts(RuleValidIDContext.class);
+		public List<ValidIDContext> validID() {
+			return getRuleContexts(ValidIDContext.class);
 		}
-		public RuleValidIDContext ruleValidID(int i) {
-			return getRuleContext(RuleValidIDContext.class,i);
+		public ValidIDContext validID(int i) {
+			return getRuleContext(ValidIDContext.class,i);
 		}
-		public RuleJvmParameterizedTypeReferenceContext(ParserRuleContext parent, int invokingState) {
+		public JvmParameterizedTypeReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleJvmParameterizedTypeReference; }
+		@Override public int getRuleIndex() { return RULE_jvmParameterizedTypeReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleJvmParameterizedTypeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterJvmParameterizedTypeReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleJvmParameterizedTypeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitJvmParameterizedTypeReference(this);
 		}
 	}
 
-	public final RuleJvmParameterizedTypeReferenceContext ruleJvmParameterizedTypeReference() throws RecognitionException {
-		RuleJvmParameterizedTypeReferenceContext _localctx = new RuleJvmParameterizedTypeReferenceContext(_ctx, getState());
-		enterRule(_localctx, 214, RULE_ruleJvmParameterizedTypeReference);
+	public final JvmParameterizedTypeReferenceContext jvmParameterizedTypeReference() throws RecognitionException {
+		JvmParameterizedTypeReferenceContext _localctx = new JvmParameterizedTypeReferenceContext(_ctx, getState());
+		enterRule(_localctx, 214, RULE_jvmParameterizedTypeReference);
 		int _la;
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1189);
-			ruleQualifiedName();
-			setState(1220);
+			setState(1190);
+			qualifiedName();
+			setState(1221);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,139,_ctx) ) {
 			case 1:
 				{
 				{
-				setState(1190);
+				setState(1191);
 				match(T__61);
 				}
-				setState(1191);
-				ruleJvmArgumentTypeReference();
-				setState(1196);
+				setState(1192);
+				jvmArgumentTypeReference();
+				setState(1197);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__36) {
 					{
 					{
-					setState(1192);
-					match(T__36);
 					setState(1193);
-					ruleJvmArgumentTypeReference();
+					match(T__36);
+					setState(1194);
+					jvmArgumentTypeReference();
 					}
 					}
-					setState(1198);
+					setState(1199);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
-				setState(1199);
+				setState(1200);
 				match(T__62);
-				setState(1217);
+				setState(1218);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,138,_ctx);
 				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
@@ -7696,39 +7693,39 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 						{
 						{
 						{
-						setState(1200);
+						setState(1201);
 						match(T__33);
 						}
-						setState(1201);
-						ruleValidID();
-						setState(1213);
+						setState(1202);
+						validID();
+						setState(1214);
 						_errHandler.sync(this);
 						switch ( getInterpreter().adaptivePredict(_input,137,_ctx) ) {
 						case 1:
 							{
 							{
-							setState(1202);
+							setState(1203);
 							match(T__61);
 							}
-							setState(1203);
-							ruleJvmArgumentTypeReference();
-							setState(1208);
+							setState(1204);
+							jvmArgumentTypeReference();
+							setState(1209);
 							_errHandler.sync(this);
 							_la = _input.LA(1);
 							while (_la==T__36) {
 								{
 								{
-								setState(1204);
-								match(T__36);
 								setState(1205);
-								ruleJvmArgumentTypeReference();
+								match(T__36);
+								setState(1206);
+								jvmArgumentTypeReference();
 								}
 								}
-								setState(1210);
+								setState(1211);
 								_errHandler.sync(this);
 								_la = _input.LA(1);
 							}
-							setState(1211);
+							setState(1212);
 							match(T__62);
 							}
 							break;
@@ -7736,7 +7733,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 						}
 						} 
 					}
-					setState(1219);
+					setState(1220);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input,138,_ctx);
 				}
@@ -7757,48 +7754,48 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleJvmArgumentTypeReferenceContext extends ParserRuleContext {
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
+	public static class JvmArgumentTypeReferenceContext extends ParserRuleContext {
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
 		}
-		public RuleJvmWildcardTypeReferenceContext ruleJvmWildcardTypeReference() {
-			return getRuleContext(RuleJvmWildcardTypeReferenceContext.class,0);
+		public JvmWildcardTypeReferenceContext jvmWildcardTypeReference() {
+			return getRuleContext(JvmWildcardTypeReferenceContext.class,0);
 		}
-		public RuleJvmArgumentTypeReferenceContext(ParserRuleContext parent, int invokingState) {
+		public JvmArgumentTypeReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleJvmArgumentTypeReference; }
+		@Override public int getRuleIndex() { return RULE_jvmArgumentTypeReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleJvmArgumentTypeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterJvmArgumentTypeReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleJvmArgumentTypeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitJvmArgumentTypeReference(this);
 		}
 	}
 
-	public final RuleJvmArgumentTypeReferenceContext ruleJvmArgumentTypeReference() throws RecognitionException {
-		RuleJvmArgumentTypeReferenceContext _localctx = new RuleJvmArgumentTypeReferenceContext(_ctx, getState());
-		enterRule(_localctx, 216, RULE_ruleJvmArgumentTypeReference);
+	public final JvmArgumentTypeReferenceContext jvmArgumentTypeReference() throws RecognitionException {
+		JvmArgumentTypeReferenceContext _localctx = new JvmArgumentTypeReferenceContext(_ctx, getState());
+		enterRule(_localctx, 216, RULE_jvmArgumentTypeReference);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1224);
+			setState(1225);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__34:
 			case T__74:
 			case RULE_ID:
 				{
-				setState(1222);
-				ruleJvmTypeReference();
+				setState(1223);
+				jvmTypeReference();
 				}
 				break;
 			case T__113:
 				{
-				setState(1223);
-				ruleJvmWildcardTypeReference();
+				setState(1224);
+				jvmWildcardTypeReference();
 				}
 				break;
 			default:
@@ -7818,66 +7815,66 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleJvmWildcardTypeReferenceContext extends ParserRuleContext {
-		public RuleJvmUpperBoundContext ruleJvmUpperBound() {
-			return getRuleContext(RuleJvmUpperBoundContext.class,0);
+	public static class JvmWildcardTypeReferenceContext extends ParserRuleContext {
+		public JvmUpperBoundContext jvmUpperBound() {
+			return getRuleContext(JvmUpperBoundContext.class,0);
 		}
-		public RuleJvmLowerBoundContext ruleJvmLowerBound() {
-			return getRuleContext(RuleJvmLowerBoundContext.class,0);
+		public JvmLowerBoundContext jvmLowerBound() {
+			return getRuleContext(JvmLowerBoundContext.class,0);
 		}
-		public List<RuleJvmUpperBoundAndedContext> ruleJvmUpperBoundAnded() {
-			return getRuleContexts(RuleJvmUpperBoundAndedContext.class);
+		public List<JvmUpperBoundAndedContext> jvmUpperBoundAnded() {
+			return getRuleContexts(JvmUpperBoundAndedContext.class);
 		}
-		public RuleJvmUpperBoundAndedContext ruleJvmUpperBoundAnded(int i) {
-			return getRuleContext(RuleJvmUpperBoundAndedContext.class,i);
+		public JvmUpperBoundAndedContext jvmUpperBoundAnded(int i) {
+			return getRuleContext(JvmUpperBoundAndedContext.class,i);
 		}
-		public List<RuleJvmLowerBoundAndedContext> ruleJvmLowerBoundAnded() {
-			return getRuleContexts(RuleJvmLowerBoundAndedContext.class);
+		public List<JvmLowerBoundAndedContext> jvmLowerBoundAnded() {
+			return getRuleContexts(JvmLowerBoundAndedContext.class);
 		}
-		public RuleJvmLowerBoundAndedContext ruleJvmLowerBoundAnded(int i) {
-			return getRuleContext(RuleJvmLowerBoundAndedContext.class,i);
+		public JvmLowerBoundAndedContext jvmLowerBoundAnded(int i) {
+			return getRuleContext(JvmLowerBoundAndedContext.class,i);
 		}
-		public RuleJvmWildcardTypeReferenceContext(ParserRuleContext parent, int invokingState) {
+		public JvmWildcardTypeReferenceContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleJvmWildcardTypeReference; }
+		@Override public int getRuleIndex() { return RULE_jvmWildcardTypeReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleJvmWildcardTypeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterJvmWildcardTypeReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleJvmWildcardTypeReference(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitJvmWildcardTypeReference(this);
 		}
 	}
 
-	public final RuleJvmWildcardTypeReferenceContext ruleJvmWildcardTypeReference() throws RecognitionException {
-		RuleJvmWildcardTypeReferenceContext _localctx = new RuleJvmWildcardTypeReferenceContext(_ctx, getState());
-		enterRule(_localctx, 218, RULE_ruleJvmWildcardTypeReference);
+	public final JvmWildcardTypeReferenceContext jvmWildcardTypeReference() throws RecognitionException {
+		JvmWildcardTypeReferenceContext _localctx = new JvmWildcardTypeReferenceContext(_ctx, getState());
+		enterRule(_localctx, 218, RULE_jvmWildcardTypeReference);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1226);
+			setState(1227);
 			match(T__113);
-			setState(1241);
+			setState(1242);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__99:
 				{
-				setState(1227);
-				ruleJvmUpperBound();
-				setState(1231);
+				setState(1228);
+				jvmUpperBound();
+				setState(1232);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__114) {
 					{
 					{
-					setState(1228);
-					ruleJvmUpperBoundAnded();
+					setState(1229);
+					jvmUpperBoundAnded();
 					}
 					}
-					setState(1233);
+					setState(1234);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -7885,19 +7882,19 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				break;
 			case T__102:
 				{
-				setState(1234);
-				ruleJvmLowerBound();
-				setState(1238);
+				setState(1235);
+				jvmLowerBound();
+				setState(1239);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==T__114) {
 					{
 					{
-					setState(1235);
-					ruleJvmLowerBoundAnded();
+					setState(1236);
+					jvmLowerBoundAnded();
 					}
 					}
-					setState(1240);
+					setState(1241);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -7923,34 +7920,34 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleJvmUpperBoundContext extends ParserRuleContext {
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
+	public static class JvmUpperBoundContext extends ParserRuleContext {
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
 		}
-		public RuleJvmUpperBoundContext(ParserRuleContext parent, int invokingState) {
+		public JvmUpperBoundContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleJvmUpperBound; }
+		@Override public int getRuleIndex() { return RULE_jvmUpperBound; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleJvmUpperBound(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterJvmUpperBound(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleJvmUpperBound(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitJvmUpperBound(this);
 		}
 	}
 
-	public final RuleJvmUpperBoundContext ruleJvmUpperBound() throws RecognitionException {
-		RuleJvmUpperBoundContext _localctx = new RuleJvmUpperBoundContext(_ctx, getState());
-		enterRule(_localctx, 220, RULE_ruleJvmUpperBound);
+	public final JvmUpperBoundContext jvmUpperBound() throws RecognitionException {
+		JvmUpperBoundContext _localctx = new JvmUpperBoundContext(_ctx, getState());
+		enterRule(_localctx, 220, RULE_jvmUpperBound);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1243);
-			match(T__99);
 			setState(1244);
-			ruleJvmTypeReference();
+			match(T__99);
+			setState(1245);
+			jvmTypeReference();
 			}
 		}
 		catch (RecognitionException re) {
@@ -7965,118 +7962,34 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleJvmUpperBoundAndedContext extends ParserRuleContext {
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
+	public static class JvmUpperBoundAndedContext extends ParserRuleContext {
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
 		}
-		public RuleJvmUpperBoundAndedContext(ParserRuleContext parent, int invokingState) {
+		public JvmUpperBoundAndedContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleJvmUpperBoundAnded; }
+		@Override public int getRuleIndex() { return RULE_jvmUpperBoundAnded; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleJvmUpperBoundAnded(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterJvmUpperBoundAnded(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleJvmUpperBoundAnded(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitJvmUpperBoundAnded(this);
 		}
 	}
 
-	public final RuleJvmUpperBoundAndedContext ruleJvmUpperBoundAnded() throws RecognitionException {
-		RuleJvmUpperBoundAndedContext _localctx = new RuleJvmUpperBoundAndedContext(_ctx, getState());
-		enterRule(_localctx, 222, RULE_ruleJvmUpperBoundAnded);
+	public final JvmUpperBoundAndedContext jvmUpperBoundAnded() throws RecognitionException {
+		JvmUpperBoundAndedContext _localctx = new JvmUpperBoundAndedContext(_ctx, getState());
+		enterRule(_localctx, 222, RULE_jvmUpperBoundAnded);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1246);
-			match(T__114);
 			setState(1247);
-			ruleJvmTypeReference();
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	@SuppressWarnings("CheckReturnValue")
-	public static class RuleJvmLowerBoundContext extends ParserRuleContext {
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
-		}
-		public RuleJvmLowerBoundContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_ruleJvmLowerBound; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleJvmLowerBound(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleJvmLowerBound(this);
-		}
-	}
-
-	public final RuleJvmLowerBoundContext ruleJvmLowerBound() throws RecognitionException {
-		RuleJvmLowerBoundContext _localctx = new RuleJvmLowerBoundContext(_ctx, getState());
-		enterRule(_localctx, 224, RULE_ruleJvmLowerBound);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(1249);
-			match(T__102);
-			setState(1250);
-			ruleJvmTypeReference();
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	@SuppressWarnings("CheckReturnValue")
-	public static class RuleJvmLowerBoundAndedContext extends ParserRuleContext {
-		public RuleJvmTypeReferenceContext ruleJvmTypeReference() {
-			return getRuleContext(RuleJvmTypeReferenceContext.class,0);
-		}
-		public RuleJvmLowerBoundAndedContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_ruleJvmLowerBoundAnded; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleJvmLowerBoundAnded(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleJvmLowerBoundAnded(this);
-		}
-	}
-
-	public final RuleJvmLowerBoundAndedContext ruleJvmLowerBoundAnded() throws RecognitionException {
-		RuleJvmLowerBoundAndedContext _localctx = new RuleJvmLowerBoundAndedContext(_ctx, getState());
-		enterRule(_localctx, 226, RULE_ruleJvmLowerBoundAnded);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(1252);
 			match(T__114);
-			setState(1253);
-			ruleJvmTypeReference();
+			setState(1248);
+			jvmTypeReference();
 			}
 		}
 		catch (RecognitionException re) {
@@ -8091,35 +8004,119 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleQualifiedNameWithWildcardContext extends ParserRuleContext {
-		public RuleQualifiedNameContext ruleQualifiedName() {
-			return getRuleContext(RuleQualifiedNameContext.class,0);
+	public static class JvmLowerBoundContext extends ParserRuleContext {
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
 		}
-		public RuleQualifiedNameWithWildcardContext(ParserRuleContext parent, int invokingState) {
+		public JvmLowerBoundContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleQualifiedNameWithWildcard; }
+		@Override public int getRuleIndex() { return RULE_jvmLowerBound; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleQualifiedNameWithWildcard(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterJvmLowerBound(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleQualifiedNameWithWildcard(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitJvmLowerBound(this);
 		}
 	}
 
-	public final RuleQualifiedNameWithWildcardContext ruleQualifiedNameWithWildcard() throws RecognitionException {
-		RuleQualifiedNameWithWildcardContext _localctx = new RuleQualifiedNameWithWildcardContext(_ctx, getState());
-		enterRule(_localctx, 228, RULE_ruleQualifiedNameWithWildcard);
+	public final JvmLowerBoundContext jvmLowerBound() throws RecognitionException {
+		JvmLowerBoundContext _localctx = new JvmLowerBoundContext(_ctx, getState());
+		enterRule(_localctx, 224, RULE_jvmLowerBound);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1255);
-			ruleQualifiedName();
+			setState(1250);
+			match(T__102);
+			setState(1251);
+			jvmTypeReference();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class JvmLowerBoundAndedContext extends ParserRuleContext {
+		public JvmTypeReferenceContext jvmTypeReference() {
+			return getRuleContext(JvmTypeReferenceContext.class,0);
+		}
+		public JvmLowerBoundAndedContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_jvmLowerBoundAnded; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterJvmLowerBoundAnded(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitJvmLowerBoundAnded(this);
+		}
+	}
+
+	public final JvmLowerBoundAndedContext jvmLowerBoundAnded() throws RecognitionException {
+		JvmLowerBoundAndedContext _localctx = new JvmLowerBoundAndedContext(_ctx, getState());
+		enterRule(_localctx, 226, RULE_jvmLowerBoundAnded);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(1253);
+			match(T__114);
+			setState(1254);
+			jvmTypeReference();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	@SuppressWarnings("CheckReturnValue")
+	public static class QualifiedNameWithWildcardContext extends ParserRuleContext {
+		public QualifiedNameContext qualifiedName() {
+			return getRuleContext(QualifiedNameContext.class,0);
+		}
+		public QualifiedNameWithWildcardContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_qualifiedNameWithWildcard; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterQualifiedNameWithWildcard(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitQualifiedNameWithWildcard(this);
+		}
+	}
+
+	public final QualifiedNameWithWildcardContext qualifiedNameWithWildcard() throws RecognitionException {
+		QualifiedNameWithWildcardContext _localctx = new QualifiedNameWithWildcardContext(_ctx, getState());
+		enterRule(_localctx, 228, RULE_qualifiedNameWithWildcard);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
 			setState(1256);
-			match(T__33);
+			qualifiedName();
 			setState(1257);
+			match(T__33);
+			setState(1258);
 			match(T__79);
 			}
 		}
@@ -8135,29 +8132,29 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleValidIDContext extends ParserRuleContext {
+	public static class ValidIDContext extends ParserRuleContext {
 		public TerminalNode RULE_ID() { return getToken(DebugInternalReactionsLanguageParser.RULE_ID, 0); }
-		public RuleValidIDContext(ParserRuleContext parent, int invokingState) {
+		public ValidIDContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleValidID; }
+		@Override public int getRuleIndex() { return RULE_validID; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleValidID(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterValidID(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleValidID(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitValidID(this);
 		}
 	}
 
-	public final RuleValidIDContext ruleValidID() throws RecognitionException {
-		RuleValidIDContext _localctx = new RuleValidIDContext(_ctx, getState());
-		enterRule(_localctx, 230, RULE_ruleValidID);
+	public final ValidIDContext validID() throws RecognitionException {
+		ValidIDContext _localctx = new ValidIDContext(_ctx, getState());
+		enterRule(_localctx, 230, RULE_validID);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1259);
+			setState(1260);
 			match(RULE_ID);
 			}
 		}
@@ -8173,35 +8170,35 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXImportSectionContext extends ParserRuleContext {
-		public List<RuleXImportDeclarationContext> ruleXImportDeclaration() {
-			return getRuleContexts(RuleXImportDeclarationContext.class);
+	public static class XImportSectionContext extends ParserRuleContext {
+		public List<XImportDeclarationContext> xImportDeclaration() {
+			return getRuleContexts(XImportDeclarationContext.class);
 		}
-		public RuleXImportDeclarationContext ruleXImportDeclaration(int i) {
-			return getRuleContext(RuleXImportDeclarationContext.class,i);
+		public XImportDeclarationContext xImportDeclaration(int i) {
+			return getRuleContext(XImportDeclarationContext.class,i);
 		}
-		public RuleXImportSectionContext(ParserRuleContext parent, int invokingState) {
+		public XImportSectionContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXImportSection; }
+		@Override public int getRuleIndex() { return RULE_xImportSection; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXImportSection(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXImportSection(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXImportSection(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXImportSection(this);
 		}
 	}
 
-	public final RuleXImportSectionContext ruleXImportSection() throws RecognitionException {
-		RuleXImportSectionContext _localctx = new RuleXImportSectionContext(_ctx, getState());
-		enterRule(_localctx, 232, RULE_ruleXImportSection);
+	public final XImportSectionContext xImportSection() throws RecognitionException {
+		XImportSectionContext _localctx = new XImportSectionContext(_ctx, getState());
+		enterRule(_localctx, 232, RULE_xImportSection);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1262); 
+			setState(1263); 
 			_errHandler.sync(this);
 			_alt = 1;
 			do {
@@ -8209,15 +8206,15 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				case 1:
 					{
 					{
-					setState(1261);
-					ruleXImportDeclaration();
+					setState(1262);
+					xImportDeclaration();
 					}
 					}
 					break;
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(1264); 
+				setState(1265); 
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,144,_ctx);
 			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
@@ -8235,74 +8232,74 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleXImportDeclarationContext extends ParserRuleContext {
-		public RuleQualifiedNameInStaticImportContext ruleQualifiedNameInStaticImport() {
-			return getRuleContext(RuleQualifiedNameInStaticImportContext.class,0);
+	public static class XImportDeclarationContext extends ParserRuleContext {
+		public QualifiedNameInStaticImportContext qualifiedNameInStaticImport() {
+			return getRuleContext(QualifiedNameInStaticImportContext.class,0);
 		}
-		public RuleQualifiedNameContext ruleQualifiedName() {
-			return getRuleContext(RuleQualifiedNameContext.class,0);
+		public QualifiedNameContext qualifiedName() {
+			return getRuleContext(QualifiedNameContext.class,0);
 		}
-		public RuleQualifiedNameWithWildcardContext ruleQualifiedNameWithWildcard() {
-			return getRuleContext(RuleQualifiedNameWithWildcardContext.class,0);
+		public QualifiedNameWithWildcardContext qualifiedNameWithWildcard() {
+			return getRuleContext(QualifiedNameWithWildcardContext.class,0);
 		}
-		public RuleValidIDContext ruleValidID() {
-			return getRuleContext(RuleValidIDContext.class,0);
+		public ValidIDContext validID() {
+			return getRuleContext(ValidIDContext.class,0);
 		}
-		public RuleXImportDeclarationContext(ParserRuleContext parent, int invokingState) {
+		public XImportDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleXImportDeclaration; }
+		@Override public int getRuleIndex() { return RULE_xImportDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleXImportDeclaration(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterXImportDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleXImportDeclaration(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitXImportDeclaration(this);
 		}
 	}
 
-	public final RuleXImportDeclarationContext ruleXImportDeclaration() throws RecognitionException {
-		RuleXImportDeclarationContext _localctx = new RuleXImportDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 234, RULE_ruleXImportDeclaration);
+	public final XImportDeclarationContext xImportDeclaration() throws RecognitionException {
+		XImportDeclarationContext _localctx = new XImportDeclarationContext(_ctx, getState());
+		enterRule(_localctx, 234, RULE_xImportDeclaration);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1266);
+			setState(1267);
 			match(T__0);
-			setState(1278);
+			setState(1279);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,147,_ctx) ) {
 			case 1:
 				{
-				setState(1267);
+				setState(1268);
 				match(T__100);
-				setState(1269);
+				setState(1270);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==T__101) {
 					{
-					setState(1268);
+					setState(1269);
 					match(T__101);
 					}
 				}
 
-				setState(1271);
-				ruleQualifiedNameInStaticImport();
-				setState(1274);
+				setState(1272);
+				qualifiedNameInStaticImport();
+				setState(1275);
 				_errHandler.sync(this);
 				switch (_input.LA(1)) {
 				case T__79:
 					{
-					setState(1272);
+					setState(1273);
 					match(T__79);
 					}
 					break;
 				case RULE_ID:
 					{
-					setState(1273);
-					ruleValidID();
+					setState(1274);
+					validID();
 					}
 					break;
 				default:
@@ -8312,23 +8309,23 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				break;
 			case 2:
 				{
-				setState(1276);
-				ruleQualifiedName();
+				setState(1277);
+				qualifiedName();
 				}
 				break;
 			case 3:
 				{
-				setState(1277);
-				ruleQualifiedNameWithWildcard();
+				setState(1278);
+				qualifiedNameWithWildcard();
 				}
 				break;
 			}
-			setState(1281);
+			setState(1282);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__89) {
 				{
-				setState(1280);
+				setState(1281);
 				match(T__89);
 				}
 			}
@@ -8347,35 +8344,35 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	@SuppressWarnings("CheckReturnValue")
-	public static class RuleQualifiedNameInStaticImportContext extends ParserRuleContext {
-		public List<RuleValidIDContext> ruleValidID() {
-			return getRuleContexts(RuleValidIDContext.class);
+	public static class QualifiedNameInStaticImportContext extends ParserRuleContext {
+		public List<ValidIDContext> validID() {
+			return getRuleContexts(ValidIDContext.class);
 		}
-		public RuleValidIDContext ruleValidID(int i) {
-			return getRuleContext(RuleValidIDContext.class,i);
+		public ValidIDContext validID(int i) {
+			return getRuleContext(ValidIDContext.class,i);
 		}
-		public RuleQualifiedNameInStaticImportContext(ParserRuleContext parent, int invokingState) {
+		public QualifiedNameInStaticImportContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_ruleQualifiedNameInStaticImport; }
+		@Override public int getRuleIndex() { return RULE_qualifiedNameInStaticImport; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterRuleQualifiedNameInStaticImport(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).enterQualifiedNameInStaticImport(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitRuleQualifiedNameInStaticImport(this);
+			if ( listener instanceof DebugInternalReactionsLanguageListener ) ((DebugInternalReactionsLanguageListener)listener).exitQualifiedNameInStaticImport(this);
 		}
 	}
 
-	public final RuleQualifiedNameInStaticImportContext ruleQualifiedNameInStaticImport() throws RecognitionException {
-		RuleQualifiedNameInStaticImportContext _localctx = new RuleQualifiedNameInStaticImportContext(_ctx, getState());
-		enterRule(_localctx, 236, RULE_ruleQualifiedNameInStaticImport);
+	public final QualifiedNameInStaticImportContext qualifiedNameInStaticImport() throws RecognitionException {
+		QualifiedNameInStaticImportContext _localctx = new QualifiedNameInStaticImportContext(_ctx, getState());
+		enterRule(_localctx, 236, RULE_qualifiedNameInStaticImport);
 		try {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(1286); 
+			setState(1287); 
 			_errHandler.sync(this);
 			_alt = 1;
 			do {
@@ -8383,9 +8380,9 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				case 1:
 					{
 					{
-					setState(1283);
-					ruleValidID();
 					setState(1284);
+					validID();
+					setState(1285);
 					match(T__33);
 					}
 					}
@@ -8393,7 +8390,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				setState(1288); 
+				setState(1289); 
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,149,_ctx);
 			} while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER );
@@ -8411,7 +8408,7 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001|\u050b\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001|\u050c\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+
@@ -8518,189 +8515,189 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 		"\bH\nH\fH\u0349\tH\u0003H\u034b\bH\u0001H\u0003H\u034e\bH\u0001H\u0001"+
 		"H\u0001H\u0001I\u0001I\u0003I\u0355\bI\u0005I\u0357\bI\nI\fI\u035a\tI"+
 		"\u0001J\u0001J\u0001J\u0005J\u035f\bJ\nJ\fJ\u0362\tJ\u0003J\u0364\bJ\u0001"+
-		"J\u0001J\u0001J\u0001J\u0001K\u0001K\u0001K\u0001K\u0001L\u0001L\u0001"+
-		"L\u0001L\u0001L\u0001L\u0001L\u0003L\u0375\bL\u0001M\u0001M\u0001M\u0001"+
-		"M\u0001M\u0001M\u0001M\u0001M\u0001M\u0001M\u0001M\u0003M\u0382\bM\u0001"+
-		"M\u0003M\u0385\bM\u0001M\u0001M\u0005M\u0389\bM\nM\fM\u038c\tM\u0001M"+
-		"\u0001M\u0001M\u0003M\u0391\bM\u0001M\u0001M\u0001N\u0003N\u0396\bN\u0001"+
-		"N\u0001N\u0003N\u039a\bN\u0001N\u0001N\u0001N\u0003N\u039f\bN\u0001O\u0001"+
-		"O\u0001O\u0001O\u0001O\u0001O\u0001O\u0001O\u0001P\u0001P\u0001P\u0001"+
-		"P\u0001P\u0005P\u03ae\bP\nP\fP\u03b1\tP\u0003P\u03b3\bP\u0001P\u0001P"+
-		"\u0003P\u03b7\bP\u0001P\u0001P\u0001P\u0001P\u0005P\u03bd\bP\nP\fP\u03c0"+
-		"\tP\u0003P\u03c2\bP\u0001P\u0001P\u0001P\u0001Q\u0001Q\u0001Q\u0001Q\u0001"+
-		"Q\u0001Q\u0001R\u0001R\u0001R\u0001R\u0001R\u0001R\u0001R\u0001S\u0001"+
-		"S\u0001S\u0003S\u03d7\bS\u0005S\u03d9\bS\nS\fS\u03dc\tS\u0001S\u0001S"+
-		"\u0001T\u0001T\u0003T\u03e2\bT\u0001U\u0001U\u0001U\u0001U\u0001U\u0003"+
-		"U\u03e9\bU\u0001U\u0001U\u0003U\u03ed\bU\u0001V\u0003V\u03f0\bV\u0001"+
-		"V\u0001V\u0001W\u0001W\u0001W\u0001X\u0001X\u0001X\u0001X\u0005X\u03fb"+
-		"\bX\nX\fX\u03fe\tX\u0001X\u0001X\u0003X\u0402\bX\u0001X\u0001X\u0001X"+
-		"\u0001X\u0001X\u0001X\u0005X\u040a\bX\nX\fX\u040d\tX\u0003X\u040f\bX\u0001"+
-		"X\u0003X\u0412\bX\u0001X\u0003X\u0415\bX\u0001Y\u0001Y\u0001Y\u0001Y\u0001"+
-		"Y\u0003Y\u041c\bY\u0001Z\u0001Z\u0003Z\u0420\bZ\u0001[\u0001[\u0001[\u0001"+
-		"[\u0001[\u0001[\u0005[\u0428\b[\n[\f[\u042b\t[\u0001[\u0001[\u0003[\u042f"+
-		"\b[\u0001[\u0001[\u0001[\u0001[\u0001[\u0005[\u0436\b[\n[\f[\u0439\t["+
-		"\u0003[\u043b\b[\u0001[\u0003[\u043e\b[\u0001[\u0003[\u0441\b[\u0001\\"+
-		"\u0001\\\u0001]\u0001]\u0001^\u0001^\u0001_\u0001_\u0001`\u0001`\u0001"+
-		"`\u0001`\u0005`\u044f\b`\n`\f`\u0452\t`\u0001`\u0001`\u0001a\u0001a\u0001"+
-		"a\u0001b\u0001b\u0003b\u045b\bb\u0001c\u0001c\u0001c\u0004c\u0460\bc\u000b"+
-		"c\fc\u0461\u0001c\u0001c\u0003c\u0466\bc\u0001c\u0001c\u0003c\u046a\b"+
-		"c\u0001d\u0001d\u0001d\u0001d\u0001d\u0001d\u0001e\u0001e\u0001e\u0001"+
-		"e\u0001e\u0001e\u0001f\u0001f\u0001f\u0005f\u047b\bf\nf\ff\u047e\tf\u0001"+
-		"g\u0001g\u0001g\u0001g\u0003g\u0484\bg\u0003g\u0486\bg\u0001h\u0001h\u0005"+
-		"h\u048a\bh\nh\fh\u048d\th\u0001h\u0003h\u0490\bh\u0001i\u0001i\u0001i"+
-		"\u0001j\u0001j\u0001j\u0001j\u0005j\u0499\bj\nj\fj\u049c\tj\u0003j\u049e"+
-		"\bj\u0001j\u0003j\u04a1\bj\u0001j\u0001j\u0001j\u0001k\u0001k\u0001k\u0001"+
-		"k\u0001k\u0005k\u04ab\bk\nk\fk\u04ae\tk\u0001k\u0001k\u0001k\u0001k\u0001"+
-		"k\u0001k\u0001k\u0005k\u04b7\bk\nk\fk\u04ba\tk\u0001k\u0001k\u0003k\u04be"+
-		"\bk\u0005k\u04c0\bk\nk\fk\u04c3\tk\u0003k\u04c5\bk\u0001l\u0001l\u0003"+
-		"l\u04c9\bl\u0001m\u0001m\u0001m\u0005m\u04ce\bm\nm\fm\u04d1\tm\u0001m"+
-		"\u0001m\u0005m\u04d5\bm\nm\fm\u04d8\tm\u0003m\u04da\bm\u0001n\u0001n\u0001"+
-		"n\u0001o\u0001o\u0001o\u0001p\u0001p\u0001p\u0001q\u0001q\u0001q\u0001"+
-		"r\u0001r\u0001r\u0001r\u0001s\u0001s\u0001t\u0004t\u04ef\bt\u000bt\ft"+
-		"\u04f0\u0001u\u0001u\u0001u\u0003u\u04f6\bu\u0001u\u0001u\u0001u\u0003"+
-		"u\u04fb\bu\u0001u\u0001u\u0003u\u04ff\bu\u0001u\u0003u\u0502\bu\u0001"+
-		"v\u0001v\u0001v\u0004v\u0507\bv\u000bv\fv\u0508\u0001v\u0000\u0000w\u0000"+
-		"\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016\u0018\u001a\u001c"+
-		"\u001e \"$&(*,.02468:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprtvxz|~\u0080\u0082\u0084"+
-		"\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094\u0096\u0098\u009a\u009c"+
-		"\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac\u00ae\u00b0\u00b2\u00b4"+
-		"\u00b6\u00b8\u00ba\u00bc\u00be\u00c0\u00c2\u00c4\u00c6\u00c8\u00ca\u00cc"+
-		"\u00ce\u00d0\u00d2\u00d4\u00d6\u00d8\u00da\u00dc\u00de\u00e0\u00e2\u00e4"+
-		"\u00e6\u00e8\u00ea\u00ec\u0000\u000b\u0001\u000001\u0001\u0000CF\u0001"+
-		"\u0000NO\u0001\u0000PS\u0002\u0000NOTT\u0001\u0000UV\u0002\u0000\u0010"+
-		"\u0010\"\"\u0003\u0000\u0010\u0010\"\"WW\u0002\u0000--cc\u0001\u0000h"+
-		"i\u0001\u0000uv\u0554\u0000\u00ef\u0001\u0000\u0000\u0000\u0002\u00fc"+
-		"\u0001\u0000\u0000\u0000\u0004\u0105\u0001\u0000\u0000\u0000\u0006\u012d"+
-		"\u0001\u0000\u0000\u0000\b\u0138\u0001\u0000\u0000\u0000\n\u0145\u0001"+
-		"\u0000\u0000\u0000\f\u0148\u0001\u0000\u0000\u0000\u000e\u014f\u0001\u0000"+
-		"\u0000\u0000\u0010\u0151\u0001\u0000\u0000\u0000\u0012\u015a\u0001\u0000"+
-		"\u0000\u0000\u0014\u0168\u0001\u0000\u0000\u0000\u0016\u016f\u0001\u0000"+
-		"\u0000\u0000\u0018\u0174\u0001\u0000\u0000\u0000\u001a\u0176\u0001\u0000"+
-		"\u0000\u0000\u001c\u0178\u0001\u0000\u0000\u0000\u001e\u017a\u0001\u0000"+
-		"\u0000\u0000 \u017e\u0001\u0000\u0000\u0000\"\u0180\u0001\u0000\u0000"+
-		"\u0000$\u0184\u0001\u0000\u0000\u0000&\u018a\u0001\u0000\u0000\u0000("+
-		"\u018c\u0001\u0000\u0000\u0000*\u0190\u0001\u0000\u0000\u0000,\u0194\u0001"+
-		"\u0000\u0000\u0000.\u019a\u0001\u0000\u0000\u00000\u019d\u0001\u0000\u0000"+
-		"\u00002\u01b3\u0001\u0000\u0000\u00004\u01bb\u0001\u0000\u0000\u00006"+
-		"\u01d0\u0001\u0000\u0000\u00008\u01db\u0001\u0000\u0000\u0000:\u01df\u0001"+
-		"\u0000\u0000\u0000<\u01e1\u0001\u0000\u0000\u0000>\u01f4\u0001\u0000\u0000"+
-		"\u0000@\u0208\u0001\u0000\u0000\u0000B\u020a\u0001\u0000\u0000\u0000D"+
-		"\u0210\u0001\u0000\u0000\u0000F\u021a\u0001\u0000\u0000\u0000H\u0220\u0001"+
-		"\u0000\u0000\u0000J\u0225\u0001\u0000\u0000\u0000L\u0229\u0001\u0000\u0000"+
-		"\u0000N\u022b\u0001\u0000\u0000\u0000P\u022e\u0001\u0000\u0000\u0000R"+
-		"\u0232\u0001\u0000\u0000\u0000T\u0237\u0001\u0000\u0000\u0000V\u023c\u0001"+
-		"\u0000\u0000\u0000X\u0248\u0001\u0000\u0000\u0000Z\u024a\u0001\u0000\u0000"+
-		"\u0000\\\u0259\u0001\u0000\u0000\u0000^\u025b\u0001\u0000\u0000\u0000"+
-		"`\u0264\u0001\u0000\u0000\u0000b\u0266\u0001\u0000\u0000\u0000d\u026f"+
-		"\u0001\u0000\u0000\u0000f\u0271\u0001\u0000\u0000\u0000h\u027a\u0001\u0000"+
-		"\u0000\u0000j\u027c\u0001\u0000\u0000\u0000l\u028c\u0001\u0000\u0000\u0000"+
-		"n\u028e\u0001\u0000\u0000\u0000p\u02ac\u0001\u0000\u0000\u0000r\u02ae"+
-		"\u0001\u0000\u0000\u0000t\u02b7\u0001\u0000\u0000\u0000v\u02b9\u0001\u0000"+
-		"\u0000\u0000x\u02c2\u0001\u0000\u0000\u0000z\u02c8\u0001\u0000\u0000\u0000"+
-		"|\u02ca\u0001\u0000\u0000\u0000~\u02cc\u0001\u0000\u0000\u0000\u0080\u02d4"+
-		"\u0001\u0000\u0000\u0000\u0082\u02d8\u0001\u0000\u0000\u0000\u0084\u02da"+
-		"\u0001\u0000\u0000\u0000\u0086\u0316\u0001\u0000\u0000\u0000\u0088\u031f"+
-		"\u0001\u0000\u0000\u0000\u008a\u0323\u0001\u0000\u0000\u0000\u008c\u0325"+
-		"\u0001\u0000\u0000\u0000\u008e\u0333\u0001\u0000\u0000\u0000\u0090\u0341"+
-		"\u0001\u0000\u0000\u0000\u0092\u0358\u0001\u0000\u0000\u0000\u0094\u0363"+
-		"\u0001\u0000\u0000\u0000\u0096\u0369\u0001\u0000\u0000\u0000\u0098\u036d"+
-		"\u0001\u0000\u0000\u0000\u009a\u0376\u0001\u0000\u0000\u0000\u009c\u0395"+
-		"\u0001\u0000\u0000\u0000\u009e\u03a0\u0001\u0000\u0000\u0000\u00a0\u03a8"+
-		"\u0001\u0000\u0000\u0000\u00a2\u03c6\u0001\u0000\u0000\u0000\u00a4\u03cc"+
-		"\u0001\u0000\u0000\u0000\u00a6\u03d3\u0001\u0000\u0000\u0000\u00a8\u03e1"+
-		"\u0001\u0000\u0000\u0000\u00aa\u03e3\u0001\u0000\u0000\u0000\u00ac\u03ef"+
-		"\u0001\u0000\u0000\u0000\u00ae\u03f3\u0001\u0000\u0000\u0000\u00b0\u0401"+
-		"\u0001\u0000\u0000\u0000\u00b2\u041b\u0001\u0000\u0000\u0000\u00b4\u041f"+
-		"\u0001\u0000\u0000\u0000\u00b6\u0421\u0001\u0000\u0000\u0000\u00b8\u0442"+
-		"\u0001\u0000\u0000\u0000\u00ba\u0444\u0001\u0000\u0000\u0000\u00bc\u0446"+
-		"\u0001\u0000\u0000\u0000\u00be\u0448\u0001\u0000\u0000\u0000\u00c0\u044a"+
-		"\u0001\u0000\u0000\u0000\u00c2\u0455\u0001\u0000\u0000\u0000\u00c4\u0458"+
-		"\u0001\u0000\u0000\u0000\u00c6\u045c\u0001\u0000\u0000\u0000\u00c8\u046b"+
-		"\u0001\u0000\u0000\u0000\u00ca\u0471\u0001\u0000\u0000\u0000\u00cc\u0477"+
-		"\u0001\u0000\u0000\u0000\u00ce\u0485\u0001\u0000\u0000\u0000\u00d0\u048f"+
-		"\u0001\u0000\u0000\u0000\u00d2\u0491\u0001\u0000\u0000\u0000\u00d4\u04a0"+
-		"\u0001\u0000\u0000\u0000\u00d6\u04a5\u0001\u0000\u0000\u0000\u00d8\u04c8"+
-		"\u0001\u0000\u0000\u0000\u00da\u04ca\u0001\u0000\u0000\u0000\u00dc\u04db"+
-		"\u0001\u0000\u0000\u0000\u00de\u04de\u0001\u0000\u0000\u0000\u00e0\u04e1"+
-		"\u0001\u0000\u0000\u0000\u00e2\u04e4\u0001\u0000\u0000\u0000\u00e4\u04e7"+
-		"\u0001\u0000\u0000\u0000\u00e6\u04eb\u0001\u0000\u0000\u0000\u00e8\u04ee"+
-		"\u0001\u0000\u0000\u0000\u00ea\u04f2\u0001\u0000\u0000\u0000\u00ec\u0506"+
-		"\u0001\u0000\u0000\u0000\u00ee\u00f0\u0003\u00e8t\u0000\u00ef\u00ee\u0001"+
-		"\u0000\u0000\u0000\u00ef\u00f0\u0001\u0000\u0000\u0000\u00f0\u00f4\u0001"+
-		"\u0000\u0000\u0000\u00f1\u00f3\u0003\u0002\u0001\u0000\u00f2\u00f1\u0001"+
-		"\u0000\u0000\u0000\u00f3\u00f6\u0001\u0000\u0000\u0000\u00f4\u00f2\u0001"+
-		"\u0000\u0000\u0000\u00f4\u00f5\u0001\u0000\u0000\u0000\u00f5\u00f8\u0001"+
-		"\u0000\u0000\u0000\u00f6\u00f4\u0001\u0000\u0000\u0000\u00f7\u00f9\u0003"+
-		"\u0004\u0002\u0000\u00f8\u00f7\u0001\u0000\u0000\u0000\u00f9\u00fa\u0001"+
-		"\u0000\u0000\u0000\u00fa\u00f8\u0001\u0000\u0000\u0000\u00fa\u00fb\u0001"+
-		"\u0000\u0000\u0000\u00fb\u0001\u0001\u0000\u0000\u0000\u00fc\u00fd\u0005"+
-		"\u0001\u0000\u0000\u00fd\u00fe\u0005x\u0000\u0000\u00fe\u00ff\u0005\u0002"+
-		"\u0000\u0000\u00ff\u0103\u0003\u00e6s\u0000\u0100\u0101\u0005\u0003\u0000"+
-		"\u0000\u0101\u0102\u0005\u0004\u0000\u0000\u0102\u0104\u0005\u0005\u0000"+
-		"\u0000\u0103\u0100\u0001\u0000\u0000\u0000\u0103\u0104\u0001\u0000\u0000"+
-		"\u0000\u0104\u0003\u0001\u0000\u0000\u0000\u0105\u0106\u0005\u0006\u0000"+
-		"\u0000\u0106\u0107\u0005\u0007\u0000\u0000\u0107\u0108\u0003\u00e6s\u0000"+
-		"\u0108\u0109\u0005\b\u0000\u0000\u0109\u010a\u0005\t\u0000\u0000\u010a"+
-		"\u010b\u0005\n\u0000\u0000\u010b\u010c\u0005\u000b\u0000\u0000\u010c\u010d"+
-		"\u0005\b\u0000\u0000\u010d\u0112\u0005w\u0000\u0000\u010e\u010f\u0005"+
-		"\f\u0000\u0000\u010f\u0111\u0005w\u0000\u0000\u0110\u010e\u0001\u0000"+
-		"\u0000\u0000\u0111\u0114\u0001\u0000\u0000\u0000\u0112\u0110\u0001\u0000"+
-		"\u0000\u0000\u0112\u0113\u0001\u0000\u0000\u0000\u0113\u0115\u0001\u0000"+
-		"\u0000\u0000\u0114\u0112\u0001\u0000\u0000\u0000\u0115\u0116\u0005\r\u0000"+
-		"\u0000\u0116\u0117\u0005\u000e\u0000\u0000\u0117\u0118\u0005\b\u0000\u0000"+
-		"\u0118\u011d\u0005w\u0000\u0000\u0119\u011a\u0005\f\u0000\u0000\u011a"+
-		"\u011c\u0005w\u0000\u0000\u011b\u0119\u0001\u0000\u0000\u0000\u011c\u011f"+
-		"\u0001\u0000\u0000\u0000\u011d\u011b\u0001\u0000\u0000\u0000\u011d\u011e"+
-		"\u0001\u0000\u0000\u0000\u011e\u0123\u0001\u0000\u0000\u0000\u011f\u011d"+
-		"\u0001\u0000\u0000\u0000\u0120\u0122\u0003\u0006\u0003\u0000\u0121\u0120"+
-		"\u0001\u0000\u0000\u0000\u0122\u0125\u0001\u0000\u0000\u0000\u0123\u0121"+
-		"\u0001\u0000\u0000\u0000\u0123\u0124\u0001\u0000\u0000\u0000\u0124\u012a"+
-		"\u0001\u0000\u0000\u0000\u0125\u0123\u0001\u0000\u0000\u0000\u0126\u0129"+
-		"\u0003\b\u0004\u0000\u0127\u0129\u00030\u0018\u0000\u0128\u0126\u0001"+
-		"\u0000\u0000\u0000\u0128\u0127\u0001\u0000\u0000\u0000\u0129\u012c\u0001"+
-		"\u0000\u0000\u0000\u012a\u0128\u0001\u0000\u0000\u0000\u012a\u012b\u0001"+
-		"\u0000\u0000\u0000\u012b\u0005\u0001\u0000\u0000\u0000\u012c\u012a\u0001"+
-		"\u0000\u0000\u0000\u012d\u012f\u0005\u0001\u0000\u0000\u012e\u0130\u0005"+
-		"\u000f\u0000\u0000\u012f\u012e\u0001\u0000\u0000\u0000\u012f\u0130\u0001"+
-		"\u0000\u0000\u0000\u0130\u0131\u0001\u0000\u0000\u0000\u0131\u0135\u0005"+
-		"w\u0000\u0000\u0132\u0133\u0005\u0003\u0000\u0000\u0133\u0134\u0005\u0004"+
-		"\u0000\u0000\u0134\u0136\u0005\u0005\u0000\u0000\u0135\u0132\u0001\u0000"+
-		"\u0000\u0000\u0135\u0136\u0001\u0000\u0000\u0000\u0136\u0007\u0001\u0000"+
-		"\u0000\u0000\u0137\u0139\u0005y\u0000\u0000\u0138\u0137\u0001\u0000\u0000"+
-		"\u0000\u0138\u0139\u0001\u0000\u0000\u0000\u0139\u013a\u0001\u0000\u0000"+
-		"\u0000\u013a\u013d\u0005\t\u0000\u0000\u013b\u013c\u0005w\u0000\u0000"+
-		"\u013c\u013e\u0005\u0010\u0000\u0000\u013d\u013b\u0001\u0000\u0000\u0000"+
-		"\u013d\u013e\u0001\u0000\u0000\u0000\u013e\u013f\u0001\u0000\u0000\u0000"+
-		"\u013f\u0140\u0003\u00e6s\u0000\u0140\u0141\u0005\u0011\u0000\u0000\u0141"+
-		"\u0142\u0003\f\u0006\u0000\u0142\u0143\u0003\n\u0005\u0000\u0143\u0144"+
-		"\u0005\u0012\u0000\u0000\u0144\t\u0001\u0000\u0000\u0000\u0145\u0146\u0005"+
-		"\u0013\u0000\u0000\u0146\u0147\u0003V+\u0000\u0147\u000b\u0001\u0000\u0000"+
-		"\u0000\u0148\u014b\u0005\u0014\u0000\u0000\u0149\u014c\u0003\u0014\n\u0000"+
-		"\u014a\u014c\u0003\u000e\u0007\u0000\u014b\u0149\u0001\u0000\u0000\u0000"+
-		"\u014b\u014a\u0001\u0000\u0000\u0000\u014c\r\u0001\u0000\u0000\u0000\u014d"+
-		"\u0150\u0003\u0010\b\u0000\u014e\u0150\u0003\u0012\t\u0000\u014f\u014d"+
-		"\u0001\u0000\u0000\u0000\u014f\u014e\u0001\u0000\u0000\u0000\u0150\u000f"+
-		"\u0001\u0000\u0000\u0000\u0151\u0153\u0005\u0015\u0000\u0000\u0152\u0154"+
-		"\u0003L&\u0000\u0153\u0152\u0001\u0000\u0000\u0000\u0153\u0154\u0001\u0000"+
-		"\u0000\u0000\u0154\u0155\u0001\u0000\u0000\u0000\u0155\u0158\u0003.\u0017"+
-		"\u0000\u0156\u0157\u0005\u0016\u0000\u0000\u0157\u0159\u0003V+\u0000\u0158"+
-		"\u0156\u0001\u0000\u0000\u0000\u0158\u0159\u0001\u0000\u0000\u0000\u0159"+
-		"\u0011\u0001\u0000\u0000\u0000\u015a\u0161\u0005\u0017\u0000\u0000\u015b"+
-		"\u015c\u0005\u0018\u0000\u0000\u015c\u0162\u0005\b\u0000\u0000\u015d\u015e"+
-		"\u0005\u0019\u0000\u0000\u015e\u0162\u0005\u001a\u0000\u0000\u015f\u0160"+
-		"\u0005\u001b\u0000\u0000\u0160\u0162\u0005\u001c\u0000\u0000\u0161\u015b"+
-		"\u0001\u0000\u0000\u0000\u0161\u015d\u0001\u0000\u0000\u0000\u0161\u015f"+
-		"\u0001\u0000\u0000\u0000\u0162\u0163\u0001\u0000\u0000\u0000\u0163\u0166"+
-		"\u0003R)\u0000\u0164\u0165\u0005\u0016\u0000\u0000\u0165\u0167\u0003V"+
-		"+\u0000\u0166\u0164\u0001\u0000\u0000\u0000\u0166\u0167\u0001\u0000\u0000"+
-		"\u0000\u0167\u0013\u0001\u0000\u0000\u0000\u0168\u016b\u0005\u001d\u0000"+
-		"\u0000\u0169\u016a\u0005\u0016\u0000\u0000\u016a\u016c\u0003V+\u0000\u016b"+
-		"\u0169\u0001\u0000\u0000\u0000\u016b\u016c\u0001\u0000\u0000\u0000\u016c"+
-		"\u0015\u0001\u0000\u0000\u0000\u016d\u0170\u0003\u001a\r\u0000\u016e\u0170"+
-		"\u0003\u001c\u000e\u0000\u016f\u016d\u0001\u0000\u0000\u0000\u016f\u016e"+
-		"\u0001\u0000\u0000\u0000\u0170\u0017\u0001\u0000\u0000\u0000\u0171\u0175"+
-		"\u0003 \u0010\u0000\u0172\u0175\u0003&\u0013\u0000\u0173\u0175\u0003,"+
-		"\u0016\u0000\u0174\u0171\u0001\u0000\u0000\u0000\u0174\u0172\u0001\u0000"+
+		"J\u0001J\u0001J\u0001J\u0001J\u0001K\u0001K\u0001K\u0001K\u0001L\u0001"+
+		"L\u0001L\u0001L\u0001L\u0001L\u0001L\u0003L\u0376\bL\u0001M\u0001M\u0001"+
+		"M\u0001M\u0001M\u0001M\u0001M\u0001M\u0001M\u0001M\u0001M\u0003M\u0383"+
+		"\bM\u0001M\u0003M\u0386\bM\u0001M\u0001M\u0005M\u038a\bM\nM\fM\u038d\t"+
+		"M\u0001M\u0001M\u0001M\u0003M\u0392\bM\u0001M\u0001M\u0001N\u0003N\u0397"+
+		"\bN\u0001N\u0001N\u0003N\u039b\bN\u0001N\u0001N\u0001N\u0003N\u03a0\b"+
+		"N\u0001O\u0001O\u0001O\u0001O\u0001O\u0001O\u0001O\u0001O\u0001P\u0001"+
+		"P\u0001P\u0001P\u0001P\u0005P\u03af\bP\nP\fP\u03b2\tP\u0003P\u03b4\bP"+
+		"\u0001P\u0001P\u0003P\u03b8\bP\u0001P\u0001P\u0001P\u0001P\u0005P\u03be"+
+		"\bP\nP\fP\u03c1\tP\u0003P\u03c3\bP\u0001P\u0001P\u0001P\u0001Q\u0001Q"+
+		"\u0001Q\u0001Q\u0001Q\u0001Q\u0001R\u0001R\u0001R\u0001R\u0001R\u0001"+
+		"R\u0001R\u0001S\u0001S\u0001S\u0003S\u03d8\bS\u0005S\u03da\bS\nS\fS\u03dd"+
+		"\tS\u0001S\u0001S\u0001T\u0001T\u0003T\u03e3\bT\u0001U\u0001U\u0001U\u0001"+
+		"U\u0001U\u0003U\u03ea\bU\u0001U\u0001U\u0003U\u03ee\bU\u0001V\u0003V\u03f1"+
+		"\bV\u0001V\u0001V\u0001W\u0001W\u0001W\u0001X\u0001X\u0001X\u0001X\u0005"+
+		"X\u03fc\bX\nX\fX\u03ff\tX\u0001X\u0001X\u0003X\u0403\bX\u0001X\u0001X"+
+		"\u0001X\u0001X\u0001X\u0001X\u0005X\u040b\bX\nX\fX\u040e\tX\u0003X\u0410"+
+		"\bX\u0001X\u0003X\u0413\bX\u0001X\u0003X\u0416\bX\u0001Y\u0001Y\u0001"+
+		"Y\u0001Y\u0001Y\u0003Y\u041d\bY\u0001Z\u0001Z\u0003Z\u0421\bZ\u0001[\u0001"+
+		"[\u0001[\u0001[\u0001[\u0001[\u0005[\u0429\b[\n[\f[\u042c\t[\u0001[\u0001"+
+		"[\u0003[\u0430\b[\u0001[\u0001[\u0001[\u0001[\u0001[\u0005[\u0437\b[\n"+
+		"[\f[\u043a\t[\u0003[\u043c\b[\u0001[\u0003[\u043f\b[\u0001[\u0003[\u0442"+
+		"\b[\u0001\\\u0001\\\u0001]\u0001]\u0001^\u0001^\u0001_\u0001_\u0001`\u0001"+
+		"`\u0001`\u0001`\u0005`\u0450\b`\n`\f`\u0453\t`\u0001`\u0001`\u0001a\u0001"+
+		"a\u0001a\u0001b\u0001b\u0003b\u045c\bb\u0001c\u0001c\u0001c\u0004c\u0461"+
+		"\bc\u000bc\fc\u0462\u0001c\u0001c\u0003c\u0467\bc\u0001c\u0001c\u0003"+
+		"c\u046b\bc\u0001d\u0001d\u0001d\u0001d\u0001d\u0001d\u0001e\u0001e\u0001"+
+		"e\u0001e\u0001e\u0001e\u0001f\u0001f\u0001f\u0005f\u047c\bf\nf\ff\u047f"+
+		"\tf\u0001g\u0001g\u0001g\u0001g\u0003g\u0485\bg\u0003g\u0487\bg\u0001"+
+		"h\u0001h\u0005h\u048b\bh\nh\fh\u048e\th\u0001h\u0003h\u0491\bh\u0001i"+
+		"\u0001i\u0001i\u0001j\u0001j\u0001j\u0001j\u0005j\u049a\bj\nj\fj\u049d"+
+		"\tj\u0003j\u049f\bj\u0001j\u0003j\u04a2\bj\u0001j\u0001j\u0001j\u0001"+
+		"k\u0001k\u0001k\u0001k\u0001k\u0005k\u04ac\bk\nk\fk\u04af\tk\u0001k\u0001"+
+		"k\u0001k\u0001k\u0001k\u0001k\u0001k\u0005k\u04b8\bk\nk\fk\u04bb\tk\u0001"+
+		"k\u0001k\u0003k\u04bf\bk\u0005k\u04c1\bk\nk\fk\u04c4\tk\u0003k\u04c6\b"+
+		"k\u0001l\u0001l\u0003l\u04ca\bl\u0001m\u0001m\u0001m\u0005m\u04cf\bm\n"+
+		"m\fm\u04d2\tm\u0001m\u0001m\u0005m\u04d6\bm\nm\fm\u04d9\tm\u0003m\u04db"+
+		"\bm\u0001n\u0001n\u0001n\u0001o\u0001o\u0001o\u0001p\u0001p\u0001p\u0001"+
+		"q\u0001q\u0001q\u0001r\u0001r\u0001r\u0001r\u0001s\u0001s\u0001t\u0004"+
+		"t\u04f0\bt\u000bt\ft\u04f1\u0001u\u0001u\u0001u\u0003u\u04f7\bu\u0001"+
+		"u\u0001u\u0001u\u0003u\u04fc\bu\u0001u\u0001u\u0003u\u0500\bu\u0001u\u0003"+
+		"u\u0503\bu\u0001v\u0001v\u0001v\u0004v\u0508\bv\u000bv\fv\u0509\u0001"+
+		"v\u0000\u0000w\u0000\u0002\u0004\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016"+
+		"\u0018\u001a\u001c\u001e \"$&(*,.02468:<>@BDFHJLNPRTVXZ\\^`bdfhjlnprt"+
+		"vxz|~\u0080\u0082\u0084\u0086\u0088\u008a\u008c\u008e\u0090\u0092\u0094"+
+		"\u0096\u0098\u009a\u009c\u009e\u00a0\u00a2\u00a4\u00a6\u00a8\u00aa\u00ac"+
+		"\u00ae\u00b0\u00b2\u00b4\u00b6\u00b8\u00ba\u00bc\u00be\u00c0\u00c2\u00c4"+
+		"\u00c6\u00c8\u00ca\u00cc\u00ce\u00d0\u00d2\u00d4\u00d6\u00d8\u00da\u00dc"+
+		"\u00de\u00e0\u00e2\u00e4\u00e6\u00e8\u00ea\u00ec\u0000\u000b\u0001\u0000"+
+		"01\u0001\u0000CF\u0001\u0000NO\u0001\u0000PS\u0002\u0000NOTT\u0001\u0000"+
+		"UV\u0002\u0000\u0010\u0010\"\"\u0003\u0000\u0010\u0010\"\"WW\u0002\u0000"+
+		"--cc\u0001\u0000hi\u0001\u0000uv\u0555\u0000\u00ef\u0001\u0000\u0000\u0000"+
+		"\u0002\u00fc\u0001\u0000\u0000\u0000\u0004\u0105\u0001\u0000\u0000\u0000"+
+		"\u0006\u012d\u0001\u0000\u0000\u0000\b\u0138\u0001\u0000\u0000\u0000\n"+
+		"\u0145\u0001\u0000\u0000\u0000\f\u0148\u0001\u0000\u0000\u0000\u000e\u014f"+
+		"\u0001\u0000\u0000\u0000\u0010\u0151\u0001\u0000\u0000\u0000\u0012\u015a"+
+		"\u0001\u0000\u0000\u0000\u0014\u0168\u0001\u0000\u0000\u0000\u0016\u016f"+
+		"\u0001\u0000\u0000\u0000\u0018\u0174\u0001\u0000\u0000\u0000\u001a\u0176"+
+		"\u0001\u0000\u0000\u0000\u001c\u0178\u0001\u0000\u0000\u0000\u001e\u017a"+
+		"\u0001\u0000\u0000\u0000 \u017e\u0001\u0000\u0000\u0000\"\u0180\u0001"+
+		"\u0000\u0000\u0000$\u0184\u0001\u0000\u0000\u0000&\u018a\u0001\u0000\u0000"+
+		"\u0000(\u018c\u0001\u0000\u0000\u0000*\u0190\u0001\u0000\u0000\u0000,"+
+		"\u0194\u0001\u0000\u0000\u0000.\u019a\u0001\u0000\u0000\u00000\u019d\u0001"+
+		"\u0000\u0000\u00002\u01b3\u0001\u0000\u0000\u00004\u01bb\u0001\u0000\u0000"+
+		"\u00006\u01d0\u0001\u0000\u0000\u00008\u01db\u0001\u0000\u0000\u0000:"+
+		"\u01df\u0001\u0000\u0000\u0000<\u01e1\u0001\u0000\u0000\u0000>\u01f4\u0001"+
+		"\u0000\u0000\u0000@\u0208\u0001\u0000\u0000\u0000B\u020a\u0001\u0000\u0000"+
+		"\u0000D\u0210\u0001\u0000\u0000\u0000F\u021a\u0001\u0000\u0000\u0000H"+
+		"\u0220\u0001\u0000\u0000\u0000J\u0225\u0001\u0000\u0000\u0000L\u0229\u0001"+
+		"\u0000\u0000\u0000N\u022b\u0001\u0000\u0000\u0000P\u022e\u0001\u0000\u0000"+
+		"\u0000R\u0232\u0001\u0000\u0000\u0000T\u0237\u0001\u0000\u0000\u0000V"+
+		"\u023c\u0001\u0000\u0000\u0000X\u0248\u0001\u0000\u0000\u0000Z\u024a\u0001"+
+		"\u0000\u0000\u0000\\\u0259\u0001\u0000\u0000\u0000^\u025b\u0001\u0000"+
+		"\u0000\u0000`\u0264\u0001\u0000\u0000\u0000b\u0266\u0001\u0000\u0000\u0000"+
+		"d\u026f\u0001\u0000\u0000\u0000f\u0271\u0001\u0000\u0000\u0000h\u027a"+
+		"\u0001\u0000\u0000\u0000j\u027c\u0001\u0000\u0000\u0000l\u028c\u0001\u0000"+
+		"\u0000\u0000n\u028e\u0001\u0000\u0000\u0000p\u02ac\u0001\u0000\u0000\u0000"+
+		"r\u02ae\u0001\u0000\u0000\u0000t\u02b7\u0001\u0000\u0000\u0000v\u02b9"+
+		"\u0001\u0000\u0000\u0000x\u02c2\u0001\u0000\u0000\u0000z\u02c8\u0001\u0000"+
+		"\u0000\u0000|\u02ca\u0001\u0000\u0000\u0000~\u02cc\u0001\u0000\u0000\u0000"+
+		"\u0080\u02d4\u0001\u0000\u0000\u0000\u0082\u02d8\u0001\u0000\u0000\u0000"+
+		"\u0084\u02da\u0001\u0000\u0000\u0000\u0086\u0316\u0001\u0000\u0000\u0000"+
+		"\u0088\u031f\u0001\u0000\u0000\u0000\u008a\u0323\u0001\u0000\u0000\u0000"+
+		"\u008c\u0325\u0001\u0000\u0000\u0000\u008e\u0333\u0001\u0000\u0000\u0000"+
+		"\u0090\u0341\u0001\u0000\u0000\u0000\u0092\u0358\u0001\u0000\u0000\u0000"+
+		"\u0094\u0363\u0001\u0000\u0000\u0000\u0096\u036a\u0001\u0000\u0000\u0000"+
+		"\u0098\u036e\u0001\u0000\u0000\u0000\u009a\u0377\u0001\u0000\u0000\u0000"+
+		"\u009c\u0396\u0001\u0000\u0000\u0000\u009e\u03a1\u0001\u0000\u0000\u0000"+
+		"\u00a0\u03a9\u0001\u0000\u0000\u0000\u00a2\u03c7\u0001\u0000\u0000\u0000"+
+		"\u00a4\u03cd\u0001\u0000\u0000\u0000\u00a6\u03d4\u0001\u0000\u0000\u0000"+
+		"\u00a8\u03e2\u0001\u0000\u0000\u0000\u00aa\u03e4\u0001\u0000\u0000\u0000"+
+		"\u00ac\u03f0\u0001\u0000\u0000\u0000\u00ae\u03f4\u0001\u0000\u0000\u0000"+
+		"\u00b0\u0402\u0001\u0000\u0000\u0000\u00b2\u041c\u0001\u0000\u0000\u0000"+
+		"\u00b4\u0420\u0001\u0000\u0000\u0000\u00b6\u0422\u0001\u0000\u0000\u0000"+
+		"\u00b8\u0443\u0001\u0000\u0000\u0000\u00ba\u0445\u0001\u0000\u0000\u0000"+
+		"\u00bc\u0447\u0001\u0000\u0000\u0000\u00be\u0449\u0001\u0000\u0000\u0000"+
+		"\u00c0\u044b\u0001\u0000\u0000\u0000\u00c2\u0456\u0001\u0000\u0000\u0000"+
+		"\u00c4\u0459\u0001\u0000\u0000\u0000\u00c6\u045d\u0001\u0000\u0000\u0000"+
+		"\u00c8\u046c\u0001\u0000\u0000\u0000\u00ca\u0472\u0001\u0000\u0000\u0000"+
+		"\u00cc\u0478\u0001\u0000\u0000\u0000\u00ce\u0486\u0001\u0000\u0000\u0000"+
+		"\u00d0\u0490\u0001\u0000\u0000\u0000\u00d2\u0492\u0001\u0000\u0000\u0000"+
+		"\u00d4\u04a1\u0001\u0000\u0000\u0000\u00d6\u04a6\u0001\u0000\u0000\u0000"+
+		"\u00d8\u04c9\u0001\u0000\u0000\u0000\u00da\u04cb\u0001\u0000\u0000\u0000"+
+		"\u00dc\u04dc\u0001\u0000\u0000\u0000\u00de\u04df\u0001\u0000\u0000\u0000"+
+		"\u00e0\u04e2\u0001\u0000\u0000\u0000\u00e2\u04e5\u0001\u0000\u0000\u0000"+
+		"\u00e4\u04e8\u0001\u0000\u0000\u0000\u00e6\u04ec\u0001\u0000\u0000\u0000"+
+		"\u00e8\u04ef\u0001\u0000\u0000\u0000\u00ea\u04f3\u0001\u0000\u0000\u0000"+
+		"\u00ec\u0507\u0001\u0000\u0000\u0000\u00ee\u00f0\u0003\u00e8t\u0000\u00ef"+
+		"\u00ee\u0001\u0000\u0000\u0000\u00ef\u00f0\u0001\u0000\u0000\u0000\u00f0"+
+		"\u00f4\u0001\u0000\u0000\u0000\u00f1\u00f3\u0003\u0002\u0001\u0000\u00f2"+
+		"\u00f1\u0001\u0000\u0000\u0000\u00f3\u00f6\u0001\u0000\u0000\u0000\u00f4"+
+		"\u00f2\u0001\u0000\u0000\u0000\u00f4\u00f5\u0001\u0000\u0000\u0000\u00f5"+
+		"\u00f8\u0001\u0000\u0000\u0000\u00f6\u00f4\u0001\u0000\u0000\u0000\u00f7"+
+		"\u00f9\u0003\u0004\u0002\u0000\u00f8\u00f7\u0001\u0000\u0000\u0000\u00f9"+
+		"\u00fa\u0001\u0000\u0000\u0000\u00fa\u00f8\u0001\u0000\u0000\u0000\u00fa"+
+		"\u00fb\u0001\u0000\u0000\u0000\u00fb\u0001\u0001\u0000\u0000\u0000\u00fc"+
+		"\u00fd\u0005\u0001\u0000\u0000\u00fd\u00fe\u0005x\u0000\u0000\u00fe\u00ff"+
+		"\u0005\u0002\u0000\u0000\u00ff\u0103\u0003\u00e6s\u0000\u0100\u0101\u0005"+
+		"\u0003\u0000\u0000\u0101\u0102\u0005\u0004\u0000\u0000\u0102\u0104\u0005"+
+		"\u0005\u0000\u0000\u0103\u0100\u0001\u0000\u0000\u0000\u0103\u0104\u0001"+
+		"\u0000\u0000\u0000\u0104\u0003\u0001\u0000\u0000\u0000\u0105\u0106\u0005"+
+		"\u0006\u0000\u0000\u0106\u0107\u0005\u0007\u0000\u0000\u0107\u0108\u0003"+
+		"\u00e6s\u0000\u0108\u0109\u0005\b\u0000\u0000\u0109\u010a\u0005\t\u0000"+
+		"\u0000\u010a\u010b\u0005\n\u0000\u0000\u010b\u010c\u0005\u000b\u0000\u0000"+
+		"\u010c\u010d\u0005\b\u0000\u0000\u010d\u0112\u0005w\u0000\u0000\u010e"+
+		"\u010f\u0005\f\u0000\u0000\u010f\u0111\u0005w\u0000\u0000\u0110\u010e"+
+		"\u0001\u0000\u0000\u0000\u0111\u0114\u0001\u0000\u0000\u0000\u0112\u0110"+
+		"\u0001\u0000\u0000\u0000\u0112\u0113\u0001\u0000\u0000\u0000\u0113\u0115"+
+		"\u0001\u0000\u0000\u0000\u0114\u0112\u0001\u0000\u0000\u0000\u0115\u0116"+
+		"\u0005\r\u0000\u0000\u0116\u0117\u0005\u000e\u0000\u0000\u0117\u0118\u0005"+
+		"\b\u0000\u0000\u0118\u011d\u0005w\u0000\u0000\u0119\u011a\u0005\f\u0000"+
+		"\u0000\u011a\u011c\u0005w\u0000\u0000\u011b\u0119\u0001\u0000\u0000\u0000"+
+		"\u011c\u011f\u0001\u0000\u0000\u0000\u011d\u011b\u0001\u0000\u0000\u0000"+
+		"\u011d\u011e\u0001\u0000\u0000\u0000\u011e\u0123\u0001\u0000\u0000\u0000"+
+		"\u011f\u011d\u0001\u0000\u0000\u0000\u0120\u0122\u0003\u0006\u0003\u0000"+
+		"\u0121\u0120\u0001\u0000\u0000\u0000\u0122\u0125\u0001\u0000\u0000\u0000"+
+		"\u0123\u0121\u0001\u0000\u0000\u0000\u0123\u0124\u0001\u0000\u0000\u0000"+
+		"\u0124\u012a\u0001\u0000\u0000\u0000\u0125\u0123\u0001\u0000\u0000\u0000"+
+		"\u0126\u0129\u0003\b\u0004\u0000\u0127\u0129\u00030\u0018\u0000\u0128"+
+		"\u0126\u0001\u0000\u0000\u0000\u0128\u0127\u0001\u0000\u0000\u0000\u0129"+
+		"\u012c\u0001\u0000\u0000\u0000\u012a\u0128\u0001\u0000\u0000\u0000\u012a"+
+		"\u012b\u0001\u0000\u0000\u0000\u012b\u0005\u0001\u0000\u0000\u0000\u012c"+
+		"\u012a\u0001\u0000\u0000\u0000\u012d\u012f\u0005\u0001\u0000\u0000\u012e"+
+		"\u0130\u0005\u000f\u0000\u0000\u012f\u012e\u0001\u0000\u0000\u0000\u012f"+
+		"\u0130\u0001\u0000\u0000\u0000\u0130\u0131\u0001\u0000\u0000\u0000\u0131"+
+		"\u0135\u0005w\u0000\u0000\u0132\u0133\u0005\u0003\u0000\u0000\u0133\u0134"+
+		"\u0005\u0004\u0000\u0000\u0134\u0136\u0005\u0005\u0000\u0000\u0135\u0132"+
+		"\u0001\u0000\u0000\u0000\u0135\u0136\u0001\u0000\u0000\u0000\u0136\u0007"+
+		"\u0001\u0000\u0000\u0000\u0137\u0139\u0005y\u0000\u0000\u0138\u0137\u0001"+
+		"\u0000\u0000\u0000\u0138\u0139\u0001\u0000\u0000\u0000\u0139\u013a\u0001"+
+		"\u0000\u0000\u0000\u013a\u013d\u0005\t\u0000\u0000\u013b\u013c\u0005w"+
+		"\u0000\u0000\u013c\u013e\u0005\u0010\u0000\u0000\u013d\u013b\u0001\u0000"+
+		"\u0000\u0000\u013d\u013e\u0001\u0000\u0000\u0000\u013e\u013f\u0001\u0000"+
+		"\u0000\u0000\u013f\u0140\u0003\u00e6s\u0000\u0140\u0141\u0005\u0011\u0000"+
+		"\u0000\u0141\u0142\u0003\f\u0006\u0000\u0142\u0143\u0003\n\u0005\u0000"+
+		"\u0143\u0144\u0005\u0012\u0000\u0000\u0144\t\u0001\u0000\u0000\u0000\u0145"+
+		"\u0146\u0005\u0013\u0000\u0000\u0146\u0147\u0003V+\u0000\u0147\u000b\u0001"+
+		"\u0000\u0000\u0000\u0148\u014b\u0005\u0014\u0000\u0000\u0149\u014c\u0003"+
+		"\u0014\n\u0000\u014a\u014c\u0003\u000e\u0007\u0000\u014b\u0149\u0001\u0000"+
+		"\u0000\u0000\u014b\u014a\u0001\u0000\u0000\u0000\u014c\r\u0001\u0000\u0000"+
+		"\u0000\u014d\u0150\u0003\u0010\b\u0000\u014e\u0150\u0003\u0012\t\u0000"+
+		"\u014f\u014d\u0001\u0000\u0000\u0000\u014f\u014e\u0001\u0000\u0000\u0000"+
+		"\u0150\u000f\u0001\u0000\u0000\u0000\u0151\u0153\u0005\u0015\u0000\u0000"+
+		"\u0152\u0154\u0003L&\u0000\u0153\u0152\u0001\u0000\u0000\u0000\u0153\u0154"+
+		"\u0001\u0000\u0000\u0000\u0154\u0155\u0001\u0000\u0000\u0000\u0155\u0158"+
+		"\u0003.\u0017\u0000\u0156\u0157\u0005\u0016\u0000\u0000\u0157\u0159\u0003"+
+		"V+\u0000\u0158\u0156\u0001\u0000\u0000\u0000\u0158\u0159\u0001\u0000\u0000"+
+		"\u0000\u0159\u0011\u0001\u0000\u0000\u0000\u015a\u0161\u0005\u0017\u0000"+
+		"\u0000\u015b\u015c\u0005\u0018\u0000\u0000\u015c\u0162\u0005\b\u0000\u0000"+
+		"\u015d\u015e\u0005\u0019\u0000\u0000\u015e\u0162\u0005\u001a\u0000\u0000"+
+		"\u015f\u0160\u0005\u001b\u0000\u0000\u0160\u0162\u0005\u001c\u0000\u0000"+
+		"\u0161\u015b\u0001\u0000\u0000\u0000\u0161\u015d\u0001\u0000\u0000\u0000"+
+		"\u0161\u015f\u0001\u0000\u0000\u0000\u0162\u0163\u0001\u0000\u0000\u0000"+
+		"\u0163\u0166\u0003R)\u0000\u0164\u0165\u0005\u0016\u0000\u0000\u0165\u0167"+
+		"\u0003V+\u0000\u0166\u0164\u0001\u0000\u0000\u0000\u0166\u0167\u0001\u0000"+
+		"\u0000\u0000\u0167\u0013\u0001\u0000\u0000\u0000\u0168\u016b\u0005\u001d"+
+		"\u0000\u0000\u0169\u016a\u0005\u0016\u0000\u0000\u016a\u016c\u0003V+\u0000"+
+		"\u016b\u0169\u0001\u0000\u0000\u0000\u016b\u016c\u0001\u0000\u0000\u0000"+
+		"\u016c\u0015\u0001\u0000\u0000\u0000\u016d\u0170\u0003\u001a\r\u0000\u016e"+
+		"\u0170\u0003\u001c\u000e\u0000\u016f\u016d\u0001\u0000\u0000\u0000\u016f"+
+		"\u016e\u0001\u0000\u0000\u0000\u0170\u0017\u0001\u0000\u0000\u0000\u0171"+
+		"\u0175\u0003 \u0010\u0000\u0172\u0175\u0003&\u0013\u0000\u0173\u0175\u0003"+
+		",\u0016\u0000\u0174\u0171\u0001\u0000\u0000\u0000\u0174\u0172\u0001\u0000"+
 		"\u0000\u0000\u0174\u0173\u0001\u0000\u0000\u0000\u0175\u0019\u0001\u0000"+
 		"\u0000\u0000\u0176\u0177\u0005\u001e\u0000\u0000\u0177\u001b\u0001\u0000"+
 		"\u0000\u0000\u0178\u0179\u0005\u001f\u0000\u0000\u0179\u001d\u0001\u0000"+
@@ -8977,233 +8974,234 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 		"\u0361\u0364\u0001\u0000\u0000\u0000\u0362\u0360\u0001\u0000\u0000\u0000"+
 		"\u0363\u035b\u0001\u0000\u0000\u0000\u0363\u0364\u0001\u0000\u0000\u0000"+
 		"\u0364\u0365\u0001\u0000\u0000\u0000\u0365\u0366\u0005Y\u0000\u0000\u0366"+
-		"\u0367\u0001\u0000\u0000\u0000\u0367\u0368\u0003V+\u0000\u0368\u0095\u0001"+
-		"\u0000\u0000\u0000\u0369\u036a\u0005#\u0000\u0000\u036a\u036b\u0003V+"+
-		"\u0000\u036b\u036c\u0005&\u0000\u0000\u036c\u0097\u0001\u0000\u0000\u0000"+
-		"\u036d\u036e\u0005[\u0000\u0000\u036e\u036f\u0005#\u0000\u0000\u036f\u0370"+
-		"\u0003V+\u0000\u0370\u0371\u0005&\u0000\u0000\u0371\u0374\u0003V+\u0000"+
-		"\u0372\u0373\u0005\\\u0000\u0000\u0373\u0375\u0003V+\u0000\u0374\u0372"+
-		"\u0001\u0000\u0000\u0000\u0374\u0375\u0001\u0000\u0000\u0000\u0375\u0099"+
-		"\u0001\u0000\u0000\u0000\u0376\u0384\u0005]\u0000\u0000\u0377\u0378\u0005"+
-		"#\u0000\u0000\u0378\u0379\u0003\u00acV\u0000\u0379\u037a\u0005\u0007\u0000"+
-		"\u0000\u037a\u037b\u0001\u0000\u0000\u0000\u037b\u037c\u0003V+\u0000\u037c"+
-		"\u037d\u0005&\u0000\u0000\u037d\u0385\u0001\u0000\u0000\u0000\u037e\u037f"+
-		"\u0003\u00acV\u0000\u037f\u0380\u0005\u0007\u0000\u0000\u0380\u0382\u0001"+
-		"\u0000\u0000\u0000\u0381\u037e\u0001\u0000\u0000\u0000\u0381\u0382\u0001"+
-		"\u0000\u0000\u0000\u0382\u0383\u0001\u0000\u0000\u0000\u0383\u0385\u0003"+
-		"V+\u0000\u0384\u0377\u0001\u0000\u0000\u0000\u0384\u0381\u0001\u0000\u0000"+
-		"\u0000\u0385\u0386\u0001\u0000\u0000\u0000\u0386\u038a\u0005\u0011\u0000"+
-		"\u0000\u0387\u0389\u0003\u009cN\u0000\u0388\u0387\u0001\u0000\u0000\u0000"+
-		"\u0389\u038c\u0001\u0000\u0000\u0000\u038a\u0388\u0001\u0000\u0000\u0000"+
-		"\u038a\u038b\u0001\u0000\u0000\u0000\u038b\u0390\u0001\u0000\u0000\u0000"+
-		"\u038c\u038a\u0001\u0000\u0000\u0000\u038d\u038e\u0005^\u0000\u0000\u038e"+
-		"\u038f\u0005\u0007\u0000\u0000\u038f\u0391\u0003V+\u0000\u0390\u038d\u0001"+
-		"\u0000\u0000\u0000\u0390\u0391\u0001\u0000\u0000\u0000\u0391\u0392\u0001"+
-		"\u0000\u0000\u0000\u0392\u0393\u0005\u0012\u0000\u0000\u0393\u009b\u0001"+
-		"\u0000\u0000\u0000\u0394\u0396\u0003\u00d0h\u0000\u0395\u0394\u0001\u0000"+
-		"\u0000\u0000\u0395\u0396\u0001\u0000\u0000\u0000\u0396\u0399\u0001\u0000"+
-		"\u0000\u0000\u0397\u0398\u0005_\u0000\u0000\u0398\u039a\u0003V+\u0000"+
-		"\u0399\u0397\u0001\u0000\u0000\u0000\u0399\u039a\u0001\u0000\u0000\u0000"+
-		"\u039a\u039e\u0001\u0000\u0000\u0000\u039b\u039c\u0005\u0007\u0000\u0000"+
-		"\u039c\u039f\u0003V+\u0000\u039d\u039f\u0005%\u0000\u0000\u039e\u039b"+
-		"\u0001\u0000\u0000\u0000\u039e\u039d\u0001\u0000\u0000\u0000\u039f\u009d"+
-		"\u0001\u0000\u0000\u0000\u03a0\u03a1\u0005`\u0000\u0000\u03a1\u03a2\u0005"+
-		"#\u0000\u0000\u03a2\u03a3\u0003\u00acV\u0000\u03a3\u03a4\u0005\u0007\u0000"+
-		"\u0000\u03a4\u03a5\u0003V+\u0000\u03a5\u03a6\u0005&\u0000\u0000\u03a6"+
-		"\u03a7\u0003V+\u0000\u03a7\u009f\u0001\u0000\u0000\u0000\u03a8\u03a9\u0005"+
-		"`\u0000\u0000\u03a9\u03b2\u0005#\u0000\u0000\u03aa\u03af\u0003\u00a8T"+
-		"\u0000\u03ab\u03ac\u0005%\u0000\u0000\u03ac\u03ae\u0003\u00a8T\u0000\u03ad"+
-		"\u03ab\u0001\u0000\u0000\u0000\u03ae\u03b1\u0001\u0000\u0000\u0000\u03af"+
-		"\u03ad\u0001\u0000\u0000\u0000\u03af\u03b0\u0001\u0000\u0000\u0000\u03b0"+
-		"\u03b3\u0001\u0000\u0000\u0000\u03b1\u03af\u0001\u0000\u0000\u0000\u03b2"+
-		"\u03aa\u0001\u0000\u0000\u0000\u03b2\u03b3\u0001\u0000\u0000\u0000\u03b3"+
-		"\u03b4\u0001\u0000\u0000\u0000\u03b4\u03b6\u0005Z\u0000\u0000\u03b5\u03b7"+
-		"\u0003V+\u0000\u03b6\u03b5\u0001\u0000\u0000\u0000\u03b6\u03b7\u0001\u0000"+
-		"\u0000\u0000\u03b7\u03b8\u0001\u0000\u0000\u0000\u03b8\u03c1\u0005Z\u0000"+
-		"\u0000\u03b9\u03be\u0003V+\u0000\u03ba\u03bb\u0005%\u0000\u0000\u03bb"+
-		"\u03bd\u0003V+\u0000\u03bc\u03ba\u0001\u0000\u0000\u0000\u03bd\u03c0\u0001"+
-		"\u0000\u0000\u0000\u03be\u03bc\u0001\u0000\u0000\u0000\u03be\u03bf\u0001"+
-		"\u0000\u0000\u0000\u03bf\u03c2\u0001\u0000\u0000\u0000\u03c0\u03be\u0001"+
-		"\u0000\u0000\u0000\u03c1\u03b9\u0001\u0000\u0000\u0000\u03c1\u03c2\u0001"+
-		"\u0000\u0000\u0000\u03c2\u03c3\u0001\u0000\u0000\u0000\u03c3\u03c4\u0005"+
-		"&\u0000\u0000\u03c4\u03c5\u0003V+\u0000\u03c5\u00a1\u0001\u0000\u0000"+
-		"\u0000\u03c6\u03c7\u0005a\u0000\u0000\u03c7\u03c8\u0005#\u0000\u0000\u03c8"+
-		"\u03c9\u0003V+\u0000\u03c9\u03ca\u0005&\u0000\u0000\u03ca\u03cb\u0003"+
-		"V+\u0000\u03cb\u00a3\u0001\u0000\u0000\u0000\u03cc\u03cd\u0005b\u0000"+
-		"\u0000\u03cd\u03ce\u0003V+\u0000\u03ce\u03cf\u0005a\u0000\u0000\u03cf"+
-		"\u03d0\u0005#\u0000\u0000\u03d0\u03d1\u0003V+\u0000\u03d1\u03d2\u0005"+
-		"&\u0000\u0000\u03d2\u00a5\u0001\u0000\u0000\u0000\u03d3\u03da\u0005\u0011"+
-		"\u0000\u0000\u03d4\u03d6\u0003\u00a8T\u0000\u03d5\u03d7\u0005Z\u0000\u0000"+
-		"\u03d6\u03d5\u0001\u0000\u0000\u0000\u03d6\u03d7\u0001\u0000\u0000\u0000"+
-		"\u03d7\u03d9\u0001\u0000\u0000\u0000\u03d8\u03d4\u0001\u0000\u0000\u0000"+
-		"\u03d9\u03dc\u0001\u0000\u0000\u0000\u03da\u03d8\u0001\u0000\u0000\u0000"+
-		"\u03da\u03db\u0001\u0000\u0000\u0000\u03db\u03dd\u0001\u0000\u0000\u0000"+
-		"\u03dc\u03da\u0001\u0000\u0000\u0000\u03dd\u03de\u0005\u0012\u0000\u0000"+
-		"\u03de\u00a7\u0001\u0000\u0000\u0000\u03df\u03e2\u0003\u00aaU\u0000\u03e0"+
-		"\u03e2\u0003V+\u0000\u03e1\u03df\u0001\u0000\u0000\u0000\u03e1\u03e0\u0001"+
-		"\u0000\u0000\u0000\u03e2\u00a9\u0001\u0000\u0000\u0000\u03e3\u03e8\u0007"+
-		"\b\u0000\u0000\u03e4\u03e5\u0003\u00d0h\u0000\u03e5\u03e6\u0003\u00e6"+
-		"s\u0000\u03e6\u03e9\u0001\u0000\u0000\u0000\u03e7\u03e9\u0003\u00e6s\u0000"+
-		"\u03e8\u03e4\u0001\u0000\u0000\u0000\u03e8\u03e7\u0001\u0000\u0000\u0000"+
-		"\u03e9\u03ec\u0001\u0000\u0000\u0000\u03ea\u03eb\u0005.\u0000\u0000\u03eb"+
-		"\u03ed\u0003V+\u0000\u03ec\u03ea\u0001\u0000\u0000\u0000\u03ec\u03ed\u0001"+
-		"\u0000\u0000\u0000\u03ed\u00ab\u0001\u0000\u0000\u0000\u03ee\u03f0\u0003"+
-		"\u00d0h\u0000\u03ef\u03ee\u0001\u0000\u0000\u0000\u03ef\u03f0\u0001\u0000"+
-		"\u0000\u0000\u03f0\u03f1\u0001\u0000\u0000\u0000\u03f1\u03f2\u0003\u00e6"+
-		"s\u0000\u03f2\u00ad\u0001\u0000\u0000\u0000\u03f3\u03f4\u0003\u00d0h\u0000"+
-		"\u03f4\u03f5\u0003\u00e6s\u0000\u03f5\u00af\u0001\u0000\u0000\u0000\u03f6"+
-		"\u03f7\u0005>\u0000\u0000\u03f7\u03fc\u0003\u00d8l\u0000\u03f8\u03f9\u0005"+
-		"%\u0000\u0000\u03f9\u03fb\u0003\u00d8l\u0000\u03fa\u03f8\u0001\u0000\u0000"+
-		"\u0000\u03fb\u03fe\u0001\u0000\u0000\u0000\u03fc\u03fa\u0001\u0000\u0000"+
-		"\u0000\u03fc\u03fd\u0001\u0000\u0000\u0000\u03fd\u03ff\u0001\u0000\u0000"+
-		"\u0000\u03fe\u03fc\u0001\u0000\u0000\u0000\u03ff\u0400\u0005?\u0000\u0000"+
-		"\u0400\u0402\u0001\u0000\u0000\u0000\u0401\u03f6\u0001\u0000\u0000\u0000"+
-		"\u0401\u0402\u0001\u0000\u0000\u0000\u0402\u0403\u0001\u0000\u0000\u0000"+
-		"\u0403\u0411\u0003\u00b4Z\u0000\u0404\u040e\u0005#\u0000\u0000\u0405\u040f"+
-		"\u0003\u0094J\u0000\u0406\u040b\u0003V+\u0000\u0407\u0408\u0005%\u0000"+
-		"\u0000\u0408\u040a\u0003V+\u0000\u0409\u0407\u0001\u0000\u0000\u0000\u040a"+
-		"\u040d\u0001\u0000\u0000\u0000\u040b\u0409\u0001\u0000\u0000\u0000\u040b"+
-		"\u040c\u0001\u0000\u0000\u0000\u040c\u040f\u0001\u0000\u0000\u0000\u040d"+
-		"\u040b\u0001\u0000\u0000\u0000\u040e\u0405\u0001\u0000\u0000\u0000\u040e"+
-		"\u0406\u0001\u0000\u0000\u0000\u040e\u040f\u0001\u0000\u0000\u0000\u040f"+
-		"\u0410\u0001\u0000\u0000\u0000\u0410\u0412\u0005&\u0000\u0000\u0411\u0404"+
-		"\u0001\u0000\u0000\u0000\u0411\u0412\u0001\u0000\u0000\u0000\u0412\u0414"+
-		"\u0001\u0000\u0000\u0000\u0413\u0415\u0003\u0090H\u0000\u0414\u0413\u0001"+
-		"\u0000\u0000\u0000\u0414\u0415\u0001\u0000\u0000\u0000\u0415\u00b1\u0001"+
-		"\u0000\u0000\u0000\u0416\u041c\u0003\u00e6s\u0000\u0417\u041c\u0005d\u0000"+
-		"\u0000\u0418\u041c\u0005e\u0000\u0000\u0419\u041c\u0005\u0001\u0000\u0000"+
-		"\u041a\u041c\u0005f\u0000\u0000\u041b\u0416\u0001\u0000\u0000\u0000\u041b"+
-		"\u0417\u0001\u0000\u0000\u0000\u041b\u0418\u0001\u0000\u0000\u0000\u041b"+
-		"\u0419\u0001\u0000\u0000\u0000\u041b\u041a\u0001\u0000\u0000\u0000\u041c"+
-		"\u00b3\u0001\u0000\u0000\u0000\u041d\u0420\u0003\u00b2Y\u0000\u041e\u0420"+
-		"\u0005g\u0000\u0000\u041f\u041d\u0001\u0000\u0000\u0000\u041f\u041e\u0001"+
-		"\u0000\u0000\u0000\u0420\u00b5\u0001\u0000\u0000\u0000\u0421\u0422\u0005"+
-		"5\u0000\u0000\u0422\u042e\u0003\u00ccf\u0000\u0423\u0424\u0005>\u0000"+
-		"\u0000\u0424\u0429\u0003\u00d8l\u0000\u0425\u0426\u0005%\u0000\u0000\u0426"+
-		"\u0428\u0003\u00d8l\u0000\u0427\u0425\u0001\u0000\u0000\u0000\u0428\u042b"+
-		"\u0001\u0000\u0000\u0000\u0429\u0427\u0001\u0000\u0000\u0000\u0429\u042a"+
-		"\u0001\u0000\u0000\u0000\u042a\u042c\u0001\u0000\u0000\u0000\u042b\u0429"+
-		"\u0001\u0000\u0000\u0000\u042c\u042d\u0005?\u0000\u0000\u042d\u042f\u0001"+
-		"\u0000\u0000\u0000\u042e\u0423\u0001\u0000\u0000\u0000\u042e\u042f\u0001"+
-		"\u0000\u0000\u0000\u042f\u043d\u0001\u0000\u0000\u0000\u0430\u043a\u0005"+
-		"#\u0000\u0000\u0431\u043b\u0003\u0094J\u0000\u0432\u0437\u0003V+\u0000"+
-		"\u0433\u0434\u0005%\u0000\u0000\u0434\u0436\u0003V+\u0000\u0435\u0433"+
-		"\u0001\u0000\u0000\u0000\u0436\u0439\u0001\u0000\u0000\u0000\u0437\u0435"+
-		"\u0001\u0000\u0000\u0000\u0437\u0438\u0001\u0000\u0000\u0000\u0438\u043b"+
-		"\u0001\u0000\u0000\u0000\u0439\u0437\u0001\u0000\u0000\u0000\u043a\u0431"+
-		"\u0001\u0000\u0000\u0000\u043a\u0432\u0001\u0000\u0000\u0000\u043a\u043b"+
-		"\u0001\u0000\u0000\u0000\u043b\u043c\u0001\u0000\u0000\u0000\u043c\u043e"+
-		"\u0005&\u0000\u0000\u043d\u0430\u0001\u0000\u0000\u0000\u043d\u043e\u0001"+
-		"\u0000\u0000\u0000\u043e\u0440\u0001\u0000\u0000\u0000\u043f\u0441\u0003"+
-		"\u0090H\u0000\u0440\u043f\u0001\u0000\u0000\u0000\u0440\u0441\u0001\u0000"+
-		"\u0000\u0000\u0441\u00b7\u0001\u0000\u0000\u0000\u0442\u0443\u0007\t\u0000"+
-		"\u0000\u0443\u00b9\u0001\u0000\u0000\u0000\u0444\u0445\u0005j\u0000\u0000"+
-		"\u0445\u00bb\u0001\u0000\u0000\u0000\u0446\u0447\u0003\u00ceg\u0000\u0447"+
-		"\u00bd\u0001\u0000\u0000\u0000\u0448\u0449\u0005x\u0000\u0000\u0449\u00bf"+
-		"\u0001\u0000\u0000\u0000\u044a\u044b\u0005k\u0000\u0000\u044b\u044c\u0005"+
-		"#\u0000\u0000\u044c\u0450\u0003\u00ccf\u0000\u044d\u044f\u0003\u00d2i"+
-		"\u0000\u044e\u044d\u0001\u0000\u0000\u0000\u044f\u0452\u0001\u0000\u0000"+
-		"\u0000\u0450\u044e\u0001\u0000\u0000\u0000\u0450\u0451\u0001\u0000\u0000"+
-		"\u0000\u0451\u0453\u0001\u0000\u0000\u0000\u0452\u0450\u0001\u0000\u0000"+
-		"\u0000\u0453\u0454\u0005&\u0000\u0000\u0454\u00c1\u0001\u0000\u0000\u0000"+
-		"\u0455\u0456\u0005l\u0000\u0000\u0456\u0457\u0003V+\u0000\u0457\u00c3"+
-		"\u0001\u0000\u0000\u0000\u0458\u045a\u0005m\u0000\u0000\u0459\u045b\u0003"+
-		"V+\u0000\u045a\u0459\u0001\u0000\u0000\u0000\u045a\u045b\u0001\u0000\u0000"+
-		"\u0000\u045b\u00c5\u0001\u0000\u0000\u0000\u045c\u045d\u0005n\u0000\u0000"+
-		"\u045d\u0469\u0003V+\u0000\u045e\u0460\u0003\u00cae\u0000\u045f\u045e"+
-		"\u0001\u0000\u0000\u0000\u0460\u0461\u0001\u0000\u0000\u0000\u0461\u045f"+
-		"\u0001\u0000\u0000\u0000\u0461\u0462\u0001\u0000\u0000\u0000\u0462\u0465"+
-		"\u0001\u0000\u0000\u0000\u0463\u0464\u0005o\u0000\u0000\u0464\u0466\u0003"+
-		"V+\u0000\u0465\u0463\u0001\u0000\u0000\u0000\u0465\u0466\u0001\u0000\u0000"+
-		"\u0000\u0466\u046a\u0001\u0000\u0000\u0000\u0467\u0468\u0005o\u0000\u0000"+
-		"\u0468\u046a\u0003V+\u0000\u0469\u045f\u0001\u0000\u0000\u0000\u0469\u0467"+
-		"\u0001\u0000\u0000\u0000\u046a\u00c7\u0001\u0000\u0000\u0000\u046b\u046c"+
-		"\u0005p\u0000\u0000\u046c\u046d\u0005#\u0000\u0000\u046d\u046e\u0003V"+
-		"+\u0000\u046e\u046f\u0005&\u0000\u0000\u046f\u0470\u0003V+\u0000\u0470"+
-		"\u00c9\u0001\u0000\u0000\u0000\u0471\u0472\u0005q\u0000\u0000\u0472\u0473"+
-		"\u0005#\u0000\u0000\u0473\u0474\u0003\u00aeW\u0000\u0474\u0475\u0005&"+
-		"\u0000\u0000\u0475\u0476\u0003V+\u0000\u0476\u00cb\u0001\u0000\u0000\u0000"+
-		"\u0477\u047c\u0003\u00e6s\u0000\u0478\u0479\u0005\"\u0000\u0000\u0479"+
-		"\u047b\u0003\u00e6s\u0000\u047a\u0478\u0001\u0000\u0000\u0000\u047b\u047e"+
-		"\u0001\u0000\u0000\u0000\u047c\u047a\u0001\u0000\u0000\u0000\u047c\u047d"+
-		"\u0001\u0000\u0000\u0000\u047d\u00cd\u0001\u0000\u0000\u0000\u047e\u047c"+
-		"\u0001\u0000\u0000\u0000\u047f\u0486\u0005t\u0000\u0000\u0480\u0483\u0007"+
-		"\n\u0000\u0000\u0481\u0482\u0005\"\u0000\u0000\u0482\u0484\u0007\n\u0000"+
-		"\u0000\u0483\u0481\u0001\u0000\u0000\u0000\u0483\u0484\u0001\u0000\u0000"+
-		"\u0000\u0484\u0486\u0001\u0000\u0000\u0000\u0485\u047f\u0001\u0000\u0000"+
-		"\u0000\u0485\u0480\u0001\u0000\u0000\u0000\u0486\u00cf\u0001\u0000\u0000"+
-		"\u0000\u0487\u048b\u0003\u00d6k\u0000\u0488\u048a\u0003\u00d2i\u0000\u0489"+
-		"\u0488\u0001\u0000\u0000\u0000\u048a\u048d\u0001\u0000\u0000\u0000\u048b"+
-		"\u0489\u0001\u0000\u0000\u0000\u048b\u048c\u0001\u0000\u0000\u0000\u048c"+
-		"\u0490\u0001\u0000\u0000\u0000\u048d\u048b\u0001\u0000\u0000\u0000\u048e"+
-		"\u0490\u0003\u00d4j\u0000\u048f\u0487\u0001\u0000\u0000\u0000\u048f\u048e"+
-		"\u0001\u0000\u0000\u0000\u0490\u00d1\u0001\u0000\u0000\u0000\u0491\u0492"+
-		"\u00057\u0000\u0000\u0492\u0493\u00058\u0000\u0000\u0493\u00d3\u0001\u0000"+
-		"\u0000\u0000\u0494\u049d\u0005#\u0000\u0000\u0495\u049a\u0003\u00d0h\u0000"+
-		"\u0496\u0497\u0005%\u0000\u0000\u0497\u0499\u0003\u00d0h\u0000\u0498\u0496"+
-		"\u0001\u0000\u0000\u0000\u0499\u049c\u0001\u0000\u0000\u0000\u049a\u0498"+
-		"\u0001\u0000\u0000\u0000\u049a\u049b\u0001\u0000\u0000\u0000\u049b\u049e"+
-		"\u0001\u0000\u0000\u0000\u049c\u049a\u0001\u0000\u0000\u0000\u049d\u0495"+
-		"\u0001\u0000\u0000\u0000\u049d\u049e\u0001\u0000\u0000\u0000\u049e\u049f"+
-		"\u0001\u0000\u0000\u0000\u049f\u04a1\u0005&\u0000\u0000\u04a0\u0494\u0001"+
-		"\u0000\u0000\u0000\u04a0\u04a1\u0001\u0000\u0000\u0000\u04a1\u04a2\u0001"+
-		"\u0000\u0000\u0000\u04a2\u04a3\u0005K\u0000\u0000\u04a3\u04a4\u0003\u00d0"+
-		"h\u0000\u04a4\u00d5\u0001\u0000\u0000\u0000\u04a5\u04c4\u0003\u00ccf\u0000"+
-		"\u04a6\u04a7\u0005>\u0000\u0000\u04a7\u04ac\u0003\u00d8l\u0000\u04a8\u04a9"+
-		"\u0005%\u0000\u0000\u04a9\u04ab\u0003\u00d8l\u0000\u04aa\u04a8\u0001\u0000"+
-		"\u0000\u0000\u04ab\u04ae\u0001\u0000\u0000\u0000\u04ac\u04aa\u0001\u0000"+
-		"\u0000\u0000\u04ac\u04ad\u0001\u0000\u0000\u0000\u04ad\u04af\u0001\u0000"+
-		"\u0000\u0000\u04ae\u04ac\u0001\u0000\u0000\u0000\u04af\u04c1\u0005?\u0000"+
-		"\u0000\u04b0\u04b1\u0005\"\u0000\u0000\u04b1\u04bd\u0003\u00e6s\u0000"+
-		"\u04b2\u04b3\u0005>\u0000\u0000\u04b3\u04b8\u0003\u00d8l\u0000\u04b4\u04b5"+
-		"\u0005%\u0000\u0000\u04b5\u04b7\u0003\u00d8l\u0000\u04b6\u04b4\u0001\u0000"+
-		"\u0000\u0000\u04b7\u04ba\u0001\u0000\u0000\u0000\u04b8\u04b6\u0001\u0000"+
-		"\u0000\u0000\u04b8\u04b9\u0001\u0000\u0000\u0000\u04b9\u04bb\u0001\u0000"+
-		"\u0000\u0000\u04ba\u04b8\u0001\u0000\u0000\u0000\u04bb\u04bc\u0005?\u0000"+
-		"\u0000\u04bc\u04be\u0001\u0000\u0000\u0000\u04bd\u04b2\u0001\u0000\u0000"+
-		"\u0000\u04bd\u04be\u0001\u0000\u0000\u0000\u04be\u04c0\u0001\u0000\u0000"+
-		"\u0000\u04bf\u04b0\u0001\u0000\u0000\u0000\u04c0\u04c3\u0001\u0000\u0000"+
-		"\u0000\u04c1\u04bf\u0001\u0000\u0000\u0000\u04c1\u04c2\u0001\u0000\u0000"+
-		"\u0000\u04c2\u04c5\u0001\u0000\u0000\u0000\u04c3\u04c1\u0001\u0000\u0000"+
-		"\u0000\u04c4\u04a6\u0001\u0000\u0000\u0000\u04c4\u04c5\u0001\u0000\u0000"+
-		"\u0000\u04c5\u00d7\u0001\u0000\u0000\u0000\u04c6\u04c9\u0003\u00d0h\u0000"+
-		"\u04c7\u04c9\u0003\u00dam\u0000\u04c8\u04c6\u0001\u0000\u0000\u0000\u04c8"+
-		"\u04c7\u0001\u0000\u0000\u0000\u04c9\u00d9\u0001\u0000\u0000\u0000\u04ca"+
-		"\u04d9\u0005r\u0000\u0000\u04cb\u04cf\u0003\u00dcn\u0000\u04cc\u04ce\u0003"+
-		"\u00deo\u0000\u04cd\u04cc\u0001\u0000\u0000\u0000\u04ce\u04d1\u0001\u0000"+
-		"\u0000\u0000\u04cf\u04cd\u0001\u0000\u0000\u0000\u04cf\u04d0\u0001\u0000"+
-		"\u0000\u0000\u04d0\u04da\u0001\u0000\u0000\u0000\u04d1\u04cf\u0001\u0000"+
-		"\u0000\u0000\u04d2\u04d6\u0003\u00e0p\u0000\u04d3\u04d5\u0003\u00e2q\u0000"+
-		"\u04d4\u04d3\u0001\u0000\u0000\u0000\u04d5\u04d8\u0001\u0000\u0000\u0000"+
-		"\u04d6\u04d4\u0001\u0000\u0000\u0000\u04d6\u04d7\u0001\u0000\u0000\u0000"+
-		"\u04d7\u04da\u0001\u0000\u0000\u0000\u04d8\u04d6\u0001\u0000\u0000\u0000"+
-		"\u04d9\u04cb\u0001\u0000\u0000\u0000\u04d9\u04d2\u0001\u0000\u0000\u0000"+
-		"\u04d9\u04da\u0001\u0000\u0000\u0000\u04da\u00db\u0001\u0000\u0000\u0000"+
-		"\u04db\u04dc\u0005d\u0000\u0000\u04dc\u04dd\u0003\u00d0h\u0000\u04dd\u00dd"+
-		"\u0001\u0000\u0000\u0000\u04de\u04df\u0005s\u0000\u0000\u04df\u04e0\u0003"+
-		"\u00d0h\u0000\u04e0\u00df\u0001\u0000\u0000\u0000\u04e1\u04e2\u0005g\u0000"+
-		"\u0000\u04e2\u04e3\u0003\u00d0h\u0000\u04e3\u00e1\u0001\u0000\u0000\u0000"+
-		"\u04e4\u04e5\u0005s\u0000\u0000\u04e5\u04e6\u0003\u00d0h\u0000\u04e6\u00e3"+
-		"\u0001\u0000\u0000\u0000\u04e7\u04e8\u0003\u00ccf\u0000\u04e8\u04e9\u0005"+
-		"\"\u0000\u0000\u04e9\u04ea\u0005P\u0000\u0000\u04ea\u00e5\u0001\u0000"+
-		"\u0000\u0000\u04eb\u04ec\u0005w\u0000\u0000\u04ec\u00e7\u0001\u0000\u0000"+
-		"\u0000\u04ed\u04ef\u0003\u00eau\u0000\u04ee\u04ed\u0001\u0000\u0000\u0000"+
-		"\u04ef\u04f0\u0001\u0000\u0000\u0000\u04f0\u04ee\u0001\u0000\u0000\u0000"+
-		"\u04f0\u04f1\u0001\u0000\u0000\u0000\u04f1\u00e9\u0001\u0000\u0000\u0000"+
-		"\u04f2\u04fe\u0005\u0001\u0000\u0000\u04f3\u04f5\u0005e\u0000\u0000\u04f4"+
-		"\u04f6\u0005f\u0000\u0000\u04f5\u04f4\u0001\u0000\u0000\u0000\u04f5\u04f6"+
-		"\u0001\u0000\u0000\u0000\u04f6\u04f7\u0001\u0000\u0000\u0000\u04f7\u04fa"+
-		"\u0003\u00ecv\u0000\u04f8\u04fb\u0005P\u0000\u0000\u04f9\u04fb\u0003\u00e6"+
-		"s\u0000\u04fa\u04f8\u0001\u0000\u0000\u0000\u04fa\u04f9\u0001\u0000\u0000"+
-		"\u0000\u04fb\u04ff\u0001\u0000\u0000\u0000\u04fc\u04ff\u0003\u00ccf\u0000"+
-		"\u04fd\u04ff\u0003\u00e4r\u0000\u04fe\u04f3\u0001\u0000\u0000\u0000\u04fe"+
-		"\u04fc\u0001\u0000\u0000\u0000\u04fe\u04fd\u0001\u0000\u0000\u0000\u04ff"+
-		"\u0501\u0001\u0000\u0000\u0000\u0500\u0502\u0005Z\u0000\u0000\u0501\u0500"+
-		"\u0001\u0000\u0000\u0000\u0501\u0502\u0001\u0000\u0000\u0000\u0502\u00eb"+
-		"\u0001\u0000\u0000\u0000\u0503\u0504\u0003\u00e6s\u0000\u0504\u0505\u0005"+
-		"\"\u0000\u0000\u0505\u0507\u0001\u0000\u0000\u0000\u0506\u0503\u0001\u0000"+
-		"\u0000\u0000\u0507\u0508\u0001\u0000\u0000\u0000\u0508\u0506\u0001\u0000"+
-		"\u0000\u0000\u0508\u0509\u0001\u0000\u0000\u0000\u0509\u00ed\u0001\u0000"+
+		"\u0367\u0001\u0000\u0000\u0000\u0367\u0368\u0003\u0092I\u0000\u0368\u0369"+
+		"\u00058\u0000\u0000\u0369\u0095\u0001\u0000\u0000\u0000\u036a\u036b\u0005"+
+		"#\u0000\u0000\u036b\u036c\u0003V+\u0000\u036c\u036d\u0005&\u0000\u0000"+
+		"\u036d\u0097\u0001\u0000\u0000\u0000\u036e\u036f\u0005[\u0000\u0000\u036f"+
+		"\u0370\u0005#\u0000\u0000\u0370\u0371\u0003V+\u0000\u0371\u0372\u0005"+
+		"&\u0000\u0000\u0372\u0375\u0003V+\u0000\u0373\u0374\u0005\\\u0000\u0000"+
+		"\u0374\u0376\u0003V+\u0000\u0375\u0373\u0001\u0000\u0000\u0000\u0375\u0376"+
+		"\u0001\u0000\u0000\u0000\u0376\u0099\u0001\u0000\u0000\u0000\u0377\u0385"+
+		"\u0005]\u0000\u0000\u0378\u0379\u0005#\u0000\u0000\u0379\u037a\u0003\u00ac"+
+		"V\u0000\u037a\u037b\u0005\u0007\u0000\u0000\u037b\u037c\u0001\u0000\u0000"+
+		"\u0000\u037c\u037d\u0003V+\u0000\u037d\u037e\u0005&\u0000\u0000\u037e"+
+		"\u0386\u0001\u0000\u0000\u0000\u037f\u0380\u0003\u00acV\u0000\u0380\u0381"+
+		"\u0005\u0007\u0000\u0000\u0381\u0383\u0001\u0000\u0000\u0000\u0382\u037f"+
+		"\u0001\u0000\u0000\u0000\u0382\u0383\u0001\u0000\u0000\u0000\u0383\u0384"+
+		"\u0001\u0000\u0000\u0000\u0384\u0386\u0003V+\u0000\u0385\u0378\u0001\u0000"+
+		"\u0000\u0000\u0385\u0382\u0001\u0000\u0000\u0000\u0386\u0387\u0001\u0000"+
+		"\u0000\u0000\u0387\u038b\u0005\u0011\u0000\u0000\u0388\u038a\u0003\u009c"+
+		"N\u0000\u0389\u0388\u0001\u0000\u0000\u0000\u038a\u038d\u0001\u0000\u0000"+
+		"\u0000\u038b\u0389\u0001\u0000\u0000\u0000\u038b\u038c\u0001\u0000\u0000"+
+		"\u0000\u038c\u0391\u0001\u0000\u0000\u0000\u038d\u038b\u0001\u0000\u0000"+
+		"\u0000\u038e\u038f\u0005^\u0000\u0000\u038f\u0390\u0005\u0007\u0000\u0000"+
+		"\u0390\u0392\u0003V+\u0000\u0391\u038e\u0001\u0000\u0000\u0000\u0391\u0392"+
+		"\u0001\u0000\u0000\u0000\u0392\u0393\u0001\u0000\u0000\u0000\u0393\u0394"+
+		"\u0005\u0012\u0000\u0000\u0394\u009b\u0001\u0000\u0000\u0000\u0395\u0397"+
+		"\u0003\u00d0h\u0000\u0396\u0395\u0001\u0000\u0000\u0000\u0396\u0397\u0001"+
+		"\u0000\u0000\u0000\u0397\u039a\u0001\u0000\u0000\u0000\u0398\u0399\u0005"+
+		"_\u0000\u0000\u0399\u039b\u0003V+\u0000\u039a\u0398\u0001\u0000\u0000"+
+		"\u0000\u039a\u039b\u0001\u0000\u0000\u0000\u039b\u039f\u0001\u0000\u0000"+
+		"\u0000\u039c\u039d\u0005\u0007\u0000\u0000\u039d\u03a0\u0003V+\u0000\u039e"+
+		"\u03a0\u0005%\u0000\u0000\u039f\u039c\u0001\u0000\u0000\u0000\u039f\u039e"+
+		"\u0001\u0000\u0000\u0000\u03a0\u009d\u0001\u0000\u0000\u0000\u03a1\u03a2"+
+		"\u0005`\u0000\u0000\u03a2\u03a3\u0005#\u0000\u0000\u03a3\u03a4\u0003\u00ac"+
+		"V\u0000\u03a4\u03a5\u0005\u0007\u0000\u0000\u03a5\u03a6\u0003V+\u0000"+
+		"\u03a6\u03a7\u0005&\u0000\u0000\u03a7\u03a8\u0003V+\u0000\u03a8\u009f"+
+		"\u0001\u0000\u0000\u0000\u03a9\u03aa\u0005`\u0000\u0000\u03aa\u03b3\u0005"+
+		"#\u0000\u0000\u03ab\u03b0\u0003\u00a8T\u0000\u03ac\u03ad\u0005%\u0000"+
+		"\u0000\u03ad\u03af\u0003\u00a8T\u0000\u03ae\u03ac\u0001\u0000\u0000\u0000"+
+		"\u03af\u03b2\u0001\u0000\u0000\u0000\u03b0\u03ae\u0001\u0000\u0000\u0000"+
+		"\u03b0\u03b1\u0001\u0000\u0000\u0000\u03b1\u03b4\u0001\u0000\u0000\u0000"+
+		"\u03b2\u03b0\u0001\u0000\u0000\u0000\u03b3\u03ab\u0001\u0000\u0000\u0000"+
+		"\u03b3\u03b4\u0001\u0000\u0000\u0000\u03b4\u03b5\u0001\u0000\u0000\u0000"+
+		"\u03b5\u03b7\u0005Z\u0000\u0000\u03b6\u03b8\u0003V+\u0000\u03b7\u03b6"+
+		"\u0001\u0000\u0000\u0000\u03b7\u03b8\u0001\u0000\u0000\u0000\u03b8\u03b9"+
+		"\u0001\u0000\u0000\u0000\u03b9\u03c2\u0005Z\u0000\u0000\u03ba\u03bf\u0003"+
+		"V+\u0000\u03bb\u03bc\u0005%\u0000\u0000\u03bc\u03be\u0003V+\u0000\u03bd"+
+		"\u03bb\u0001\u0000\u0000\u0000\u03be\u03c1\u0001\u0000\u0000\u0000\u03bf"+
+		"\u03bd\u0001\u0000\u0000\u0000\u03bf\u03c0\u0001\u0000\u0000\u0000\u03c0"+
+		"\u03c3\u0001\u0000\u0000\u0000\u03c1\u03bf\u0001\u0000\u0000\u0000\u03c2"+
+		"\u03ba\u0001\u0000\u0000\u0000\u03c2\u03c3\u0001\u0000\u0000\u0000\u03c3"+
+		"\u03c4\u0001\u0000\u0000\u0000\u03c4\u03c5\u0005&\u0000\u0000\u03c5\u03c6"+
+		"\u0003V+\u0000\u03c6\u00a1\u0001\u0000\u0000\u0000\u03c7\u03c8\u0005a"+
+		"\u0000\u0000\u03c8\u03c9\u0005#\u0000\u0000\u03c9\u03ca\u0003V+\u0000"+
+		"\u03ca\u03cb\u0005&\u0000\u0000\u03cb\u03cc\u0003V+\u0000\u03cc\u00a3"+
+		"\u0001\u0000\u0000\u0000\u03cd\u03ce\u0005b\u0000\u0000\u03ce\u03cf\u0003"+
+		"V+\u0000\u03cf\u03d0\u0005a\u0000\u0000\u03d0\u03d1\u0005#\u0000\u0000"+
+		"\u03d1\u03d2\u0003V+\u0000\u03d2\u03d3\u0005&\u0000\u0000\u03d3\u00a5"+
+		"\u0001\u0000\u0000\u0000\u03d4\u03db\u0005\u0011\u0000\u0000\u03d5\u03d7"+
+		"\u0003\u00a8T\u0000\u03d6\u03d8\u0005Z\u0000\u0000\u03d7\u03d6\u0001\u0000"+
+		"\u0000\u0000\u03d7\u03d8\u0001\u0000\u0000\u0000\u03d8\u03da\u0001\u0000"+
+		"\u0000\u0000\u03d9\u03d5\u0001\u0000\u0000\u0000\u03da\u03dd\u0001\u0000"+
+		"\u0000\u0000\u03db\u03d9\u0001\u0000\u0000\u0000\u03db\u03dc\u0001\u0000"+
+		"\u0000\u0000\u03dc\u03de\u0001\u0000\u0000\u0000\u03dd\u03db\u0001\u0000"+
+		"\u0000\u0000\u03de\u03df\u0005\u0012\u0000\u0000\u03df\u00a7\u0001\u0000"+
+		"\u0000\u0000\u03e0\u03e3\u0003\u00aaU\u0000\u03e1\u03e3\u0003V+\u0000"+
+		"\u03e2\u03e0\u0001\u0000\u0000\u0000\u03e2\u03e1\u0001\u0000\u0000\u0000"+
+		"\u03e3\u00a9\u0001\u0000\u0000\u0000\u03e4\u03e9\u0007\b\u0000\u0000\u03e5"+
+		"\u03e6\u0003\u00d0h\u0000\u03e6\u03e7\u0003\u00e6s\u0000\u03e7\u03ea\u0001"+
+		"\u0000\u0000\u0000\u03e8\u03ea\u0003\u00e6s\u0000\u03e9\u03e5\u0001\u0000"+
+		"\u0000\u0000\u03e9\u03e8\u0001\u0000\u0000\u0000\u03ea\u03ed\u0001\u0000"+
+		"\u0000\u0000\u03eb\u03ec\u0005.\u0000\u0000\u03ec\u03ee\u0003V+\u0000"+
+		"\u03ed\u03eb\u0001\u0000\u0000\u0000\u03ed\u03ee\u0001\u0000\u0000\u0000"+
+		"\u03ee\u00ab\u0001\u0000\u0000\u0000\u03ef\u03f1\u0003\u00d0h\u0000\u03f0"+
+		"\u03ef\u0001\u0000\u0000\u0000\u03f0\u03f1\u0001\u0000\u0000\u0000\u03f1"+
+		"\u03f2\u0001\u0000\u0000\u0000\u03f2\u03f3\u0003\u00e6s\u0000\u03f3\u00ad"+
+		"\u0001\u0000\u0000\u0000\u03f4\u03f5\u0003\u00d0h\u0000\u03f5\u03f6\u0003"+
+		"\u00e6s\u0000\u03f6\u00af\u0001\u0000\u0000\u0000\u03f7\u03f8\u0005>\u0000"+
+		"\u0000\u03f8\u03fd\u0003\u00d8l\u0000\u03f9\u03fa\u0005%\u0000\u0000\u03fa"+
+		"\u03fc\u0003\u00d8l\u0000\u03fb\u03f9\u0001\u0000\u0000\u0000\u03fc\u03ff"+
+		"\u0001\u0000\u0000\u0000\u03fd\u03fb\u0001\u0000\u0000\u0000\u03fd\u03fe"+
+		"\u0001\u0000\u0000\u0000\u03fe\u0400\u0001\u0000\u0000\u0000\u03ff\u03fd"+
+		"\u0001\u0000\u0000\u0000\u0400\u0401\u0005?\u0000\u0000\u0401\u0403\u0001"+
+		"\u0000\u0000\u0000\u0402\u03f7\u0001\u0000\u0000\u0000\u0402\u0403\u0001"+
+		"\u0000\u0000\u0000\u0403\u0404\u0001\u0000\u0000\u0000\u0404\u0412\u0003"+
+		"\u00b4Z\u0000\u0405\u040f\u0005#\u0000\u0000\u0406\u0410\u0003\u0094J"+
+		"\u0000\u0407\u040c\u0003V+\u0000\u0408\u0409\u0005%\u0000\u0000\u0409"+
+		"\u040b\u0003V+\u0000\u040a\u0408\u0001\u0000\u0000\u0000\u040b\u040e\u0001"+
+		"\u0000\u0000\u0000\u040c\u040a\u0001\u0000\u0000\u0000\u040c\u040d\u0001"+
+		"\u0000\u0000\u0000\u040d\u0410\u0001\u0000\u0000\u0000\u040e\u040c\u0001"+
+		"\u0000\u0000\u0000\u040f\u0406\u0001\u0000\u0000\u0000\u040f\u0407\u0001"+
+		"\u0000\u0000\u0000\u040f\u0410\u0001\u0000\u0000\u0000\u0410\u0411\u0001"+
+		"\u0000\u0000\u0000\u0411\u0413\u0005&\u0000\u0000\u0412\u0405\u0001\u0000"+
+		"\u0000\u0000\u0412\u0413\u0001\u0000\u0000\u0000\u0413\u0415\u0001\u0000"+
+		"\u0000\u0000\u0414\u0416\u0003\u0090H\u0000\u0415\u0414\u0001\u0000\u0000"+
+		"\u0000\u0415\u0416\u0001\u0000\u0000\u0000\u0416\u00b1\u0001\u0000\u0000"+
+		"\u0000\u0417\u041d\u0003\u00e6s\u0000\u0418\u041d\u0005d\u0000\u0000\u0419"+
+		"\u041d\u0005e\u0000\u0000\u041a\u041d\u0005\u0001\u0000\u0000\u041b\u041d"+
+		"\u0005f\u0000\u0000\u041c\u0417\u0001\u0000\u0000\u0000\u041c\u0418\u0001"+
+		"\u0000\u0000\u0000\u041c\u0419\u0001\u0000\u0000\u0000\u041c\u041a\u0001"+
+		"\u0000\u0000\u0000\u041c\u041b\u0001\u0000\u0000\u0000\u041d\u00b3\u0001"+
+		"\u0000\u0000\u0000\u041e\u0421\u0003\u00b2Y\u0000\u041f\u0421\u0005g\u0000"+
+		"\u0000\u0420\u041e\u0001\u0000\u0000\u0000\u0420\u041f\u0001\u0000\u0000"+
+		"\u0000\u0421\u00b5\u0001\u0000\u0000\u0000\u0422\u0423\u00055\u0000\u0000"+
+		"\u0423\u042f\u0003\u00ccf\u0000\u0424\u0425\u0005>\u0000\u0000\u0425\u042a"+
+		"\u0003\u00d8l\u0000\u0426\u0427\u0005%\u0000\u0000\u0427\u0429\u0003\u00d8"+
+		"l\u0000\u0428\u0426\u0001\u0000\u0000\u0000\u0429\u042c\u0001\u0000\u0000"+
+		"\u0000\u042a\u0428\u0001\u0000\u0000\u0000\u042a\u042b\u0001\u0000\u0000"+
+		"\u0000\u042b\u042d\u0001\u0000\u0000\u0000\u042c\u042a\u0001\u0000\u0000"+
+		"\u0000\u042d\u042e\u0005?\u0000\u0000\u042e\u0430\u0001\u0000\u0000\u0000"+
+		"\u042f\u0424\u0001\u0000\u0000\u0000\u042f\u0430\u0001\u0000\u0000\u0000"+
+		"\u0430\u043e\u0001\u0000\u0000\u0000\u0431\u043b\u0005#\u0000\u0000\u0432"+
+		"\u043c\u0003\u0094J\u0000\u0433\u0438\u0003V+\u0000\u0434\u0435\u0005"+
+		"%\u0000\u0000\u0435\u0437\u0003V+\u0000\u0436\u0434\u0001\u0000\u0000"+
+		"\u0000\u0437\u043a\u0001\u0000\u0000\u0000\u0438\u0436\u0001\u0000\u0000"+
+		"\u0000\u0438\u0439\u0001\u0000\u0000\u0000\u0439\u043c\u0001\u0000\u0000"+
+		"\u0000\u043a\u0438\u0001\u0000\u0000\u0000\u043b\u0432\u0001\u0000\u0000"+
+		"\u0000\u043b\u0433\u0001\u0000\u0000\u0000\u043b\u043c\u0001\u0000\u0000"+
+		"\u0000\u043c\u043d\u0001\u0000\u0000\u0000\u043d\u043f\u0005&\u0000\u0000"+
+		"\u043e\u0431\u0001\u0000\u0000\u0000\u043e\u043f\u0001\u0000\u0000\u0000"+
+		"\u043f\u0441\u0001\u0000\u0000\u0000\u0440\u0442\u0003\u0090H\u0000\u0441"+
+		"\u0440\u0001\u0000\u0000\u0000\u0441\u0442\u0001\u0000\u0000\u0000\u0442"+
+		"\u00b7\u0001\u0000\u0000\u0000\u0443\u0444\u0007\t\u0000\u0000\u0444\u00b9"+
+		"\u0001\u0000\u0000\u0000\u0445\u0446\u0005j\u0000\u0000\u0446\u00bb\u0001"+
+		"\u0000\u0000\u0000\u0447\u0448\u0003\u00ceg\u0000\u0448\u00bd\u0001\u0000"+
+		"\u0000\u0000\u0449\u044a\u0005x\u0000\u0000\u044a\u00bf\u0001\u0000\u0000"+
+		"\u0000\u044b\u044c\u0005k\u0000\u0000\u044c\u044d\u0005#\u0000\u0000\u044d"+
+		"\u0451\u0003\u00ccf\u0000\u044e\u0450\u0003\u00d2i\u0000\u044f\u044e\u0001"+
+		"\u0000\u0000\u0000\u0450\u0453\u0001\u0000\u0000\u0000\u0451\u044f\u0001"+
+		"\u0000\u0000\u0000\u0451\u0452\u0001\u0000\u0000\u0000\u0452\u0454\u0001"+
+		"\u0000\u0000\u0000\u0453\u0451\u0001\u0000\u0000\u0000\u0454\u0455\u0005"+
+		"&\u0000\u0000\u0455\u00c1\u0001\u0000\u0000\u0000\u0456\u0457\u0005l\u0000"+
+		"\u0000\u0457\u0458\u0003V+\u0000\u0458\u00c3\u0001\u0000\u0000\u0000\u0459"+
+		"\u045b\u0005m\u0000\u0000\u045a\u045c\u0003V+\u0000\u045b\u045a\u0001"+
+		"\u0000\u0000\u0000\u045b\u045c\u0001\u0000\u0000\u0000\u045c\u00c5\u0001"+
+		"\u0000\u0000\u0000\u045d\u045e\u0005n\u0000\u0000\u045e\u046a\u0003V+"+
+		"\u0000\u045f\u0461\u0003\u00cae\u0000\u0460\u045f\u0001\u0000\u0000\u0000"+
+		"\u0461\u0462\u0001\u0000\u0000\u0000\u0462\u0460\u0001\u0000\u0000\u0000"+
+		"\u0462\u0463\u0001\u0000\u0000\u0000\u0463\u0466\u0001\u0000\u0000\u0000"+
+		"\u0464\u0465\u0005o\u0000\u0000\u0465\u0467\u0003V+\u0000\u0466\u0464"+
+		"\u0001\u0000\u0000\u0000\u0466\u0467\u0001\u0000\u0000\u0000\u0467\u046b"+
+		"\u0001\u0000\u0000\u0000\u0468\u0469\u0005o\u0000\u0000\u0469\u046b\u0003"+
+		"V+\u0000\u046a\u0460\u0001\u0000\u0000\u0000\u046a\u0468\u0001\u0000\u0000"+
+		"\u0000\u046b\u00c7\u0001\u0000\u0000\u0000\u046c\u046d\u0005p\u0000\u0000"+
+		"\u046d\u046e\u0005#\u0000\u0000\u046e\u046f\u0003V+\u0000\u046f\u0470"+
+		"\u0005&\u0000\u0000\u0470\u0471\u0003V+\u0000\u0471\u00c9\u0001\u0000"+
+		"\u0000\u0000\u0472\u0473\u0005q\u0000\u0000\u0473\u0474\u0005#\u0000\u0000"+
+		"\u0474\u0475\u0003\u00aeW\u0000\u0475\u0476\u0005&\u0000\u0000\u0476\u0477"+
+		"\u0003V+\u0000\u0477\u00cb\u0001\u0000\u0000\u0000\u0478\u047d\u0003\u00e6"+
+		"s\u0000\u0479\u047a\u0005\"\u0000\u0000\u047a\u047c\u0003\u00e6s\u0000"+
+		"\u047b\u0479\u0001\u0000\u0000\u0000\u047c\u047f\u0001\u0000\u0000\u0000"+
+		"\u047d\u047b\u0001\u0000\u0000\u0000\u047d\u047e\u0001\u0000\u0000\u0000"+
+		"\u047e\u00cd\u0001\u0000\u0000\u0000\u047f\u047d\u0001\u0000\u0000\u0000"+
+		"\u0480\u0487\u0005t\u0000\u0000\u0481\u0484\u0007\n\u0000\u0000\u0482"+
+		"\u0483\u0005\"\u0000\u0000\u0483\u0485\u0007\n\u0000\u0000\u0484\u0482"+
+		"\u0001\u0000\u0000\u0000\u0484\u0485\u0001\u0000\u0000\u0000\u0485\u0487"+
+		"\u0001\u0000\u0000\u0000\u0486\u0480\u0001\u0000\u0000\u0000\u0486\u0481"+
+		"\u0001\u0000\u0000\u0000\u0487\u00cf\u0001\u0000\u0000\u0000\u0488\u048c"+
+		"\u0003\u00d6k\u0000\u0489\u048b\u0003\u00d2i\u0000\u048a\u0489\u0001\u0000"+
+		"\u0000\u0000\u048b\u048e\u0001\u0000\u0000\u0000\u048c\u048a\u0001\u0000"+
+		"\u0000\u0000\u048c\u048d\u0001\u0000\u0000\u0000\u048d\u0491\u0001\u0000"+
+		"\u0000\u0000\u048e\u048c\u0001\u0000\u0000\u0000\u048f\u0491\u0003\u00d4"+
+		"j\u0000\u0490\u0488\u0001\u0000\u0000\u0000\u0490\u048f\u0001\u0000\u0000"+
+		"\u0000\u0491\u00d1\u0001\u0000\u0000\u0000\u0492\u0493\u00057\u0000\u0000"+
+		"\u0493\u0494\u00058\u0000\u0000\u0494\u00d3\u0001\u0000\u0000\u0000\u0495"+
+		"\u049e\u0005#\u0000\u0000\u0496\u049b\u0003\u00d0h\u0000\u0497\u0498\u0005"+
+		"%\u0000\u0000\u0498\u049a\u0003\u00d0h\u0000\u0499\u0497\u0001\u0000\u0000"+
+		"\u0000\u049a\u049d\u0001\u0000\u0000\u0000\u049b\u0499\u0001\u0000\u0000"+
+		"\u0000\u049b\u049c\u0001\u0000\u0000\u0000\u049c\u049f\u0001\u0000\u0000"+
+		"\u0000\u049d\u049b\u0001\u0000\u0000\u0000\u049e\u0496\u0001\u0000\u0000"+
+		"\u0000\u049e\u049f\u0001\u0000\u0000\u0000\u049f\u04a0\u0001\u0000\u0000"+
+		"\u0000\u04a0\u04a2\u0005&\u0000\u0000\u04a1\u0495\u0001\u0000\u0000\u0000"+
+		"\u04a1\u04a2\u0001\u0000\u0000\u0000\u04a2\u04a3\u0001\u0000\u0000\u0000"+
+		"\u04a3\u04a4\u0005K\u0000\u0000\u04a4\u04a5\u0003\u00d0h\u0000\u04a5\u00d5"+
+		"\u0001\u0000\u0000\u0000\u04a6\u04c5\u0003\u00ccf\u0000\u04a7\u04a8\u0005"+
+		">\u0000\u0000\u04a8\u04ad\u0003\u00d8l\u0000\u04a9\u04aa\u0005%\u0000"+
+		"\u0000\u04aa\u04ac\u0003\u00d8l\u0000\u04ab\u04a9\u0001\u0000\u0000\u0000"+
+		"\u04ac\u04af\u0001\u0000\u0000\u0000\u04ad\u04ab\u0001\u0000\u0000\u0000"+
+		"\u04ad\u04ae\u0001\u0000\u0000\u0000\u04ae\u04b0\u0001\u0000\u0000\u0000"+
+		"\u04af\u04ad\u0001\u0000\u0000\u0000\u04b0\u04c2\u0005?\u0000\u0000\u04b1"+
+		"\u04b2\u0005\"\u0000\u0000\u04b2\u04be\u0003\u00e6s\u0000\u04b3\u04b4"+
+		"\u0005>\u0000\u0000\u04b4\u04b9\u0003\u00d8l\u0000\u04b5\u04b6\u0005%"+
+		"\u0000\u0000\u04b6\u04b8\u0003\u00d8l\u0000\u04b7\u04b5\u0001\u0000\u0000"+
+		"\u0000\u04b8\u04bb\u0001\u0000\u0000\u0000\u04b9\u04b7\u0001\u0000\u0000"+
+		"\u0000\u04b9\u04ba\u0001\u0000\u0000\u0000\u04ba\u04bc\u0001\u0000\u0000"+
+		"\u0000\u04bb\u04b9\u0001\u0000\u0000\u0000\u04bc\u04bd\u0005?\u0000\u0000"+
+		"\u04bd\u04bf\u0001\u0000\u0000\u0000\u04be\u04b3\u0001\u0000\u0000\u0000"+
+		"\u04be\u04bf\u0001\u0000\u0000\u0000\u04bf\u04c1\u0001\u0000\u0000\u0000"+
+		"\u04c0\u04b1\u0001\u0000\u0000\u0000\u04c1\u04c4\u0001\u0000\u0000\u0000"+
+		"\u04c2\u04c0\u0001\u0000\u0000\u0000\u04c2\u04c3\u0001\u0000\u0000\u0000"+
+		"\u04c3\u04c6\u0001\u0000\u0000\u0000\u04c4\u04c2\u0001\u0000\u0000\u0000"+
+		"\u04c5\u04a7\u0001\u0000\u0000\u0000\u04c5\u04c6\u0001\u0000\u0000\u0000"+
+		"\u04c6\u00d7\u0001\u0000\u0000\u0000\u04c7\u04ca\u0003\u00d0h\u0000\u04c8"+
+		"\u04ca\u0003\u00dam\u0000\u04c9\u04c7\u0001\u0000\u0000\u0000\u04c9\u04c8"+
+		"\u0001\u0000\u0000\u0000\u04ca\u00d9\u0001\u0000\u0000\u0000\u04cb\u04da"+
+		"\u0005r\u0000\u0000\u04cc\u04d0\u0003\u00dcn\u0000\u04cd\u04cf\u0003\u00de"+
+		"o\u0000\u04ce\u04cd\u0001\u0000\u0000\u0000\u04cf\u04d2\u0001\u0000\u0000"+
+		"\u0000\u04d0\u04ce\u0001\u0000\u0000\u0000\u04d0\u04d1\u0001\u0000\u0000"+
+		"\u0000\u04d1\u04db\u0001\u0000\u0000\u0000\u04d2\u04d0\u0001\u0000\u0000"+
+		"\u0000\u04d3\u04d7\u0003\u00e0p\u0000\u04d4\u04d6\u0003\u00e2q\u0000\u04d5"+
+		"\u04d4\u0001\u0000\u0000\u0000\u04d6\u04d9\u0001\u0000\u0000\u0000\u04d7"+
+		"\u04d5\u0001\u0000\u0000\u0000\u04d7\u04d8\u0001\u0000\u0000\u0000\u04d8"+
+		"\u04db\u0001\u0000\u0000\u0000\u04d9\u04d7\u0001\u0000\u0000\u0000\u04da"+
+		"\u04cc\u0001\u0000\u0000\u0000\u04da\u04d3\u0001\u0000\u0000\u0000\u04da"+
+		"\u04db\u0001\u0000\u0000\u0000\u04db\u00db\u0001\u0000\u0000\u0000\u04dc"+
+		"\u04dd\u0005d\u0000\u0000\u04dd\u04de\u0003\u00d0h\u0000\u04de\u00dd\u0001"+
+		"\u0000\u0000\u0000\u04df\u04e0\u0005s\u0000\u0000\u04e0\u04e1\u0003\u00d0"+
+		"h\u0000\u04e1\u00df\u0001\u0000\u0000\u0000\u04e2\u04e3\u0005g\u0000\u0000"+
+		"\u04e3\u04e4\u0003\u00d0h\u0000\u04e4\u00e1\u0001\u0000\u0000\u0000\u04e5"+
+		"\u04e6\u0005s\u0000\u0000\u04e6\u04e7\u0003\u00d0h\u0000\u04e7\u00e3\u0001"+
+		"\u0000\u0000\u0000\u04e8\u04e9\u0003\u00ccf\u0000\u04e9\u04ea\u0005\""+
+		"\u0000\u0000\u04ea\u04eb\u0005P\u0000\u0000\u04eb\u00e5\u0001\u0000\u0000"+
+		"\u0000\u04ec\u04ed\u0005w\u0000\u0000\u04ed\u00e7\u0001\u0000\u0000\u0000"+
+		"\u04ee\u04f0\u0003\u00eau\u0000\u04ef\u04ee\u0001\u0000\u0000\u0000\u04f0"+
+		"\u04f1\u0001\u0000\u0000\u0000\u04f1\u04ef\u0001\u0000\u0000\u0000\u04f1"+
+		"\u04f2\u0001\u0000\u0000\u0000\u04f2\u00e9\u0001\u0000\u0000\u0000\u04f3"+
+		"\u04ff\u0005\u0001\u0000\u0000\u04f4\u04f6\u0005e\u0000\u0000\u04f5\u04f7"+
+		"\u0005f\u0000\u0000\u04f6\u04f5\u0001\u0000\u0000\u0000\u04f6\u04f7\u0001"+
+		"\u0000\u0000\u0000\u04f7\u04f8\u0001\u0000\u0000\u0000\u04f8\u04fb\u0003"+
+		"\u00ecv\u0000\u04f9\u04fc\u0005P\u0000\u0000\u04fa\u04fc\u0003\u00e6s"+
+		"\u0000\u04fb\u04f9\u0001\u0000\u0000\u0000\u04fb\u04fa\u0001\u0000\u0000"+
+		"\u0000\u04fc\u0500\u0001\u0000\u0000\u0000\u04fd\u0500\u0003\u00ccf\u0000"+
+		"\u04fe\u0500\u0003\u00e4r\u0000\u04ff\u04f4\u0001\u0000\u0000\u0000\u04ff"+
+		"\u04fd\u0001\u0000\u0000\u0000\u04ff\u04fe\u0001\u0000\u0000\u0000\u0500"+
+		"\u0502\u0001\u0000\u0000\u0000\u0501\u0503\u0005Z\u0000\u0000\u0502\u0501"+
+		"\u0001\u0000\u0000\u0000\u0502\u0503\u0001\u0000\u0000\u0000\u0503\u00eb"+
+		"\u0001\u0000\u0000\u0000\u0504\u0505\u0003\u00e6s\u0000\u0505\u0506\u0005"+
+		"\"\u0000\u0000\u0506\u0508\u0001\u0000\u0000\u0000\u0507\u0504\u0001\u0000"+
+		"\u0000\u0000\u0508\u0509\u0001\u0000\u0000\u0000\u0509\u0507\u0001\u0000"+
+		"\u0000\u0000\u0509\u050a\u0001\u0000\u0000\u0000\u050a\u00ed\u0001\u0000"+
 		"\u0000\u0000\u0096\u00ef\u00f4\u00fa\u0103\u0112\u011d\u0123\u0128\u012a"+
 		"\u012f\u0135\u0138\u013d\u014b\u014f\u0153\u0158\u0161\u0166\u016b\u016f"+
 		"\u0174\u017e\u018a\u019a\u019d\u01a3\u01a9\u01ac\u01af\u01b8\u01bf\u01c5"+
@@ -9211,12 +9209,12 @@ public class DebugInternalReactionsLanguageParser extends Parser {
 		"\u020c\u0215\u0225\u0246\u0248\u0256\u0259\u0261\u026c\u0277\u0282\u0284"+
 		"\u028c\u0294\u02a1\u02a8\u02ac\u02b4\u02bf\u02c8\u02d1\u02d6\u02e8\u02ed"+
 		"\u02f7\u02fa\u02fd\u0300\u0302\u0304\u0316\u031f\u0323\u032c\u032f\u033a"+
-		"\u033d\u0347\u034a\u034d\u0354\u0358\u0360\u0363\u0374\u0381\u0384\u038a"+
-		"\u0390\u0395\u0399\u039e\u03af\u03b2\u03b6\u03be\u03c1\u03d6\u03da\u03e1"+
-		"\u03e8\u03ec\u03ef\u03fc\u0401\u040b\u040e\u0411\u0414\u041b\u041f\u0429"+
-		"\u042e\u0437\u043a\u043d\u0440\u0450\u045a\u0461\u0465\u0469\u047c\u0483"+
-		"\u0485\u048b\u048f\u049a\u049d\u04a0\u04ac\u04b8\u04bd\u04c1\u04c4\u04c8"+
-		"\u04cf\u04d6\u04d9\u04f0\u04f5\u04fa\u04fe\u0501\u0508";
+		"\u033d\u0347\u034a\u034d\u0354\u0358\u0360\u0363\u0375\u0382\u0385\u038b"+
+		"\u0391\u0396\u039a\u039f\u03b0\u03b3\u03b7\u03bf\u03c2\u03d7\u03db\u03e2"+
+		"\u03e9\u03ed\u03f0\u03fd\u0402\u040c\u040f\u0412\u0415\u041c\u0420\u042a"+
+		"\u042f\u0438\u043b\u043e\u0441\u0451\u045b\u0462\u0466\u046a\u047d\u0484"+
+		"\u0486\u048c\u0490\u049b\u049e\u04a1\u04ad\u04b9\u04be\u04c2\u04c5\u04c9"+
+		"\u04d0\u04d7\u04da\u04f1\u04f6\u04fb\u04ff\u0502\u0509";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
