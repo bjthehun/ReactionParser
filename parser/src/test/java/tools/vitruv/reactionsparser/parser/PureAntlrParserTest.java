@@ -87,7 +87,7 @@ public class PureAntlrParserTest {
     @Test
     void testFileWithUnknownErrors() throws IOException, RecognitionException {
         var fixedParserResult = 
-            new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_interesting_errors.reactions"))
+            new ErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_interesting_errors.reactions"))
         )
         .findCorrectingOperations();
         assertEquals(2, fixedParserResult.size());
@@ -96,7 +96,7 @@ public class PureAntlrParserTest {
     @Test
     void testFileWithMissingContent() throws IOException, RecognitionException {
         var fixedParserResult = 
-            new ANTLRErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_missing_content.reactions"))
+            new ErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_missing_content.reactions"))
         )
         .findCorrectingOperations();
         assertEquals(2, fixedParserResult.size());
@@ -105,7 +105,7 @@ public class PureAntlrParserTest {
     @Test
     void testCorrectParseGuessingForAmaltheaToAscetExample() throws IOException, RecognitionException {
         var parserResult =
-            new ANTLRErrorRecoveryExplorer(
+            new ErrorRecoveryExplorer(
                 ParserUtils.getTextFromFile(resourcePath("AmaltheaToAscet_TaskCreated.reactions"))
             )
             .findCorrectingOperations();

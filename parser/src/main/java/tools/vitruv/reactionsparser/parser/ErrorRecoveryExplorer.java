@@ -5,106 +5,17 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.RecognitionException;
-import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.TokenStreamRewriter;
 import org.antlr.v4.runtime.misc.IntervalSet;
 import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageLexer;
 import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageParser;
 
-import org.antlr.v4.runtime.InputMismatchException;
-
-public class ANTLRErrorRecoveryExplorer {
-    /**
-     * Recovery action for fixing the input.
-     */
-    public static record RecoveryAction(
-        /**
-         * Token where we encountered the error
-         */
-        Token offendingToken,
-        /**
-         * Text that needs to be inserted/deleted/replaced.
-         */
-        String content,
-        /**
-         * Actual recovery action that needs to be conducted.
-         */
-        RecoveryActionType actionType,
-        /**
-         * Editing distance. Heuristic to prioritize recovery actions.
-         */
-        int distance
-    ) {};
-    
-    /**
-     * Types of error to correct.
-     */
-    public static enum RecoveryActionType {
-        /**
-         * Token needs to be replaced; guess alternative tokens.
-         */
-        REPLACE,
-        /**
-         * Token needs to be inserted.
-         */
-        INSERT,
-        /**
-         * No recovery action required; input parses without problems.
-         */
-        NONE_REQUIRED,
-        /**
-         * No recovery action possible; input is not parsable.
-         */
-        NONE_POSSIBLE
-    }
-
-    /**
-     * Listens to the first parse error and records all required information
-     * to fix that error.
-     */
-    private static class ErrorFixInformationRecorder extends BaseErrorListener {
-        private ANTLRErrorRecoveryExplorer explorer;
-
-        public ErrorFixInformationRecorder(ANTLRErrorRecoveryExplorer explorer) {
-            this.explorer = explorer;
-        }
-        
-        @Override
-        public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line,
-                int charPositionInLine, String msg, RecognitionException e) {
-            if (explorer.actionType != RecoveryActionType.NONE_REQUIRED) {
-                return;
-            }
-
-            explorer.recognitionException = e;
-            var parser = (Parser) recognizer;
-            if (e instanceof InputMismatchException
-                || msg.startsWith("extraneous")
-            ) {
-                // Input Mismatch -> record offending token and replacements
-                // Also when we have extraneous tokens -> try to replace them, too.
-                explorer.actionType = RecoveryActionType.REPLACE;
-                explorer.offendingToken = (Token) offendingSymbol;
-                explorer.expectedTokens = parser.getExpectedTokens();
-            }
-            else if (msg.startsWith("missing")) {
-                // Missing input -> record token to insert
-                explorer.actionType = RecoveryActionType.INSERT;
-                explorer.offendingToken = (Token) offendingSymbol;
-                explorer.expectedTokens = parser.getExpectedTokens();
-            }
-            else {
-                explorer.actionType = RecoveryActionType.NONE_POSSIBLE;
-            }
-        }
-    }
-
+public class ErrorRecoveryExplorer {
     /**
      * Text of the program to parse.
      */
@@ -112,19 +23,19 @@ public class ANTLRErrorRecoveryExplorer {
     /**
      * Type of recovery action that needs to be taken.
      */
-    private RecoveryActionType actionType = RecoveryActionType.NONE_REQUIRED;
+    RecoveryActionType actionType = RecoveryActionType.NONE_REQUIRED;
     /**
      * Token that caused the parser error.
      */
-    private Token offendingToken;
+    Token offendingToken;
     /**
      * Possible replacement tokens.
      */
-    private IntervalSet expectedTokens;
+    IntervalSet expectedTokens;
     /**
      * RecognitionExcpetion, if any.
      */
-    private RecognitionException recognitionException;
+    RecognitionException recognitionException;
 
     /**
      * Creates a new recoverer.
@@ -133,7 +44,7 @@ public class ANTLRErrorRecoveryExplorer {
      * @param grammar
      * @param substituteToken
      */
-    public ANTLRErrorRecoveryExplorer(String reactionsText){
+    public ErrorRecoveryExplorer(String reactionsText){
         this.programText = reactionsText;
     }
 
@@ -170,7 +81,9 @@ public class ANTLRErrorRecoveryExplorer {
     }
 
     private List<RecoveryAction> guessActions(Parser parser) {
-        if (actionType == RecoveryActionType.REPLACE || actionType == RecoveryActionType.INSERT) {
+        List<RecoveryAction> actions = new LinkedList<>();
+        if (actionType == RecoveryActionType.REPLACE 
+            || actionType == RecoveryActionType.INSERT) {
             // What token caused the error?
             var content = offendingToken.getText();
             // What literals could we expect?
@@ -191,9 +104,14 @@ public class ANTLRErrorRecoveryExplorer {
             Collections.sort(expectedLiterals, (token1, token2) -> {
                 return token1.distance() - token2.distance();
             });
-            return expectedLiterals;
+            actions.addAll(expectedLiterals);
         }
-        return List.of();
+        if (actionType == RecoveryActionType.DELETE) {
+            actions.add(
+                new RecoveryAction(offendingToken, "", actionType, 0)
+            );
+        }
+        return actions;
     }
     
     private String removeSingleQuotes(String literalText) {
@@ -209,16 +127,19 @@ public class ANTLRErrorRecoveryExplorer {
         originalTokenStream.fill();
         var manipulatedTokenStream = new TokenStreamRewriter(originalTokenStream);
 
-        if (action.actionType == RecoveryActionType.REPLACE) {
-            manipulatedTokenStream.replace(offendingToken.getTokenIndex(), action.content);
+        if (action.actionType() == RecoveryActionType.REPLACE) {
+            manipulatedTokenStream.replace(offendingToken.getTokenIndex(), action.content());
+        }
+        else if (action.actionType() == RecoveryActionType.INSERT) {
+            manipulatedTokenStream.insertBefore(offendingToken.getTokenIndex(), action.content() + " ");
         }
         else {
-            manipulatedTokenStream.insertBefore(offendingToken.getTokenIndex(), action.content + " ");
+            manipulatedTokenStream.delete(offendingToken.getTokenIndex());
         }
         var manipulatedText = manipulatedTokenStream.getText();
 
         // Try out alternative
-        return new ANTLRErrorRecoveryExplorer(manipulatedText).findCorrectingOperations();
+        return new ErrorRecoveryExplorer(manipulatedText).findCorrectingOperations();
     }
 
     private int levenshteinDistance(String tokenToFix, String alternativeToken) {

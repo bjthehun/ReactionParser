@@ -42,7 +42,7 @@ public class ReactionsErrorReporter {
         if (!shouldGuessCorrectProgram) {
             return;
         }    
-        var recoveryExplorer = new ANTLRErrorRecoveryExplorer(reactionsText);
+        var recoveryExplorer = new ErrorRecoveryExplorer(reactionsText);
         var recoveryTokens = recoveryExplorer.findCorrectingOperations();
         if (recoveryTokens == null) {
             System.out.println("Cannot guess correct tokens to recover from syntax errors");
