@@ -11,6 +11,7 @@ import org.antlr.v4.runtime.Parser;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.TokenStreamRewriter;
+import org.antlr.v4.runtime.Vocabulary;
 import org.antlr.v4.runtime.misc.IntervalSet;
 import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageLexer;
 import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageParser;
@@ -90,13 +91,13 @@ public class ErrorRecoveryExplorer {
             var expectedLiterals = expectedTokens
                 .toList()
                 .stream()
-                .filter(type -> parser.getVocabulary().getLiteralName(type) != null)
-                .map(type -> new RecoveryAction(
+                .map(type -> guessTextForTokenType(type, parser.getVocabulary()))
+                .filter(text -> text != null)
+                .map(text -> new RecoveryAction(
                     offendingToken,
-                    removeSingleQuotes(parser.getVocabulary().getLiteralName(type)), 
+                    text,
                     actionType,
-                    levenshteinDistance(content, 
-                        removeSingleQuotes(parser.getVocabulary().getLiteralName(type)))
+                    levenshteinDistance(content, text)
                 ))
                 .toList();
             expectedLiterals = new ArrayList<>(expectedLiterals); 
@@ -112,6 +113,36 @@ public class ErrorRecoveryExplorer {
             );
         }
         return actions;
+    }
+
+    private String guessTextForTokenType(int tokenType, Vocabulary vocabulary) {
+        // Literals/Keywords, Operators etc.: Text is directly available, remove single quotes.
+        String tokenText = vocabulary.getLiteralName(tokenType);
+        if (tokenText != null) {
+            return tokenText.substring(1, tokenText.length() - 1);
+        }
+        // Symbols/Non-Literals, return dummy expressions.
+        switch (tokenType) {
+            case DebugInternalReactionsLanguageLexer.RULE_DECIMAL:
+                return "47.67";
+            case DebugInternalReactionsLanguageLexer.RULE_HEX:
+                return "0x4767";
+            case DebugInternalReactionsLanguageLexer.RULE_ID:
+                return "unknownId";
+            case DebugInternalReactionsLanguageLexer.RULE_INT:
+                return "4767";
+            case DebugInternalReactionsLanguageLexer.RULE_ML_COMMENT:
+                return "/* ML comment 4767 */";
+            case DebugInternalReactionsLanguageLexer.RULE_SL_COMMENT:
+                return "// SL comment 6747";
+            case DebugInternalReactionsLanguageLexer.RULE_STRING:
+                return "\"unknownStringLiteral\"";
+            case DebugInternalReactionsLanguageLexer.RULE_WS:
+                return " ";
+            case DebugInternalReactionsLanguageLexer.RULE_ANY_OTHER:
+            default:
+                return null;
+        }
     }
     
     private String removeSingleQuotes(String literalText) {
