@@ -112,6 +112,16 @@ public class PureAntlrParserTest {
         assertTrue(!parserResult.isEmpty());
     }
 
+    @Test
+    void testCorrectParseGuessingForFamiliesToPersonsExample() throws IOException, RecognitionException {
+        var parserResult =
+            new ErrorRecoveryExplorer(
+                ParserUtils.getTextFromFile(resourcePath("FtP_Delete_Grammar.reactions"))
+            )
+            .findCorrectingOperations();
+        assertTrue(!parserResult.isEmpty());
+    }
+
     private String resourcePath(String fileName) {
         return new File(this.getClass().getClassLoader().getResource(fileName).getFile()).getAbsolutePath();
     }

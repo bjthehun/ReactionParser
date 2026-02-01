@@ -51,18 +51,35 @@ public class ErrorRecoveryExplorer {
 
     public List<RecoveryAction> findCorrectingOperations() {
         // Set up parser
-        DebugInternalReactionsLanguageParser parser = new DebugInternalReactionsLanguageParser(
-            new CommonTokenStream(
-                new DebugInternalReactionsLanguageLexer(
-                    CharStreams.fromString(programText))
-                )
-            );
+        CommonTokenStream stream = new CommonTokenStream(new DebugInternalReactionsLanguageLexer(CharStreams.fromString(programText)));
+        stream.fill();
+        DebugInternalReactionsLanguageParser parser = new DebugInternalReactionsLanguageParser(stream);
+            
         // Intercept wrong token problems
         parser.addErrorListener(new ErrorFixInformationRecorder(this));
         var result = parser.reactionsFile();
 
-        // No parser error occurred -> nothing needs to be done
+
+        // Parse succeeded -> nothing needs to be done
         if (actionType == RecoveryActionType.NONE_REQUIRED) {
+            // Did it _really_ succeed?
+            // Compare the last token parsed sucessfully
+            // against the last token that could be parsed
+            // (neither EOF, nor on hidden channel)
+            int lastParsedToken = result.getStop().getTokenIndex();
+            var allTokens = stream.getTokens();
+            int lastParsableToken = -1;
+            for (int i = allTokens.size() - 1; i >= 0; i--) {
+                var token = allTokens.get(i);
+                if (token.getType() != -1 && token.getChannel() == 0) {
+                    lastParsableToken = i;
+                    break;
+                }
+            }
+            if (lastParsedToken < lastParsableToken) {
+                return null;
+            }
+
             System.out.println("Parser accepts this input: ");
             System.out.println(programText);
             return new LinkedList<RecoveryAction>();
@@ -74,8 +91,8 @@ public class ErrorRecoveryExplorer {
             var tokenFixes = exploreAlternative(parser, action);
             if (tokenFixes != null) {
                 tokenFixes.add(action);
+                return tokenFixes;
             }
-            return tokenFixes;
         }
 
         System.out.println("Failed at: ");
@@ -156,12 +173,11 @@ public class ErrorRecoveryExplorer {
         Parser parser,
         RecoveryAction action) {
         // Replace token in token stream
-        var originalTokenStream = (CommonTokenStream) parser.getTokenStream();
-        originalTokenStream.fill();
+        var originalTokenStream = parser.getTokenStream();
         var manipulatedTokenStream = new TokenStreamRewriter(originalTokenStream);
 
         if (action.actionType() == RecoveryActionType.REPLACE) {
-            manipulatedTokenStream.replace(offendingToken.getTokenIndex(), " "+ action.content()+" ");
+            manipulatedTokenStream.replace(offendingToken.getTokenIndex(), " " + action.content() + " ");
         }
         else if (action.actionType() == RecoveryActionType.INSERT) {
             manipulatedTokenStream.insertBefore(offendingToken.getTokenIndex(), " " + action.content() + " ");

@@ -33,7 +33,7 @@ class ErrorFixInformationRecorder extends BaseErrorListener {
 
             explorer.actionType = RecoveryActionType.REPLACE;
             explorer.offendingToken = (Token) offendingSymbol;
-            explorer.expectedTokens = parser.getExpectedTokens();
+            explorer.expectedTokens = e.getExpectedTokens();
         }
         else if (e instanceof NoViableAltException) {
             // No viable alternative -> delete offending token

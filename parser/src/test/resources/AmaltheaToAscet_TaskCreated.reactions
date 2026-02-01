@@ -73,7 +73,7 @@ transformation amaltheaToAscet {
     
     routine createTimeTableTask(amalthea::Task amaltheaTask) {
         match {
-            val ascetModule = retrieve ascet::AscetModule
+            val ascetModule = retrieve ascet :: AscetModule
         }
         action {
             val existingTask = ascetModule.tasks.findFirst[name == amaltheaTask.name]
