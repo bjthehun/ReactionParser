@@ -42,29 +42,30 @@ public class ReactionsErrorReporter {
         if (!shouldGuessCorrectProgram) {
             return;
         }    
-        var recoveryExplorer = new ErrorRecoveryExplorer(reactionsText);
-        var recoveryTokens = recoveryExplorer.findCorrectingOperations();
-        if (recoveryTokens == null) {
+        var dfsSearch = new DFSSearchStrategy();
+        var searchResult = dfsSearch.findRecoveryActions(reactionsText);
+        if (searchResult.isEmpty()) {
             System.out.println("Cannot guess correct tokens to recover from syntax errors");
             System.exit(0);
         }
         else {
-            System.out.println("Syntax fixes: " + recoveryTokens.size() + " substitutions required");
-        }
+            var recoveryActions = searchResult.get();
+            System.out.println("Syntax fixes: " + recoveryActions.size() + " substitutions required");
 
-        // Translate to parser errors
-        Collections.reverse(recoveryTokens);
-        var recoveryTokensAsParserErrors = recoveryTokens
-            .stream()
-            .map(token -> new PureAntlrParser.SyntaxError(
-                token.offendingToken().getLine(), 
-                token.offendingToken().getCharPositionInLine(),
-                "Use " + token.content() + " as replacement for "
-                + token.offendingToken().getText(),
-                token.offendingToken()))
-            .toList();
-        for (var recoveryMessage : recoveryTokensAsParserErrors) {
-            System.out.println(recoveryMessage);
+            // Translate to parser errors
+            Collections.reverse(recoveryActions);
+            var recoveryTokensAsParserErrors = recoveryActions
+                .stream()
+                .map(token -> new PureAntlrParser.SyntaxError(
+                    token.offendingToken().getLine(), 
+                    token.offendingToken().getCharPositionInLine(),
+                    "Use " + token.content() + " as replacement for "
+                    + token.offendingToken().getText(),
+                    token.offendingToken()))
+                .toList();
+            for (var recoveryMessage : recoveryTokensAsParserErrors) {
+                System.out.println(recoveryMessage);
+            }
         }
     }
 }

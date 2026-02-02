@@ -87,39 +87,38 @@ public class PureAntlrParserTest {
     @Test
     void testFileWithUnknownErrors() throws IOException, RecognitionException {
         var fixedParserResult = 
-            new ErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_interesting_errors.reactions"))
-        )
-        .findCorrectingOperations();
-        assertEquals(2, fixedParserResult.size());
+            new DFSSearchStrategy()
+            .findRecoveryActions(ParserUtils.getTextFromFile(resourcePath("with_interesting_errors.reactions")));
+
+        assertEquals(2, fixedParserResult.get().size());
     }
 
     @Test
     void testFileWithMissingContent() throws IOException, RecognitionException {
         var fixedParserResult = 
-            new ErrorRecoveryExplorer(ParserUtils.getTextFromFile(resourcePath("with_missing_content.reactions"))
-        )
-        .findCorrectingOperations();
-        assertEquals(2, fixedParserResult.size());
+            new DFSSearchStrategy()
+            .findRecoveryActions(ParserUtils.getTextFromFile(resourcePath("with_missing_content.reactions")));
+        assertEquals(2, fixedParserResult.get().size());
     }
 
     @Test
     void testCorrectParseGuessingForAmaltheaToAscetExample() throws IOException, RecognitionException {
-        var parserResult =
-            new ErrorRecoveryExplorer(
+        var fixedParserResult = 
+            new DFSSearchStrategy()
+            .findRecoveryActions(
                 ParserUtils.getTextFromFile(resourcePath("AmaltheaToAscet_TaskCreated.reactions"))
-            )
-            .findCorrectingOperations();
-        assertTrue(!parserResult.isEmpty());
+            );
+        assertTrue(!fixedParserResult.isEmpty());
     }
 
     @Test
     void testCorrectParseGuessingForFamiliesToPersonsExample() throws IOException, RecognitionException {
-        var parserResult =
-            new ErrorRecoveryExplorer(
+        var fixedParserResult = 
+            new DFSSearchStrategy()
+            .findRecoveryActions(
                 ParserUtils.getTextFromFile(resourcePath("FtP_Delete_Grammar.reactions"))
-            )
-            .findCorrectingOperations();
-        assertTrue(!parserResult.isEmpty());
+            );
+        assertTrue(!fixedParserResult.isEmpty());
     }
 
     private String resourcePath(String fileName) {

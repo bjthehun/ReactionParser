@@ -8,7 +8,6 @@ import java.util.List;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Parser;
-import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.TokenStreamRewriter;
@@ -16,7 +15,7 @@ import org.antlr.v4.runtime.misc.IntervalSet;
 import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageLexer;
 import tools.vitruv.reactionsparser.parser.antlr.DebugInternalReactionsLanguageParser;
 
-public class ErrorRecoveryExplorer {
+public class ErrorRecoveryExplorationNode {
     /**
      * Counter for produced tokens during error recovery.
      */
@@ -54,7 +53,7 @@ public class ErrorRecoveryExplorer {
      * @param grammar
      * @param substituteToken
      */
-    public ErrorRecoveryExplorer(String reactionsText){
+    public ErrorRecoveryExplorationNode(String reactionsText){
         this.programText = reactionsText;
     }
 
@@ -102,40 +101,44 @@ public class ErrorRecoveryExplorer {
         return parser;
     }
 
-    /**
-     * Depth-first search strategy to find correcting operations.
-     * 
-     * @return {@link List} of {@link RecoveryAction}s
-     */
-    public List<RecoveryAction> findCorrectingOperations() {
-        var parser = prepare();
-        if (didFindCorrectInput()) {
-            System.out.println("Parser accepts this input: ");
-            System.out.println(programText);
-            return new LinkedList<RecoveryAction>();
-        }
-    
-        var recoveryActions = guessActions();
-        // Rewrite to most suitable token
-        // Try alternatives based on editing costs
-        for (var action: recoveryActions) {
-            var appliedAction = exploreAlternative(parser, action);
-            var tokenFixes = appliedAction.findCorrectingOperations();
-
-            if (tokenFixes != null) {
-                tokenFixes.add(action);
-                return tokenFixes;
-            }
-        }
-
-        System.out.println("Failed at: ");
-        System.out.println(programText);
-        return null;
+    public String getProgramText() {
+        return programText;
     }
 
     public boolean didFindCorrectInput() {
         return didParseSucceed;
     }
+    
+    /**
+     * Applies {@code action} to the input of {@code parser}, and returns a new {@link ErrorRecoveryExplorationNode}
+     * to continue the search from.
+     * 
+     * @param parser - {@link Parser}
+     * @param action - {@link RecoveryAction}
+     * @return new ErrorRecoveryExplorer
+     */
+    public ErrorRecoveryExplorationNode exploreAlternative(
+        Parser parser,
+        RecoveryAction action) {
+        // Replace token in token stream
+        var originalTokenStream = parser.getTokenStream();
+        var manipulatedTokenStream = new TokenStreamRewriter(originalTokenStream);
+
+        if (action.actionType() == RecoveryActionType.REPLACE) {
+            manipulatedTokenStream.replace(offendingToken.getTokenIndex(), " " + action.content() + " ");
+        }
+        else if (action.actionType() == RecoveryActionType.INSERT) {
+            manipulatedTokenStream.insertBefore(offendingToken.getTokenIndex(), " " + action.content() + " ");
+        }
+        else {
+            manipulatedTokenStream.delete(offendingToken.getTokenIndex());
+        }
+        var manipulatedText = manipulatedTokenStream.getText();
+
+        // Try out alternative
+        return new ErrorRecoveryExplorationNode(manipulatedText);
+    }
+
 
     /**
      * Comes up with possible recovery actions for the current state
@@ -212,36 +215,6 @@ public class ErrorRecoveryExplorer {
             default:
                 return null;
         }
-    }
-    
-    /**
-     * Applies {@code action} to the input of {@code parser}, and returns a new {@link ErrorRecoveryExplorer}
-     * to continue the search from.
-     * 
-     * @param parser - {@link Parser}
-     * @param action - {@link RecoveryAction}
-     * @return new ErrorRecoveryExplorer
-     */
-    public ErrorRecoveryExplorer exploreAlternative(
-        Parser parser,
-        RecoveryAction action) {
-        // Replace token in token stream
-        var originalTokenStream = parser.getTokenStream();
-        var manipulatedTokenStream = new TokenStreamRewriter(originalTokenStream);
-
-        if (action.actionType() == RecoveryActionType.REPLACE) {
-            manipulatedTokenStream.replace(offendingToken.getTokenIndex(), " " + action.content() + " ");
-        }
-        else if (action.actionType() == RecoveryActionType.INSERT) {
-            manipulatedTokenStream.insertBefore(offendingToken.getTokenIndex(), " " + action.content() + " ");
-        }
-        else {
-            manipulatedTokenStream.delete(offendingToken.getTokenIndex());
-        }
-        var manipulatedText = manipulatedTokenStream.getText();
-
-        // Try out alternative
-        return new ErrorRecoveryExplorer(manipulatedText);
     }
 
     /**

@@ -13,9 +13,9 @@ import org.antlr.v4.runtime.Token;
  * to fix that error.
  */
 class ErrorFixInformationRecorder extends BaseErrorListener {
-    private ErrorRecoveryExplorer explorer;
+    private ErrorRecoveryExplorationNode explorer;
 
-    public ErrorFixInformationRecorder(ErrorRecoveryExplorer explorer) {
+    public ErrorFixInformationRecorder(ErrorRecoveryExplorationNode explorer) {
         this.explorer = explorer;
     }
     
