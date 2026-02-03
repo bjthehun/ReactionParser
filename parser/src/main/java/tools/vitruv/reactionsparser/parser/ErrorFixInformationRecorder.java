@@ -55,5 +55,6 @@ class ErrorFixInformationRecorder extends BaseErrorListener {
         else {
             explorer.actionType = RecoveryActionType.NONE_POSSIBLE;
         }
+        // Also terminate parsing immediately
     }
 }

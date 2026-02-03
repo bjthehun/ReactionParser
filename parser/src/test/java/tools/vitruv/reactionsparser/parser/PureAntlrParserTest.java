@@ -104,7 +104,7 @@ public class PureAntlrParserTest {
     @Test
     void testCorrectParseGuessingForAmaltheaToAscetExample() throws IOException, RecognitionException {
         var fixedParserResult = 
-            new DFSSearchStrategy()
+            new IterativeDeepeningDFSSearchStrategy()
             .findRecoveryActions(
                 ParserUtils.getTextFromFile(resourcePath("AmaltheaToAscet_TaskCreated.reactions"))
             );
@@ -114,7 +114,7 @@ public class PureAntlrParserTest {
     @Test
     void testCorrectParseGuessingForFamiliesToPersonsExample() throws IOException, RecognitionException {
         var fixedParserResult = 
-            new DFSSearchStrategy()
+            new IterativeDeepeningDFSSearchStrategy()
             .findRecoveryActions(
                 ParserUtils.getTextFromFile(resourcePath("FtP_Delete_Grammar.reactions"))
             );

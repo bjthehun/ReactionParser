@@ -18,7 +18,7 @@ public class DFSSearchStrategy implements ErrorRecoverySearchStrategy {
      * 
      * @return {@link List} of {@link RecoveryAction}s
      */
-    public List<RecoveryAction> findRecoveryActionsFrom(ErrorRecoveryExplorationNode node) {
+    private List<RecoveryAction> findRecoveryActionsFrom(ErrorRecoveryExplorationNode node) {
         var parser = node.prepare();
         if (node.didFindCorrectInput()) {
             System.out.println("Parser accepts this input: ");

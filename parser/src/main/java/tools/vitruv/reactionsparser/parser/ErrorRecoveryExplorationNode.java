@@ -8,7 +8,9 @@ import java.util.List;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Parser;
+import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.RecognitionException;
+import org.antlr.v4.runtime.RuleContext;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.TokenStreamRewriter;
 import org.antlr.v4.runtime.misc.IntervalSet;
@@ -71,11 +73,18 @@ public class ErrorRecoveryExplorationNode {
         CommonTokenStream stream = new CommonTokenStream(new DebugInternalReactionsLanguageLexer(CharStreams.fromString(programText)));
         stream.fill();
 
-        // Find the first parser error
+        // Find the first parser error, bail out after second
         DebugInternalReactionsLanguageParser parser = new DebugInternalReactionsLanguageParser(stream);     
         parser.removeErrorListeners();
         parser.addErrorListener(new ErrorFixInformationRecorder(this));
-        var result = parser.reactionsFile();
+        parser.setErrorHandler(new OneErrorOnlyErrorStrategy());
+        ParserRuleContext result;
+        try {
+            result = parser.reactionsFile();
+        }
+        catch (RuntimeException e) {
+            result = null;
+        }
 
         // Parse succeeded -> nothing needs to be done
         if (actionType == RecoveryActionType.NONE_REQUIRED) {
