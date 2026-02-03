@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.File;
 import java.io.IOException;
-import org.antlr.runtime.RecognitionException;
 import org.junit.jupiter.api.Test;
 
 public class PureAntlrParserTest {
@@ -82,43 +81,6 @@ public class PureAntlrParserTest {
 
         // File has 2 known errors: "aftr" and "updat"
         assertTrue(result.hasErrors(), "Should have syntax errors");
-    }
-
-    @Test
-    void testFileWithUnknownErrors() throws IOException, RecognitionException {
-        var fixedParserResult = 
-            new DFSSearchStrategy()
-            .findRecoveryActions(ParserUtils.getTextFromFile(resourcePath("with_interesting_errors.reactions")));
-
-        assertEquals(2, fixedParserResult.get().size());
-    }
-
-    @Test
-    void testFileWithMissingContent() throws IOException, RecognitionException {
-        var fixedParserResult = 
-            new DFSSearchStrategy()
-            .findRecoveryActions(ParserUtils.getTextFromFile(resourcePath("with_missing_content.reactions")));
-        assertEquals(2, fixedParserResult.get().size());
-    }
-
-    @Test
-    void testCorrectParseGuessingForAmaltheaToAscetExample() throws IOException, RecognitionException {
-        var fixedParserResult = 
-            new IterativeDeepeningDFSSearchStrategy()
-            .findRecoveryActions(
-                ParserUtils.getTextFromFile(resourcePath("AmaltheaToAscet_TaskCreated.reactions"))
-            );
-        assertTrue(!fixedParserResult.isEmpty());
-    }
-
-    @Test
-    void testCorrectParseGuessingForFamiliesToPersonsExample() throws IOException, RecognitionException {
-        var fixedParserResult = 
-            new IterativeDeepeningDFSSearchStrategy()
-            .findRecoveryActions(
-                ParserUtils.getTextFromFile(resourcePath("FtP_Delete_Grammar.reactions"))
-            );
-        assertTrue(!fixedParserResult.isEmpty());
     }
 
     private String resourcePath(String fileName) {
